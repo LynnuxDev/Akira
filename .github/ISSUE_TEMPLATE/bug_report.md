@@ -1,33 +1,44 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+title: "[Bug]"
+labels: bug
+assignees: Dark-LYNN
 
 ---
 
-**Describe the bug**
+## Bug Report
+
+**Describe the Bug:**
 A clear and concise description of what the bug is.
 
-**To Reproduce**
+**To Reproduce:**
 Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
 
-**Expected behavior**
+1.  '...' *(optional)*
+2. Command used '....' *\**
+3. what you get '...' *\**
+
+**Expected Behavior:**
 A clear and concise description of what you expected to happen.
 
-**Screenshots**
+**Screenshots:**
 If applicable, add screenshots to help explain your problem.
 
-**please complete the following information:**
- - Version [e.g. v2]
- - command [e.g. about]
- - Bug [e.g. Typo]
+**Environment:**
+- Bot Version: `[e.g., v1.0.0]` *(if enabled)*
+- Your serverID/Name `[e.g., 1153968713276604436]`
+- Your userID/Name: `[e.g., LynnuxDev]`
 
-
-**Additional context**
+**Additional Context:**
 Add any other context about the problem here.
+
+**Possible Solution:**
+If you have a suggestion on how to fix the bug or what might be causing it, please let us know.
+
+---
+
+**Note:**
+- Before submitting, please make sure that the bot is not currently down.
+- Search for existing issues to avoid duplication.
+- If the bug is related to a specific command or feature, please mention it.
