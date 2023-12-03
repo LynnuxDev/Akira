@@ -36,7 +36,7 @@ If you have major coding issues with this bot, please join and ask for help.
 [![Run on Repl.it](https://repl.it/badge/github/SudhanPlayz/Discord-MusicBot)](./)
 
 ## ✨ Contributors
-Contributions are always welcomed :D Make sure to follow [Contributing.md](contribute.md)
+Contributions are always welcomed :D Make sure to follow [contribute.md](contribute.md)
 
 <a href="https://github.com/Dark-LYNN/AkiraBot/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=Dark-LYNN/AkiraBot" />
