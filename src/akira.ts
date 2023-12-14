@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 // @ts-ignore
-const token = require("./handler/token");
+const token = require("./handler/token.ts");
 // @ts-ignore
 const events = require("./handler/events.ts");
 // @ts-ignore
