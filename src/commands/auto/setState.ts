@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 module.exports = {
     name: "setstate",
     type: "ready",
