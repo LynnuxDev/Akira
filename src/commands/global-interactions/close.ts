@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 module.exports = [{
     module: "Global-Interaction",
     version: "1.0",

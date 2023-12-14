@@ -1,8 +1,13 @@
-const token = require("./handler/token.js");
-const events = require("./handler/events.js");
-const intents = require("./handler/intents.js");
-const { ForgeDB } = require("forgedb") 
-const { ForgeClient } = require("forgescript")
+// @ts-nocheck
+
+// @ts-ignore
+const token = require("./handler/token");
+// @ts-ignore
+const events = require("./handler/events.ts");
+// @ts-ignore
+const intents = require("./handler/intents.ts");
+const { ForgeDB } = require("forgedb");
+const { ForgeClient } = require("forgescript");
 // const { ForgeMusic } = require("forge-music")
 
 const client = new ForgeClient({

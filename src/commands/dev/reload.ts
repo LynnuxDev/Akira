@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 module.exports = ({
     name: "update",
     aliases: ["reload", "updatecommands"],

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 module.exports = [{
     name: "help",
 	aliases: ["sos","help-me","what","howto","how-to"],

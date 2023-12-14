@@ -1,3 +1,5 @@
+// @ts-nocheck
+// @ts-ignore
 const events = [
     "debug",
     "channelUpdate",
