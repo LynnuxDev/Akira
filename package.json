@@ -1,4 +1,11 @@
 {
+    "name": "akira",
+    "version": "1.0.0",
+    "main": "src/akira.ts",
+    "scripts": {
+        "start": "node src/akira.ts"
+    },
+
     "dependencies": {
         "@types/lodash": "^4.14.202",
         "@types/node": "^20.10.4",
