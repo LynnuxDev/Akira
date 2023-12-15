@@ -1,9 +1,15 @@
 module.exports = ({
     name: "update",
     aliases: ["reload", "updatecommands"],
-    description: "reload codes",
+    description: "reload all codes.",
     type: "messageCreate",
     usage: "update",
+    module: "Developers-Only",
+	version: "1.0",
+    sourcecode: "https://github.com/LynnuxDev/Akira/blob/main/SRC/commands/dev/reload.js",
+    documentation: "https://documentation.lynnux.xyz/commands/utility/dev/Not-Available",
+    type: "messageCreate",
+	example: "update",
     code: `
         $onlyForUsers[;705306248538488947;392609934744748032]
 
