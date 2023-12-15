@@ -31,7 +31,7 @@ If you have major coding issues with this bot, please join and ask for help.
 </div>
 
 ## 💨 Run the projects
-[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](./)
+[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/remix/akira-forgescript)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](./)
 [![Run on Repl.it](https://repl.it/badge/github/SudhanPlayz/Discord-MusicBot)](./)
 
