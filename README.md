@@ -39,7 +39,7 @@ If you have major coding issues with this bot, please join and ask for help.
 Contributions are always welcomed :D Make sure to follow [contribute.md](contribute.md)
 
 <a href="https://github.com/Dark-LYNN/AkiraBot/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=Dark-LYNN/AkiraBot" />
+  <img src="https://contributors-img.web.app/image?repo=Lynnux/Akira" />
 </a>
 
 > **Note:** Contributions are not accepted in the master branch.
