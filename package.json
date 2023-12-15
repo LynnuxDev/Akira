@@ -2,7 +2,7 @@
     "dependencies": {
       "forgedb": "github:tryforge/ForgeDB",
       "forgescript": "^1.1.0",
-      "node.js": "^0.0.1-security",
+      "node.js": "^0.0.1-security"
     },
   }
   
