@@ -3,6 +3,8 @@ module.exports = [{
 	aliases: ["sos","help-me","what","howto","how-to"],
 	module: "Help",
 	version: "1.0",
+    sourcecode: "https://github.com/LynnuxDev/Akira/blob/main/SRC/commands/help/help.js",
+    documentation: "https://documentation.lynnux.xyz/commands/utility/help",
     type: "messageCreate",
 	description: "Get help using Akira.",
 	usage: "help {module/command}",
