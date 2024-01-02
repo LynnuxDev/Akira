@@ -41,7 +41,7 @@ module.exports = [{
 **Version:** \`$commandInfo[messageCreate;$message[0];version]\`
 **Example:**
 \`\`\`
-$getVar[prefix;default]$commandInfo[messageCreate;$message[0];example]
+$getVar[prefix;default]$replace[$commandInfo[messageCreate;$message[0];example];{prefix};$getVar[prefix;default]]
 \`\`\`
 **Module:** \`$commandInfo[messageCreate;$message[0];module]\`]
         $addActionRow
