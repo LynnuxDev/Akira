@@ -14,7 +14,7 @@ module.exports = ({
         $onlyForUsers[;705306248538488947;392609934744748032]
 
         $let[count;$commandCount]
-        $updateCommands
+        $updateCommands $updateApplicationCommands
         $let[add;$sub[$commandCount;$get[count]]]
  
         $color[ff47ff]
