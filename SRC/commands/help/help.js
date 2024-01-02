@@ -10,8 +10,10 @@ module.exports = [{
 	usage: "help {module/command}",
 	example: "Help",
     code: `
-        $if[$authorID==705306248538488947;Ping: \`$pingMS\` | Uptime: <t:$round[$math[$math[$getTimestamp-$uptime]/1000];0]:R>;]        
-$if[$guildID==;$c[not a guild];$replace[$checkContains[$message;-c;-chat];false;**Got it!** I sent you a DM with information on how to use me. Please check your DM <@$authorID>;1]]    
+    $if[$authorID==705306248538488947;Ping: \`$pingMS\` | Uptime: <t:$round[$math[$math[$getTimestamp-$uptime]/1000];0]:R>;]        
+    $if[$guildID==;$c[not a guild];$replace[$replace[$checkContains[$message;-c;-chat];true;$c[is for chat];1];false;**Got it!** I sent you a DM with information on how to use me. Please check your DM <@$authorID>;1]]    
+
+    $if[$toLowercase[$message[0]]!=roleplay;
     	$color[$getVar[color;default]]
 		$author[Akira's Features;$userAvatar[$botID;2048;webp]]
 		$description[**To check out a section or command use** \`akira help \[module / command\\]\`
@@ -68,9 +70,21 @@ For arguments in commands:
         $addOption[Utility;Useful left over commands.;Utility;🔦;false]
 
         $addActionRow
-        $addButton[close-$authorID;Close;Danger]
-        
-
+        $addButton[close-$authorID;Close;Danger]   
+    ;
+        $author[Akira's RolePlay commands;$userAvatar[$botID;1024]]
+        $color[$getVar[color;default]]
+        $description[Express yourself with over \`50\` different gif commands that each track how often you've received and given them so you can see how many hugs you've given and gotten. Check \`akira counters\` to see your statistics.\n\n(Commands executed on yourself do not count towards the counters)]
+        $addField[Wholesome:;\`akira [command\\] {users} (reason)\`\n\`\`\`Blush, Boop, Cheer, Cuddle, Dance, Feed, Glomp, Handhold, Happy, Highfive, Hug, Kiss, Laugh, Love, Nom, Nuzzle, Pat, Peck, Tease, Thumbsup, Tickle, Wag, Wave, Wink\`\`\`]
+        $addField[Neutral:;\`akira [command\\] {users} (reason)\`\n\`\`\`Bonk, Bored, Chase, Dab, Facepalm, Lick, Lurk, Nervous, No, Panic, Poke, Pout, Run, Shrug, Sip, Sleep, Smug, Stare, Think, Yes\`\`\`]
+        $addField[Negative:;\`akira [command\\] {users} (reason)\`\n\`\`\`Bite, Cringe, Cry, Die, Hate, Kill, Sad, Shoot, Slap, Stab, Triggered\`\`\`]
+        $addField[Akira counters (user):;See how many times each roleplay action has happened to you and how often you've done them to others.]
+        $addField[Akira blockcommand [roleplay command\\]:;Block a roleplay command so people can't use it on you, in case you want to reject everyone from slapping you.]
+        $addField[Akira unblockcommand [roleplay command\\]:;Unblock a roleplay command so people can use it on you again, in case you once again accept slaps and bonks.]
+        $addField[Akira block [@users\\]:;Block users so they can't spam you with roleplay commands and harass you. Useful if they keep trying to kiss you.]
+        $addField[Akira unblock [@users\\]:;Unblock a user so they can use roleplay commands on you again. In case you forgive your stalkers.]
+        $addField[Extra links and information:;[[Invite akira\\](https://discord.com/api/oauth2/authorize?client_id=738057910923296839&permissions=8&scope=bot%20applications.commands)\\] | \[[Support Server\\](https://discord.com/invite/TUqZTutDUz)\\] | \[[Vote\\](https://akira.lynnux.xyz/vote)\\] | \[[Website\\](https://akira.lynnux.xyz)\\] | [Premium\\]]
+    ]
         $if[$checkContains[$message;-c;-chat]!=true;$sendDM[$authorID];]    
 
 `}, {
