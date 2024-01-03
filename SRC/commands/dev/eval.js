@@ -13,5 +13,5 @@ example: "ev you are $authorID",
   code: `
   $onlyForUsers[;705306248538488947;392609934744748032]
   $if[$authorID==705306248538488947;Ping: \`$pingMS\` | Uptime: <t:$round[$math[$math[$getTimestamp-$uptime]/1000];0]:R>;]                
-  $eval[$message;false]
+  $eval[$message;true]
   `}
