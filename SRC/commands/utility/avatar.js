@@ -14,8 +14,9 @@ module.exports = [{
         $onlyID[$hasPerms[$guildID;$botID;embedlinks]==true;$color[ff3333]$title[❌ Missing Permission!]$description[I'm missing the \`Use_External_Emojis\` Permission.]]
         $onlyID[$hasPerms[$guildID;$botID;sendmessages]==true;$dm[$authorID]$color[ff3333]$title[❌ Missing Permission!]$description[I'm missing the \`Use_External_Emojis\` Permission.]]
 
+        $let[user;$findUser[$message]]
         $color[$getVar[color;default]]
-        $title[uwu]
+        $title[$username[$get[user]]'s Avatar]
 `}]
 /* 
         $if[$authorID==705306248538488947;Ping: \`$pingMS\` | Uptime: <t:$round[$math[$math[$djsEval[Date.now();true]-$uptime[ms]]/1000]]:R>;]
