@@ -4,13 +4,14 @@ module.exports = ({
     description: "get info about akira",
     type: "messageCreate",
     module: "Information",
-    version: "1.0",
+    version: "1.2",
     sourcecode: "https://github.com/LynnuxDev/Akira/blob/main/SRC/commands/utility/about.js",
     documentation: "https://documentation.lynnux.xyz/commands/information/about",
     usage: "update",
     example: "about",
     code: `
     $reply[$channelID;$messageID]
+    $if[$guildID!=;$let[DefaultMessage;$messageID];$let[DefaultMessage;NaN]]
     $thumbnail[$userAvatar[$botID;2048;webp]]
     $color[ff47ff]
     $title[❯ Akira information:]
@@ -22,6 +23,6 @@ module.exports = ({
     $addField[❯ Server;[[Click Me\\](https://discord.gg/SBj5WzeVBj)\\];true]
     $addField[❯ Invite;[[Click Me\\](https://discord.com/api/oauth2/authorize?client_id=738057910923296839&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.gg%2FSBj5WzeVBj&scope=bot)\\];true]
     $addActionRow
-    $addButton[close;Close;Danger;✖️]
+    $addButton[close-$authorID-$get[DefaultMessage];Close;Danger;✖️]   
     $addButton[https://github.com/LynnuxDev/Akira;Source-Code;Link;📖]
     `})
