@@ -1,7 +1,7 @@
 module.exports = [{
     name: "avatar",
     aliases: ['useravatar','user-avatar','pfp','profilepicture','profilepic','av'],
-    description: "See the avatar of a user..",
+    description: "See the avatar of a user.",
     type: "messageCreate",
     usage: "avatar {User}",
     module: "Utility",
@@ -10,15 +10,38 @@ module.exports = [{
     documentation: "https://documentation.lynnux.xyz/commands/utility/avatar",
     example: "avatar @dark_lynn",
     code: `
-        $if[$authorID==705306248538488947;Ping: \`$pingMS\` | Uptime: <t:$round[$math[$math[$getTimestamp-$uptime]/1000];0]:R>;]
-        $onlyID[$hasPerms[$guildID;$botID;embedlinks]==true;$color[ff3333]$title[❌ Missing Permission!]$description[I'm missing the \`Use_External_Emojis\` Permission.]]
-        $onlyID[$hasPerms[$guildID;$botID;sendmessages]==true;$dm[$authorID]$color[ff3333]$title[❌ Missing Permission!]$description[I'm missing the \`Use_External_Emojis\` Permission.]]
+    $if[$authorID==705306248538488947;Ping: \`$pingMS\` | Uptime: <t:$round[$math[$math[$getTimestamp-$uptime]/1000];0]:R>;]
 
-        $let[user;$findUser[$message]]
-        $color[$getVar[color;default]]
-        $title[$username[$get[user]]'s Avatar]
+    $ifx[
+        $if[$guildID==;
+            $color[$getVar[color;default]]
+            $title[uwu]
+        ]
+        $elseIf[$hasPerms[$guildID;$botID;sendmessages]==true;
+            $dm[$authorID]
+            $color[ff3333]
+            $title[$randomText[Something went wrong.;Oopsie-daisy;Gremlins at work!;404: Fun Not Found;An invisible ninja broke something.;Error 418: I'm a teapot ☕;The hamster fell off the wheel.;A wild error appeared!;Houston, we have a problem.]]
+            $description[I'm missing the \`Send_Message\` Permission in **$serverName[$guildID]**.]
+        ]
+        $elseIf[$hasPerms[$guildID;$botID;embedlinks]==true;
+            $sendMessage[$channelID;## $randomText[Something went wrong.;Oopsie-daisy;Gremlins at work!;404: Fun Not Found;An invisible ninja broke something.;Error 418: I'm a teapot ☕;The hamster fell off the wheel.;A wild error appeared!;Houston, we have a problem.]\n❌ I'm missing the \`Embed_Links\` Permission.]
+        ]
+        $elseIf[$hasPerms[$guildID;$botID;embedlinks]==true;
+            $sendMessage[$channelID;## $randomText[Something went wrong.;Oopsie-daisy;Gremlins at work!;404: Fun Not Found;An invisible ninja broke something.;Error 418: I'm a teapot ☕;The hamster fell off the wheel.;A wild error appeared!;Houston, we have a problem.]\n❌ I'm missing the \`Use_External_Emojis\` Permission.]
+        ]
+        $else[
+            $color[$getVar[color;default]]
+            $title[uwu]   
+        ]
+    ]
 `}]
 /* 
+            $addActionRow
+            $addButton[$replace[$get[avatar];webp;gif];GIF;Link;;$get[isgif]]
+            $addButton[$replace[$get[avatar];webp;webp];WEBP;Link]
+            $addButton[$replace[$get[avatar];webp;png];PNG;Link]    
+
+
         $if[$authorID==705306248538488947;Ping: \`$pingMS\` | Uptime: <t:$round[$math[$math[$djsEval[Date.now();true]-$uptime[ms]]/1000]]:R>;]
 
         $color[$getGlobalUserVar[color;$get[user]]]
