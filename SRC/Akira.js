@@ -1,14 +1,14 @@
 const token = require("./handler/token.js");
 const events = require("./handler/events.js");
 const intents = require("./handler/intents.js");
-const { ForgeDB } = require("forgedb") 
-const { ForgeClient } = require("forgescript")
-const { ForgeTopGG } = require("forgetop.gg");
+const { ForgeDB } = require("forgedb")              // https://github.com/tryforge/ForgeDB/tree/dev
+const { ForgeClient } = require("forgescript")      // https://github.com/tryforge/ForgeScript/tree/dev
+const { ForgeTopGG } = require("forgetop.gg");      // https://github.com/tryforge/ForgeTopGG/tree/dev
 
-// const { ForgeMusic } = require("forge-music")
+// const { ForgeMusic } = require("forge-music")    // https://github.com/tryforge/ForgeMusic
 
 const top = new ForgeTopGG({
-    token: "SECRET-TOKEN",
+    token: "SECRET-TOKEN",  
     auth: "SECRET-AUTH",
     events: [
         "error",
@@ -69,7 +69,7 @@ top.commands.add({
                     $addField[User:;<@$get[user]>]
                     $addField[Bot:;<@$botID>]
                     $addField[Voted at:;<t:$round[$math[$getTimestamp/1000]]:f>]
-                    $addField[Can vote again in:;<t:$math[$round[$math[$getTimestamp/1000]]+43200:f>]
+                    $addField[Can vote again in:;<t:$math[$round[$math[$getTimestamp/1000]]+43200]:f>]
                     $addField[Total Votes:;$totalVotes]
                     $addField[Monthly Votes:;$monthlyVotes]
                     $footer[This vote was a test.]
