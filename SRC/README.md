@@ -37,7 +37,7 @@ If you have major coding issues with this bot, please join and ask for help.
 [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/remix/akira-forgescript)
 
 ## ✨ Contributors
-Contributions are always welcomed :D Make sure to follow [contribute.md](contribute.md)
+Contributions are always welcomed :D Make sure to follow [contribute.md](../contribute.md)
 
 <a href="https://github.com/Dark-LYNN/AkiraBot/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=LynnuxDev/Akira" />
