@@ -62,22 +62,30 @@ top.commands.add({
             $case[test;
                 $log[A test vote was made by $username[$voteUserID] ($voteUserID)]
                 $let[user;$voteUserID]
-                $sendMessage[1193223146501836860;
-                    $title[Voted;https://top.gg/bot/$botID]
+                $sendMessage[1193223146501836860;<@$get[user]> Voted For <@$clientID>!
+                    $title[(test) Vote;https://top.gg/bot/$botID]
                     $description[<@$get[user]> Voted For <@$clientID>!]
-                    $color[ff47ff]    
+                    $color[ff47ff]
+                    $addField[User:;<@$get[user]>]
+                    $addField[Bot:;<@$botID>]
+                    $addField[Voted at:;<t:$round[$math[$getTimestamp/1000]]:f>]
+                    $addField[Can vote again in:;<t:$math[$round[$math[$getTimestamp/1000]]+43200:f>]
+                    $addField[Total Votes:;$totalVotes]
+                    $addField[Monthly Votes:;$monthlyVotes]
+                    $footer[This vote was a test.]
+                    $timestamp
                 ;false]
-
             ]
             $case[upvote;
                 if message is uwu
             ]
             $default[
-                if $case values werent matched
+                if $ case values werent matched
             ]
         ]    
     `
 })
+
 
 ///////////////////////////////
 //  [   Client Login    ]    //
