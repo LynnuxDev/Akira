@@ -27,7 +27,7 @@ module.exports = {
         $let[url;$httpResult[embed;image;url]]
         $image[$get[url]]
 
-        $footer[$username used $get[type] $if[$getVar[$get[type]-give;$authorID]==1; 1 time;$getVar[$get[type]-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[$get[type]-got;$get[user]]==1; 1 time;$getVar[$get[type]-got;$get[user]] times]]
+        $footer[$username used $get[type] $if[$getVar[$get[type]-give;$authorID]==1;1 time;$getVar[$get[type]-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[$get[type]-got;$get[user]]==1;1 time;$getVar[$get[type]-got;$get[user]] times]]
     `,
     data: {
         "name": "neutral",
