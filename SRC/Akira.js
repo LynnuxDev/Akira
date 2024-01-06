@@ -7,9 +7,18 @@ const { ForgeTopGG } = require("forgetop.gg");
 
 // const { ForgeMusic } = require("forge-music")
 
-//////////////////////////////
-//  [   ForgeScript    ]    //
-//////////////////////////////
+const top = new ForgeTopGG({
+    token: "SECRET-TOKEN",
+    auth: "SECRET-AUTH",
+    events: [
+        "error",
+        "posted",
+        "voted"
+    ],
+    post: {
+        interval: 3_600_000 // Update bot stats every hour
+    }
+})
 
 const client = new ForgeClient({
     "events": events,
@@ -23,6 +32,7 @@ const client = new ForgeClient({
     ],
     "extensions": [
         new ForgeDB(), 
+        top
         // new ForgeMusic({ soundsFolder: `${process.cwd()}/sounds` })  
     ]
 })
@@ -31,23 +41,9 @@ const client = new ForgeClient({
    client.commands.load("commands")
    client.applicationCommands.load("slash")
    
-
 //////////////////////////////
 //  [   ForgeTop.gg    ]    //
 //////////////////////////////
-
-const top = new ForgeTopGG({
-    token: "Secret-Top.GG-Token",
-    auth: "Secret-Top.GG-Auth",
-    events: [
-        "error",
-        "posted",
-        "voted"
-    ],
-    post: {
-        interval: 3_600_000 // Update bot stats every hour
-    }
-})
 
 top.commands.add({
     type: "error",
@@ -61,7 +57,26 @@ top.commands.add({
 
 top.commands.add({
     type: "voted",
-    code: `$log[voted by $voteUserID]`
+    code: `
+        $switch[$voteType;
+            $case[test;
+                $log[A test vote was made by $username[$voteUserID] ($voteUserID)]
+                $let[user;$voteUserID]
+                $sendMessage[1193223146501836860;
+                    $title[Voted;https://top.gg/bot/$botID]
+                    $description[<@$get[user]> Voted For <@$clientID>!]
+                    $color[ff47ff]    
+                ;false]
+
+            ]
+            $case[upvote;
+                if message is uwu
+            ]
+            $default[
+                if $case values werent matched
+            ]
+        ]    
+    `
 })
 
 ///////////////////////////////
