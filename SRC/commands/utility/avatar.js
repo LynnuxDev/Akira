@@ -16,9 +16,13 @@ module.exports = [{
         $if[$guildID==;
             $color[$getVar[color;default]]
             $title[uwu]
+            $addActionRow
+            $addButton[MemberAvatar-$get[user];MemberAvatar;Primary;;true]
+            $addButton[UserAvatar-$get[user];UserAvatar;Primary;;true]
+            $addButton[close-$authorID-$get[DefaultMessage];Close;Danger;✖️]
         ]
-        $elseIf[$hasPerms[$guildID;$botID;sendmessages]==true;
-            $dm[$authorID]
+        $elseIf[$hasPerms[$if[$guildID==;813511476052492328;$guildID];$botID;sendmessages]==true;
+            $sendDm[$authorID]
             $color[ff3333]
             $title[$randomText[Something went wrong.;Oopsie-daisy;Gremlins at work!;404: Fun Not Found;An invisible ninja broke something.;Error 418: I'm a teapot ☕;The hamster fell off the wheel.;A wild error appeared!;Houston, we have a problem.]]
             $description[I'm missing the \`Send_Message\` Permission in **$serverName[$guildID]**.]
@@ -32,6 +36,7 @@ module.exports = [{
         $else[
             $color[$getVar[color;default]]
             $title[uwu]   
+    
         ]
     ]
 `}]
