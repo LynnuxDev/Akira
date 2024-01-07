@@ -1,0 +1,37 @@
+module.exports = {
+    name: "bite",
+    aliases: ["rp-bite"],
+	module: "Roleplay",
+	version: "1.0",
+    sourcecode: "https://github.com/LynnuxDev/Akira/blob/main/SRC/commands/Roleplay/wholesome/bite.js",
+    documentation: "https://documentation.lynnux.xyz/akira/roleplay",
+    type: "messageCreate",
+	description: "bite someone.",
+	usage: "bite <user> {message}",
+	example: "bite @dark_lynn\n{prefix}bite @dark_lynn got bitten.",
+    code: `
+        $onlyIf[$message!=;Wrong usage of this command use \`bite <user> {message}\`]
+        $onlyIf[$checkContains[$message[0];<@&]!=true;You can't use this on a role.]
+        $let[user;$if[$message[0]==;$authorID;$findUser[$message[0];true]]]
+        $let[message;$replace[$replace[$message;$message[0] ;];$message[0];]]
+        $let[user1;**$username[$get[user]]**] $let[user2;**$username[$authorID]**]
+
+        $onlyIf[$get[user]!=$authorID;You cant do this to yourself.]
+        $onlyIf[$getVar[rp-blocked-$authorID;$get[user]]!=true;Your Blocked by this user]
+
+        $setVar[bite-give;$authorID;$sum[$getVar[bite-give;$authorID];1]]
+        $setVar[bite-got;$get[user];$sum[$getVar[bite-got;$get[user]];1]]
+
+        $let[msg;$get[user1] got bitten by $get[user2].]
+
+        $description[$get[msg]$if[$get[message]!=;\n"$get[message]"]]
+        $color[$getVar[color;default]]
+
+        $let[type2;got bitten]
+
+        $!httpRequest[https://api.lynnux.xyz/roleplay/bite.json;get]
+        $let[url;$httpResult[embed;image;url]]
+        $image[$get[url]]
+
+        $footer[$username used bite $if[$getVar[bite-give;$authorID]==1;1 time;$getVar[bite-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[bite-got;$get[user]]==1;1 time;$getVar[bite-got;$get[user]] times]]
+    `}
