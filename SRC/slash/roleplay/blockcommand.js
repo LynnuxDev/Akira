@@ -6,12 +6,12 @@ module.exports = {
 
     $switch[$get[type];
         $case[reset;
-            $setVar[rp-commandblocked;$authorID;]
-
-            $color[$getVar[color;default]]
-            $title[Blockcommands reset.]
-            $description[you have reset all blocked commands.]
-            $addField[Current blocked commands:;\`\`\`\nNone\n\`\`\`]
+            $if[$getVar[rp-commandblocked;$authorID]!=;$setVar[rp-commandblocked;$authorID;]
+                $color[$getVar[color;default]]
+                $title[Blockcommands reset.]
+                $description[you have reset all blocked commands.]
+                $addField[Current blocked commands:;\`\`\`\nNone\n\`\`\`]
+            ;:x: You dont have any blockcommands.]
         ]
         $case[$get[type];
             $setVar[rp-commandblocked;$authorID;$getVar[rp-commandblocked;$authorID]$if[$getVar[rp-commandblocked;$authorID]==$getVar[rp-commandblocked;default];$get[type];,$get[type]]]
