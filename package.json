@@ -1,7 +1,8 @@
 {
     "dependencies": {
-      "forgedb": "github:tryforge/ForgeDB",
-      "forgescript": "^1.1.0"
+      "forgedb": "github:tryforge/ForgeDB#dev",
+      "forgescript": "github:tryforge/ForgeScript#dev",
+      "forgetop.gg": "github:tryforge/ForgeTopGG#dev"
     }
   }
   
