@@ -20,8 +20,9 @@ module.exports = {
         $onlyIf[$checkContains[$getVar[rp-commandblocked;$get[user]];shoot]==false;:x: This roleplay command is blocked by $get[user1].]
 
         $onlyIf[$get[user]!=$authorID;You cant do this to yourself.]
-        $onlyIf[$getVar[rp-blocked-$authorID;$get[user]]!=true;Your Blocked by this user]
-
+        $onlyIf[$checkContains[$getVar[rp-commandblocked;$get[user]];*]==false;:x: All roleplay commands are blocked by $get[user1].]
+        $onlyIf[$checkContains[$getVar[rp-commandblocked;$get[user]];$get[type]]==false;:x: This roleplay command is blocked by $get[user1].]
+    
         $setVar[shoot-give;$authorID;$sum[$getVar[shoot-give;$authorID];1]]
         $setVar[shoot-got;$get[user];$sum[$getVar[shoot-got;$get[user]];1]]
 
