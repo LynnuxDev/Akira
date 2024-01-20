@@ -1,4 +1,3 @@
- 
 <div align="center">
 <img src="https://cdn.lynnux.xyz/images/AkiraAvatar.png" width="50px">
 <h1>Akira Bot</h1>

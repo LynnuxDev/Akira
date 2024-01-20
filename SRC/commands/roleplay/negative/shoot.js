@@ -10,7 +10,8 @@ module.exports = {
 	usage: "shoot <user> {message}",
 	example: "shoot @dark_lynn\n{prefix}shoot @dark_lynn shooted by me.",
     code: `
-    $onlyIf[$getVar[AgreedToTos;$authorID]==true;$ephemeral $color[$getVar[color;default]] $title[Before we continue:] $footer[You have to agree with these terms before using akira.] $description[Before you proceed, please make sure to read and agree to our [Terms of Service\\](https://akira.lynnux.xyz/terms) and [Privacy Policy\\](https://akira.lynnux.xyz/policy).\n\nBy using the button below, you confirm that you have read and agree to abide by our terms and policies.\n\nIf you have any questions or concerns, feel free to contact our support team.] $addActionRow $addButton[AcceptTerms-$authorID;I have read and agree to abide by these terms and policies.;Success;;false]]
+        $onlyIf[$getVar[AgreedToTos;$authorID]==true;$ephemeral $color[$getVar[color;default]] $title[Before we continue:] $footer[You have to agree with these terms before using akira.] $description[Before you proceed, please make sure to read and agree to our [Terms of Service\\](https://akira.lynnux.xyz/terms) and [Privacy Policy\\](https://akira.lynnux.xyz/policy).\n\nBy using the button below, you confirm that you have read and agree to abide by our terms and policies.\n\nIf you have any questions or concerns, feel free to contact our support team.] $addActionRow $addButton[AcceptTerms-$authorID;I have read and agree to abide by these terms and policies.;Success;;false]]
+        $onlyIf[$channelID==$getVar[BotChannel;$guildID];$getVar[BotChannelError;default]]
 
         $onlyIf[$message!=;Wrong usage of this command use \`shoot <user> {message}\`]
         $onlyIf[$checkContains[$message[0];<@&]!=true;You can't use this on a role.]
@@ -23,7 +24,7 @@ module.exports = {
 
         $onlyIf[$get[user]!=$authorID;You cant do this to yourself.]
         $onlyIf[$checkContains[$getVar[rp-commandblocked;$get[user]];*]==false;:x: All roleplay commands are blocked by $get[user1].]
-        $onlyIf[$checkContains[$getVar[rp-commandblocked;$get[user]];$get[type]]==false;:x: This roleplay command is blocked by $get[user1].]
+        $onlyIf[$checkContains[$getVar[rp-commandblocked;$get[user]];shoot]==false;:x: This roleplay command is blocked by $get[user1].]
     
         $setVar[shoot-give;$authorID;$sum[$getVar[shoot-give;$authorID];1]]
         $setVar[shoot-got;$get[user];$sum[$getVar[shoot-got;$get[user]];1]]

@@ -10,8 +10,11 @@ module.exports = [{
 	usage: "counter {user}",
 	example: "counter\n{prefix}counter @dark_lynn",
     code: `
+    $c[----------------------------------ONLY-IF---------------------------------]
         $onlyIf[$getVar[AgreedToTos;$authorID]==true;$ephemeral $color[$getVar[color;default]] $title[Before we continue:] $footer[You have to agree with these terms before using akira.] $description[Before you proceed, please make sure to read and agree to our [Terms of Service\\](https://akira.lynnux.xyz/terms) and [Privacy Policy\\](https://akira.lynnux.xyz/policy).\n\nBy using the button below, you confirm that you have read and agree to abide by our terms and policies.\n\nIf you have any questions or concerns, feel free to contact our support team.] $addActionRow $addButton[AcceptTerms-$authorID;I have read and agree to abide by these terms and policies.;Success;;false]]
+        $onlyIf[$channelID==$getVar[BotChannel;$guildID];$getVar[BotChannelError;default]]
 
+    $c[------------------------------------Let-----------------------------------]
         $let[user;$findUser[$message[0];true]]
         $if[$guildID!=;$let[DefaultMessage;$messageID];$let[DefaultMessage;NaN]]
 
@@ -48,6 +51,7 @@ module.exports = [{
         $let[WagGotten;$if[$getVar[wag-got;$get[user]]==;0;$getVar[wag-got;$get[user]]]] $let[WagGiven;$if[$getVar[wag-give;$get[user]]==;0;$getVar[wag-give;$get[user]]]]
         $let[WaveGotten;$if[$getVar[wave-got;$get[user]]==;0;$getVar[wave-got;$get[user]]]] $let[WaveGiven;$if[$getVar[wave-give;$get[user]]==;0;$getVar[wave-give;$get[user]]]]
     
+    $c[-----------------------------------MAIN-----------------------------------]
         $color[$getVar[color;default]]
         $author[Here are "$username[$get[user]]" gif command counts!]
         $addfield[Wholesome:;\`\`\`swift

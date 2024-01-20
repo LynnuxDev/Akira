@@ -47,12 +47,9 @@ $c[----------------------------------SWITCH----------------------------------]
             $color[$getVar[color;default]]
             $thumbnail[$userAvatar[$get[author]]]
             $addField[Terms And Policy:;Agreed To [TOS\\](https://akira.lynnux.xyz/terms) and [Policy\\](https://akira.lynnux.xyz/terms): $if[$get[Terms-Policy]==true;<:Enabled_Switch:827659766738321460>;<:Disabled_Switch:827659815266025482>]]
-        ]
-        $default[
-            $title[$username's Privacy Settings:]
-            $color[$getVar[color;default]]
-            $thumbnail[$userAvatar[$get[author]]]
-            $addField[Terms And Policy:;Agreed To [TOS\\](https://akira.lynnux.xyz/terms) and [Policy\\](https://akira.lynnux.xyz/terms): $if[$get[Terms-Policy]==true;<:Enabled_Switch:827659766738321460>;<:Disabled_Switch:827659815266025482>]]
+            $addActionRow
+            $addButton[RemoveMyData-$authorID-user;Delete Data;Danger;;false]
+
         ]
     ]
     `,

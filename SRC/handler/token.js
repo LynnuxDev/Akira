@@ -1,6 +1,5 @@
 const token = [
-    `SUPER_SECRET_TOKEN`
+    `SUPER-SECRET-TOKEN`
 ]
 
 module.exports = token;
- 

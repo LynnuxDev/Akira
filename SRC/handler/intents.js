@@ -17,7 +17,6 @@ const intents = [
     "AutoModerationConfiguration",
     "AutoModerationExecution",
     "GuildMembers",
-    "GuildPresences"
 ]
 
 module.exports = intents;
