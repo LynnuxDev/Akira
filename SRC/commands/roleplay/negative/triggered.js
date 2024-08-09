@@ -34,9 +34,7 @@ module.exports = {
 
         $let[type2;got triggered]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/triggered.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;triggered]]
 
         $footer[$username used triggered $if[$getVar[triggered-give;$authorID]==1;1 time;$getVar[triggered-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[triggered-got;$get[user]]==1;1 time;$getVar[triggered-got;$get[user]] times]]
     `}

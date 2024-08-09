@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got cuddled]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/cuddle.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;cuddle]]
 
         $footer[$username used cuddle $if[$getVar[cuddle-give;$authorID]==1;1 time;$getVar[cuddle-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[cuddle-got;$get[user]]==1;1 time;$getVar[cuddle-got;$get[user]] times]]
     `}

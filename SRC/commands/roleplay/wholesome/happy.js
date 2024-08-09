@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;made someone happy]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/happy.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;happy]]
 
         $footer[$username used happy $if[$getVar[happy-give;$authorID]==1;1 time;$getVar[happy-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[happy-got;$get[user]]==1;1 time;$getVar[happy-got;$get[user]] times]]
     `}

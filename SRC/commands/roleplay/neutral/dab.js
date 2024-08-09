@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got dabbed on]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/dab.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;dab]]
 
         $footer[$username used dab $if[$getVar[dab-give;$authorID]==1;1 time;$getVar[dab-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[dab-got;$get[user]]==1;1 time;$getVar[dab-got;$get[user]] times]]
     `}

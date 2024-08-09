@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got bored]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/bored.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;bored]]
 
         $footer[$username used bored $if[$getVar[bored-give;$authorID]==1;1 time;$getVar[bored-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[bored-got;$get[user]]==1;1 time;$getVar[bored-got;$get[user]] times]]
     `}

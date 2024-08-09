@@ -35,9 +35,8 @@ module.exports = {
 
         $let[type2;made people think]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/think.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;think]]
+
 
         $footer[$username used think $if[$getVar[think-give;$authorID]==1;1 time;$getVar[think-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[think-got;$get[user]]==1;1 time;$getVar[think-got;$get[user]] times]]
     `}

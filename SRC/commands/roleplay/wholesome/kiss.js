@@ -34,10 +34,8 @@ module.exports = {
         $color[$getVar[color;default]]
 
         $let[type2;got kissed]
-
-        $!httpRequest[https://api.lynnux.xyz/roleplay/kiss.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+            
+        $image[$callFunction[nekobest;kiss]]
 
         $footer[$username used kiss $if[$getVar[kiss-give;$authorID]==1;1 time;$getVar[kiss-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[kiss-got;$get[user]]==1;1 time;$getVar[kiss-got;$get[user]] times]]
     `}

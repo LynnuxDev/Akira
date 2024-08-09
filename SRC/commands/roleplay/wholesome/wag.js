@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got wagged at]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/wag.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;wag]]
 
         $footer[$username used wag $if[$getVar[wag-give;$authorID]==1;1 time;$getVar[wag-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[wag-got;$get[user]]==1;1 time;$getVar[wag-got;$get[user]] times]]
     `}

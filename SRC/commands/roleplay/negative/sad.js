@@ -36,9 +36,7 @@ module.exports = {
 
         $let[type2;made people sad]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/sad.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;stab]]
 
         $footer[$username used sad $if[$getVar[sad-give;$authorID]==1;1 time;$getVar[sad-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[sad-got;$get[user]]==1;1 time;$getVar[sad-got;$get[user]] times]]
     `}

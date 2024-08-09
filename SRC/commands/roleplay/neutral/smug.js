@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got smugged at]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/smug.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;smug]]
 
         $footer[$username used smug $if[$getVar[smug-give;$authorID]==1;1 time;$getVar[smug-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[smug-got;$get[user]]==1;1 time;$getVar[smug-got;$get[user]] times]]
     `}

@@ -57,21 +57,21 @@ $c[----------------------------------SWITCH----------------------------------]
         "name": "privacy",
         "description": "Change your privacy settings.",
         "options": [
-          {
-            "type": 3,
-            "name": "category",
-            "description": "Weather you want to See the \"server privacy\"/\"user privacy\".",
-            "choices": [
-              {
-                "name": "server",
-                "value": "guild"
-              },
-              {
-                "name": "user",
-                "value": "user"
-              }
-            ]
-          }
+            {
+                "type": 3,
+                "name": "category",
+                "description": "Weather you want to See the \"server privacy\"/\"user privacy\".",
+                "choices": [
+                    {
+                        "name": "server",
+                        "value": "guild"
+                    },
+                    {
+                        "name": "user",
+                        "value": "user"
+                    }
+                ]
+            }
         ]
     }
 }

@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got sipped on]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/sip.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;sip]]
 
         $footer[$username used sip $if[$getVar[sip-give;$authorID]==1;1 time;$getVar[sip-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[sip-got;$get[user]]==1;1 time;$getVar[sip-got;$get[user]] times]]
     `}

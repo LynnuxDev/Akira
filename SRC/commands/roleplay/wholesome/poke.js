@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got poked]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/poke.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;poke]]
 
         $footer[$username used poke $if[$getVar[poke-give;$authorID]==1;1 time;$getVar[poke-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[poke-got;$get[user]]==1;1 time;$getVar[poke-got;$get[user]] times]]
     `}

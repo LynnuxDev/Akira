@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got patted]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/pat.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;pat]]
 
         $footer[$username used pat $if[$getVar[pat-give;$authorID]==1;1 time;$getVar[pat-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[pat-got;$get[user]]==1;1 time;$getVar[pat-got;$get[user]] times]]
     `}

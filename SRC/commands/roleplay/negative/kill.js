@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got killed]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/kill.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;kill]]
 
         $footer[$username used kill $if[$getVar[kill-give;$authorID]==1;1 time;$getVar[kill-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[kill-got;$get[user]]==1;1 time;$getVar[kill-got;$get[user]] times]]
     `}

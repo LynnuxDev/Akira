@@ -34,9 +34,7 @@ module.exports = {
 
         $let[type2;got stabbed]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/stab.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;stab]]
 
         $footer[$username used stab $if[$getVar[stab-give;$authorID]==1;1 time;$getVar[stab-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[stab-got;$get[user]]==1;1 time;$getVar[stab-got;$get[user]] times]]
     `}

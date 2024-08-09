@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got licked]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/lick.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;lick]]
 
         $footer[$username used lick $if[$getVar[lick-give;$authorID]==1;1 time;$getVar[lick-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[lick-got;$get[user]]==1;1 time;$getVar[lick-got;$get[user]] times]]
     `}

@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;made people run]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/run.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;run]]
 
         $footer[$username used run $if[$getVar[run-give;$authorID]==1;1 time;$getVar[run-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[run-got;$get[user]]==1;1 time;$getVar[run-got;$get[user]] times]]
     `}

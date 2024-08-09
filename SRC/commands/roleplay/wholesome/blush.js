@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got blushed at]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/blush.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;blush]]
 
         $footer[$username used blush $if[$getVar[blush-give;$authorID]==1;1 time;$getVar[blush-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[blush-got;$get[user]]==1;1 time;$getVar[blush-got;$get[user]] times]]
     `}

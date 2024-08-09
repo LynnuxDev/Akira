@@ -36,9 +36,7 @@ module.exports = {
 
         $let[type2;got shot]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/shoot.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;shoot]]
 
         $footer[$username used shoot $if[$getVar[shoot-give;$authorID]==1;1 time;$getVar[shoot-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[shoot-got;$get[user]]==1;1 time;$getVar[shoot-got;$get[user]] times]]
     `}

@@ -9,7 +9,7 @@ $c[----------------------------------PRELET----------------------------------]
 
 $c[--------------------------------HTTPREQUEST-------------------------------]
     $!httpRequest[https://api.jikan.moe/v4/anime?sfw&q=$get[anime]&page=1&limit=1;GET]
-    
+
 $c[------------------------------------LET-----------------------------------]
     $let[author;$authorID]
     $let[nsfw;$if[$if[$option[nsfw]!=;$option[nsfw];false]==false;sfw;nsfw]]
@@ -17,7 +17,7 @@ $c[------------------------------------LET-----------------------------------]
     $let[CurrentPage;$httpResult[pagination;current_page]]
     $let[HasNextPage;$httpResult[pagination;has_next_page]]
     $let[LargeImage;$httpResult[data;0;images;webp;large_image_url]]
-    
+
     $let[TitleOrigional;$httpResult[data;0;title]]
     $let[TitleDefault;$httpResult[data;0;title_english]]
     $let[TitleJapanese;$httpResult[data;0;title_japanese]]
@@ -33,8 +33,10 @@ $try[
     $description[**Description:**\`\`\`$replace[$get[synopsis];\n[Written by MAL Rewrite\\];;1]\`\`\`]
     $addField[Information:;<:Clock:937415318278647818> **Duration:** \`$httpResult[data;0;duration]\`\n<:Members:936736954853236816> **Rating:** \`$if[$advancedTextSplit[$httpResult[data;0;rating]; - ;1]==;$if[$advancedTextSplit[$httpResult[data;0;rating]; - ;0]==null;Unknown];$advancedTextSplit[$httpResult[data;0;rating]; - ;1]]\`\n<:Plus:936967540700221440> **Release Date:** \`$httpResult[data;0;season] $httpResult[data;0;year]\`\n<:Owner:936963916607680533> **Anime Ranking:** \`$if[$httpResult[data;0;rank]==null;Not Ranked Yet!]$if[$httpResult[data;0;score]!=null; ($httpResult[data;0;score] Rated);]\`;true]
     $image[$get[LargeImage]]
-    $addActionRow
-    $addButton[close-$authorID-$get[DefaultMessage]-false;Close;Danger;✖️]   
+    $try[
+        $addActionRow
+        $addButton[close-$authorID-$get[DefaultMessage]-false;Close;Danger;✖️]   
+    ]
     $c[
         $if[$get[CurrentPage]>=2;$addButton[anime-$authorID-PreviousPage-$get[anime]-$get[CurrentPage];PreviousPage;Secondary;⬅️;false];$addButton[anime-$authorID-PreviousPage-$get[anime]-$get[CurrentPage];PreviousPage;Secondary;⬅️;true]]
         $if[$get[HasNextPage]==true;$addButton[anime-$authorID-NextPage-$get[anime]-$get[CurrentPage];NextPage;Secondary;➡️;false];$addButton[anime-$authorID-NextPage-$get[anime]-$get[CurrentPage];NextPage;Secondary;➡️;true]]

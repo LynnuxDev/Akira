@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got a no]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/no.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;nope]]
 
         $footer[$username used no $if[$getVar[no-give;$authorID]==1;1 time;$getVar[no-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[no-got;$get[user]]==1;1 time;$getVar[no-got;$get[user]] times]]
     `}

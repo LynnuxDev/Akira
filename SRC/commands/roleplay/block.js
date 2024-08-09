@@ -17,7 +17,7 @@ module.exports = [{
         $onlyIf[$message!=;:x: Wrong usage of \`$getVar[prefix;default]block <user>\`.]
         $onlyIf[$get[user]!=$authorID;:x: You can't block yourself!]
         $onlyIf[$getVar[rp-blocked-$get[user];$authorID]!=true;:x: You have this user is blocked already.]
-        
+
         $setVar[rp-blocked-$get[user];$authorID;true]
         $color[$getVar[color;default]]
         $title[User blocked!]

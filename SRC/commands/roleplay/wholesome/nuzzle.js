@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got nuzzled]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/nuzzle.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;nuzzle]]
 
         $footer[$username used nuzzle $if[$getVar[nuzzle-give;$authorID]==1;1 time;$getVar[nuzzle-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[nuzzle-got;$get[user]]==1;1 time;$getVar[nuzzle-got;$get[user]] times]]
     `}

@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got waved at]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/wave.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;wave]]
 
         $footer[$username used wave $if[$getVar[wave-give;$authorID]==1;1 time;$getVar[wave-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[wave-got;$get[user]]==1;1 time;$getVar[wave-got;$get[user]] times]]
     `}

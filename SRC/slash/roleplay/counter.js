@@ -12,34 +12,34 @@ module.exports = {
         $let[CheerGotten;$if[$getVar[cheer-got;$get[user]]==;0;$getVar[cheer-got;$get[user]]]] $let[CheerGiven;$if[$getVar[cheer-give;$get[user]]==;0;$getVar[cheer-give;$get[user]]]]
         $let[CuddleGotten;$if[$getVar[cuddle-got;$get[user]]==;0;$getVar[cuddle-got;$get[user]]]] $let[CuddleGiven;$if[$getVar[cuddle-give;$get[user]]==;0;$getVar[cuddle-give;$get[user]]]]
         $let[DanceGotten;$if[$getVar[dance-got;$get[user]]==;0;$getVar[dance-got;$get[user]]]] $let[DanceGiven;$if[$getVar[dance-give;$get[user]]==;0;$getVar[dance-give;$get[user]]]]
-        
+
         $let[FeedGotten;$if[$getVar[feed-got;$get[user]]==;0;$getVar[feed-got;$get[user]]]] $let[FeedGiven;$if[$getVar[feed-give;$get[user]]==;0;$getVar[feed-give;$get[user]]]]
         $let[HandholdGotten;$if[$getVar[handhold-got;$get[user]]==;0;$getVar[handhold-got;$get[user]]]] $let[HandholdGiven;$if[$getVar[handhold-give;$get[user]]==;0;$getVar[handhold-give;$get[user]]]]
         $let[HappyGotten;$if[$getVar[happy-got;$get[user]]==;0;$getVar[happy-got;$get[user]]]] $let[HappyGiven;$if[$getVar[happy-give;$get[user]]==;0;$getVar[happy-give;$get[user]]]]
         $let[HighfiveGotten;$if[$getVar[highfive-got;$get[user]]==;0;$getVar[highfive-got;$get[user]]]] $let[HighfiveGiven;$if[$getVar[highfive-give;$get[user]]==;0;$getVar[highfive-give;$get[user]]]]
         $let[HugGotten;$if[$getVar[hug-got;$get[user]]==;0;$getVar[hug-got;$get[user]]]] $let[HugGiven;$if[$getVar[hug-give;$get[user]]==;0;$getVar[hug-give;$get[user]]]]
-    
+
         $let[KissGotten;$if[$getVar[kiss-got;$get[user]]==;0;$getVar[kiss-got;$get[user]]]] $let[KissGiven;$if[$getVar[kiss-give;$get[user]]==;0;$getVar[kiss-give;$get[user]]]]
         $let[LaughGotten;$if[$getVar[laugh-got;$get[user]]==;0;$getVar[laugh-got;$get[user]]]] $let[LaughGiven;$if[$getVar[laugh-give;$get[user]]==;0;$getVar[laugh-give;$get[user]]]]
         $let[LickGotten;$if[$getVar[lick-got;$get[user]]==;0;$getVar[lick-got;$get[user]]]] $let[LickGiven;$if[$getVar[lick-give;$get[user]]==;0;$getVar[lick-give;$get[user]]]]
         $let[LoveGotten;$if[$getVar[love-got;$get[user]]==;0;$getVar[love-got;$get[user]]]] $let[LoveGiven;$if[$getVar[love-give;$get[user]]==;0;$getVar[love-give;$get[user]]]]
         $let[LurkGotten;$if[$getVar[lurk-got;$get[user]]==;0;$getVar[lurk-got;$get[user]]]] $let[LurkGiven;$if[$getVar[lurk-give;$get[user]]==;0;$getVar[lurk-give;$get[user]]]]
-    
+
         $let[NomGotten;$if[$getVar[nom-got;$get[user]]==;0;$getVar[nom-got;$get[user]]]] $let[NomGiven;$if[$getVar[nom-give;$get[user]]==;0;$getVar[nom-give;$get[user]]]]
         $let[NuzzleGotten;$if[$getVar[nuzzle-got;$get[user]]==;0;$getVar[nuzzle-got;$get[user]]]] $let[NuzzleGiven;$if[$getVar[nuzzle-give;$get[user]]==;0;$getVar[nuzzle-give;$get[user]]]]
         $let[PatGotten;$if[$getVar[pat-got;$get[user]]==;0;$getVar[pat-got;$get[user]]]] $let[PatGiven;$if[$getVar[pat-give;$get[user]]==;0;$getVar[pat-give;$get[user]]]]
         $let[GlompGotten;$if[$getVar[glomp-got;$get[user]]==;0;$getVar[glomp-got;$get[user]]]] $let[GlompGiven;$if[$getVar[glomp-give;$get[user]]==;0;$getVar[glomp-give;$get[user]]]]
         $let[PeckGotten;$if[$getVar[peck-got;$get[user]]==;0;$getVar[peck-got;$get[user]]]] $let[PeckGiven;$if[$getVar[peck-give;$get[user]]==;0;$getVar[peck-give;$get[user]]]]
-    
+
         $let[PokeGotten;$if[$getVar[poke-got;$get[user]]==;0;$getVar[poke-got;$get[user]]]] $let[PokeGiven;$if[$getVar[poke-give;$get[user]]==;0;$getVar[poke-give;$get[user]]]]
         $let[PoutGotten;$if[$getVar[pout-got;$get[user]]==;0;$getVar[pout-got;$get[user]]]] $let[PoutGiven;$if[$getVar[pout-give;$get[user]]==;0;$getVar[pout-give;$get[user]]]]
         $let[SleepGotten;$if[$getVar[sleep-got;$get[user]]==;0;$getVar[sleep-got;$get[user]]]] $let[SleepGiven;$if[$getVar[sleep-give;$get[user]]==;0;$getVar[sleep-give;$get[user]]]]
         $let[ThumbsupGotten;$if[$getVar[thumbsup-got;$get[user]]==;0;$getVar[thumbsup-got;$get[user]]]] $let[ThumbsupGiven;$if[$getVar[thumbsup-give;$get[user]]==;0;$getVar[thumbsup-give;$get[user]]]]
         $let[TickleGotten;$if[$getVar[tickle-got;$get[user]]==;0;$getVar[tickle-got;$get[user]]]] $let[TickleGiven;$if[$getVar[tickle-give;$get[user]]==;0;$getVar[tickle-give;$get[user]]]]
-    
+
         $let[WagGotten;$if[$getVar[wag-got;$get[user]]==;0;$getVar[wag-got;$get[user]]]] $let[WagGiven;$if[$getVar[wag-give;$get[user]]==;0;$getVar[wag-give;$get[user]]]]
         $let[WaveGotten;$if[$getVar[wave-got;$get[user]]==;0;$getVar[wave-got;$get[user]]]] $let[WaveGiven;$if[$getVar[wave-give;$get[user]]==;0;$getVar[wave-give;$get[user]]]]
-    
+
         $color[$getVar[color;default]]
         $author[Here are "$username[$get[user]]" gif command counts!]
         $addfield[Wholesome:;\`\`\`swift
@@ -93,5 +93,5 @@ Wave     |$switch[$charCount[$get[WaveGotten]];$case[1;    $get[WaveGotten]    ]
                 "description": "Who's roleplay count do you want to see'?"
             }
         ]
-      }
+    }
 }

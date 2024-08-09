@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;made people hate them]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/hate.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;hate]]
 
         $footer[$username used hate $if[$getVar[hate-give;$authorID]==1;1 time;$getVar[hate-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[hate-got;$get[user]]==1;1 time;$getVar[hate-got;$get[user]] times]]
     `}

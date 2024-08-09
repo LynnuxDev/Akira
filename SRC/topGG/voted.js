@@ -38,5 +38,5 @@ module.exports = {
         $default[
             $log[\\[Error\\] | got a other vote type than upvote or test (got $voteType)]
         ]
-    ]    
+    ]
 `}

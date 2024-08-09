@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got slept on]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/sleep.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;sleep]]
 
         $footer[$username used sleep $if[$getVar[sleep-give;$authorID]==1;1 time;$getVar[sleep-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[sleep-got;$get[user]]==1;1 time;$getVar[sleep-got;$get[user]] times]]
     `}

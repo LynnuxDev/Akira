@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got cheered]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/cheer.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;cheer]]
 
         $footer[$username used cheer $if[$getVar[cheer-give;$authorID]==1;1 time;$getVar[cheer-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[cheer-got;$get[user]]==1;1 time;$getVar[cheer-got;$get[user]] times]]
     `}

@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got teased]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/tease.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;tease]]
 
         $footer[$username used tease $if[$getVar[tease-give;$authorID]==1;1 time;$getVar[tease-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[tease-got;$get[user]]==1;1 time;$getVar[tease-got;$get[user]] times]]
     `}

@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;made people cringe]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/cringe.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;cringe]]
 
         $footer[$username used cringe $if[$getVar[cringe-give;$authorID]==1;1 time;$getVar[cringe-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[cringe-got;$get[user]]==1;1 time;$getVar[cringe-got;$get[user]] times]]
     `}

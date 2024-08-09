@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got a thumbsup]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/thumbsup.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;thumbsup]]
 
         $footer[$username used thumbsup $if[$getVar[thumbsup-give;$authorID]==1;1 time;$getVar[thumbsup-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[thumbsup-got;$get[user]]==1;1 time;$getVar[thumbsup-got;$get[user]] times]]
     `}

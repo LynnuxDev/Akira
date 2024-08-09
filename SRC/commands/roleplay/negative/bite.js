@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got bitten]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/bite.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;bite]]
 
         $footer[$username used bite $if[$getVar[bite-give;$authorID]==1;1 time;$getVar[bite-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[bite-got;$get[user]]==1;1 time;$getVar[bite-got;$get[user]] times]]
     `}

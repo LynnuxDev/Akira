@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got a yes]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/yes.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;yes]]
 
         $footer[$username used yes $if[$getVar[yes-give;$authorID]==1;1 time;$getVar[yes-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[yes-got;$get[user]]==1;1 time;$getVar[yes-got;$get[user]] times]]
     `}

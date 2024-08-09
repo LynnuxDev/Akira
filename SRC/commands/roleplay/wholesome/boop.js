@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got booped]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/boop.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;boop]]
 
         $footer[$username used boop $if[$getVar[boop-give;$authorID]==1;1 time;$getVar[boop-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[boop-got;$get[user]]==1;1 time;$getVar[boop-got;$get[user]] times]]
     `}

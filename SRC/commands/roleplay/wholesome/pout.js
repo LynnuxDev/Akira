@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got pouted at]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/pout.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;pout]]
 
         $footer[$username used pout $if[$getVar[pout-give;$authorID]==1;1 time;$getVar[pout-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[pout-got;$get[user]]==1;1 time;$getVar[pout-got;$get[user]] times]]
     `}

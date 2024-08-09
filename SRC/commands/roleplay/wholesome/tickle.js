@@ -36,9 +36,7 @@ module.exports = {
 
         $let[type2;got tickled]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/tickle.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;tickle]]
 
         $footer[$username used tickle $if[$getVar[tickle-give;$authorID]==1;1 time;$getVar[tickle-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[tickle-got;$get[user]]==1;1 time;$getVar[tickle-got;$get[user]] times]]
     `}

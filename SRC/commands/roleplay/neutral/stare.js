@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got stared at]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/stare.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;stare]]
 
         $footer[$username used stare $if[$getVar[stare-give;$authorID]==1;1 time;$getVar[stare-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[stare-got;$get[user]]==1;1 time;$getVar[stare-got;$get[user]] times]]
     `}

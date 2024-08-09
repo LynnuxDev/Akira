@@ -15,9 +15,6 @@ module.exports = {
 
         $onlyIf[$message!=;Wrong usage of this command use \`lurk <user> {message}\`]
         $onlyIf[$checkContains[$message[0];<@&]!=true;You can't use this on a role.]
-        $let[user;$if[$message[0]==;$authorID;$findUser[$message[0];true]]]
-        $let[message;$replace[$replace[$message;$message[0] ;];$message[0];]]
-        $let[user1;**$username[$get[user]]**] $let[user2;**$username[$authorID]**]
 
         $onlyIf[$checkContains[$getVar[rp-commandblocked;$get[user]];*]==false;:x: All roleplay commands are blocked by $get[user1].]
         $onlyIf[$checkContains[$getVar[rp-commandblocked;$get[user]];lurk]==false;:x: This roleplay command is blocked by $get[user1].]
@@ -25,18 +22,22 @@ module.exports = {
         $onlyIf[$get[user]!=$authorID;You cant do this to yourself.]
         $onlyIf[$getVar[rp-blocked-$authorID;$get[user]]!=true;Your Blocked by this user]
 
+        $let[user;$if[$message[0]==;$authorID;$findUser[$message[0];true]]]
+        $let[message;$replace[$replace[$message;$message[0] ;];$message[0];]]
+        $let[user1;**$username[$get[user]]**] $let[user2;**$username[$authorID]**]
+
         $setVar[lurk-give;$authorID;$sum[$getVar[lurk-give;$authorID];1]]
         $setVar[lurk-got;$get[user];$sum[$getVar[lurk-got;$get[user]];1]]
 
-        $let[msg;$get[user1] got lurked on by $get[user2].]
+        $let[msg;$randomText[$get[user1] got lurked on by $get[user2];$get[user2] is lurking on $get[user1].]]
 
         $description[$get[msg]$if[$get[message]!=;\n"$get[message]"]]
         $color[$getVar[color;default]]
 
         $let[type2;got lurked at]
+        
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/lurk.json;get]
-        $let[url;$httpResult[embed;image;url]]
+        $let[url;$callFunction[nekobest;lurk]]
         $image[$get[url]]
 
         $footer[$username used lurk $if[$getVar[lurk-give;$authorID]==1;1 time;$getVar[lurk-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[lurk-got;$get[user]]==1;1 time;$getVar[lurk-got;$get[user]] times]]

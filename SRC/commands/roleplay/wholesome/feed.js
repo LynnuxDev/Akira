@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got fed]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/feed.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;feed]]
 
         $footer[$username used feed $if[$getVar[feed-give;$authorID]==1;1 time;$getVar[feed-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[feed-got;$get[user]]==1;1 time;$getVar[feed-got;$get[user]] times]]
     `}

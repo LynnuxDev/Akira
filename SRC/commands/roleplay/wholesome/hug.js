@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got hugged]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/hug.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;hug]]
 
         $footer[$username used hug $if[$getVar[hug-give;$authorID]==1;1 time;$getVar[hug-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[hug-got;$get[user]]==1;1 time;$getVar[hug-got;$get[user]] times]]
     `}

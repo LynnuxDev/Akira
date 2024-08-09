@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got a handhold]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/handhold.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;handhold]]
 
         $footer[$username used handhold $if[$getVar[handhold-give;$authorID]==1;1 time;$getVar[handhold-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[handhold-got;$get[user]]==1;1 time;$getVar[handhold-got;$get[user]] times]]
     `}

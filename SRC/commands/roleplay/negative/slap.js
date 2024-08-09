@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got slapped]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/slap.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;slap]]
 
         $footer[$username used slap $if[$getVar[slap-give;$authorID]==1;1 time;$getVar[slap-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[slap-got;$get[user]]==1;1 time;$getVar[slap-got;$get[user]] times]]
     `}

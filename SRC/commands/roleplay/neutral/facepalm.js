@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got facepalmed on]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/facepalm.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;facepalm]]
 
         $footer[$username used facepalm $if[$getVar[facepalm-give;$authorID]==1;1 time;$getVar[facepalm-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[facepalm-got;$get[user]]==1;1 time;$getVar[facepalm-got;$get[user]] times]]
     `}

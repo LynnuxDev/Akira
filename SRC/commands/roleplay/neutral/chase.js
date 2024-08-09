@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got chased]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/chase.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;chase]]
 
         $footer[$username used chase $if[$getVar[chase-give;$authorID]==1;1 time;$getVar[chase-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[chase-got;$get[user]]==1;1 time;$getVar[chase-got;$get[user]] times]]
     `}

@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got pecked]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/peck.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;peck]]
 
         $footer[$username used peck $if[$getVar[peck-give;$authorID]==1;1 time;$getVar[peck-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[peck-got;$get[user]]==1;1 time;$getVar[peck-got;$get[user]] times]]
     `}

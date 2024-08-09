@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got bonked]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/bonk.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;bonk]]
 
         $footer[$username used bonk $if[$getVar[bonk-give;$authorID]==1;1 time;$getVar[bonk-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[bonk-got;$get[user]]==1;1 time;$getVar[bonk-got;$get[user]] times]]
     `}

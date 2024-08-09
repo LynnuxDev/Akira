@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;danced]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/dance.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[nekobest;dance]]
 
         $footer[$username used dance $if[$getVar[dance-give;$authorID]==1;1 time;$getVar[dance-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[dance-got;$get[user]]==1;1 time;$getVar[dance-got;$get[user]] times]]
     `}

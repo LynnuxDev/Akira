@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;got glomped]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/glomp.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;glomp]]
 
         $footer[$username used glomp $if[$getVar[glomp-give;$authorID]==1;1 time;$getVar[glomp-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[glomp-got;$get[user]]==1;1 time;$getVar[glomp-got;$get[user]] times]]
     `}

@@ -28,7 +28,6 @@ module.exports = {
             $ephemeral
         ]
     ]
-    
     `,
     data: {
         "name": "block",

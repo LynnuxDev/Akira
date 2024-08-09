@@ -35,9 +35,7 @@ module.exports = {
 
         $let[type2;made people panic]
 
-        $!httpRequest[https://api.lynnux.xyz/roleplay/panic.json;get]
-        $let[url;$httpResult[embed;image;url]]
-        $image[$get[url]]
+        $image[$callFunction[roleplay;panic]]
 
         $footer[$username used panic $if[$getVar[panic-give;$authorID]==1;1 time;$getVar[panic-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[panic-got;$get[user]]==1;1 time;$getVar[panic-got;$get[user]] times]]
     `}
