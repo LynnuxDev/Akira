@@ -34,12 +34,12 @@ If you have major coding issues with this bot, please join and ask for help.
 </div>
 
 ## 💨 Run the projects
-[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/remix/akira-forgescript)
+[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](#) `(soon)`
 
 ## ✨ Contributors
 Contributions are always welcomed :D Make sure to follow [contribute.md](contribute.md)
 
-<a href="https://github.com/Dark-LYNN/AkiraBot/graphs/contributors">
+<a href="https://github.com/LynnuxDev/Akira/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=LynnuxDev/Akira" />
 </a>
 
