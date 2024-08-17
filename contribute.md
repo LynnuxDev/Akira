@@ -18,7 +18,7 @@ git clone https://github.com/LynnuxDev/Akira.git
 Create a new branch to isolate your changes and avoid conflicts with the main project.
 ```bash
 cd Akira
-git checkout -b feature-or-fix-name
+git checkout -b feature-or-fix-Name
 ```
 Replace `feature-or-fix-name` with a descriptive name for your feature or fix.<br><br>
 ### 5. **Make Changes:** <br>
@@ -36,7 +36,7 @@ git commit -m "Your commit message here"
 ### 8. **Push Your Changes:** <br>
 Push your changes to your forked repository on GitHub.
 ```bash
-git push origin feature-or-fix-name
+git push origin feature-or-fix-Name
 ```
 ### 9. **Submit a Pull Request:** <br>
 Open a pull request on the [original repository](https://github.com/LynnuxDev/Akira). Provide a detailed description of your changes, why they are necessary, and any additional information that might be useful.
