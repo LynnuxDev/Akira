@@ -3,7 +3,7 @@ module.exports = {
     aliases: ["fs","ForgeScript"],
     description: "Evals an ForgeScript code",
     type: "messageCreate",
-    usage: "eval <code>",
+    usage: "ev <code>",
     module: "Developers-Only",
 	version: "1.0",
     sourcecode: "https://github.com/LynnuxDev/Akira/blob/main/SRC/commands/dev/eval.js",
