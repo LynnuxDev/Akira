@@ -1,7 +1,7 @@
 <div align="center">
 <img src="https://cdn.lynnux.xyz/images/AkiraAvatar.png" width="50px">
 <h1>Akira Bot</h1>
-<p>With ForgeScript v1.4.0</p>
+<p>With ForgeScript v1.5.0</p>
 </div>
 
 ## ✨Latest Updates
