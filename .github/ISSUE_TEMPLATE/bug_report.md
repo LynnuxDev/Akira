@@ -15,17 +15,20 @@ A clear and concise description of what the bug is.
 **To Reproduce:**
 Steps to reproduce the behavior:
 
-1.  '...' *(optional)*
+1. '...' *(optional)*
 2. Command used '....' *\**
 3. what you get '...' *\**
 
 **Expected Behavior:**
+
 A clear and concise description of what you expected to happen.
 
 **Screenshots:**
+
 If applicable, add screenshots to help explain your problem.
 
 **Environment:**
+
 - Bot Version: `[e.g., v1.0.0]` *(if enabled)*
 - Your serverID/Name `[e.g., 1153968713276604436]`
 - Your userID/Name: `[e.g., LynnuxDev]`
@@ -39,6 +42,7 @@ If you have a suggestion on how to fix the bug or what might be causing it, plea
 ---
 
 **Note:**
+
 - Before submitting, please make sure that the bot is not currently down.
 - Search for existing issues to avoid duplication.
 - If the bug is related to a specific command or feature, please mention it.

@@ -8,11 +8,11 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-    interval: "weekly"
+      interval: "weekly"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-    interval: "weekly"
+      interval: "weekly"
     allow:
       - dependency-name: "pm2"
       - dependency-name: "forgescript"
