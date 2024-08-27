@@ -1,0 +1,29 @@
+{
+  "name": "akira",
+  "version": "1.0.0",
+  "description": "Akira's Test Bot",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "author": "Lynnux",
+  "license": "MIT",
+  "dependencies": {
+    "@tryforge/forge.api": "github:tryforge/ForgeAPI#dev",
+    "@tryforge/forge.db": "github:Lynnux-useless-codes/ForgeDB#dev",
+    "@tryforge/forge.topgg": "github:tryforge/ForgeTopGG#dev",
+    "@tryforge/forgescript": "github:tryforge/ForgeScript#dev",
+    "@types/node": "^22.5.0",
+    "@types/ws": "^8.5.12",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "sqlite3": "^5.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@types/uuid": "^10.0.0"
+  }
+}
