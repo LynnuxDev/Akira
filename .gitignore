@@ -1,6 +1,5 @@
 # Ignore Build Files
 node_modules/
-dist/
 package-lock.json
 
 # Ignore specific files

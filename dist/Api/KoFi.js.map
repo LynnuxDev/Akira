@@ -1,0 +1,1 @@
+{"version":3,"file":"KoFi.js","sourceRoot":"","sources":["../../src/Api/KoFi.ts"],"names":[],"mappings":";AAEA,MAAM,CAAC,OAAO,GAAG;IACb,GAAG,EAAE,OAAO;IACZ,MAAM,EAAE,MAAM;IACd,IAAI,EAAE,IAAI;IACV,OAAO,EAAE,KAAK,WAAW,GAAG;QACxB,GAAG,CAAC,GAAG,CAAC,IAAI,CAAC,gBAAgB,CAAC,CAAC;IACnC,CAAC;CACJ,CAAA"}

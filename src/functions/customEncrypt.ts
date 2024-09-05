@@ -1,4 +1,4 @@
-import encryptionKey from "../handler/encryptionKey";
+import encryptionKey from "../handler/encrytionKey";
 
 interface CustomFunction {
   name: string,
