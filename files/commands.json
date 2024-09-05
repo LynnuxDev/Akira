@@ -1,0 +1,40 @@
+{
+  "slash": {
+    "1275053211643940955": {
+      "main": "/search anime",
+      "options": {
+        "count": 1,
+        "data": [
+          {
+            "type": {
+              "input": "string",
+              "required": true,
+              "options": [
+                "Anime",
+                "Character",
+                "Manga"
+              ]
+            },
+            "query": {
+              "input":"string",
+              "required": true
+            }
+          }
+        ]
+      },
+      "example": "/search anime type:Anime query:Frieren"
+    }
+  },
+  "message": {
+  },
+  "interaction": {
+    "agreedToTos": {
+      "type": "button",
+      "customID": "acceptterms~",
+      "usedIn": [
+        "about"
+      ],
+      "path": "src/commands/Global-Interactions/settings/agreedToTos.ts"
+    }
+  }
+}

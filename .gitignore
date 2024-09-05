@@ -1,1 +1,10 @@
-*.zip
+# Ignore Build Files
+node_modules/
+dist/
+package-lock.json
+
+# Ignore specific files
+TODO.MD
+forge.db
+src/handler/token.ts
+src/handler/encryptionKey.ts

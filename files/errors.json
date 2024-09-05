@@ -1,0 +1,155 @@
+
+{
+  "Info": {
+    "options": {
+      "prefix": "Returns prefix",
+      "command": "Returns the command",
+      "messageOne": "Returns the message[1]",
+      "example": "Example of the command"
+    }
+  },
+  "100": {
+    "title": "",
+    "meaning": "Continue",
+    "description": "Indicates that the initial part of a request has been received.",
+    "from": "N/A"
+  },
+  "101": {
+    "title": "",
+    "meaning":"Command Recived",
+    "description":"This code indicates that Akira has successfully received a command but hasn't started processing it yet.",
+    "from": "N/A"
+  },
+  "102": {
+    "title": "",
+    "meaning": "Slash Recieved",
+    "description": "Similar to 101, but with slash command.",
+    "from":"N/A"
+  },
+  "200": {
+    "title": "",
+    "meaning": "Request succesful",
+    "description": "Request was succesful",
+    "from": "Any"
+  },
+  "301": {
+    "title": "This Command is on Retirement.",
+    "meaning": "Moved Permanently",
+    "description": "The command used has been changed.",
+    "from": "Client"
+  },
+  "302": {
+    "title": "This Command is on Vacation.",
+    "meaning": "Moved Temporarily",
+    "description": "The command used has been temporarily changed.",
+    "from": "Client"
+  },
+  "400": {
+    "title": ["Check⸲ Please! That Command’s a Little Off…", "Hmm⸲ That Doesn’t Look Quite Right…", "That’s Not Quite What I Expected...", "Yuri’s Not the Only One Feeling Anxious…", "It's Not You⸲ It’s the Syntax… 💔"],
+    "meaning": "Bad Request",
+    "description": "The command provided has an incorrect syntax.",
+    "from": "Client"
+  },
+  "404": {
+    "title": ["Fun Not Found! 😜","Command Went Missing!","Command Not in My’s Dictionary!","Command Not Found, But I Found a Cookie.","I Have No Idea What That Is", "Command Went Poof!","I Never Heard of That One."],
+    "meaning": "Endpoint Not Found",
+    "description": "i didn't find this command, perhaps due to a typo or this is a non-existent command.",
+    "from": "Any"
+  },
+  "706": {
+    "title": "Permission Denied! I Guess I'm Not That Powerful... Yet!",
+    "meaning": "Insufficient Bot Perms",
+    "description": "I am currently muted in the server, so it cannot send messages or execute commands.",
+    "from": "Client"
+  },
+  "707": {
+    "title": "Too Fast, Too Furious! Slow Down Turbo!",
+    "meaning": "Cooldown Active",
+    "description": "The command is currently on cooldown for the user or channel, preventing it from being used repeatedly in a short time.",
+    "from": "Client"
+  },
+  "708": {
+    "title": ["Argument Anomaly!","Argument in Distress!","Oops，Wrong Argument!","Argument Malfunction!","Lost Argument Syndrome!","Argument’s Lost in Translation!"],
+    "meaning": "Invalid Argument",
+    "description": "You provided one or more invalid arguments for this command.",
+    "from": "Client"
+  },
+  "709": {
+    "title": "I’d Love To, But… It’s Complicated  💔",
+    "meaning": "Command Alias Conflict",
+    "description": "There’s a conflict between command aliases that prevents the bot from determining which command to execute.",
+    "from": "Client"
+  },
+  "714": {
+    "title": ["Command’s Out of Its Element!","Command’s Lost in the Wrong Dimension!","Command’s Passport is Server-Only!","Command’s Not a Fan of DMs!"],
+    "meaning": "Invalid Command",
+    "description": "The command was used in an wrong envirment.\n-# This includes server-only command in a direct message.",
+    "from": "Client"
+  },
+  "715": {
+    "title":"Nope, Not Gonna Happen!",
+    "meaning": "Requires Elevated Role",
+    "description": "The user needs a specific role to execute the command, and they lack that role.",
+    "from": "Client"
+  },
+  "716": {
+    "title": ["Impostor Detected!","Nice Try，Wrong Guy!","Unauthorized Scribbler","Faker Mode Activated","Command Piracy Detected!"],
+    "meaning": "Wrong Author.",
+    "description": "This interaction can only be used by the origional command author.",
+    "from": "Client"
+  },
+  "717": {
+    "title": ["Fill in the Blanks!","Argument Not Found!","Oops，Where's the Rest?","Half-Baked Command!","Lost and Found Argument Department!", "The Argument Thief Strikes Again!"],
+    "meaning": "Missing Argument(s).",
+    "description": "You did not provide enough arguments.\nMaybe try `{prefix}{example}`",
+    "from": "Client"
+  },
+  "718": {
+    "title": ["Sorry，This Field is a Guild-Free Zone!","Your Guild ID is Not the Chosen One!","GuildIDs Don’t Belong Here?","Guild ID Tried to Sneak In—Access Denied!","This Field is a Strict No-Guild Zone!", "Guild ID Alert! Not On the Guest List!"],
+    "meaning": "Argument cannot be a guildID",
+    "description": "The given argument is a guildID, which is not accepted in this field.",
+    "from": "Client"
+  },
+  "719": {
+    "title": ["Looking for Friends!","Searching for a Friend，Not a Unicorn!","User，Role，or Channel Required—No Exceptions!","Need a Person，a Role，or a Hangout Spot!","We Need a Face，a Role，or a Place!", "Your Input Needs More Personality!"],
+    "meaning": "Input should be a memer/role/channel.",
+    "description": "The given argument expected a member, role or channel input.\n-# Member being a user thats in the server.",
+    "from": "Client"
+  },
+  "801": {
+    "title": ["Argument Anomaly!","Argument in Distress!","Oops，Wrong Argument!","Argument Malfunction!","Lost Argument Syndrome!","Argument’s Lost in Translation!"],
+    "meaning": "Wrong arguments (specific).",
+    "description": "Wrong argument for `{prefix}perms reply`. \nPosible options are `reply / ignore / react`.",
+    "from": "Client"
+  },
+  "802": {
+    "title": ["Argument Anomaly!","Argument in Distress!","Oops，Wrong Argument!","Argument Malfunction!","Lost Argument Syndrome!","Argument’s Lost in Translation!"],
+    "meaning": "Wrong arguments (specific).",
+    "description": "Wrong argument for `{prefix}perms list`. \nThe argument needs to be a `user / role / channel`.",
+    "from": "Client"
+  },
+  "803": {
+    "title": ["Argument Anomaly!","Argument in Distress!","Oops，Wrong Argument!","Argument Malfunction!","Lost Argument Syndrome!","Argument’s Lost in Translation!"],
+    "meaning": "Duplicate arguments (specific).",
+    "description": "The given value `{messageOne}` is already in the perms list of this target.",
+    "from": "Client"
+  },
+  "804": {
+    "title": ["Argument Anomaly!","Argument in Distress!","Oops，Wrong Argument!","Argument Malfunction!","Lost Argument Syndrome!","Argument’s Lost in Translation!"],
+    "meaning": "Duplicate arguments (specific).",
+    "description": "The given value `{messageOne}` is not in the perms list of this target.",
+    "from": "Client"
+  },
+  "805": {
+    "title": ["Argument Anomaly!","Argument in Distress!","Oops，Wrong Argument!","Argument Malfunction!","Lost Argument Syndrome!","Argument’s Lost in Translation!"],
+    "meaning": "Wrong arguments (specific).",
+    "description": "Wrong argument for `{prefix}perms default`. \nThe argument needs to be a `user / role / channel`.",
+    "from": "Client"
+  },
+  "901": {
+    "title": ["Permission, denied.", "Sorry，Can't do that here."],
+    "meaning": "Perms Channel denied.",
+    "description": "You cannot use this command here.\nThis command has been disabled for this channel specific by an server admin.",
+    "from": "Client"
+  }
+}
