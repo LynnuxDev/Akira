@@ -27,11 +27,11 @@ const api = new forge_api_1.ForgeAPI({
 });
 const database = new forge_db_1.ForgeDB({
     type: "mysql",
-    host: "176.223.139.122",
-    port: 4020,
-    username: "akira",
-    password: "k7<BXX+7_15[8m",
-    database: "akiradb"
+    host: "host-domain",
+    port: 4069,
+    username: "akiraDB",
+    password: "password",
+    database: "akira"
 });
 const top = new forge_topgg_1.ForgeTopGG({
     token: "TOP.GG TOKEN",
