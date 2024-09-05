@@ -14,22 +14,22 @@ const slashCommandsPath: string = isDevelopment ? "src/slash" : "dist/slash";
 const apiPath: string = isDevelopment ? "src/Api" : "dist/Api";
 
 const api = new ForgeAPI({
-  port: 1069,
+  port: 1025,
   logLevel: 1,
   auth: {
     bearer: true,
     type: 1,
-    code: "ImAAuthCode",
-    ip: "127.0.0.1"
+    code: "ImAAuthCode",  // Not actually using this auth
+    ip: "127.0.0.1"       // This is a localhost
   }
 })
 const database = new ForgeDB({
   type: "mysql",
-  host: "176.223.139.122",
-  port: 4020,
-  username: "akira",
-  password: "k7<BXX+7_15[8m",
-  database: "akiradb"
+  host: "host-domain",
+  port: 1069,
+  username: "akiraDB",
+  password: "Password",
+  database: "akira"
 })
 const top = new ForgeTopGG({
   token: "TOP.GG TOKEN",
