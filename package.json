@@ -5,19 +5,24 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "npm run build && node dist/index.js",
-    "dev": "ts-node src/index.ts"
+    "start": "NODE_ENV=production npm run build && node dist/index.js",
+    "dev": "NODE_ENV=development ts-node src/index.ts"
   },
   "author": "Lynnux",
   "license": "MIT",
   "dependencies": {
-    "@tryforge/forge.api": "github:tryforge/ForgeAPI#dev",
+    "@tryforge/forge.api": "github:tryforge/ForgeAPI",
     "@tryforge/forge.db": "github:Lynnux-useless-codes/ForgeDB#dev",
     "@tryforge/forge.topgg": "github:tryforge/ForgeTopGG#dev",
     "@tryforge/forgescript": "github:tryforge/ForgeScript#dev",
+    "@types/i18next": "^12.1.0",
     "@types/node": "^22.5.0",
     "@types/ws": "^8.5.12",
     "fs": "^0.0.1-security",
+    "i18next": "^23.15.1",
+    "i18next-fs-backend": "^2.3.2",
+    "js-yaml": "^4.1.0",
+    "mysql": "^2.18.1",
     "path": "^0.12.7",
     "sqlite3": "^5.1.7",
     "ts-node": "^10.9.2",

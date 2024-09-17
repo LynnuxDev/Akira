@@ -1,3 +1,5 @@
+// @ts-nocheck
+// @ts-ignore
 module.exports = {
     url: '/KoFi',
     method: "Post",

@@ -7,3 +7,4 @@ package-lock.json
 TODO.MD
 forge.db
 src/handler/token.ts
+src/handler/encryptionKey.ts

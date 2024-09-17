@@ -1,3 +1,5 @@
+// @ts-nocheck
+// @ts-ignore
 const url = require('url');
 
 module.exports = {

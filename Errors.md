@@ -48,3 +48,17 @@ table of content
 | 713    | Disabled by Admin      | The command has been explicitly disabled by a server admin or the bot owner, making it unavailable. |
 | 714    | Invalid Command        | The command was used in an wrong envirment, such as trying to use a server-specific command in a direct message. |
 | 715    | Requires Elevated Role | The user needs a specific role to execute the command, and they lack that role. |
+| 716    | Wrong author           | The author using the interaction is not the author of the origional command. |
+| 717    | Missing Arguments      | The user did not provide enough argument for this command. |
+| 718    | Cannot be a guildID    | The given argument is a guildID, which is not accepted in this field. |
+| 718    | Need user/role/channel | The given argument expected a user, role or channel input. |
+| 719    | should be m/r/c        | Input should be a memer/role/channel |
+| 720    | User doesnt have perms | The user who ran the command doesn't have the right server specific perms. |
+| 801    | Perms reply            | when the user uses perms reply with wrong input. |
+| 802    | Perms list             | Wrong argument for a.perms list. The argument needs to be a user / role / channel. |
+| 803    | Perms default          | No argument for default. |
+| 804    | Duplicate arguments (specific). | The given value `{messageOne}` is not in the perms list of this target. |
+| 805    | Wrong arguments (specific) | Wrong argument for `{prefix}perms default`. \nThe argument needs to be a `user / role / channel`. |
+| 901    | Perms Channel denied   | The perms for this command have been disabled for this channel |
+| 902    | Perms User denied      | The perms for this command have been disabled for this user    |
+| 903    | Perms Role denied      | The perms for this command have been disabled for a role the user has |

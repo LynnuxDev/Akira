@@ -1,0 +1,612 @@
+{
+    "pagination": {
+        "last_visible_page": 1,
+        "has_next_page": false,
+        "current_page": 1,
+        "items": {
+            "count": 4,
+            "total": 4,
+            "per_page": 5
+        }
+    },
+    "data": [
+        {
+            "mal_id": 52991,
+            "url": "https://myanimelist.net/anime/52991/Sousou_no_Frieren",
+            "images": {
+                "jpg": {
+                    "image_url": "https://cdn.myanimelist.net/images/anime/1015/138006.jpg",
+                    "small_image_url": "https://cdn.myanimelist.net/images/anime/1015/138006t.jpg",
+                    "large_image_url": "https://cdn.myanimelist.net/images/anime/1015/138006l.jpg"
+                },
+                "webp": {
+                    "image_url": "https://cdn.myanimelist.net/images/anime/1015/138006.webp",
+                    "small_image_url": "https://cdn.myanimelist.net/images/anime/1015/138006t.webp",
+                    "large_image_url": "https://cdn.myanimelist.net/images/anime/1015/138006l.webp"
+                }
+            },
+            "trailer": {
+                "youtube_id": "ZEkwCGJ3o7M",
+                "url": "https://www.youtube.com/watch?v=ZEkwCGJ3o7M",
+                "embed_url": "https://www.youtube.com/embed/ZEkwCGJ3o7M?enablejsapi=1&wmode=opaque&autoplay=1",
+                "images": {
+                    "image_url": "https://img.youtube.com/vi/ZEkwCGJ3o7M/default.jpg",
+                    "small_image_url": "https://img.youtube.com/vi/ZEkwCGJ3o7M/sddefault.jpg",
+                    "medium_image_url": "https://img.youtube.com/vi/ZEkwCGJ3o7M/mqdefault.jpg",
+                    "large_image_url": "https://img.youtube.com/vi/ZEkwCGJ3o7M/hqdefault.jpg",
+                    "maximum_image_url": "https://img.youtube.com/vi/ZEkwCGJ3o7M/maxresdefault.jpg"
+                }
+            },
+            "approved": true,
+            "titles": [
+                {
+                    "type": "Default",
+                    "title": "Sousou no Frieren"
+                },
+                {
+                    "type": "Synonym",
+                    "title": "Frieren at the Funeral"
+                },
+                {
+                    "type": "Japanese",
+                    "title": "葬送のフリーレン"
+                },
+                {
+                    "type": "English",
+                    "title": "Frieren: Beyond Journey's End"
+                }
+            ],
+            "title": "Sousou no Frieren",
+            "title_english": "Frieren: Beyond Journey's End",
+            "title_japanese": "葬送のフリーレン",
+            "title_synonyms": [
+                "Frieren at the Funeral"
+            ],
+            "type": "TV",
+            "source": "Manga",
+            "episodes": 28,
+            "status": "Finished Airing",
+            "airing": false,
+            "aired": {
+                "from": "2023-09-29T00:00:00+00:00",
+                "to": "2024-03-22T00:00:00+00:00",
+                "prop": {
+                    "from": {
+                        "day": 29,
+                        "month": 9,
+                        "year": 2023
+                    },
+                    "to": {
+                        "day": 22,
+                        "month": 3,
+                        "year": 2024
+                    }
+                },
+                "string": "Sep 29, 2023 to Mar 22, 2024"
+            },
+            "duration": "24 min per ep",
+            "rating": "PG-13 - Teens 13 or older",
+            "score": 9.33,
+            "scored_by": 486836,
+            "rank": 1,
+            "popularity": 212,
+            "members": 853947,
+            "favorites": 50516,
+            "synopsis": "During their decade-long quest to defeat the Demon King, the members of the hero's party—Himmel himself, the priest Heiter, the dwarf warrior Eisen, and the elven mage Frieren—forge bonds through adventures and battles, creating unforgettable precious memories for most of them.\n\nHowever, the time that Frieren spends with her comrades is equivalent to merely a fraction of her life, which has lasted over a thousand years. When the party disbands after their victory, Frieren casually returns to her \"usual\" routine of collecting spells across the continent. Due to her different sense of time, she seemingly holds no strong feelings toward the experiences she went through.\n\nAs the years pass, Frieren gradually realizes how her days in the hero's party truly impacted her. Witnessing the deaths of two of her former companions, Frieren begins to regret having taken their presence for granted; she vows to better understand humans and create real personal connections. Although the story of that once memorable journey has long ended, a new tale is about to begin.\n\n[Written by MAL Rewrite]",
+            "background": "Sousou no Frieren was released on Blu-ray and DVD in seven volumes from January 24, 2024, to July 17, 2024.",
+            "season": "fall",
+            "year": 2023,
+            "broadcast": {
+                "day": "Fridays",
+                "time": "23:00",
+                "timezone": "Asia/Tokyo",
+                "string": "Fridays at 23:00 (JST)"
+            },
+            "producers": [
+                {
+                    "mal_id": 17,
+                    "type": "anime",
+                    "name": "Aniplex",
+                    "url": "https://myanimelist.net/anime/producer/17/Aniplex"
+                },
+                {
+                    "mal_id": 53,
+                    "type": "anime",
+                    "name": "Dentsu",
+                    "url": "https://myanimelist.net/anime/producer/53/Dentsu"
+                },
+                {
+                    "mal_id": 62,
+                    "type": "anime",
+                    "name": "Shogakukan-Shueisha Productions",
+                    "url": "https://myanimelist.net/anime/producer/62/Shogakukan-Shueisha_Productions"
+                },
+                {
+                    "mal_id": 1003,
+                    "type": "anime",
+                    "name": "Nippon Television Network",
+                    "url": "https://myanimelist.net/anime/producer/1003/Nippon_Television_Network"
+                },
+                {
+                    "mal_id": 1143,
+                    "type": "anime",
+                    "name": "TOHO animation",
+                    "url": "https://myanimelist.net/anime/producer/1143/TOHO_animation"
+                },
+                {
+                    "mal_id": 1430,
+                    "type": "anime",
+                    "name": "Shogakukan",
+                    "url": "https://myanimelist.net/anime/producer/1430/Shogakukan"
+                }
+            ],
+            "licensors": [],
+            "studios": [
+                {
+                    "mal_id": 11,
+                    "type": "anime",
+                    "name": "Madhouse",
+                    "url": "https://myanimelist.net/anime/producer/11/Madhouse"
+                }
+            ],
+            "genres": [
+                {
+                    "mal_id": 2,
+                    "type": "anime",
+                    "name": "Adventure",
+                    "url": "https://myanimelist.net/anime/genre/2/Adventure"
+                },
+                {
+                    "mal_id": 8,
+                    "type": "anime",
+                    "name": "Drama",
+                    "url": "https://myanimelist.net/anime/genre/8/Drama"
+                },
+                {
+                    "mal_id": 10,
+                    "type": "anime",
+                    "name": "Fantasy",
+                    "url": "https://myanimelist.net/anime/genre/10/Fantasy"
+                }
+            ],
+            "explicit_genres": [],
+            "themes": [],
+            "demographics": [
+                {
+                    "mal_id": 27,
+                    "type": "anime",
+                    "name": "Shounen",
+                    "url": "https://myanimelist.net/anime/genre/27/Shounen"
+                }
+            ]
+        },
+        {
+            "mal_id": 56885,
+            "url": "https://myanimelist.net/anime/56885/Sousou_no_Frieren__●●_no_Mahou",
+            "images": {
+                "jpg": {
+                    "image_url": "https://cdn.myanimelist.net/images/anime/1197/139034.jpg",
+                    "small_image_url": "https://cdn.myanimelist.net/images/anime/1197/139034t.jpg",
+                    "large_image_url": "https://cdn.myanimelist.net/images/anime/1197/139034l.jpg"
+                },
+                "webp": {
+                    "image_url": "https://cdn.myanimelist.net/images/anime/1197/139034.webp",
+                    "small_image_url": "https://cdn.myanimelist.net/images/anime/1197/139034t.webp",
+                    "large_image_url": "https://cdn.myanimelist.net/images/anime/1197/139034l.webp"
+                }
+            },
+            "trailer": {
+                "youtube_id": null,
+                "url": null,
+                "embed_url": null,
+                "images": {
+                    "image_url": null,
+                    "small_image_url": null,
+                    "medium_image_url": null,
+                    "large_image_url": null,
+                    "maximum_image_url": null
+                }
+            },
+            "approved": true,
+            "titles": [
+                {
+                    "type": "Default",
+                    "title": "Sousou no Frieren: ●● no Mahou"
+                },
+                {
+                    "type": "Synonym",
+                    "title": "Sousou no Frieren: Marumaru no Mahou"
+                },
+                {
+                    "type": "Japanese",
+                    "title": "葬送のフリーレン ～●●の魔法～"
+                },
+                {
+                    "type": "English",
+                    "title": "Frieren: Beyond Journey's End Mini Anime"
+                }
+            ],
+            "title": "Sousou no Frieren: ●● no Mahou",
+            "title_english": "Frieren: Beyond Journey's End Mini Anime",
+            "title_japanese": "葬送のフリーレン ～●●の魔法～",
+            "title_synonyms": [
+                "Sousou no Frieren: Marumaru no Mahou"
+            ],
+            "type": "ONA",
+            "source": "Manga",
+            "episodes": 12,
+            "status": "Finished Airing",
+            "airing": false,
+            "aired": {
+                "from": "2023-10-11T00:00:00+00:00",
+                "to": "2024-03-24T00:00:00+00:00",
+                "prop": {
+                    "from": {
+                        "day": 11,
+                        "month": 10,
+                        "year": 2023
+                    },
+                    "to": {
+                        "day": 24,
+                        "month": 3,
+                        "year": 2024
+                    }
+                },
+                "string": "Oct 11, 2023 to Mar 24, 2024"
+            },
+            "duration": "1 min per ep",
+            "rating": "PG-13 - Teens 13 or older",
+            "score": 7.37,
+            "scored_by": 6748,
+            "rank": 2377,
+            "popularity": 5443,
+            "members": 15731,
+            "favorites": 51,
+            "synopsis": "Frieren loves collecting peculiar spells, and her ever-growing arsenal of magic contains the perfect spells for many occasions. Whether it be by stealthily removing alcohol from Heiter's drinks or by remedying her own sleep issues, Frieren is sure to brighten her companions' days with her magic.\n\n[Written by MAL Rewrite]",
+            "background": "This entry includes the Mizkan Ajipon collaboration episode.",
+            "season": null,
+            "year": null,
+            "broadcast": {
+                "day": null,
+                "time": null,
+                "timezone": null,
+                "string": null
+            },
+            "producers": [
+                {
+                    "mal_id": 1294,
+                    "type": "anime",
+                    "name": "Sound Team Don Juan",
+                    "url": "https://myanimelist.net/anime/producer/1294/Sound_Team_Don_Juan"
+                }
+            ],
+            "licensors": [],
+            "studios": [
+                {
+                    "mal_id": 2705,
+                    "type": "anime",
+                    "name": "TOHO animation STUDIO",
+                    "url": "https://myanimelist.net/anime/producer/2705/TOHO_animation_STUDIO"
+                }
+            ],
+            "genres": [
+                {
+                    "mal_id": 4,
+                    "type": "anime",
+                    "name": "Comedy",
+                    "url": "https://myanimelist.net/anime/genre/4/Comedy"
+                },
+                {
+                    "mal_id": 10,
+                    "type": "anime",
+                    "name": "Fantasy",
+                    "url": "https://myanimelist.net/anime/genre/10/Fantasy"
+                }
+            ],
+            "explicit_genres": [],
+            "themes": [],
+            "demographics": []
+        },
+        {
+            "mal_id": 795,
+            "url": "https://myanimelist.net/anime/795/Oniisama_e",
+            "images": {
+                "jpg": {
+                    "image_url": "https://cdn.myanimelist.net/images/anime/12/18531.jpg",
+                    "small_image_url": "https://cdn.myanimelist.net/images/anime/12/18531t.jpg",
+                    "large_image_url": "https://cdn.myanimelist.net/images/anime/12/18531l.jpg"
+                },
+                "webp": {
+                    "image_url": "https://cdn.myanimelist.net/images/anime/12/18531.webp",
+                    "small_image_url": "https://cdn.myanimelist.net/images/anime/12/18531t.webp",
+                    "large_image_url": "https://cdn.myanimelist.net/images/anime/12/18531l.webp"
+                }
+            },
+            "trailer": {
+                "youtube_id": "HVIBFWUwWvw",
+                "url": "https://www.youtube.com/watch?v=HVIBFWUwWvw",
+                "embed_url": "https://www.youtube.com/embed/HVIBFWUwWvw?enablejsapi=1&wmode=opaque&autoplay=1",
+                "images": {
+                    "image_url": "https://img.youtube.com/vi/HVIBFWUwWvw/default.jpg",
+                    "small_image_url": "https://img.youtube.com/vi/HVIBFWUwWvw/sddefault.jpg",
+                    "medium_image_url": "https://img.youtube.com/vi/HVIBFWUwWvw/mqdefault.jpg",
+                    "large_image_url": "https://img.youtube.com/vi/HVIBFWUwWvw/hqdefault.jpg",
+                    "maximum_image_url": "https://img.youtube.com/vi/HVIBFWUwWvw/maxresdefault.jpg"
+                }
+            },
+            "approved": true,
+            "titles": [
+                {
+                    "type": "Default",
+                    "title": "Oniisama e..."
+                },
+                {
+                    "type": "Synonym",
+                    "title": "Onii-sama e"
+                },
+                {
+                    "type": "Synonym",
+                    "title": "To My Brother..."
+                },
+                {
+                    "type": "Japanese",
+                    "title": "おにいさまへ…"
+                },
+                {
+                    "type": "English",
+                    "title": "Dear Brother"
+                },
+                {
+                    "type": "French",
+                    "title": "Tres Cher frère"
+                }
+            ],
+            "title": "Oniisama e...",
+            "title_english": "Dear Brother",
+            "title_japanese": "おにいさまへ…",
+            "title_synonyms": [
+                "Onii-sama e",
+                "To My Brother..."
+            ],
+            "type": "TV",
+            "source": "Manga",
+            "episodes": 39,
+            "status": "Finished Airing",
+            "airing": false,
+            "aired": {
+                "from": "1991-07-14T00:00:00+00:00",
+                "to": "1992-05-31T00:00:00+00:00",
+                "prop": {
+                    "from": {
+                        "day": 14,
+                        "month": 7,
+                        "year": 1991
+                    },
+                    "to": {
+                        "day": 31,
+                        "month": 5,
+                        "year": 1992
+                    }
+                },
+                "string": "Jul 14, 1991 to May 31, 1992"
+            },
+            "duration": "25 min per ep",
+            "rating": "PG-13 - Teens 13 or older",
+            "score": 7.84,
+            "scored_by": 11077,
+            "rank": 907,
+            "popularity": 3217,
+            "members": 49413,
+            "favorites": 1127,
+            "synopsis": "When 16-year-old Nanako Misonoo enters the prestigious all-girls Seiran Academy, she believes a bright future awaits her. Instead, the unlucky girl finds herself dragged into a web of deceit, misery, and jealousy. On top of that, she is chosen as the newest inductee of the Sorority, an elite group whose members are the envy of the entire school. Having none of the grace, wealth, or talent of the other members, Nanako quickly draws the ire of her jealous classmates—especially the fierce Aya Misaki.\n\nTo cope with her increasingly difficult school life, Nanako recalls her days through letters to her former teacher, Takehiko Henmi, whom she affectionately calls \"onii-sama\" (big brother). She also finds comfort with her four closest friends: her childhood friend Tomoko Arikura, the sociable but erratic Mariko Shinobu, the troubled musician Rei Asaka, and the athletic tomboy Kaoru Orihara.\n\nAn impassioned drama about the hardships of bullying, Oniisama e... chronicles a young girl's harsh life at her new school, as she endures cruel rumours, heartless classmates, and countless social trials.\n\n[Written by MAL Rewrite]",
+            "background": "",
+            "season": "summer",
+            "year": 1991,
+            "broadcast": {
+                "day": null,
+                "time": null,
+                "timezone": null,
+                "string": "Sundays at Unknown"
+            },
+            "producers": [
+                {
+                    "mal_id": 111,
+                    "type": "anime",
+                    "name": "NHK",
+                    "url": "https://myanimelist.net/anime/producer/111/NHK"
+                }
+            ],
+            "licensors": [
+                {
+                    "mal_id": 467,
+                    "type": "anime",
+                    "name": "Discotek Media",
+                    "url": "https://myanimelist.net/anime/producer/467/Discotek_Media"
+                }
+            ],
+            "studios": [
+                {
+                    "mal_id": 200,
+                    "type": "anime",
+                    "name": "Tezuka Productions",
+                    "url": "https://myanimelist.net/anime/producer/200/Tezuka_Productions"
+                }
+            ],
+            "genres": [
+                {
+                    "mal_id": 8,
+                    "type": "anime",
+                    "name": "Drama",
+                    "url": "https://myanimelist.net/anime/genre/8/Drama"
+                },
+                {
+                    "mal_id": 26,
+                    "type": "anime",
+                    "name": "Girls Love",
+                    "url": "https://myanimelist.net/anime/genre/26/Girls_Love"
+                }
+            ],
+            "explicit_genres": [],
+            "themes": [
+                {
+                    "mal_id": 40,
+                    "type": "anime",
+                    "name": "Psychological",
+                    "url": "https://myanimelist.net/anime/genre/40/Psychological"
+                },
+                {
+                    "mal_id": 23,
+                    "type": "anime",
+                    "name": "School",
+                    "url": "https://myanimelist.net/anime/genre/23/School"
+                }
+            ],
+            "demographics": [
+                {
+                    "mal_id": 25,
+                    "type": "anime",
+                    "name": "Shoujo",
+                    "url": "https://myanimelist.net/anime/genre/25/Shoujo"
+                }
+            ]
+        },
+        {
+            "mal_id": 10116,
+            "url": "https://myanimelist.net/anime/10116/Crayon_Shin-chan_Movie_19__Arashi_wo_Yobu_Ougon_no_Spy_Daisakusen",
+            "images": {
+                "jpg": {
+                    "image_url": "https://cdn.myanimelist.net/images/anime/1849/137876.jpg",
+                    "small_image_url": "https://cdn.myanimelist.net/images/anime/1849/137876t.jpg",
+                    "large_image_url": "https://cdn.myanimelist.net/images/anime/1849/137876l.jpg"
+                },
+                "webp": {
+                    "image_url": "https://cdn.myanimelist.net/images/anime/1849/137876.webp",
+                    "small_image_url": "https://cdn.myanimelist.net/images/anime/1849/137876t.webp",
+                    "large_image_url": "https://cdn.myanimelist.net/images/anime/1849/137876l.webp"
+                }
+            },
+            "trailer": {
+                "youtube_id": "yMjB8oDXpiA",
+                "url": "https://www.youtube.com/watch?v=yMjB8oDXpiA",
+                "embed_url": "https://www.youtube.com/embed/yMjB8oDXpiA?enablejsapi=1&wmode=opaque&autoplay=1",
+                "images": {
+                    "image_url": "https://img.youtube.com/vi/yMjB8oDXpiA/default.jpg",
+                    "small_image_url": "https://img.youtube.com/vi/yMjB8oDXpiA/sddefault.jpg",
+                    "medium_image_url": "https://img.youtube.com/vi/yMjB8oDXpiA/mqdefault.jpg",
+                    "large_image_url": "https://img.youtube.com/vi/yMjB8oDXpiA/hqdefault.jpg",
+                    "maximum_image_url": "https://img.youtube.com/vi/yMjB8oDXpiA/maxresdefault.jpg"
+                }
+            },
+            "approved": true,
+            "titles": [
+                {
+                    "type": "Default",
+                    "title": "Crayon Shin-chan Movie 19: Arashi wo Yobu Ougon no Spy Daisakusen"
+                },
+                {
+                    "type": "Synonym",
+                    "title": "Eiga Crayon Shin-chan: Arashi wo Yobu Ougon no Spy Daisakusen"
+                },
+                {
+                    "type": "Japanese",
+                    "title": "映画 クレヨンしんちゃん 嵐を呼ぶ黄金のスパイ大作戦"
+                },
+                {
+                    "type": "English",
+                    "title": "Crayon Shin-chan: Fierceness That Invites Storm! Operation Golden Spy"
+                },
+                {
+                    "type": "Spanish",
+                    "title": "Shin Chan Película 19: Operación Espía de Oro"
+                }
+            ],
+            "title": "Crayon Shin-chan Movie 19: Arashi wo Yobu Ougon no Spy Daisakusen",
+            "title_english": "Crayon Shin-chan: Fierceness That Invites Storm! Operation Golden Spy",
+            "title_japanese": "映画 クレヨンしんちゃん 嵐を呼ぶ黄金のスパイ大作戦",
+            "title_synonyms": [
+                "Eiga Crayon Shin-chan: Arashi wo Yobu Ougon no Spy Daisakusen"
+            ],
+            "type": "Movie",
+            "source": "Manga",
+            "episodes": 1,
+            "status": "Finished Airing",
+            "airing": false,
+            "aired": {
+                "from": "2011-04-16T00:00:00+00:00",
+                "to": null,
+                "prop": {
+                    "from": {
+                        "day": 16,
+                        "month": 4,
+                        "year": 2011
+                    },
+                    "to": {
+                        "day": null,
+                        "month": null,
+                        "year": null
+                    }
+                },
+                "string": "Apr 16, 2011"
+            },
+            "duration": "1 hr 48 min",
+            "rating": "G - All Ages",
+            "score": 6.97,
+            "scored_by": 3370,
+            "rank": 4371,
+            "popularity": 8254,
+            "members": 5675,
+            "favorites": 2,
+            "synopsis": "Comical action spy film including an indecent material (flatus) and a story of a girl who had obeyed her parents, but becomes self-aware. A mystery spy girl Lemon Sunomono suddenly appears in front of Shinnosuke, and she calls herself an emissary of Action Kamen. She had trained as a spy by her parents in the Sukashipestan Republic, and works for the Queens. Under her guidance, Shinnosuke decides to be a spy to fight for justice, and receives spy training. Under the instruction of Action Kamen, Lemon and Shinnosuke perform a mission to creep into the laboratory in the Hedelna Kingdom and recapture a capsule from an evil professor, but Lemon finds the real purpose of the Queens, and they fight to foil the plot of the Queens. \n\n(Source: Manabu Tsuribe)",
+            "background": "",
+            "season": null,
+            "year": null,
+            "broadcast": {
+                "day": null,
+                "time": null,
+                "timezone": null,
+                "string": null
+            },
+            "producers": [
+                {
+                    "mal_id": 1377,
+                    "type": "anime",
+                    "name": "Futabasha",
+                    "url": "https://myanimelist.net/anime/producer/1377/Futabasha"
+                },
+                {
+                    "mal_id": 2135,
+                    "type": "anime",
+                    "name": "Imagine",
+                    "url": "https://myanimelist.net/anime/producer/2135/Imagine"
+                }
+            ],
+            "licensors": [],
+            "studios": [
+                {
+                    "mal_id": 247,
+                    "type": "anime",
+                    "name": "Shin-Ei Animation",
+                    "url": "https://myanimelist.net/anime/producer/247/Shin-Ei_Animation"
+                }
+            ],
+            "genres": [
+                {
+                    "mal_id": 4,
+                    "type": "anime",
+                    "name": "Comedy",
+                    "url": "https://myanimelist.net/anime/genre/4/Comedy"
+                }
+            ],
+            "explicit_genres": [],
+            "themes": [],
+            "demographics": [
+                {
+                    "mal_id": 42,
+                    "type": "anime",
+                    "name": "Seinen",
+                    "url": "https://myanimelist.net/anime/genre/42/Seinen"
+                }
+            ]
+        }
+    ]
+}

@@ -1,7 +1,6 @@
-// @ts-nocheck
-// @ts-ignore
-const events = [
-  // Client
+import { ClientEvents } from 'discord.js';
+const events: (keyof ClientEvents)[] = [
+  // ~ Client
   "debug",                                      // This event is called when discord.js sends out debug info
   "error",                                      // This event is called when an error happens on the client
   "ready",                                      // This event is called when the client is ready
@@ -11,10 +10,10 @@ const events = [
   //"shardReconnecting",                        // This event is called when a shard is reconnecting
   //"shardResume",                              // This event is called when a shard resumes
 
-    // Automod
+  // ~ Automod
   //"autoModerationActionExecution",            // This event is called when a automod is called under a message
 
-    // Guilds
+  // ~ Guilds
   //"channelUpdate",                            // This event is called when a channel gets updated
   //"channelDelete",                            // This event is called when a channel gets deleted
   //"channelPinsUpdate",                        // This event is called when a channel's pins are updated
@@ -67,7 +66,8 @@ const events = [
   //"userUpdate",                               // This event is called when a user updates their// profile
   //"voiceStateUpdate",                         // This event is fired when a user joins/leaves a voice channel
 
-  // Users
+  // ~ Users
   //"presenceUpdate",                           // This event is called when a user's presence is updated
-]
-module.exports = events;
+];
+
+export default events;

@@ -5,7 +5,7 @@ This file explains what changes have been made to the `node_modules` folder.
 - [Edited Node\_Modules](#edited-node_modules)
   - [ForgeScript](#forgescript)
     - [FunctionManager](#functionmanager)
-    - [Logger](#logger)
+    - [encrypt.js / decrypt.js](#encryptjs--decryptjs)
 
 ## [ForgeScript]
 
@@ -13,14 +13,12 @@ This file explains what changes have been made to the `node_modules` folder.
 
 This removes the Function Spam from Function overrides.
 
-- [FunctionManager.js](./files/node-modules-files/FunctionManager.js)
-- location: `node_modules/@tryforge/forgescript/dist/managers/`
+- location: `node_modules/@tryforge/forgescript/dist/managers/` [.](./node_modules/@tryforge/forgescript/dist/managers/ForgeFunctionManager.js)
 
-### Logger
+### encrypt.js / decrypt.js
 
-This adds the Client option to $logger.
+Changed FIXED_IV to a custom IV so it doenst use the default IV of [ForgeScript]
 
-- [Logger.js](./files/node-modules-files/Logger.js)
-- location: `node_modules/@tryforge/forgescript/dist/structures/@internal/`
+- location: `node_modules/@tryforge/forgescript/dist/native/crypto/` [.](./node_modules/@tryforge/forgescript/dist/native/crypto/encrypt.js)
 
-[ForgeScript]: https://github.com/ForgeScript/ForgeDB/blob/dev/\
+[ForgeScript]: https://github.com/tryforge/forgescript
