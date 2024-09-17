@@ -6,21 +6,19 @@ interface CustomFunction {
 
 const functions: CustomFunction[] = [
   {
-    name: "customerror",
-    params: ["errorid","type","cmdid"],
+    name: "customError",
+    params: ["errorid","origin"],
     code: `
       $jsonLoad[result;$readFile[./files/errors.json]]
-      $jsonLoad[command;$readFile[./files/commands.json]]
-      $sendMessage[1083095711094149180;
-        $color[#d50056]
-        $title[A error $env[errorid] in "$env[command;slash;$env[cmdid];main]"]
-        $description[**in:** $if[$env[type]==slash;<$env[command;slash;$env[cmdid];main]:$env[cmdid]>;$env[command;main;$env[cmdid];main]]\n**Error:** \`$env[errorid] ($env[result;$env[errorid];meaning])\`\n**Error Message:** \n\`\`\`$env[result;$env[errorid];description]\`\`\`]
-        $addField[Isued:;**Author:** <@$authorID> ||$authorID||\n**Usage:** \n\`$env[command;slash;$env[cmdid];main] $getUserVar[error;$authorID]\`;true]
-        $if[$guildID!=;
-          $attachment[$memberPerms[$guildID;$clientID;,\n];result.actionscript;true]
-          $addField[GuildInfo:;**Guild**: $guildName[$guildID] ~ ||$guildID||\n**Permissions**: \`in file attached\`;true]
-        ]
-      ]
+      $let[origin;$env[origin]]
+      $let[error;$env[errorid]]
+
+      $interactionReply
+      $color[$getGlobalVar[colorError]]
+      $footer[Error code: "$get[error]" | Meaning: "$env[result;$get[error];meaning]"]
+      $arrayLoad[title;,;$env[result;$get[error];title]]
+      $title[$replace[$replace[$replace[$arrayRandomValue[title];";;2];\\];;1];[;;1]]
+      $description[$replace[$replace[$replace[$env[result;$get[error];description];{prefix};$if[$getUserVar[prefix;$get[author];false]!=false;$getUserVar[prefix;$get[author];a.];$getUserVar[prefix;$guildID;a.]];-1];{example};$commandInfo[messageCreate;$get[origin];usage];-1];{messageOne};$message[1];-1]]
     `
   }
 ]

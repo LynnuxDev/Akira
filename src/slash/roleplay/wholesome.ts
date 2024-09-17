@@ -2,16 +2,37 @@
 // @ts-ignore
 module.exports = {
   code: `
-    $onlyIf[$getUserVar[AgreedToTos;$authorID]==true;$ephemeral $color[$getGlobalVar[color]] $title[Before we continue:] $footer[You have to agree with these terms before using akira.] $description[Before you proceed, please make sure to read and agree to our [Terms of Service\\](https://akira.lynnux.xyz/terms) and [Privacy Policy\\](https://akira.lynnux.xyz/policy).\n\nBy using the button below, you confirm that you have read and agree to abide by our terms and policies.\n\nIf you have any questions or concerns, feel free to contact our support team.] $addActionRow $addButton[AcceptTerms-$authorID;I have read and agree to abide by these terms and policies.;Success;;false]]
-    $onlyIf[$channelID==$getGuildVar[BotChannel;$guildID;$channelID];de $interactionUpdate[$getGlobalVar[BotChannelError]]]
+    $let[author;$customEncrypt[encrypt;$authorID]]
+    $let[authorname;**$username[$authorID]**]
+    $let[guild;$customEncrypt[encrypt;$guildID]]
+    $let[channel;$customEncrypt[encrypt;$channelID]]
+
+    $onlyIf[$channelID==$getGuildVar[BotChannel;$guildID;$channelID];$interactionReply[$getGlobalVar[BotChannelError]]]
+    $onlyIf[$getUserVar[AgreedToTos;$get[author]]==true;$ephemeral $color[$getGlobalVar[color]] $title[Before we continue:] $footer[You have to agree with these terms before using akira.] $description[Before you proceed, please make sure to read and agree to our [Terms of Service\\](https://akira.lynnux.xyz/terms) and [Privacy Policy\\](https://akira.lynnux.xyz/policy).\n\nBy using the button below, you confirm that you have read and agree to abide by our terms and policies.\n\nIf you have any questions or concerns, feel free to contact our support team.] $addActionRow $addButton[AcceptTerms-$authorID;I have read and agree to abide by these terms and policies.;Success;;false]]
+
+$c[=================================================== PERMS ============================================================================================================================================================]
+    $if[$checkContains[$getGuildVar[perms~roleplay;$get[guild]];- $get[channel]]==false;$let[passChannel;true];$let[passChannel;false]$let[error;902]]
+    $if[$checkContains[$getGuildVar[perms~whoesome;$get[guild]];- $get[channel]]==false;$let[passChannel;true];$let[passChannel2;false]$let[error;500]]
+    $onlyIf[$get[passChannel]==true;$customError[901;wholesome]]
+    $onlyIf[$get[passChannel2]==true;$customError[500;wholesome]]
+
+    $arrayLoad[roles;, ;$memberRoles[$guildID;$authorID]]
+    $arraySome[roles;role;$checkContains[$getGuildVar[perms~roleplay;$get[guild]];$customEncrypt[encrypt;$env[role]]]]
+
+    $if[$get[passedPerms]==true;$if[$checkContains[$getGuildVar[perms~roleplay;$get[guild]];- $get[author]]!=true;$let[passUser;true];$let[passUser;false]$let[error;902]]$let[PassRole;true];$let[error;903]$let[PassRole;false]]
+    $onlyIf[$get[passUser]==true;$customError[902;wholesome]]
+    $onlyIf[$get[PassRole]==true;$customError[903;wholesome]]
+
 
     $let[type;$option[type]]
-    $let[user;$if[$option[user]==;$authorID;$option[user]]]
+    $if[$get[user]!=NAN;
+      $let[userid;$if[$option[user]==;NAN;$option[user]]]
+      $let[username;**$username[$get[user]]**]
+      $let[user;$customEncrypt[encrypt;$get[user]]]
+    ]
     $let[message;$option[message]]
-    $let[user1;**$username[$get[user]]**]
-    $let[user2;**$username[$authorID]**]
 
-    $onlyIf[$get[user]!=$authorID;You cant do this to yourself.]
+    $onlyIf[$get[userid]!=$authorID;You cant do this to yourself.]
     $onlyIf[$checkContains[$getUserVar[rp-commandblocked;$get[user]];*]==false;:x: All roleplay commands are blocked by $get[user1].]
     $onlyIf[$checkContains[$getUserVar[rp-commandblocked;$get[user]];$get[type]]==false;:x: This roleplay command is blocked by $get[user1].]
     $onlyIf[$getUserVar[rp-blocked-$authorID;$get[user]]!=true;:x: Sorry but $get[user1] blocked you from using roleplay commands on you.$ephemeral]
@@ -164,8 +185,8 @@ module.exports = {
         {
           "type": 6,
           "name": "user",
-          "required": true,
-          "description": "Who do you want to give this reaction to?"
+          "required": false,
+          "description": "Who do you want to give this reaction to? (required for most interactions)"
         },
         {
           "type": 3,

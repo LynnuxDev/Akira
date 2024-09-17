@@ -21,6 +21,7 @@ const commands: Command[] = [
     version: "1.0.0",
     code: `
       $textSplit[$customID;-]
+      $let[lang;nl]
 
       $onlyIf[$toLowerCase[$splitText[0]]==acceptterms;]
       $onlyIf[$toLowerCase[$splitText[1]]==$authorID;]
@@ -28,18 +29,18 @@ const commands: Command[] = [
       $try[
         $interactionUpdate[
           $color[$getGlobalVar[color]]
-          $title[I'm looking forward to interacting with you.]
-          $description[Thanks for confirming that you've read and accepted our terms and policies. You're all set!]
+          $title[$i18n[$get[lang];interactions.settings.agreedtoterms.success-title]]
+          $description[$i18n[$get[lang];interactions.settings.agreedtoterms.success-description]]
         ]
       ;
         $editMessage[$channelID;$messageID;
           $color[$getGlobalVar[color]]
-          $title[I'm looking forward to interacting with you.]
-          $description[Thanks for confirming that you've read and accepted our terms and policies. You're all set!]
+          $title[$i18n[$get[lang];interactions.settings.agreedtoterms.success-title]]
+          $description[$i18n[$get[lang];interactions.settings.agreedtoterms.success-description]]
         ]
       ]
 
-      $let[author;$callFunction[customencrypt;encrypt;$authorID]]
+      $let[author;$customEncrypt[encrypt;$authorID]]
 
       $setUserVar[AgreedToTos;true;$get[author]]
       $setUserVar[uuid;$randomUUID;$get[author]]

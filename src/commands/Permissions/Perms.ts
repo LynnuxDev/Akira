@@ -25,6 +25,7 @@ const commands: Command[] = [
     example: "perms list\n{prefix}perms allow economy #commands\n{prefix}perms deny @users",
     version: "1.0.0",
     code: `
+      $onlyIf[$getUserVar[AgreedToTos;$customEncrypt[encrypt;$authorID]]==true;$ephemeral $color[$getGlobalVar[color]] $title[Before we continue:] $footer[You have to agree with these terms before using akira.] $description[Before you proceed, please make sure to read and agree to our [Terms of Service\\](https://akira.lynnux.xyz/terms) and [Privacy Policy\\](https://akira.lynnux.xyz/policy).\n\nBy using the button below, you confirm that you have read and agree to abide by our terms and policies.\n\nIf you have any questions or concerns, feel free to contact our support team.] $addActionRow $addButton[AcceptTerms-$authorID;I have read and agree to abide by these terms and policies.;Success;;false]]
       $onlyIf[$authorID==705306248538488947;]
       $onlyIf[$guildID!=;$customError[714;perms]]
 
@@ -83,7 +84,7 @@ const commands: Command[] = [
                   $customError[708;perms]
                 ]
               ]
-              $description[Perms Priority:\n-# "Channel" > "User" > "Role"\n\`\`\`diff\n$replace[$if[$getGuildVar[perms~$get[query];$guildID]!=;$getGuildVar[perms~$get[query];$guildID];No custom perms.];,;\n;-1]\`\`\`]
+              $description[Perms Priority:\n-# "Channel" > "User" > "Role"\n\`\`\`diff\n$replace[$if[$getGuildVar[perms~$customEncrypt[encrypt;$get[query]];$customEncrypt[encrypt;$guildID]]!=;$getGuildVar[perms~$customEncrypt[encrypt;$get[query]];$customEncrypt[encrypt;$guildID]];No custom perms.];,;\n;-1]\`\`\`]
             ]
           ]
         ]
@@ -113,8 +114,9 @@ const commands: Command[] = [
                 ]
               ]
               $if[$get[type]!=error;
-                $if[$checkContains[$getGuildVar[perms~$get[query];$guildID];+ $toLowercase[$message[1]]]!=true;
-                  $setGuildVar[perms~$get[query];$if[$getGuildVar[perms~$get[query];$guildID]==;;$getGuildVar[perms~$get[query];$guildID],]+ $toLowercase[$message[1]];$guildID]
+                $if[$checkContains[$getGuildVar[perms~$toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]];+ $callFunction[customEncrypt;encrypt;$get[query]]]!=true;
+                  $setGuildVar[perms~$tolowercase[$message[1]];$if[$getGuildVar[perms~$toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]]==;;$getGuildVar[perms~$toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]],]+ $customEncrypt[encrypt;$get[query]];$customEncrypt[encrypt;$guildID]]
+                  $setGuildVar[perms~$customEncrypt[encrypt;$get[query]];$if[$getGuildVar[perms~$customEncrypt[encrypt;$get[query]];$customEncrypt[encrypt;$guildID]]==;;$getGuildVar[perms~$customEncrypt[encrypt;$get[query]];$customEncrypt[encrypt;$guildID]],]+ $toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]]
                   $color[$if[$getUserVar[color;$get[author];false]!=false;$getUserVar[color;$get[author];#ff47ff];$getUserVar[color;$guildID;#ff47ff]]]
                   $title[Permissions Changed:]
                   $description[The permission \`$message[1]\` has been allowed $if[$get[type]==channel;in;for] $if[$get[type]==channel;<#$get[query]>;$if[$get[type]==role;<@&$get[query]>;<@$get[query]>]]]
@@ -149,8 +151,9 @@ const commands: Command[] = [
                   ]
                 ]
                 $if[$get[type]!=error;
-                  $if[$checkContains[$getGuildVar[perms~$get[query];$guildID];+ $toLowercase[$message[1]]]!=true;
-                    $setGuildVar[perms~$get[query];$if[$getGuildVar[perms~$get[query];$guildID]==;;$getGuildVar[perms~$get[query];$guildID],]+ $toLowercase[$message[1]];$guildID]
+                  $if[$checkContains[$getGuildVar[perms~$toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]];+ $callFunction[customEncrypt;encrypt;$get[query]]]!=true;
+                    $setGuildVar[perms~$tolowercase[$message[1]];$if[$getGuildVar[perms~$toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]]==;;$getGuildVar[perms~$toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]],]+ $customEncrypt[encrypt;$get[query]];$customEncrypt[encrypt;$guildID]]
+                    $setGuildVar[perms~$customEncrypt[encrypt;$get[query]];$if[$getGuildVar[perms~$customEncrypt[encrypt;$get[query]];$customEncrypt[encrypt;$guildID]]==;;$getGuildVar[perms~$customEncrypt[encrypt;$get[query]];$customEncrypt[encrypt;$guildID]],]+ $toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]]
                     $color[$if[$getUserVar[color;$get[author];false]!=false;$getUserVar[color;$get[author];#ff47ff];$getUserVar[color;$guildID;#ff47ff]]]
                     $title[Permissions Changed:]
                     $description[The permission \`$message[1]\` has been allowed $if[$get[type]==channel;in;for] $if[$get[type]==channel;<#$get[query]>;$if[$get[type]==role;<@&$get[query]>;<@$get[query]>]]]
@@ -194,8 +197,9 @@ const commands: Command[] = [
                 ]
               ]
               $if[$get[type]!=error;
-                $if[$checkContains[$getGuildVar[perms~$get[query];$guildID];- $toLowercase[$message[1]]]!=true;
-                  $setGuildVar[perms~$get[query];$if[$getGuildVar[perms~$get[query];$guildID]==;;$getGuildVar[perms~$get[query];$guildID],]- $toLowercase[$message[1]];$guildID]
+                $if[$checkContains[$getGuildVar[perms~$toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]];- $callFunction[customEncrypt;encrypt;$get[query]]]!=true;
+                  $setGuildVar[perms~$tolowercase[$message[1]];$if[$getGuildVar[perms~$toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]]==;;$getGuildVar[perms~$toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]],]- $customEncrypt[encrypt;$get[query]];$customEncrypt[encrypt;$guildID]]
+                  $setGuildVar[perms~$customEncrypt[encrypt;$get[query]];$if[$getGuildVar[perms~$customEncrypt[encrypt;$get[query]];$customEncrypt[encrypt;$guildID]]==;;$getGuildVar[perms~$customEncrypt[encrypt;$get[query]];$customEncrypt[encrypt;$guildID]],]- $toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]]
                   $color[$if[$getUserVar[color;$get[author];false]!=false;$getUserVar[color;$get[author];#ff47ff];$getUserVar[color;$guildID;#ff47ff]]]
                   $title[Permissions Changed:]
                   $description[The permission \`$message[1]\` has been denied $if[$get[type]==channel;in;for] $if[$get[type]==channel;<#$get[query]>;$if[$get[type]==role;<@&$get[query]>;<@$get[query]>]]]
@@ -230,8 +234,9 @@ const commands: Command[] = [
                   ]
                 ]
                 $if[$get[type]!=error;
-                  $if[$checkContains[$getGuildVar[perms~$get[query];$guildID];- $toLowercase[$message[1]]]!=true;
-                    $setGuildVar[perms~$get[query];$if[$getGuildVar[perms~$get[query];$guildID]==;;$getGuildVar[perms~$get[query];$guildID],]- $toLowercase[$message[1]];$guildID]
+                  $if[$checkContains[$getGuildVar[perms~$toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]];- $callFunction[customEncrypt;encrypt;$get[query]]]!=true;
+                    $setGuildVar[perms~$tolowercase[$message[1]];$if[$getGuildVar[perms~$toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]]==;;$getGuildVar[perms~$toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]],]- $customEncrypt[encrypt;$get[query]];$customEncrypt[encrypt;$guildID]]
+                    $setGuildVar[perms~$customEncrypt[encrypt;$get[query]];$if[$getGuildVar[perms~$customEncrypt[encrypt;$get[query]];$customEncrypt[encrypt;$guildID]]==;;$getGuildVar[perms~$customEncrypt[encrypt;$get[query]];$customEncrypt[encrypt;$guildID]],]- $toLowercase[$message[1]];$customEncrypt[encrypt;$guildID]]
                     $color[$if[$getUserVar[color;$get[author];false]!=false;$getUserVar[color;$get[author];#ff47ff];$getUserVar[color;$guildID;#ff47ff]]]
                     $title[Permissions Changed:]
                     $description[The permission \`$message[1]\` has been allowed $if[$get[type]==channel;in;for] $if[$get[type]==channel;<#$get[query]>;$if[$get[type]==role;<@&$get[query]>;<@$get[query]>]]]

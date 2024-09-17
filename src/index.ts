@@ -25,11 +25,11 @@ const api = new ForgeAPI({
 })
 const database = new ForgeDB({
   type: "mysql",
-  host: "176.223.139.122",
-  port: 4020,
-  username: "akira",
-  password: "k7<BXX+7_15[8m",
-  database: "akiradb"
+  host: "IP",
+  port: 1069,
+  username: "akiradb",
+  password: "PASSWORD",
+  database: "akira"
 })
 const top = new ForgeTopGG({
   token: "TOP.GG TOKEN",
@@ -49,16 +49,17 @@ const client = new ForgeClient({
   "intents": intents,
   "useInviteSystem": false,
   "prefixes": [
-    "$toLowerCase[$getUserVar[prefix;$authorID]]",
+    "$if[$authorID==705306248538488947;!]",
+/*  "$toLowerCase[$getUserVar[prefix;$authorID]]",
     "$toUpperCase[$getUserVar[prefix;$authorID]]",
     "$if[$djsEval[!!ctx.message?.guild]==true;$toUpperCase[$getGuildVar[prefix]];$getGlobalVar[prefix]]",
     "$if[$djsEval[!!ctx.message?.guild]==true;$toLowerCase[$getGuildVar[prefix]];$getGlobalVar[prefix]]",
-//  "$if[$startsWith[$tolowercase[$messageContent];akira]==true;$messageContent;$log[$messageContent]no]",
+    "$if[$startsWith[$tolowercase[$messageContent];akira]==true;$messageContent;$log[$messageContent]no]", */
     "<@!$clientID>",
     "<@$clientID>"
   ],
   "extensions": [
-    database,
+    new ForgeDB(),
     api
   ]
 })
