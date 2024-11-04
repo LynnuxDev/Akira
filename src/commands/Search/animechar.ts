@@ -26,15 +26,17 @@ const commands: Command[] = [
     example: "anime frieren",
     code: `
       $c[=====-=====-===== ONLY IFS =====-=====-=====-=====-=====-=====-=====-=====-=====-=====]
-      $onlyIf[$getUserVar[AgreedToTos;$callFunction[customEncrypt;encrypt;$authorID]]==true;$getGlobalVar[AgreedToTosEmbedReply]]
+      $let[author;$callFunction[customEncrypt;encrypt;$authorID]]
+      $let[uuid;$getUserVar[uuid;$get[author]]]
+      $onlyIf[$getUserVar[AgreedToTos;$get[uuid]]==true;$getGlobalVar[AgreedToTosEmbedReply]]
 
       $if[$message[1]!=;
         $let[input;$replace[$replace[$message;$message[0] ;;1]; ;%20;-1]]
         $let[request;$httpRequest[https://api.jikan.moe/v4/characters?page=1&limit=5&q=$get[input];get]]
         $switch[$get[request];
           $case[200;
-            $writeFile[./files/anime/$getUserVar[uuid;$authorID;not-found].json;$httpResult]
-            $jsonLoad[result;$readFile[./files/anime/$getUserVar[uuid;$authorID;not-found].json]]
+            $writeFile[./files/anime/$get[uuid].json;$httpResult]
+            $jsonLoad[result;$readFile[./files/anime/$get[uuid].json]]
             $let[description;$cropText[$env[result;data;0;about];0;250]]
             $color[$if[$guildID==;$getUserVar[color;$userID;#ff47ff];$getGuildVar[color;$guildID;#ff47ff]]]
             $title[$env[result;data;0;name] ~ ($env[result;data;0;name_kanji]);$env[result;data;0;url]]

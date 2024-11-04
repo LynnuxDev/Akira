@@ -10,27 +10,10 @@ const functions: CustomFunction[] = [
     params: ["lang","string"],
     code: `
       $let[lang;$toLowercase[$env[lang]]]
-      $onlyIf[$checkContains[$get[lang];af;ar;ca;cs;da;de;el;en;es;fi;fr;he;hu;it;ja;ko;nl;no;pl;pt;ro;ru;sr;sv;tr;uk;vi;zh;custom;default]==true;]
 
-      $switch[$replace[$get[lang];default;origional;1];
-        $case[custom;
-        ]
-        $case[origional;
-          $c[Counts as default input]
-        ]
-        $case[default;
-          $c[Any language.]
-          $return[
-            $djsEval[
-              const path = require('path');
-              const { loadYaml } = require(path.join(__dirname, '../../../../../../dist/i18n.js'));
-              const successMessage = loadYaml("$get[lang]", '$env[string]');
-              successMessage
-            ]
-          ]
-        ]
-      ]
-      $return[$checkContains[$toLowerCase[$env[command]];blacklist;black-list;botchannel;bot-channel;default;default-channels;disable;disable-command;enable-command;enable;freechannel;free-channel;free;ignore;ignore-channel;listen;listen-channel;permission;permissions;perm;perms;white-list;whitelist;anime;animelookup;whattheanime;about;info;information;avatar;useravatar;cleardata;removedata;cmd;commandinfo;command-info;command;sos;help;help-me;what;howto;how-to;report;ifoundabug;ibrokesomething;settings;setting;seting;userinfo;user;whois]]
+      $let[output;$i18nRequest[$env[lang];$env[string]]]
+
+      $return[$replace[$replace[$replace[$replace[$replace[$replace[$replace[$replace[$replace[$replace[$replace[$replace[$get[output];{{italic}};*;-1];{{/italic}};*;-1];{{prefix}};$getUserVar[prefix;$get[author];a.];-1];{{newLine}};\n;-1];{{linkDonatePost}};https://www.patreon.com/posts/how-are-being-112094582;-1];{{linkPatreon}};https://www.patreon.com/Dark_Lynn;-1];{{linkKoFi}};https://ko-fi.com/lynnuxdev;-1];{{linkBuyMeACoffee}};https://buymeacoffee.com/darklynn;-1];{{linkLynnuxContact}};https://lynnux.xyz/#contact;-1];{{linkAkira}};https://akira.lynnux.xyz/;-1];{{linkAkiraServer}};discord://-/invite/TUqZTutDUz/login;-1];{{linkAkiraInvite}};https://discord.com/oauth2/authorize?client_id=$clientID&permissions=414800276567&integration_type=0&scope=bot;-1]]
     `
   }
 ]

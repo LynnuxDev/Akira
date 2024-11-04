@@ -26,6 +26,8 @@ const commands: Command[] = [
         $splitText[3] == number of page
         $splitText[4] == MalID if given
       ]
+      $let[author;$callFunction[customEncrypt;encrypt;$authorID]]
+      $let[uuid;$getUserVar[uuid;$get[author]]]
 
 $c[=====-=====-===== ONLY IFS =====-=====-=====-=====-=====-=====-=====-=====-=====-=====]
       $onlyIf[$splitText[0]==anime;]
@@ -33,7 +35,7 @@ $c[=====-=====-===== ONLY IFS =====-=====-=====-=====-=====-=====-=====-=====-==
       $onlyIf[$splitText[2]==$authorID;]
 
 $c[=====-=====-===== FILE VARIABLES =====-=====-=====-=====-=====-=====-=====-=====-=====]
-      $jsonLoad[result;$readFile[./files/anime/$getUserVar[uuid;$get[author];not-found].json]]
+      $jsonLoad[result;$readFile[./files/anime/$get[uuid].json]]
       $let[author;$customEncrypt[encrypt;$authorID]]
       $let[guild;$customEncrypt[encrypt;$guildID]]
       $let[page;$splitText[3]]

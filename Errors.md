@@ -54,6 +54,8 @@ table of content
 | 718    | Need user/role/channel | The given argument expected a user, role or channel input. |
 | 719    | should be m/r/c        | Input should be a memer/role/channel |
 | 720    | User doesnt have perms | The user who ran the command doesn't have the right server specific perms. |
+| 721    | User cannot be Author  | The user given cannot be the author. |
+| 722    | Target user blocked    | The user given has blocked someone/anyone from using this command on them. |
 | 801    | Perms reply            | when the user uses perms reply with wrong input. |
 | 802    | Perms list             | Wrong argument for a.perms list. The argument needs to be a user / role / channel. |
 | 803    | Perms default          | No argument for default. |

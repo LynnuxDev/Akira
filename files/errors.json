@@ -122,6 +122,24 @@
     "description": "The given argument expected a member, role or channel input.\n-# Member being a user thats in the server.",
     "from": "Client"
   },
+  "720": {
+    "title": ["Sorry，Can't do that.","Nope not happening!"],
+    "meaning": "User doesnt have perms.",
+    "description": "You dont have the right permissions to run this command",
+    "from": "Client"
+  },
+  "721": {
+    "title": ["Looking for Friends?", "Searching for a Friend，Not a Unicorn!", "None you user Required—No Exceptions!"],
+    "meaning": "Input cannot be author.",
+    "description": "The input cannot be you, it has to be another person.",
+    "from": "Client"
+  },
+  "722": {
+    "title": ["Sorry，Can't do that.","Nope not happening!"],
+    "meaning": "Target user blocked.",
+    "description": "The user provided has blocked You or anyone from using this command on them.",
+    "from": "Client"
+  },
   "801": {
     "title": ["Argument Anomaly!","Argument in Distress!","Oops，Wrong Argument!","Argument Malfunction!","Lost Argument Syndrome!","Argument’s Lost in Translation!"],
     "meaning": "Wrong arguments (specific).",

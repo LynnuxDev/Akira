@@ -23,6 +23,7 @@ const api = new ForgeAPI({
     ip: "127.0.0.1"
   }
 })
+
 const database = new ForgeDB({
   type: "mysql",
   host: "IP",
@@ -31,6 +32,7 @@ const database = new ForgeDB({
   password: "PASSWORD",
   database: "akira"
 })
+
 const top = new ForgeTopGG({
   token: "TOP.GG TOKEN",
   auth: "TOP.GG AUTH",
@@ -49,7 +51,7 @@ const client = new ForgeClient({
   "intents": intents,
   "useInviteSystem": false,
   "prefixes": [
-    "$if[$authorID==705306248538488947;!]",
+    "$if[$checkContains[$authorID;1004291040150298715;521676495316582400;705306248538488947]==true;!]",
 /*  "$toLowerCase[$getUserVar[prefix;$authorID]]",
     "$toUpperCase[$getUserVar[prefix;$authorID]]",
     "$if[$djsEval[!!ctx.message?.guild]==true;$toUpperCase[$getGuildVar[prefix]];$getGlobalVar[prefix]]",
@@ -82,6 +84,7 @@ ForgeDB.variables({
   userBanned: false,
   botErrorChannel: "1083095711094149180",
   ServerFeatured: false,
+  language: "en-us",
   BotChannel: "$channelID",
   BotChannelStatus: "default",
   //   [   Permission ]
@@ -107,6 +110,6 @@ ForgeDB.variables({
 ///////////////////////////////
 //  [   Client Login    ]    //
 ///////////////////////////////
-api.router.load(apiPath)
+// api.router.load(apiPath)
 
 client.login(`${token}`);

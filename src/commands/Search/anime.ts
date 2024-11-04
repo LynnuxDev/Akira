@@ -25,7 +25,9 @@ const commands: Command[] = [
     documentation: "anime/",
     example: "anime frieren",
     code: `
-      $onlyIf[$getUserVar[AgreedToTos;$callFunction[customEncrypt;encrypt;$authorID]]==true;$getGlobalVar[AgreedToTosEmbedReply]]
+      $let[author;$callFunction[customEncrypt;encrypt;$authorID]]
+      $let[uuid;$getUserVar[uuid;$get[author]]]
+      $onlyIf[$getUserVar[AgreedToTos;$get[uuid]]==true;$getGlobalVar[AgreedToTosEmbedReply]]
       $switch[$toLowercase[$message[0]];
         $case[favorite;
           $if[$getUserVar[anime~favorite;$authorID]!=;
@@ -33,18 +35,17 @@ const commands: Command[] = [
             $title[$userGlobalName[$authorID]'s favorite anime:]
             $description[- $replace[$replace[$getUserVar[anime~favorite;$authorID];,;;1];,;\n\n- ;-1]]
           ;
-            YOU DONT HAVE ANY FAVORITED ANIME
+            YOU DON'T HAVE ANY FAVORITED ANIME
           ]
         ]
         $case[default;
-          $let[author;$customEncrypt[encrypt;$authorID]]
           $let[query;$replace[$replace[$message; --all;;-1]; --tv;;-1]]
           $let[type;$if[$checkContains[$message;--all]==true;&type=all;$if[$checkContains[$message;--tv]==true;&type=tv;]]]
           $let[request;$httpRequest[https://api.jikan.moe/v4/anime?page=1&limit=5&q=$replace[$get[query]; ;%20;-1]&sfw=true$get[type];get]]
           $reply[$channelID;$messageID;false]
           $c[-# $userName[$clientID] is thinking <a:Loading:1275473940789330000>]
-          $writeFile[./files/anime/$getUserVar[uuid;$authorID;not-found].json;$httpResult]
-          $jsonLoad[result;$readFile[./files/anime/$getUserVar[uuid;$authorID;not-found].json]]
+          $writeFile[./files/anime/$get[uuid].json;$httpResult]
+          $jsonLoad[result;$readFile[./files/anime/$get[uuid].json]]
           $jsonLoad[genres;$env[result;data;0;genres]]
           $arrayMap[genres;genre;$jsonLoad[uwu;$env[genre]]$return[$env[uwu;name]];final]
 
