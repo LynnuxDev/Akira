@@ -1,16 +1,4 @@
-interface Command {
-  name?: string;
-  aliases?: string[];
-  type: string;
-  description: string;
-  module: string;
-  sourcecode: string;
-  documentation?: string;
-  usage?: string;
-  example?: string;
-  version: string;
-  code: string;
-}
+import { Command } from "@/types"
 
 const commands: Command[] = [
   {
@@ -23,7 +11,7 @@ const commands: Command[] = [
     sourcecode: "src/commands/Roleplay/Wholesome/blush.ts",
     documentation: "roleplay",
     usage: "blush {user} {message}",
-    example: "blush @dark-lynn Aww don't say thay",
+    example: "blush @dark-lynn Aww don't say that.",
     code: `
       $c[------------------------------------LET-----------------------------------]
       $let[author;$getUserVar[uuid;$customEncrypt[encrypt;$authorID]]]
@@ -44,7 +32,7 @@ const commands: Command[] = [
       $let[msg;$i18n[$get[lang];message.roleplay.wholesome.blush.description]]
 
       $if[$getUserVar[blush-give;$get[author]]==;$setUserVar[blush-give;$get[author];0]]
-      $if[$getUserVar[blush-give;$get[authot]]==;$if[$get[user]==null;$let[userAgree;false];$let[userAgree;true]$setUserVar[blush-give;$get[author];0]]]
+      $if[$getUserVar[blush-give;$get[author]]==;$if[$get[user]==null;$let[userAgree;false];$let[userAgree;true]$setUserVar[blush-give;$get[author];0]]]
 
       $setVar[blush-give;$get[author];$sum[$getVar[blush-give;$get[author]];1]]
       $if[$get[user]!=null;$setVar[blush-got;$get[user];$sum[$getVar[blush-got;$get[user]];1]]]

@@ -5,5 +5,29 @@
     "**/*.rpymc": true,
     "**/cache/": true
   },
-  "i18n-ally.localesPaths": []
+  "i18n-ally.localesPaths": [],
+  "cSpell.words": [
+    "Català",
+    "Čeština",
+    "commandblocked",
+    "Dansk",
+    "Deutsch",
+    "endfulfulll",
+    "iconicayansh",
+    "Italiano",
+    "Norsk",
+    "Polski",
+    "Português",
+    "renancolombini",
+    "Svenska",
+    "Tiếng",
+    "Türkçe",
+    "Việt",
+    "Ελληνικά",
+    "Русский",
+    "Српски",
+    "Українська",
+    "עברית",
+    "العربية"
+  ]
 }

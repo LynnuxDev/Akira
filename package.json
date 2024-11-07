@@ -12,9 +12,9 @@
   "license": "MIT",
   "dependencies": {
     "@tryforge/forge.api": "github:tryforge/ForgeAPI",
-    "@tryforge/forge.db": "github:Lynnux-useless-codes/ForgeDB#dev",
+    "@tryforge/forge.db": "github:tryforge/forgedb#dev",
     "@tryforge/forge.topgg": "github:tryforge/ForgeTopGG#dev",
-    "@tryforge/forgescript": "github:tryforge/ForgeScript#dev",
+    "@tryforge/forgescript": "github:tryforge/forgescript#dev",
     "@types/i18next": "^12.1.0",
     "@types/node": "^22.5.0",
     "@types/ws": "^8.5.12",

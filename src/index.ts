@@ -67,7 +67,6 @@ const client = new ForgeClient({
 })
 
 
-
 client.functions.load(join(__dirname, "functions"))
 client.commands.load(commandsPath);
 client.applicationCommands.load(slashCommandsPath);

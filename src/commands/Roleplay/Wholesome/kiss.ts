@@ -31,7 +31,6 @@ const commands: Command[] = [
       $let[userID;$findUser[$message[0]]]
       $let[user;$getUserVar[uuid;$get[userID];null]]
 
-      $get[lang]
       $c[----------------------------------ONLY-IF---------------------------------]
       $onlyIf[$getUserVar[AgreedToTos;$get[author];false]==true;$callEmbed[agreeToTerms]]
       $onlyIf[$channelID==$getGuildVar[BotChannel;$guildID;$channelID];$getGlobalVar[BotChannelError]]
@@ -46,7 +45,7 @@ const commands: Command[] = [
       $let[type;got kissed]
 
       $if[$getUserVar[kiss-give;$get[author]]==;$setUserVar[kiss-give;$get[author];0]]
-      $if[$getUserVar[kiss-give;$get[authot]]==;$if[$get[user]==null;$let[userAgree;false];$let[userAgree;true]$setUserVar[kiss-give;$get[author];0]]]
+      $if[$getUserVar[kiss-give;$get[author]]==;$if[$get[user]==null;$let[userAgree;false];$let[userAgree;true]$setUserVar[kiss-give;$get[author];0]]]
 
       $setVar[kiss-give;$get[author];$sum[$getVar[kiss-give;$get[author]];1]]
       $if[$get[user]!=null;$setVar[kiss-got;$get[user];$sum[$getVar[kiss-got;$get[user]];1]]]
