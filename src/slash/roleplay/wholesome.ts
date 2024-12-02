@@ -12,7 +12,7 @@ module.exports = {
 
 $c[=================================================== PERMS ============================================================================================================================================================]
     $if[$checkContains[$getGuildVar[perms~roleplay;$get[guild]];- $get[channel]]==false;$let[passChannel;true];$let[passChannel;false]$let[error;902]]
-    $if[$checkContains[$getGuildVar[perms~whoesome;$get[guild]];- $get[channel]]==false;$let[passChannel;true];$let[passChannel2;false]$let[error;500]]
+    $if[$checkContains[$getGuildVar[perms~wholesome;$get[guild]];- $get[channel]]==false;$let[passChannel;true];$let[passChannel2;false]$let[error;500]]
     $onlyIf[$get[passChannel]==true;$customError[901;wholesome]]
     $onlyIf[$get[passChannel2]==true;$customError[500;wholesome]]
 
@@ -26,13 +26,13 @@ $c[=================================================== PERMS ===================
 
     $let[type;$option[type]]
     $if[$get[user]!=NAN;
-      $let[userid;$if[$option[user]==;NAN;$option[user]]]
+      $let[userID;$if[$option[user]==;NAN;$option[user]]]
       $let[username;**$username[$get[user]]**]
       $let[user;$customEncrypt[encrypt;$get[user]]]
     ]
     $let[message;$option[message]]
 
-    $onlyIf[$get[userid]!=$authorID;You cant do this to yourself.]
+    $onlyIf[$get[userID]!=$authorID;You cant do this to yourself.]
     $onlyIf[$checkContains[$getUserVar[rp-commandblocked;$get[user]];*]==false;:x: All roleplay commands are blocked by $get[user1].]
     $onlyIf[$checkContains[$getUserVar[rp-commandblocked;$get[user]];$get[type]]==false;:x: This roleplay command is blocked by $get[user1].]
     $onlyIf[$getUserVar[rp-blocked-$authorID;$get[user]]!=true;:x: Sorry but $get[user1] blocked you from using roleplay commands on you.$ephemeral]

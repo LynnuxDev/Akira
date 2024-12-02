@@ -62,6 +62,12 @@
     "description": "I didn't find this command, perhaps due to a typo or this is a non-existent command.",
     "from": "Any"
   },
+  "600": {
+    "title": ["User missing from database"],
+    "meaning": "User not found in database",
+    "description": "The user used was not found in the database and/or didn’t accept the terms of service.",
+    "from": "Client"
+  },
   "706": {
     "title": "Permission Denied! I Guess I'm Not That Powerful... Yet!",
     "meaning": "Insufficient Bot Perms",

@@ -23,7 +23,7 @@ const functions: CustomFunction[] = [
             $description[**in:** $replace[$env[command;$env[type];$env[cmdid];main];{prefix};$getGuildVar[prefix;$customEncrypt[encrypt;$guildID;$getGlobalVar[prefix;a.]]]]\n**Error:** \`$env[errorid] ($env[result;$env[errorid];meaning])\`\n**Error Message:** \n\`\`\`$env[result;$env[errorid];description]\`\`\`]
           ]
         ]
-        $addField[Isued:;**Author:** <@$authorID> ||$authorID||\n**Usage:** \n\`$env[command;slash;$env[cmdid];main] $getUserVar[error;$authorID]\`;true]
+        $addField[Issued:;**Author:** <@$authorID> ||$authorID||\n**Usage:** \n\`$env[command;slash;$env[cmdid];main] $getUserVar[error;$authorID]\`;true]
         $if[$guildID!=;
           $attachment[$memberPerms[$guildID;$clientID;,\n];result.actionscript;true]
           $addField[GuildInfo:;**Guild**: $guildName[$guildID] ~ ||$guildID||\n**Permissions**: \`in file attached\`;true]

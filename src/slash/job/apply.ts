@@ -1,5 +1,8 @@
 // @ts-nocheck
 // @ts-ignore
+// cspell:words actionscript onthego
+
+
 module.exports = {
   name: "apply",
   code: `

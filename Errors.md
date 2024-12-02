@@ -12,7 +12,7 @@ table of content
 | 100    | Continue               | Indicates that the initial part of a request has been received. |
 | 101    | Command Recieved       | This code indicates that Akira has successfully received a command but hasn't started processing it yet. |
 | 102    | Slash Recieved         | Similar to 101, but with slash command. |
-| 200    | Default Success        | Used when a request is succesful.|
+| 200    | Default Success        | Used when a request is successful.|
 | 201    | Created                | The bot successfully processed the command and performed the requested action. |
 | 204    | No Content             | Akira executed the command, but there is no content to return |
 | 301    | Moved Permanently      | The command used has been deprecated. |
@@ -33,6 +33,7 @@ table of content
 | 502    | Bad Gateway            | Akira failed to retrieve or process data from an external API she relies on. |
 | 503    | Service Unavailable    | Akira's services are temporarily unavailable, possibly due to maintenance or an issue with the hosting service.|
 | 504    | Gateway Timeout        | Similar to 502, but specifically indicates that the server, while acting as a gateway or proxy, did not receive a timely response from the upstream server. |
+| 600    | User tos missing       | the user used doesn't have tos accepted. |
 | 701    | Command not enabled    | The command exists but is currently disabled by the bot owner or admins. |
 | 702    | Unavailable In Channel | The requested feature or command is not available in the current channel.|
 | 703    | User Blacklisted       | The user is blacklisted and cannot use the bot's commands. |
@@ -46,14 +47,14 @@ table of content
 | 711    | Command Requires Setup | The command cannot be executed because the bot or server requires initial setup. |
 | 712    | Command Timed Out      | The command was initiated but took too long to complete, and the bot timed out. |
 | 713    | Disabled by Admin      | The command has been explicitly disabled by a server admin or the bot owner, making it unavailable. |
-| 714    | Invalid Command        | The command was used in an wrong envirment, such as trying to use a server-specific command in a direct message. |
+| 714    | Invalid Command        | The command was used in an wrong environment, such as trying to use a server-specific command in a direct message. |
 | 715    | Requires Elevated Role | The user needs a specific role to execute the command, and they lack that role. |
-| 716    | Wrong author           | The author using the interaction is not the author of the origional command. |
+| 716    | Wrong author           | The author using the interaction is not the author of the original command. |
 | 717    | Missing Arguments      | The user did not provide enough argument for this command. |
 | 718    | Cannot be a guildID    | The given argument is a guildID, which is not accepted in this field. |
 | 718    | Need user/role/channel | The given argument expected a user, role or channel input. |
-| 719    | should be m/r/c        | Input should be a memer/role/channel |
-| 720    | User doesnt have perms | The user who ran the command doesn't have the right server specific perms. |
+| 719    | should be m/r/c        | Input should be a member/role/channel |
+| 720    | User doesn't have perms | The user who ran the command doesn't have the right server specific perms. |
 | 721    | User cannot be Author  | The user given cannot be the author. |
 | 722    | Target user blocked    | The user given has blocked someone/anyone from using this command on them. |
 | 801    | Perms reply            | when the user uses perms reply with wrong input. |

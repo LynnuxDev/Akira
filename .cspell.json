@@ -1,0 +1,44 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "dictionaries": [],
+  "languageSettings": [
+    {
+      "languageId": "typescript",
+      "words": [
+        "tryforge"
+      ]
+    },
+    {
+      "languageId": "markdown",
+      "words": [
+        "Recieved",
+        "botforge",
+        "nolonger"
+      ]
+    }
+  ],
+  "words": [
+    "actionscript",
+    "agreedtoterms",
+    "atleast",
+    "Automod",
+    "botchannel",
+    "bughunter",
+    "cmdid",
+    "commandinfo",
+    "errorid",
+    "fieldone",
+    "fieldthree",
+    "freechannel",
+    "givemoney",
+    "howto",
+    "hypesquad",
+    "ibrokesomething",
+    "ifoundabug",
+    "Lynnux",
+    "reactionroles",
+    "useravatar",
+    "whois"
+  ]
+}

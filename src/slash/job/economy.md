@@ -1,7 +1,7 @@
 # Akira Economy Modules
 
 - [Akira Economy Modules](#akira-economy-modules)
-  - [Incomming](#incomming)
+  - [Incoming](#incoming)
     - [Work](#work)
       - [Normal Work](#normal-work)
       - [Special Work](#special-work)
@@ -20,13 +20,13 @@
         - [Programmer Exp](#programmer-exp)
   - [Ideas](#ideas)
 
-## Incomming
+## Incoming
 
 ### Work
 
 `Normal Work = normal stamina usage | normal hours | Cooldown`
 
-`c/H = Coins per hour.` | `w/H = wood per hour` | `a/H = Artifects per hour` | `s/H = Stone per hour` | `f/H = Fish per hour`
+`c/H = Coins per hour.` | `w/H = wood per hour` | `a/H = Artifacts per hour` | `s/H = Stone per hour` | `f/H = Fish per hour`
 
 `(A) = Rare` | `(S) = Super Rare`
 
@@ -43,9 +43,9 @@
 | Work Name | Description | Default Income   | Type of income | Work Time | Cooldown | note                    |
 |-----------|-------------|------------------|----------------|-----------|----------|-------------------------|
 | Timer     | Hard Work   | 2 to 3 W/H       | Wood/Coins(R)  | 7H to 12H | 15 Hours | Min = 175    \| Max 450 |
-| Explorer  | Hard Work   | 0.25 to 1.50 a/H | Artifect/Coins | 7H to 13H | 14 Hours | Min = 49.35  \| Max 550 |
+| Explorer  | Hard Work   | 0.25 to 1.50 a/H | Artifacts/Coins| 7H to 13H | 14 Hours | Min = 49.35  \| Max 550 |
 | Miner     | Hard Work   | 10/25 s/H        | Stone/Ruby(S)  | 7H to 12H | 15 Hours | Min = 187    \| Max 510 |
-| Fishher   | Hard Work   | 0.33 to 12 f/H   | Fish/Boot(R)   | 10 Hours  | 10 Hours | Min = 14.025 \| max 510 |
+| Fisher    | Hard Work   | 0.33 to 12 f/H   | Fish/Boot(R)   | 10 Hours  | 10 Hours | Min = 14.025 \| max 510 |
 
 ### Special income
 
@@ -66,7 +66,7 @@
 | 1x     | Boot     | 7.0 Coins  | 15  Coins |
 | 1X     | Stone    | 1.7 Coins  | 3.0 Coins |
 | 1x     | Ruby     | 120 Coins  | 175 Coins |
-| 1x     | Artifect | 28.2 Coins | 45  Coins |
+| 1x     | Artifacts | 28.2 Coins | 45  Coins |
 
 ## Outgoing
 

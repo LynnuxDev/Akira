@@ -24,7 +24,7 @@ const events: (keyof ClientEvents)[] = [
   //"guildAuditLogEntryCreate",                 // This event is called when a guild audit log entry is created
   //"guildAvailable",                           // This event is called when a guild becomes available
   //"guildBanAdd",                              // This event is called when a ban is added
-  //"guildBanRemove",                           // This evemt is called when a ban is removed
+  //"guildBanRemove",                           // This event is called when a ban is removed
   //"guildCreate",                              // This event is called when the bot is added to a guild
   //"guildDelete",                              // This event is called when the bot is removed from a guild
   "guildMemberAdd",                             // This event is called when a member joins the guild

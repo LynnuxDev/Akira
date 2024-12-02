@@ -6,15 +6,19 @@
 
 - [Dev] pulled to [Main]
 
-## [[Dev]] ChangeLog | Aug 22 2024
+## [[Dev]] ChangeLog | Nov 12 2024
 
 ### Added
 
+- Voting command `a.vote`.
+- About command `a.about`.
 - UserInfo `a.userInfo`
+- Different languages using i18n.
 
 ### Changed
 
 - Anime Lookup (`/anime`)
+- Swapped from plain JavaScript to TypeScript.
 
 ### Versions used
 

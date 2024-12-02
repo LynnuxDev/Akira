@@ -17,7 +17,7 @@ This removes the Function Spam from Function overrides.
 
 ### encrypt.js / decrypt.js
 
-Changed FIXED_IV to a custom IV so it doenst use the default IV of [ForgeScript]
+Changed FIXED_IV to a custom IV so it doesn't use the default IV of [ForgeScript]
 
 - location: `node_modules/@tryforge/forgescript/dist/native/crypto/` [.](./node_modules/@tryforge/forgescript/dist/native/crypto/encrypt.js)
 
