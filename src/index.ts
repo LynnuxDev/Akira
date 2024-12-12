@@ -77,6 +77,7 @@ client.applicationCommands.load(slashCommandsPath);
 
 ForgeDB.variables({
   prefix: "!",
+  uuid: "null",
   color: "#ff47ff",
   colorError: "#d50056",
   AgreedToTos: false,

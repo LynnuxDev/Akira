@@ -22,6 +22,7 @@ const commands: Command[] = [
       $c[----------------------------------ONLY-IF---------------------------------]
       $onlyIf[$getUserVar[AgreedToTos;$get[author];false]==true;$callEmbed[agreeToTerms]]
       $onlyIf[$channelID==$getGuildVar[BotChannel;$guildID;$channelID];$getGlobalVar[BotChannelError]]
+      $onlyIf[$findUser[$message[1];true]!=$authorID];wrong usage of bite, bite a user.]
 
       $onlyIf[$checkContains[$getVar[rp-commandblocked;$get[user]];*;bite]==false;$customError[722;bite]]
       $onlyIf[$checkContains[$getVar[rp-blocked;$get[user]];$get[author]]!=true;$customError[722;bite]]
