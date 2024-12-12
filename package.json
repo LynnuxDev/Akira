@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc && standard-version",
-    "start": "NODE_ENV=production npm run build && node -r tsconfig-paths/register dist/index.js",
+    "start": "NODE_ENV=production tsc && node -r tsconfig-paths/register dist/index.js",
     "dev": "NODE_ENV=development ts-node -r tsconfig-paths/register src/index.ts"
   },
   "author": "Lynnux",
@@ -34,5 +34,41 @@
   "devDependencies": {
     "@types/uuid": "^10.0.0",
     "standard-version": "^9.5.0"
+  },
+  "standard-version": {
+    "types": [
+      {
+        "type": "feat",
+        "section": "Features"
+      },
+      {
+        "type": "fix",
+        "section": "Bug Fixes"
+      },
+      {
+        "type": "chore",
+        "section": "Chores"
+      },
+      {
+        "type": "refactor",
+        "section": "Code Refactoring"
+      },
+      {
+        "type": "perf",
+        "section": "Performance Improvements"
+      },
+      {
+        "type": "docs",
+        "section": "Documentation"
+      },
+      {
+        "type": "style",
+        "section": "Styles"
+      },
+      {
+        "type": "test",
+        "section": "Tests"
+      }
+    ]
   }
 }
