@@ -40,7 +40,7 @@ const commands: Command[] = [
       $if[$get[userID]!=$authorID;
         $let[msg;$i18n[$get[lang];message.roleplay.neutral.sip.description]]
         $description[$replace[$replace[$get[msg];{{author}};**$nickname**;1];{{user}};**$username[$get[userID]]**;1]$if[$get[message]!=;\n"$get[message]"]]
-        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.neutral.sip.$if[$getVar[sip-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$nickname;1];{{amount}};$getVar[sip-give;$get[author]];1] | $replace[$replace[$i18n[$get[lang];message.roleplay.neutral.sip.footer.$if[$getVar[sip-gotten;$get[user];0]==1;two;twoSingle]];{{amount}};$getVar[sip-gotten;$get[user];0];-1];{{user}};$nickname[$guildID;$get[userID]];-1]]
+        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.neutral.sip.$if[$getVar[sip-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$nickname;1];{{amount}};$getVar[sip-give;$get[author]];1] | $replace[$replace[$i18n[$get[lang];message.roleplay.neutral.sip.footer.$if[$getVar[sip-gotten;$get[user];0]==1;two;twoSingle]];{{amount}};$getVar[sip-gotten;$get[user];0];-1];{{user}};$try[$nickname[$guildID;$get[userID]];$username];-1]]
       ;
         $let[msg;$i18n[$get[lang];message.roleplay.neutral.sip.descriptionSingle]]
         $description[$replace[$replace[$get[msg];{{author}};**$nickname**;1];{{user}};**$username[$get[userID]]**;1]$if[$get[message]!=;\n"$get[message]"]]
