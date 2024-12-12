@@ -1,11 +1,11 @@
 {
   "name": "akira",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Akira's Test Bot",
   "main": "index.js",
   "scripts": {
     "release": "standard-version",
-    "build": "tsc",
+    "build": "tsc && standard-version",
     "start": "NODE_ENV=production npm run build && node -r tsconfig-paths/register dist/index.js",
     "dev": "NODE_ENV=development ts-node -r tsconfig-paths/register src/index.ts"
   },
