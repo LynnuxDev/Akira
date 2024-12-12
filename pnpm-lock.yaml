@@ -9,35 +9,35 @@ importers:
   .:
     dependencies:
       '@tryforge/forge.api':
-        specifier: github:tryforge/Forgeapi#dev
-        version: https://codeload.github.com/tryforge/Forgeapi/tar.gz/76c7cb998e7e9debcfbcacb6c112ebd65bcd3b19
+        specifier: github:tryforge/ForgeAPI#dev
+        version: https://codeload.github.com/tryforge/ForgeAPI/tar.gz/76c7cb998e7e9debcfbcacb6c112ebd65bcd3b19
       '@tryforge/forge.db':
-        specifier: github:tryforge/Forgedb#dev
-        version: https://codeload.github.com/tryforge/Forgedb/tar.gz/f17c4305ed498f2e38853dab5abe2f9b6f828f4a(sqlite3@5.1.7)(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))
+        specifier: github:tryforge/ForgeDB#dev
+        version: https://codeload.github.com/tryforge/ForgeDB/tar.gz/f17c4305ed498f2e38853dab5abe2f9b6f828f4a(sqlite3@5.1.7)(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))
       '@tryforge/forge.topgg':
-        specifier: github:tryforge/Forgetopgg#dev
-        version: https://codeload.github.com/tryforge/Forgetopgg/tar.gz/704560ff14fc6236205c639df0287575873aa6d7
+        specifier: github:tryforge/ForgeTopGG#dev
+        version: https://codeload.github.com/tryforge/ForgeTopGG/tar.gz/704560ff14fc6236205c639df0287575873aa6d7
       '@tryforge/forgescript':
-        specifier: github:tryforge/Forgescript#dev
-        version: https://codeload.github.com/tryforge/Forgescript/tar.gz/6c173174954115368bb3691c7bb0358067f6a081
+        specifier: github:tryforge/ForgeScript#dev
+        version: https://codeload.github.com/tryforge/ForgeScript/tar.gz/6c173174954115368bb3691c7bb0358067f6a081
       '@types/i18next':
         specifier: ^12.1.0
         version: 12.1.0
-      '@types/js-yaml':
-        specifier: ^4.0.9
-        version: 4.0.9
       '@types/node':
-        specifier: ^22.10.2
+        specifier: ^22.5.0
         version: 22.10.2
       '@types/ws':
-        specifier: ^8.5.13
+        specifier: ^8.5.12
         version: 8.5.13
-      discord.js:
-        specifier: ^14.16.3
-        version: 14.16.3
       fs:
-        specifier: 0.0.1-security
+        specifier: ^0.0.1-security
         version: 0.0.1-security
+      i18next:
+        specifier: ^23.15.1
+        version: 23.16.8
+      i18next-fs-backend:
+        specifier: ^2.3.2
+        version: 2.6.0
       js-yaml:
         specifier: ^4.1.0
         version: 4.1.0
@@ -47,25 +47,25 @@ importers:
       path:
         specifier: ^0.12.7
         version: 0.12.7
+      sqlite3:
+        specifier: ^5.1.7
+        version: 5.1.7
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@22.10.2)(typescript@5.7.2)
       typescript:
-        specifier: ^5.7.2
+        specifier: ^5.5.4
         version: 5.7.2
-    optionalDependencies:
-      sqlite3:
-        specifier: ^5.1.7
-        version: 5.1.7
     devDependencies:
       '@types/uuid':
         specifier: ^10.0.0
         version: 10.0.0
-      tsconfig-paths:
-        specifier: ^4.2.0
-        version: 4.2.0
 
 packages:
+
+  '@babel/runtime@7.26.0':
+    resolution: {integrity: sha512-FDSOghenHTiToteC/QRlv2q3DhPZ/oOXTBoirfWNx1Cx3TMVcGWQtMMmQcSvb/JjpNeGzx8Pq/b4fKEJuWm1sw==}
+    engines: {node: '>=6.9.0'}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -157,21 +157,21 @@ packages:
   '@top-gg/sdk@3.1.6':
     resolution: {integrity: sha512-qWWYDKAwJHaKaA/5EyLYMzfR76MwCbmKVMSXTPMd9FZFPHuLWJHO+m7Q8dWpWtcnunHa6evRAwlB3p83cht7Ww==}
 
-  '@tryforge/forge.api@https://codeload.github.com/tryforge/Forgeapi/tar.gz/76c7cb998e7e9debcfbcacb6c112ebd65bcd3b19':
-    resolution: {tarball: https://codeload.github.com/tryforge/Forgeapi/tar.gz/76c7cb998e7e9debcfbcacb6c112ebd65bcd3b19}
+  '@tryforge/forge.api@https://codeload.github.com/tryforge/ForgeAPI/tar.gz/76c7cb998e7e9debcfbcacb6c112ebd65bcd3b19':
+    resolution: {tarball: https://codeload.github.com/tryforge/ForgeAPI/tar.gz/76c7cb998e7e9debcfbcacb6c112ebd65bcd3b19}
     version: 1.0.0
 
-  '@tryforge/forge.db@https://codeload.github.com/tryforge/Forgedb/tar.gz/f17c4305ed498f2e38853dab5abe2f9b6f828f4a':
-    resolution: {tarball: https://codeload.github.com/tryforge/Forgedb/tar.gz/f17c4305ed498f2e38853dab5abe2f9b6f828f4a}
+  '@tryforge/forge.db@https://codeload.github.com/tryforge/ForgeDB/tar.gz/f17c4305ed498f2e38853dab5abe2f9b6f828f4a':
+    resolution: {tarball: https://codeload.github.com/tryforge/ForgeDB/tar.gz/f17c4305ed498f2e38853dab5abe2f9b6f828f4a}
     version: 2.0.7
     engines: {node: '>=16.11.0'}
 
-  '@tryforge/forge.topgg@https://codeload.github.com/tryforge/Forgetopgg/tar.gz/704560ff14fc6236205c639df0287575873aa6d7':
-    resolution: {tarball: https://codeload.github.com/tryforge/Forgetopgg/tar.gz/704560ff14fc6236205c639df0287575873aa6d7}
+  '@tryforge/forge.topgg@https://codeload.github.com/tryforge/ForgeTopGG/tar.gz/704560ff14fc6236205c639df0287575873aa6d7':
+    resolution: {tarball: https://codeload.github.com/tryforge/ForgeTopGG/tar.gz/704560ff14fc6236205c639df0287575873aa6d7}
     version: 1.0.0
 
-  '@tryforge/forgescript@https://codeload.github.com/tryforge/Forgescript/tar.gz/6c173174954115368bb3691c7bb0358067f6a081':
-    resolution: {tarball: https://codeload.github.com/tryforge/Forgescript/tar.gz/6c173174954115368bb3691c7bb0358067f6a081}
+  '@tryforge/forgescript@https://codeload.github.com/tryforge/ForgeScript/tar.gz/6c173174954115368bb3691c7bb0358067f6a081':
+    resolution: {tarball: https://codeload.github.com/tryforge/ForgeScript/tar.gz/6c173174954115368bb3691c7bb0358067f6a081}
     version: 1.5.0
     engines: {node: '>=16.11.0'}
 
@@ -192,9 +192,6 @@ packages:
 
   '@types/i18next@12.1.0':
     resolution: {integrity: sha512-qLyqTkp3ZKHsSoX8CNVYcTyTkxlm0aRCUpaUVetgkSlSpiNCdWryOgaYwgbO04tJIfLgBXPcy0tJ3Nl/RagllA==}
-
-  '@types/js-yaml@4.0.9':
-    resolution: {integrity: sha512-k4MGaQl5TGo/iipqb2UDG2UwjXziSWkh0uysQelTlJpX1qGlpUZYm8PnO4DxG1qBomtJUdYJ6qR6xdIah10JLg==}
 
   '@types/node@22.10.2':
     resolution: {integrity: sha512-Xxr6BBRCAOQixvonOye19wnzyDiUtTeqldOOmj3CkeblonbccA12PFwlufvRdrpjXxqnmUaeiU5EOA+7s5diUQ==}
@@ -643,6 +640,12 @@ packages:
   humanize-ms@1.2.1:
     resolution: {integrity: sha512-Fl70vYtsAFb/C06PTS9dZBo7ihau+Tu/DNCk/OyHhea07S+aeMWpFFkUaXRa8fI+ScZbEI8dfSxwY7gxZ9SAVQ==}
 
+  i18next-fs-backend@2.6.0:
+    resolution: {integrity: sha512-3ZlhNoF9yxnM8pa8bWp5120/Ob6t4lVl1l/tbLmkml/ei3ud8IWySCHt2lrY5xWRlSU5D9IV2sm5bEbGuTqwTw==}
+
+  i18next@23.16.8:
+    resolution: {integrity: sha512-06r/TitrM88Mg5FdUXAKL96dJMzgqLE5dv3ryBAra4KCwD9mJ4ndOTS95ZuymIGoE+2hzfdaMak2X11/es7ZWg==}
+
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
@@ -708,11 +711,6 @@ packages:
 
   jsbn@1.1.0:
     resolution: {integrity: sha512-4bYVV3aAMtDTTu4+xsDYa6sy9GyJ69/amsu9sYF2zqjiEoZA5xJi3BrfX3uY+/IekIu7MwdObdbDWpoZdBv3/A==}
-
-  json5@2.2.3:
-    resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
-    engines: {node: '>=6'}
-    hasBin: true
 
   jsonwebtoken@9.0.2:
     resolution: {integrity: sha512-PRp66vJ865SSqOlgqS8hujT5U4AOgMfhrwYIuIhfKaoSCZcirrmASQr8CX7cUg+RMih+hgznrjp99o+W4pJLHQ==}
@@ -1014,6 +1012,9 @@ packages:
   reflect-metadata@0.2.2:
     resolution: {integrity: sha512-urBwgfrvVP/eAyXx4hluJivBKzuEbSQs9rKWCrCkbSxNv8mxPcUZKeuoF3Uy4mJl3Lwprp6yy5/39VWigZ4K6Q==}
 
+  regenerator-runtime@0.14.1:
+    resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
+
   require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
     engines: {node: '>=0.10.0'}
@@ -1152,10 +1153,6 @@ packages:
     resolution: {integrity: sha512-iq6eVVI64nQQTRYq2KtEg2d2uU7LElhTJwsH4YzIHZshxlgZms/wIc4VoDQTlG/IvVIrBKG06CrZnp0qv7hkcQ==}
     engines: {node: '>=12'}
 
-  strip-bom@3.0.0:
-    resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==}
-    engines: {node: '>=4'}
-
   strip-json-comments@2.0.1:
     resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
     engines: {node: '>=0.10.0'}
@@ -1208,10 +1205,6 @@ packages:
         optional: true
       '@swc/wasm':
         optional: true
-
-  tsconfig-paths@4.2.0:
-    resolution: {integrity: sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==}
-    engines: {node: '>=6'}
 
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
@@ -1388,6 +1381,10 @@ packages:
 
 snapshots:
 
+  '@babel/runtime@7.26.0':
+    dependencies:
+      regenerator-runtime: 0.14.1
+
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
@@ -1498,7 +1495,7 @@ snapshots:
       raw-body: 2.5.2
       undici: 5.28.4
 
-  '@tryforge/forge.api@https://codeload.github.com/tryforge/Forgeapi/tar.gz/76c7cb998e7e9debcfbcacb6c112ebd65bcd3b19':
+  '@tryforge/forge.api@https://codeload.github.com/tryforge/ForgeAPI/tar.gz/76c7cb998e7e9debcfbcacb6c112ebd65bcd3b19':
     dependencies:
       '@tryforge/webserver': 1.0.1
       jsonwebtoken: 9.0.2
@@ -1507,7 +1504,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@tryforge/forge.db@https://codeload.github.com/tryforge/Forgedb/tar.gz/f17c4305ed498f2e38853dab5abe2f9b6f828f4a(sqlite3@5.1.7)(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))':
+  '@tryforge/forge.db@https://codeload.github.com/tryforge/ForgeDB/tar.gz/f17c4305ed498f2e38853dab5abe2f9b6f828f4a(sqlite3@5.1.7)(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))':
     dependencies:
       tiny-typed-emitter: 2.1.0
       typeorm: 0.3.20(sqlite3@5.1.7)(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))
@@ -1531,7 +1528,7 @@ snapshots:
       - ts-node
       - typeorm-aurora-data-api-driver
 
-  '@tryforge/forge.topgg@https://codeload.github.com/tryforge/Forgetopgg/tar.gz/704560ff14fc6236205c639df0287575873aa6d7':
+  '@tryforge/forge.topgg@https://codeload.github.com/tryforge/ForgeTopGG/tar.gz/704560ff14fc6236205c639df0287575873aa6d7':
     dependencies:
       '@top-gg/sdk': 3.1.6
       express: 4.21.2
@@ -1540,7 +1537,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tryforge/forgescript@https://codeload.github.com/tryforge/Forgescript/tar.gz/6c173174954115368bb3691c7bb0358067f6a081':
+  '@tryforge/forgescript@https://codeload.github.com/tryforge/ForgeScript/tar.gz/6c173174954115368bb3691c7bb0358067f6a081':
     dependencies:
       chalk: 4.1.2
       discord.js: 14.16.3
@@ -1569,8 +1566,6 @@ snapshots:
   '@tsconfig/node16@1.0.4': {}
 
   '@types/i18next@12.1.0': {}
-
-  '@types/js-yaml@4.0.9': {}
 
   '@types/node@22.10.2':
     dependencies:
@@ -1654,14 +1649,12 @@ snapshots:
   bindings@1.5.0:
     dependencies:
       file-uri-to-path: 1.0.0
-    optional: true
 
   bl@4.1.0:
     dependencies:
       buffer: 5.7.1
       inherits: 2.0.4
       readable-stream: 3.6.2
-    optional: true
 
   body-parser@1.20.3:
     dependencies:
@@ -1696,7 +1689,6 @@ snapshots:
     dependencies:
       base64-js: 1.5.1
       ieee754: 1.2.1
-    optional: true
 
   buffer@6.0.3:
     dependencies:
@@ -1751,11 +1743,9 @@ snapshots:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
 
-  chownr@1.1.4:
-    optional: true
+  chownr@1.1.4: {}
 
-  chownr@2.0.0:
-    optional: true
+  chownr@2.0.0: {}
 
   clean-stack@2.2.0:
     optional: true
@@ -1829,10 +1819,8 @@ snapshots:
   decompress-response@6.0.0:
     dependencies:
       mimic-response: 3.1.0
-    optional: true
 
-  deep-extend@0.6.0:
-    optional: true
+  deep-extend@0.6.0: {}
 
   define-data-property@1.1.4:
     dependencies:
@@ -1847,8 +1835,7 @@ snapshots:
 
   destroy@1.2.0: {}
 
-  detect-libc@2.0.3:
-    optional: true
+  detect-libc@2.0.3: {}
 
   diff@4.0.2: {}
 
@@ -1908,7 +1895,6 @@ snapshots:
   end-of-stream@1.4.4:
     dependencies:
       once: 1.4.0
-    optional: true
 
   env-paths@2.2.1:
     optional: true
@@ -1926,8 +1912,7 @@ snapshots:
 
   etag@1.8.1: {}
 
-  expand-template@2.0.3:
-    optional: true
+  expand-template@2.0.3: {}
 
   express@4.21.2:
     dependencies:
@@ -1967,8 +1952,7 @@ snapshots:
 
   fast-deep-equal@3.1.3: {}
 
-  file-uri-to-path@1.0.0:
-    optional: true
+  file-uri-to-path@1.0.0: {}
 
   finalhandler@1.3.1:
     dependencies:
@@ -1991,13 +1975,11 @@ snapshots:
 
   fresh@0.5.2: {}
 
-  fs-constants@1.0.0:
-    optional: true
+  fs-constants@1.0.0: {}
 
   fs-minipass@2.1.0:
     dependencies:
       minipass: 3.3.6
-    optional: true
 
   fs.realpath@1.0.0:
     optional: true
@@ -2031,8 +2013,7 @@ snapshots:
       has-symbols: 1.1.0
       hasown: 2.0.2
 
-  github-from-package@0.0.0:
-    optional: true
+  github-from-package@0.0.0: {}
 
   glob@10.4.5:
     dependencies:
@@ -2108,6 +2089,12 @@ snapshots:
       ms: 2.1.3
     optional: true
 
+  i18next-fs-backend@2.6.0: {}
+
+  i18next@23.16.8:
+    dependencies:
+      '@babel/runtime': 7.26.0
+
   iconv-lite@0.4.24:
     dependencies:
       safer-buffer: 2.1.2
@@ -2138,8 +2125,7 @@ snapshots:
 
   inherits@2.0.4: {}
 
-  ini@1.3.8:
-    optional: true
+  ini@1.3.8: {}
 
   ip-address@9.0.5:
     dependencies:
@@ -2170,8 +2156,6 @@ snapshots:
 
   jsbn@1.1.0:
     optional: true
-
-  json5@2.2.3: {}
 
   jsonwebtoken@9.0.2:
     dependencies:
@@ -2263,8 +2247,7 @@ snapshots:
 
   mime@1.6.0: {}
 
-  mimic-response@3.1.0:
-    optional: true
+  mimic-response@3.1.0: {}
 
   minimatch@3.1.2:
     dependencies:
@@ -2309,10 +2292,8 @@ snapshots:
   minipass@3.3.6:
     dependencies:
       yallist: 4.0.0
-    optional: true
 
-  minipass@5.0.0:
-    optional: true
+  minipass@5.0.0: {}
 
   minipass@7.1.2: {}
 
@@ -2320,13 +2301,10 @@ snapshots:
     dependencies:
       minipass: 3.3.6
       yallist: 4.0.0
-    optional: true
 
-  mkdirp-classic@0.5.3:
-    optional: true
+  mkdirp-classic@0.5.3: {}
 
-  mkdirp@1.0.4:
-    optional: true
+  mkdirp@1.0.4: {}
 
   mkdirp@2.1.6: {}
 
@@ -2349,8 +2327,7 @@ snapshots:
       object-assign: 4.1.1
       thenify-all: 1.6.0
 
-  napi-build-utils@1.0.2:
-    optional: true
+  napi-build-utils@1.0.2: {}
 
   negotiator@0.6.3: {}
 
@@ -2360,10 +2337,8 @@ snapshots:
   node-abi@3.71.0:
     dependencies:
       semver: 7.6.3
-    optional: true
 
-  node-addon-api@7.1.1:
-    optional: true
+  node-addon-api@7.1.1: {}
 
   node-gyp@8.4.1:
     dependencies:
@@ -2406,7 +2381,6 @@ snapshots:
   once@1.4.0:
     dependencies:
       wrappy: 1.0.2
-    optional: true
 
   p-map@4.0.0:
     dependencies:
@@ -2456,7 +2430,6 @@ snapshots:
       simple-get: 4.0.1
       tar-fs: 2.1.1
       tunnel-agent: 0.6.0
-    optional: true
 
   process-nextick-args@2.0.1: {}
 
@@ -2480,7 +2453,6 @@ snapshots:
     dependencies:
       end-of-stream: 1.4.4
       once: 1.4.0
-    optional: true
 
   qs@6.13.0:
     dependencies:
@@ -2501,7 +2473,6 @@ snapshots:
       ini: 1.3.8
       minimist: 1.2.8
       strip-json-comments: 2.0.1
-    optional: true
 
   readable-stream@2.3.7:
     dependencies:
@@ -2518,9 +2489,10 @@ snapshots:
       inherits: 2.0.4
       string_decoder: 1.3.0
       util-deprecate: 1.0.2
-    optional: true
 
   reflect-metadata@0.2.2: {}
+
+  regenerator-runtime@0.14.1: {}
 
   require-directory@2.1.1: {}
 
@@ -2625,15 +2597,13 @@ snapshots:
 
   signal-exit@4.1.0: {}
 
-  simple-concat@1.0.1:
-    optional: true
+  simple-concat@1.0.1: {}
 
   simple-get@4.0.1:
     dependencies:
       decompress-response: 6.0.0
       once: 1.4.0
       simple-concat: 1.0.1
-    optional: true
 
   smart-buffer@4.2.0:
     optional: true
@@ -2667,7 +2637,6 @@ snapshots:
     transitivePeerDependencies:
       - bluebird
       - supports-color
-    optional: true
 
   sqlstring@2.3.1: {}
 
@@ -2697,7 +2666,6 @@ snapshots:
   string_decoder@1.3.0:
     dependencies:
       safe-buffer: 5.2.1
-    optional: true
 
   strip-ansi@6.0.1:
     dependencies:
@@ -2707,10 +2675,7 @@ snapshots:
     dependencies:
       ansi-regex: 6.1.0
 
-  strip-bom@3.0.0: {}
-
-  strip-json-comments@2.0.1:
-    optional: true
+  strip-json-comments@2.0.1: {}
 
   supports-color@7.2.0:
     dependencies:
@@ -2722,7 +2687,6 @@ snapshots:
       mkdirp-classic: 0.5.3
       pump: 3.0.2
       tar-stream: 2.2.0
-    optional: true
 
   tar-stream@2.2.0:
     dependencies:
@@ -2731,7 +2695,6 @@ snapshots:
       fs-constants: 1.0.0
       inherits: 2.0.4
       readable-stream: 3.6.2
-    optional: true
 
   tar@6.2.1:
     dependencies:
@@ -2741,7 +2704,6 @@ snapshots:
       minizlib: 2.1.2
       mkdirp: 1.0.4
       yallist: 4.0.0
-    optional: true
 
   thenify-all@1.6.0:
     dependencies:
@@ -2780,18 +2742,11 @@ snapshots:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
-  tsconfig-paths@4.2.0:
-    dependencies:
-      json5: 2.2.3
-      minimist: 1.2.8
-      strip-bom: 3.0.0
-
   tslib@2.8.1: {}
 
   tunnel-agent@0.6.0:
     dependencies:
       safe-buffer: 5.2.1
-    optional: true
 
   type-is@1.6.18:
     dependencies:
@@ -2878,15 +2833,13 @@ snapshots:
       string-width: 5.1.2
       strip-ansi: 7.1.0
 
-  wrappy@1.0.2:
-    optional: true
+  wrappy@1.0.2: {}
 
   ws@8.18.0: {}
 
   y18n@5.0.8: {}
 
-  yallist@4.0.0:
-    optional: true
+  yallist@4.0.0: {}
 
   yargs-parser@20.2.9: {}
 
