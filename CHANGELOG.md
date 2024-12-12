@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.5](https://github.com/LynnuxDev/Akira/compare/v0.5.4...v0.5.5) (2024-12-12)
+
+
+### Code Refactoring
+
+* Added Function checkBotChannel for easy access/changing if needed. ([6cc76d8](https://github.com/LynnuxDev/Akira/commit/6cc76d8265be4e25f68f04908df1da8ad9d802ea))
+
+
+### Tests
+
+* Testing this shi ([f7cdf79](https://github.com/LynnuxDev/Akira/commit/f7cdf7995e9a73a716ecad921675566dcb1f74be))
+
 ### [0.5.4](https://github.com/LynnuxDev/Akira/compare/v0.5.3...v0.5.4) (2024-12-12)
 
 
