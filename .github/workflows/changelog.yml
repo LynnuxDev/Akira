@@ -41,10 +41,13 @@ jobs:
         run: |
           git status --porcelain | grep "CHANGELOG.md\|package.json" || echo "No changes to commit"
 
+      - name: Check token availability
+        run: echo "Token is available: ${{ secrets.GH_TOKEN }}" || echo "GH_TOKEN not set"
+
       - name: Commit and push changes if necessary
         run: |
           git add CHANGELOG.md package.json
           git status --porcelain | grep "CHANGELOG.md\|package.json" && git commit -m "chore(release): update changelog and version"
-          git push https://github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
