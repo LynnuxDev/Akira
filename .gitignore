@@ -9,3 +9,4 @@ forge.db
 src/handler/token.ts
 src/handler/encryptionKey.ts
 pnpm-lock.yaml
+files/anime/not-found.json
