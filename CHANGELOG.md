@@ -8,5 +8,3 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 * Added Changelog automation ([164fee8](https://github.com/LynnuxDev/Akira/commit/164fee83c7ea1352f8918a9d4dd7e2c43e603437))
-
-### [0.5.1](https://github.com/LynnuxDev/Akira/compare/v1.1.2...v0.5.1) (2024-12-12)
