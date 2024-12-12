@@ -42,7 +42,8 @@ jobs:
           git status --porcelain | grep "CHANGELOG.md\|package.json" || echo "No changes to commit"
 
       - name: Check token availability
-        run: echo "Token is available: ${{ secrets.GH_TOKEN }}" || echo "GH_TOKEN not set"
+        run: |
+          echo "Token is available: ${{ secrets.GH_TOKEN }}" || echo "GH_TOKEN not set"
 
       - name: Commit and push changes if necessary
         run: |
