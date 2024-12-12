@@ -1,25 +1,25 @@
 import { GatewayIntentBits } from 'discord.js';
 const intents: GatewayIntentBits[] = [
-//"AutoModerationConfiguration",      // Intent for Automod Config
-//"AutoModerationExecution",          // Intent for Automod Execution
+//GatewayIntentBits.AutoModerationConfiguration,      // Intent for Automod Config
+//GatewayIntentBits.AutoModerationExecution,          // Intent for Automod Execution
 
 GatewayIntentBits.DirectMessages,             // Intent for DM
-//"DirectMessageReactions",           // Intent for DM Reacts
-//"DirectMessageTyping",              // Intent for Typing in DM
-//"GuildEmojisAndStickers",           // Intent for Guild Emojis and Stickers
+//GatewayIntentBits.DirectMessageReactions,           // Intent for DM Reacts
+//GatewayIntentBits.DirectMessageTyping,              // Intent for Typing in DM
+//GatewayIntentBits.GuildEmojisAndStickers,           // Intent for Guild Emojis and Stickers
 
 GatewayIntentBits.Guilds,                    // Intent for Guilds
 GatewayIntentBits.GuildMembers,              // Intent for Guild Members
-//"GuildModeration",                  // Intent for GuildModeration
-//"GuildEmojisAndStickers",           // Intent for Guild Emojis and Stickers
+//GatewayIntentBits.GuildModeration,                  // Intent for GuildModeration
+//GatewayIntentBits.GuildEmojisAndStickers,           // Intent for Guild Emojis and Stickers
 GatewayIntentBits.GuildIntegrations,         // Intent for Guild Integrations (bots, etc.)
-//"GuildWebhooks",                    // Intent for Guild Webhook
-//"GuildInvites",                     // Intent for Guild Invites
-//"GuildVoiceStates",                 // Intent for Guild Voice States
+//GatewayIntentBits.GuildWebhooks,                    // Intent for Guild Webhook
+//GatewayIntentBits.GuildInvites,                     // Intent for Guild Invites
+//GatewayIntentBits.GuildVoiceStates,                 // Intent for Guild Voice States
 GatewayIntentBits.GuildMessages,             // Intent for Guild Messages
-//"GuildMessageReactions",            // Intent for Guild Reactions
-//"GuildMessageTyping",               // Intent for Guild typing
-//"GuildScheduledEvents",             // Intent for Guild scheduled events
+//GatewayIntentBits.GuildMessageReactions,            // Intent for Guild Reactions
+//GatewayIntentBits.GuildMessageTyping,               // Intent for Guild typing
+//GatewayIntentBits.GuildScheduledEvents,             // Intent for Guild scheduled events
 GatewayIntentBits.MessageContent,            // Intent for Message Content
 ];
 

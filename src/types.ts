@@ -8,7 +8,7 @@ export interface Command {
   documentation?: string;
   usage?: string;
   example?: string;
-  version: string; 
+  version: string;
   code: string;
 }
 
@@ -30,4 +30,8 @@ export interface customFunction {
   name: string;
   params?: string[];
   code: string;
+}
+
+export interface Translations {
+  [key: string]: any;
 }

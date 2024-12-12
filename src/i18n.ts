@@ -2,9 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
 
-interface Translations {
-  [key: string]: any;
-}
+import { Translations } from './types';
 
 const BASE_PATH = '/media/lynnux/[E] Other/Codes/@Github/@LynnuxDev/AkiraLocalization';
 
