@@ -1,0 +1,11 @@
+{
+  "botName": "Akira",
+  "primaryLanguage": "TypeScript",
+  "minimumNodeVersion": "22.3.0",
+  "communityStatus": "active",
+  "license": "MIT",
+  "features": {
+    "autoModeration": "beta",
+    "roleplay": "beta"
+  }
+}

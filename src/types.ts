@@ -31,3 +31,7 @@ export interface customFunction {
   params?: string[];
   code: string;
 }
+
+export interface Translations {
+  [key: string]: any;
+}

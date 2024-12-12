@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "NODE_ENV=production npm run build && node dist/index.js",
-    "dev": "NODE_ENV=development ts-node src/index.ts"
+    "start": "NODE_ENV=production npm run build && node -r tsconfig-paths/register dist/index.js",
+    "dev": "NODE_ENV=development ts-node -r tsconfig-paths/register src/index.ts"
   },
   "author": "Lynnux",
   "license": "MIT",
@@ -16,8 +16,10 @@
     "@tryforge/forge.topgg": "github:tryforge/ForgeTopGG#dev",
     "@tryforge/forgescript": "github:tryforge/ForgeScript#dev",
     "@types/i18next": "^12.1.0",
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.5.0",
     "@types/ws": "^8.5.12",
+    "discord.js": "^14.16.3",
     "fs": "^0.0.1-security",
     "i18next": "^23.15.1",
     "i18next-fs-backend": "^2.3.2",
@@ -26,6 +28,7 @@
     "path": "^0.12.7",
     "sqlite3": "^5.1.7",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.5.4"
   },
   "devDependencies": {

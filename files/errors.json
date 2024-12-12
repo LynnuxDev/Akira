@@ -146,6 +146,12 @@
     "description": "The user provided has blocked You or anyone from using this command on them.",
     "from": "Client"
   },
+  "723": {
+    "title": ["User required.", "We need a friend."],
+    "meaning": "User input required.",
+    "description": "You need to provide a user for this command.",
+    "from": "Client"
+  },
   "801": {
     "title": ["Argument Anomaly!","Argument in Distress!","Oops，Wrong Argument!","Argument Malfunction!","Lost Argument Syndrome!","Argument’s Lost in Translation!"],
     "meaning": "Wrong arguments (specific).",

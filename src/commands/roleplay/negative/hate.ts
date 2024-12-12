@@ -2,16 +2,16 @@ import { Command } from "@/types"
 
 const commands: Command[] = [
   {
-    name: "bite",
-    aliases: ["rp-bite"],
-    description: "Give them a bite",
+    name: "hate",
+    aliases: ["rp-hate"],
+    description: "Show how sad you are.",
     type: "messageCreate",
     module: "Roleplay",
     version: "1.0.0",
-    sourcecode: "src/commands/Roleplay/negative/bite.ts",
+    sourcecode: "src/commands/Roleplay/negative/hate.ts",
     documentation: "roleplay",
-    usage: "bite <user> {message}",
-    example: "bite @dark-lynn NEVER do that again.",
+    usage: "hate <user> {message}",
+    example: "hate @dark-lynn I hate you for doing this.",
     code: `
       $c[------------------------------------LET-----------------------------------]
       $let[author;$getUserVar[uuid;$customEncrypt[encrypt;$authorID]]]
@@ -24,28 +24,28 @@ const commands: Command[] = [
       $onlyIf[$channelID==$getGuildVar[BotChannel;$guildID;$channelID];$getGlobalVar[BotChannelError]]
       $onlyIf[$get[user]!=$get[author];$customError[723;bite]]
 
-      $onlyIf[$checkContains[$getVar[rp-commandblocked;$get[user]];*;bite]==false;$customError[722;bite]]
-      $onlyIf[$checkContains[$getVar[rp-blocked;$get[user]];$get[author]]!=true;$customError[722;bite]]
+      $onlyIf[$checkContains[$getVar[rp-commandblocked;$get[user]];*;hate]==false;$customError[722;hate]]
+      $onlyIf[$checkContains[$getVar[rp-blocked;$get[user]];$get[author]]!=true;$customError[722;hate]]
 
       $c[-----------------------------------MAIN-----------------------------------]
       $let[message;$replace[$replace[$message;$message[0] ;];$message[0];]]
 
-      $setVar[bite-give;$get[author];$sum[$getVar[bite-give;$get[author];0];1]]
+      $setVar[hate-give;$get[author];$sum[$getVar[hate-give;$get[author];0];1]]
 
       $if[$get[user]!=null;
-        $setVar[bite-gotten;$get[user];$sum[$getVar[bite-gotten;$get[user];0];1]]
+        $setVar[hate-gotten;$get[user];$sum[$getVar[hate-gotten;$get[user];0];1]]
       ]
 
       $color[$getVar[color;default]]
-      $image[$callFunction[roleplay;bite]]
+      $image[$callFunction[roleplay;hate]]
       $if[$get[userID]!=$authorID;
-        $let[msg;$i18n[$get[lang];message.roleplay.negative.bite.description]]
+        $let[msg;$i18n[$get[lang];message.roleplay.negative.hate.description]]
         $description[$replace[$replace[$get[msg];{{author}};**$if[$guildID!=;$nickname;$username]**;1];{{user}};**$username[$get[userID]]**;1]$if[$get[message]!=;\n"$get[message]"]]
-        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.negative.bite.$if[$getVar[bite-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$if[$guildID!=;$nickname;$username];1];{{amount}};$getVar[bite-give;$get[author]];1] | $replace[$replace[$i18n[$get[lang];message.roleplay.negative.bite.footer.$if[$getVar[bite-gotten;$get[user];0]==1;two;twoSingle]];{{amount}};$getVar[bite-gotten;$get[user];0];-1];{{user}};$try[$nickname[$guildID;$get[userID]];$username[$get[userID]]];-1]]
+        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.negative.hate.$if[$getVar[hate-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$if[$guildID!=;$nickname;$username];1];{{amount}};$getVar[hate-give;$get[author]];1] | $replace[$replace[$i18n[$get[lang];message.roleplay.negative.hate.footer.$if[$getVar[hate-gotten;$get[user];0]==1;two;twoSingle]];{{amount}};$getVar[hate-gotten;$get[user];0];-1];{{user}};$try[$nickname[$guildID;$get[userID]];$username[$get[userID]]];-1]]
       ;
-        $let[msg;$i18n[$get[lang];message.roleplay.negative.bite.descriptionSingle]]
+        $let[msg;$i18n[$get[lang];message.roleplay.negative.hate.descriptionSingle]]
         $description[$replace[$replace[$get[msg];{{author}};**$if[$guildID!=;$nickname;$username]**;1];{{user}};**$username[$get[userID]]**;1]$if[$get[message]!=;\n"$get[message]"]]
-        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.negative.bite.$if[$getVar[bite-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$if[$guildID!=;$nickname;$username];1];{{amount}};$getVar[bite-give;$get[author]];1]]
+        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.negative.hate.$if[$getVar[hate-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$if[$guildID!=;$nickname;$username];1];{{amount}};$getVar[hate-give;$get[author]];1]]
 
       ]
     `
