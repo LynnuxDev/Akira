@@ -1,0 +1,41 @@
+name: Generate Changelog
+
+on:
+  push:
+    branches:
+      - V1.0.0
+      - Beta
+      - backup-branch
+  pull_request:
+    branches:
+      - V1.0.0
+      - Beta
+      - backup-branch
+  release:
+    types: [published]
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate Changelog
+        run: npm run release
+
+      - name: Commit changelog
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git add CHANGELOG.md
+          git commit -m "chore: update changelog"
+          git push
