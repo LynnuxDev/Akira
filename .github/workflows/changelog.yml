@@ -3,12 +3,14 @@ name: Generate Changelog
 on:
   push:
     branches:
-      - main
-      - beta
+      - Beta
+      - V1.0.0
+      - backup-branch
   pull_request:
     branches:
-      - main
-      - beta
+      - Beta
+      - V1.0.0
+      - backup-branch
   release:
     types: [published]
 
@@ -35,12 +37,12 @@ jobs:
       - name: Generate Changelog
         run: npm run release
 
-      - name: Check for changes
+      - name: Check if there are changes to commit
         run: |
-          git diff --exit-code || echo "Changes detected, ready to commit"
+          git status --porcelain | grep "CHANGELOG.md\|package.json" || echo "No changes to commit"
 
-      - name: Commit and push changes
+      - name: Commit and push changes if necessary
         run: |
           git add CHANGELOG.md package.json
-          git diff --quiet || git commit -m "chore(release): 1.0.1" # Only commit if there are changes
+          git status --porcelain | grep "CHANGELOG.md\|package.json" && git commit -m "chore(release): update changelog and version"
           git push
