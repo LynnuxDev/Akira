@@ -7,7 +7,7 @@ const commands: Command[] = [
     description: "sip",
     type: "messageCreate",
     module: "Roleplay",
-    version: "1.0.0",
+    version: "1.0.0", 
     sourcecode: "src/commands/Roleplay/neutral/sip.ts",
     documentation: "roleplay",
     usage: "sip {user} {message}",

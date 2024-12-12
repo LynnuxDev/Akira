@@ -8,7 +8,7 @@ export interface Command {
   documentation?: string;
   usage?: string;
   example?: string;
-  version: string;
+  version: string; 
   code: string;
 }
 
