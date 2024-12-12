@@ -25,6 +25,7 @@ const commands: Command[] = [
     documentation: "https://documentation.lynnux.xyz/commands/utility/dev/Not-Available",
     example: "test",
     code: `
+      test file
     `
   }
 ]
