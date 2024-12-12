@@ -24,18 +24,21 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'
+          node-version: '16'
 
       - name: Install dependencies
         run: npm install
+
+      - name: Set Git config
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
 
       - name: Generate Changelog
         run: npm run release
 
       - name: Commit changelog
         run: |
-          git config --local user.name "GitHub Actions"
-          git config --local user.email "actions@github.com"
-          git add CHANGELOG.md
-          git commit -m "chore: update changelog"
+          git add CHANGELOG.md package.json
+          git commit -m "chore(release): 1.0.1"
           git push
