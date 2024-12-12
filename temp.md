@@ -1,12 +1,12 @@
 # ChangeLog
 
-## [[Main]] ChangeLog | To Be Added
+## [[Beta]] ChangeLog | To Be Added
 
 ### Pull
 
-- [Dev] pulled to [Main]
+- [backup-branch] pulled to [Beta]
 
-## [[Dev]] ChangeLog | Nov 12 2024
+## [[backup-branch]] ChangeLog | Nov 12 2024
 
 ### Added
 
@@ -27,7 +27,8 @@
 
 ### Deleted
 
-[Dev]: https://github.com/LynnuxDev/Akira/compare/main...dev
-[Main]: https://github.com/LynnuxDev/Akira/tree/main
+[backup-branch]: https://github.com/LynnuxDev/Akira/compare/Beta...backup-branch
+[V1.0.0]: https://github.com/LynnuxDev/Akira/compare/Beta...V1.0.0
+[Beta]: https://github.com/LynnuxDev/Akira/tree/Beta
 [ForgeDB]: https://github.com/tryforge/ForgeDB/blob/dev/
 [ForgeScript]: https://github.com/ForgeScript/ForgeDB/blob/dev/\
