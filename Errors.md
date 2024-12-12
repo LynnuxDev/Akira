@@ -57,6 +57,7 @@ table of content
 | 720    | User doesn't have perms | The user who ran the command doesn't have the right server specific perms. |
 | 721    | User cannot be Author  | The user given cannot be the author. |
 | 722    | Target user blocked    | The user given has blocked someone/anyone from using this command on them. |
+| 723    | User input required    | There must be a user given in the query |
 | 801    | Perms reply            | when the user uses perms reply with wrong input. |
 | 802    | Perms list             | Wrong argument for a.perms list. The argument needs to be a user / role / channel. |
 | 803    | Perms default          | No argument for default. |
