@@ -62,6 +62,12 @@
     "description": "I didn't find this command, perhaps due to a typo or this is a non-existent command.",
     "from": "Any"
   },
+  "405": {
+    "title": ["Oops, something went wrong!", "That wasn't supposed to happen!", "Unexpected input detected!"],
+    "meaning": "Method Not Allowed",
+    "description": "It seems the input received was invalid or not expected. Please ensure you are interacting with the correct options.",
+    "from": "Any"
+  },
   "600": {
     "title": ["User missing from database"],
     "meaning": "User not found in database",
