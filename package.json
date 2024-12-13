@@ -1,6 +1,6 @@
 {
   "name": "akira",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "Akira's Test Bot",
   "main": "index.js",
   "scripts": {
