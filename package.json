@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "lint": "eslint --fix",
+    "lint": "eslint . --fix",
     "release": "standard-version",
     "build": "tsc",
     "start": "NODE_ENV=production tsc && node -r tsconfig-paths/register dist/index.js",
