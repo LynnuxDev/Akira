@@ -1,17 +1,17 @@
-import { Command } from '@/types'
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "commandinfo",
-    aliases: ['command-info','command','cmd'],
-    type: "messageCreate",
-    module: "Utility",
-    sourcecode: "SRC/commands/help/commandinfo.js",
-    documentation: "commandinfo",
-    version: "1.0.0",
-    usage: "commandinfo {command}",
-    description: "See information about a command.",
-    example: "commandinfo about",
+    name: 'commandinfo',
+    aliases: ['command-info', 'command', 'cmd'],
+    type: 'messageCreate',
+    module: 'Utility',
+    sourcecode: 'SRC/commands/help/commandinfo.js',
+    documentation: 'commandinfo',
+    version: '1.0.0',
+    usage: 'commandinfo {command}',
+    description: 'See information about a command.',
+    example: 'commandinfo about',
     code: `
       $let[author;$callFunction[customEncrypt;encrypt;$authorID]]
       $let[uuid;$getUserVar[uuid;$get[author]]]
@@ -50,6 +50,6 @@ const commands: Command[] = [
       ]
     `
   }
-]
+];
 
 export default commands;

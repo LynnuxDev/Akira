@@ -1,17 +1,17 @@
-import { Command } from "@/types"
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "stab",
-    aliases: ["rp-stab"],
-    description: "Show how sad you are.",
-    type: "messageCreate",
-    module: "Roleplay",
-    version: "1.0.0",
-    sourcecode: "src/commands/Roleplay/negative/stab.ts",
-    documentation: "roleplay",
-    usage: "stab <user> {message}",
-    example: "stab @dark-lynn Is that blood.",
+    name: 'stab',
+    aliases: ['rp-stab'],
+    description: 'Show how sad you are.',
+    type: 'messageCreate',
+    module: 'Roleplay',
+    version: '1.0.0',
+    sourcecode: 'src/commands/Roleplay/negative/stab.ts',
+    documentation: 'roleplay',
+    usage: 'stab <user> {message}',
+    example: 'stab @dark-lynn Is that blood.',
     code: `
       $c[------------------------------------LET-----------------------------------]
       $let[author;$getUserVar[uuid;$customEncrypt[encrypt;$authorID]]]
@@ -50,6 +50,6 @@ const commands: Command[] = [
       ]
     `
   }
-]
+];
 
 export default commands;

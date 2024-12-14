@@ -1,17 +1,17 @@
-import { Command } from '@/types'
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "perms",
-    aliases: ["permission","perm","permissions"],
-    type: "messageCreate",
-    description: "Edit specific permissions for Akira commands.",
-    module: "Permissions",
-    sourcecode: "src/commnads/Permissions/Perms.ts",
-    documentation: "perms",
-    usage: "perms <option> [group/command] [target]",
-    example: "perms list\n{prefix}perms allow economy #commands\n{prefix}perms deny @users",
-    version: "1.0.0",
+    name: 'perms',
+    aliases: ['permission', 'perm', 'permissions'],
+    type: 'messageCreate',
+    description: 'Edit specific permissions for Akira commands.',
+    module: 'Permissions',
+    sourcecode: 'src/commnads/Permissions/Perms.ts',
+    documentation: 'perms',
+    usage: 'perms <option> [group/command] [target]',
+    example: 'perms list\n{prefix}perms allow economy #commands\n{prefix}perms deny @users',
+    version: '1.0.0',
     code: `
       $onlyIf[$getUserVar[AgreedToTos;$customEncrypt[encrypt;$authorID]]==true;$ephemeral $color[$getGlobalVar[color]] $title[Before we continue:] $footer[You have to agree with these terms before using akira.] $description[Before you proceed, please make sure to read and agree to our [Terms of Service\\](https://akira.lynnux.xyz/terms) and [Privacy Policy\\](https://akira.lynnux.xyz/policy).\n\nBy using the button below, you confirm that you have read and agree to abide by our terms and policies.\n\nIf you have any questions or concerns, feel free to contact our support team.] $addActionRow $addButton[AcceptTerms-$authorID;I have read and agree to abide by these terms and policies.;Success;;false]]
       $onlyIf[$authorID==705306248538488947;]
@@ -407,6 +407,6 @@ const commands: Command[] = [
       ]
     `
   }
-]
+];
 
 export default commands;

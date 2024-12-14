@@ -1,4 +1,4 @@
-import encryptionKey from "../handler/encryptionKey";
+import encryptionKey from '../handler/encryptionKey';
 
 interface CustomFunction {
   name: string,
@@ -8,8 +8,8 @@ interface CustomFunction {
 
 const functions: CustomFunction[] = [
   {
-    name: "customEncrypt",
-    params: ["option", "text"],
+    name: 'customEncrypt',
+    params: ['option', 'text'],
     code: `
       $switch[$env[option];
         $case[encrypt;
@@ -21,6 +21,6 @@ const functions: CustomFunction[] = [
       ]
     `
   }
-]
+];
 
 export default functions;

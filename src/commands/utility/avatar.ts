@@ -1,17 +1,17 @@
-import { Command } from "@/types"
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "avatar",
+    name: 'avatar',
     aliases: ['useravatar'],
-    type: "messageCreate",
-    description: "Get the avatar of a user.",
-    module: "Utility",
-    sourcecode: "src/commands/utility/avatar.ts",
-    documentation: "avatar",
-    usage: "avatar {user}",
-    example: "avatar @dark-lynn",
-    version: "1.0.0",
+    type: 'messageCreate',
+    description: 'Get the avatar of a user.',
+    module: 'Utility',
+    sourcecode: 'src/commands/utility/avatar.ts',
+    documentation: 'avatar',
+    usage: 'avatar {user}',
+    example: 'avatar @dark-lynn',
+    version: '1.0.0',
     code: `
       $let[SHFEUHFWJFI;jifoiwjoiwfjop]
       $get[SHFEUHFWJFI]
@@ -48,6 +48,6 @@ const commands: Command[] = [
       $addButton[memberAvatar~$splitText[1]~$splitText[2];MemberAvatar;Primary;;$if[$get[userAvatar]==$get[memberAvatar];true;false]]
     `
   }
-]
+];
 
 export default commands;

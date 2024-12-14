@@ -2,9 +2,8 @@
 // @ts-ignore
 // cspell:words actionscript onthego
 
-
 module.exports = {
-  name: "apply",
+  name: 'apply',
   code: `
     $let[job;$option[job]]
     $let[contract;$if[$option[contract]!=;$option[contract];fulltime]]
@@ -66,44 +65,44 @@ module.exports = {
     ]
   `,
   data: {
-    "name": "apply",
-    "description": "Apply for a job.",
-    "options": [
+    name: 'apply',
+    description: 'Apply for a job.',
+    options: [
       {
-        "type": 3,
-        "name": "job",
-        "description": "Which job do you want to apply for?",
-        "required": true,
-        "choices": [
+        type: 3,
+        name: 'job',
+        description: 'Which job do you want to apply for?',
+        required: true,
+        choices: [
           {
-            "name": "Supermarket Employee",
-            "value": "supermarket"
+            name: 'Supermarket Employee',
+            value: 'supermarket'
           },
           {
-            "name": "Programmer",
-            "value": "programmer"
+            name: 'Programmer',
+            value: 'programmer'
           }
         ]
       },
       {
-        "type": 3,
-        "name": "contract",
-        "description": "what type of contract are you looking for?",
-        "choices": [
+        type: 3,
+        name: 'contract',
+        description: 'what type of contract are you looking for?',
+        choices: [
           {
-            "name": "Full-Time",
-            "value": "fulltime"
+            name: 'Full-Time',
+            value: 'fulltime'
           },
           {
-            "name": "Part-Time",
-            "value": "parttime"
+            name: 'Part-Time',
+            value: 'parttime'
           },
           {
-            "name": "On The Go",
-            "value": "onthego"
+            name: 'On The Go',
+            value: 'onthego'
           }
         ]
       }
     ]
   }
-}
+};

@@ -14,15 +14,15 @@ interface Command {
 
 const commands: Command[] = [
   {
-    name: "onEveryFirstOfMonth",
-    type: "ready",
-    description: "This command runs every first of the month.",
-    module: "ClientSpecific",
-    sourcecode: "https://github.com/LynnuxDev/Akira/blob/main/SRC/commands/Global-Interactions/loop/onEveryFirstOfMonth.js",
-    documentation: "https://documentation.lynnux.xyz/commands/utility/dev/Not-Available",
-    usage: "n/a",
-    example: "n/a",
-    version: "1.0.0",
+    name: 'onEveryFirstOfMonth',
+    type: 'ready',
+    description: 'This command runs every first of the month.',
+    module: 'ClientSpecific',
+    sourcecode: 'https://github.com/LynnuxDev/Akira/blob/main/SRC/commands/Global-Interactions/loop/onEveryFirstOfMonth.js',
+    documentation: 'https://documentation.lynnux.xyz/commands/utility/dev/Not-Available',
+    usage: 'n/a',
+    example: 'n/a',
+    version: '1.0.0',
     code: `
       $c[
         $loop[-1;
@@ -32,6 +32,6 @@ const commands: Command[] = [
       ]
     `
   }
-]
+];
 
 export default commands;

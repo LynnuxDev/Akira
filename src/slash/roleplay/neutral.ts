@@ -45,100 +45,100 @@ module.exports = {
     $footer[$username used $get[type] $if[$getVar[$get[type]-give;$authorID]==1;1 time;$getVar[$get[type]-give;$authorID] times]. | $replace[$get[user1];**;;-1] $get[type2] $if[$getVar[$get[type]-got;$get[user]]==1;1 time;$getVar[$get[type]-got;$get[user]] times]]
   `,
   data: {
-    "name": "neutral",
-    "description": "Use neutral roleplay interactions.",
-    "options": [
+    name: 'neutral',
+    description: 'Use neutral roleplay interactions.',
+    options: [
       {
-        "type": 3,
-        "name": "type",
-        "description": "what type of roleplay command you want to use?",
-        "required": true,
-        "choices": [
+        type: 3,
+        name: 'type',
+        description: 'what type of roleplay command you want to use?',
+        required: true,
+        choices: [
           {
-            "name": "Bonk",
-            "value": "bonk"
+            name: 'Bonk',
+            value: 'bonk'
           },
           {
-            "name": "Bored",
-            "value": "bored"
+            name: 'Bored',
+            value: 'bored'
           },
           {
-            "name": "Chase",
-            "value": "chase"
+            name: 'Chase',
+            value: 'chase'
           },
           {
-            "name": "Cringe",
-            "value": "cringe"
+            name: 'Cringe',
+            value: 'cringe'
           },
           {
-            "name": "Dab",
-            "value": "dab"
+            name: 'Dab',
+            value: 'dab'
           },
           {
-            "name": "Facepalm",
-            "value": "facepalm"
+            name: 'Facepalm',
+            value: 'facepalm'
           },
           {
-            "name": "Nervous",
-            "value": "nervous"
+            name: 'Nervous',
+            value: 'nervous'
           },
           {
-            "name": "No",
-            "value": "no"
+            name: 'No',
+            value: 'no'
           },
           {
-            "name": "Panic",
-            "value": "panic"
+            name: 'Panic',
+            value: 'panic'
           },
           {
-            "name": "Run",
-            "value": "run"
+            name: 'Run',
+            value: 'run'
           },
           {
-            "name": "Sip",
-            "value": "sip"
+            name: 'Sip',
+            value: 'sip'
           },
           {
-            "name": "Smug",
-            "value": "smug"
+            name: 'Smug',
+            value: 'smug'
           },
           {
-            "name": "Stare",
-            "value": "stare"
+            name: 'Stare',
+            value: 'stare'
           },
           {
-            "name": "Tease",
-            "value": "tease"
+            name: 'Tease',
+            value: 'tease'
           },
           {
-            "name": "Think",
-            "value": "think"
+            name: 'Think',
+            value: 'think'
           },
           {
-            "name": "Rage",
-            "value": "rage"
+            name: 'Rage',
+            value: 'rage'
           },
           {
-            "name": "Wink",
-            "value": "wink"
+            name: 'Wink',
+            value: 'wink'
           },
           {
-            "name": "Yes",
-            "value": "yes"
+            name: 'Yes',
+            value: 'yes'
           }
         ]
       },
       {
-        "type": 6,
-        "name": "user",
-        "required": true,
-        "description": "Who do you want to give this reaction to?"
+        type: 6,
+        name: 'user',
+        required: true,
+        description: 'Who do you want to give this reaction to?'
       },
       {
-        "type": 3,
-        "name": "message",
-        "description": "What massage do you want to add to the reaction?"
+        type: 3,
+        name: 'message',
+        description: 'What massage do you want to add to the reaction?'
       }
     ]
   }
-}
+};

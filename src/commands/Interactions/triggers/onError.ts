@@ -14,18 +14,18 @@ interface Command {
 
 const commands: Command[] = [
   {
-    type: "error",
-    description: "Execute on errors.",
-    module: "Client",
-    sourcecode: "src/commands/Global-Interactions/triggers/onError.ts",
-    documentation: "onError",
-    usage: "N/A",
-    example: "N/A",
-    version: "1.0.0",
+    type: 'error',
+    description: 'Execute on errors.',
+    module: 'Client',
+    sourcecode: 'src/commands/Global-Interactions/triggers/onError.ts',
+    documentation: 'onError',
+    usage: 'N/A',
+    example: 'N/A',
+    version: '1.0.0',
     code: `
       $disableConsoleErrors
       $logger[Error;$error[]]
   `
-}];
+  }];
 
 export default commands;

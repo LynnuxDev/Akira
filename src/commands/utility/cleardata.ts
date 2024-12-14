@@ -1,17 +1,17 @@
-import { InteractionCommand } from "@/types"
+import { InteractionCommand } from '@/types';
 
 const commands: InteractionCommand[] = [
   {
-    name: "cleardata",
+    name: 'cleardata',
     aliases: ['removedata'],
-    type: "messageCreate",
-    description: "Clear all your Akira data. ~ !THIS CANNOT BE UNDONE!",
-    module: "Utility",
-    sourcecode: "/SRC/commands/utility/cleardata.js",
-    documentation: "cleardata",
-    usage: "cleardata",
-    example: "clearData",
-    version: "1.0.0",
+    type: 'messageCreate',
+    description: 'Clear all your Akira data. ~ !THIS CANNOT BE UNDONE!',
+    module: 'Utility',
+    sourcecode: '/SRC/commands/utility/cleardata.js',
+    documentation: 'cleardata',
+    usage: 'cleardata',
+    example: 'clearData',
+    version: '1.0.0',
     code: `
       $title[Are you sure you?]
       $description[Are you sure you want me to forget who you are?\nThis will mean i will forget every interaction we had.]
@@ -24,8 +24,8 @@ const commands: InteractionCommand[] = [
     `
   },
   {
-    type: "interactionCreate",
-    version: "V1.0.0",
+    type: 'interactionCreate',
+    version: 'V1.0.0',
     code: `
       $textSplit[$customID;~]
       $onlyIf[$startsWith[$splitText[0];cleardata]==true;]

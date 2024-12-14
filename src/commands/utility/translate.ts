@@ -1,17 +1,17 @@
-import { Command } from '@/types'
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "translate",
-    aliases: ["help-translate", "localization", "i18n"],
-    description: "See info on translation.",
-    type: "messageCreate",
-    module: "Information",
-    version: "1.0.0",
-    sourcecode: "src/commands/utility/translate.ts",
-    documentation: "Utility",
-    usage: "translate",
-    example: "translate",
+    name: 'translate',
+    aliases: ['help-translate', 'localization', 'i18n'],
+    description: 'See info on translation.',
+    type: 'messageCreate',
+    module: 'Information',
+    version: '1.0.0',
+    sourcecode: 'src/commands/utility/translate.ts',
+    documentation: 'Utility',
+    usage: 'translate',
+    example: 'translate',
     code: `
       $c[---------------------------------PRE-LETS---------------------------------]
       $let[author;$callFunction[customEncrypt;encrypt;$authorID]]
@@ -76,14 +76,14 @@ const commands: Command[] = [
     `
   },
   {
-    type: "interactionCreate",
-    module: "Information",
-    version: "1.0.0",
-    description: "See info on translation.",
-    sourcecode: "src/commands/utility/translate.ts",
-    documentation: "Utility",
-    usage: "translate",
-    example: "translate",
+    type: 'interactionCreate',
+    module: 'Information',
+    version: '1.0.0',
+    description: 'See info on translation.',
+    sourcecode: 'src/commands/utility/translate.ts',
+    documentation: 'Utility',
+    usage: 'translate',
+    example: 'translate',
     code: `
       $textSplit[$customID;~]
       $onlyIf[$splitText[1]==$authorID]
@@ -176,6 +176,6 @@ const commands: Command[] = [
 
     `
   }
-]
+];
 
 export default commands;

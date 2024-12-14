@@ -12,7 +12,7 @@ const BASE_PATH = '/media/lynnux/[E] Other/Codes/@Github/@LynnuxDev/AkiraLocaliz
  * @param key - The translation key in dot notation (e.g., 'greetings.hello').
  * @returns The translation value or an error message if the key or file is not found.
  */
-export function loadYaml(lang: string, key: string): string {
+export function loadYaml (lang: string, key: string): string {
   try {
     const filePath = path.join(
       BASE_PATH,

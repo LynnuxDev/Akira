@@ -1,21 +1,21 @@
-import { Command } from '@/types'
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "Freechannel",
-    aliases: ["free-channel","free"],
-    type: "messageCreate",
-    description: "Removes the bot channel restriction from the server, if there is one in place.",
-    module: "Permissions",
-    sourcecode: "src/commnads/Permissions/freeChannel.ts",
-    documentation: "freechannel",
-    usage: "freechannel",
-    example: "freechannel",
-    version: "1.0.0",
+    name: 'Freechannel',
+    aliases: ['free-channel', 'free'],
+    type: 'messageCreate',
+    description: 'Removes the bot channel restriction from the server, if there is one in place.',
+    module: 'Permissions',
+    sourcecode: 'src/commnads/Permissions/freeChannel.ts',
+    documentation: 'freechannel',
+    usage: 'freechannel',
+    example: 'freechannel',
+    version: '1.0.0',
     code: `
       
     `
   }
-]
+];
 
 export default commands;

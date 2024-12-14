@@ -1,17 +1,17 @@
-import { Command } from "@/types"
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "blush",
-    aliases: ["rp-blush"],
-    description: "Show a blush",
-    type: "messageCreate",
-    module: "Roleplay",
-    version: "1.0.0",
-    sourcecode: "src/commands/Roleplay/Wholesome/blush.ts",
-    documentation: "roleplay",
-    usage: "blush {user} {message}",
-    example: "blush @dark-lynn Aww don't say that.",
+    name: 'blush',
+    aliases: ['rp-blush'],
+    description: 'Show a blush',
+    type: 'messageCreate',
+    module: 'Roleplay',
+    version: '1.0.0',
+    sourcecode: 'src/commands/Roleplay/Wholesome/blush.ts',
+    documentation: 'roleplay',
+    usage: 'blush {user} {message}',
+    example: 'blush @dark-lynn Aww don\'t say that.',
     code: `
       $c[------------------------------------LET-----------------------------------]
       $let[author;$getUserVar[uuid;$customEncrypt[encrypt;$authorID]]]
@@ -43,6 +43,6 @@ const commands: Command[] = [
       $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.wholesome.blush.$if[$getUserVar[blush-got;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$nickname;1];{{amount}};$getVar[blush-give;$get[author]];1] | $replace[$replace[$i18n[$get[lang];message.roleplay.wholesome.blush.$if[$getUserVar[blush-got;$get[user]]>=2;footer.two;footer.twoSingle]];{{amount}};$if[$get[userAgree]==true;$getVar[blush-got;$get[user]];0];1];{{user}};$nickname[$guildID;$get[userID]];1]]
     `
   }
-]
+];
 
 export default commands;

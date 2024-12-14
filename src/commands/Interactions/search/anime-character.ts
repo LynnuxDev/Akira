@@ -14,9 +14,9 @@ interface Command {
 
 const commands: Command[] = [
   {
-    type: "interactionCreate",
-    version: "1.0.0",
-    sourcecode: "src/commands/Global-Interactions/search/anime.ts",
+    type: 'interactionCreate',
+    version: '1.0.0',
+    sourcecode: 'src/commands/Global-Interactions/search/anime.ts',
     code: `
       $textSplit[$customID;~]
       $c[
@@ -61,6 +61,6 @@ $c[=====-=====-===== EDIT EMBED ===-=====-=====-=====-=====-=====-=====-=====-==
         $if[$get[animeRequest]==200;$author[From the anime: "$httpResult[data;0;anime;title]"]]
       ]
   `
-}]
+  }];
 
 export default commands;

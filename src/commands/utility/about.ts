@@ -1,17 +1,17 @@
-import { Command } from "@/types"
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "about",
-    aliases: ["info", "information"],
-    description: "get info about akira",
-    type: "messageCreate",
-    module: "Utility",
-    version: "1.0.0",
-    sourcecode: "src/commands/utility/about.ts",
-    documentation: "about",
-    usage: "update",
-    example: "about",
+    name: 'about',
+    aliases: ['info', 'information'],
+    description: 'get info about akira',
+    type: 'messageCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/utility/about.ts',
+    documentation: 'about',
+    usage: 'update',
+    example: 'about',
     code: `
       $c[----------------------------------ONLY-IF---------------------------------]
       $onlyIf[$channelID==$getGuildVar[BotChannel;$guildID;$channelID];$getGlobalVar[BotChannelError]]
@@ -37,6 +37,6 @@ const commands: Command[] = [
       $addButton[https://github.com/LynnuxDev/Akira;Source-Code;Link;📖]
     `
   }
-]
+];
 
 export default commands;

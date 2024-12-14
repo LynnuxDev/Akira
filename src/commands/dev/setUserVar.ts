@@ -1,12 +1,12 @@
-import { Command } from "@/types";
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "setuservar",
-    type: "messageCreate",
-    module: "dev",
-    description: "Change a user variable using their uuid.",
-    sourcecode: "src/commands/dev/setUserVar.ts",
+    name: 'setuservar',
+    type: 'messageCreate',
+    module: 'dev',
+    description: 'Change a user variable using their uuid.',
+    sourcecode: 'src/commands/dev/setUserVar.ts',
     version: 'v1.0.0',
     code: `
       $onlyForUsers[;705306248538488947;392609934744748032]
@@ -20,6 +20,6 @@ const commands: Command[] = [
 
     `
   }
-]
+];
 
 export default commands;

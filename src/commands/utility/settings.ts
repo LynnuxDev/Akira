@@ -1,17 +1,17 @@
-import { Command } from '@/types'
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "settings",
-    aliases: ["setting", "setting"],
-    description: "Change your settings",
-    type: "messageCreate",
-    module: "Utility",
-    version: "1.0.0",
-    sourcecode: "src/commands/utility/settings.ts",
-    documentation: "settings",
-    usage: "settings",
-    example: "settings",
+    name: 'settings',
+    aliases: ['setting', 'setting'],
+    description: 'Change your settings',
+    type: 'messageCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/utility/settings.ts',
+    documentation: 'settings',
+    usage: 'settings',
+    example: 'settings',
     code: `
       $let[author;$getUserVar[uuid;$customEncrypt[encrypt;$authorID]]]
       $onlyIf[$getUserVar[AgreedToTos;$get[author]]==true;$getGlobalVar[AgreedToTosEmbedReply]]
@@ -33,6 +33,6 @@ const commands: Command[] = [
       $addButton[close~$authorID~message~$messageID;Close;Danger]
     `
   }
-]
+];
 
 export default commands;

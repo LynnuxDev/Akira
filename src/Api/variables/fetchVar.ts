@@ -3,17 +3,17 @@
 
 module.exports = {
   url: '/variable/fetch/:name/:type/:id?/:guildid?',
-  method: "get",
+  method: 'get',
   auth: true,
   handler: async function (ctx) {
     const { name, type, id, guildid } = ctx.req.params;
 
     if ((type === 'role' || type === 'channel' || type === 'member') && !guildid) {
-      return ctx.res.status(400).send({ error: "guildid is required for this type" });
+      return ctx.res.status(400).send({ error: 'guildid is required for this type' });
     }
 
     if (type !== 'global' && !id) {
-      return ctx.res.status(400).send({ error: "id is required for all types except 'global'" });
+      return ctx.res.status(400).send({ error: 'id is required for all types except \'global\'' });
     }
 
     let identifier;
@@ -21,7 +21,7 @@ module.exports = {
       if (guildid) {
         identifier = `${type}_${name}_${guildid}_${id}`;
       } else {
-        return ctx.res.status(400).send({ error: "guildid is required for 'role' or 'member' type" });
+        return ctx.res.status(400).send({ error: 'guildid is required for \'role\' or \'member\' type' });
       }
     } else if (type === 'global') {
       identifier = `custom_${name}_undifined`;
@@ -38,7 +38,7 @@ module.exports = {
         ctx.res.send(JSON.stringify({ result: result.toJSON ? result.toJSON() : result }));
       }
     } catch (error) {
-      ctx.res.status(500).send({ error: "Internal server error" });
+      ctx.res.status(500).send({ error: 'Internal server error' });
     }
-  },
-}
+  }
+};

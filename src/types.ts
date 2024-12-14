@@ -1,7 +1,7 @@
 export interface Command {
   name?: string;
   aliases?: string[];
-  type: "messageCreate" | "debug" | "ready" | "interactionCreate";
+  type: 'messageCreate' | 'debug' | 'ready' | 'interactionCreate';
   description: string;
   module: string;
   sourcecode: string;
@@ -15,7 +15,7 @@ export interface Command {
 export interface InteractionCommand {
   name?: string;
   aliases?: string[];
-  type:"interactionCreate" | "messageCreate" ;
+  type:'interactionCreate' | 'messageCreate' ;
   description?: string;
   module?: string;
   sourcecode?: string;

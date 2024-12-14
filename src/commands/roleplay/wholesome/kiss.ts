@@ -1,17 +1,17 @@
-import { Command } from "@/types"
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "kiss",
-    aliases: ["rp-kiss"],
-    description: "kiss someone",
-    type: "messageCreate",
-    module: "Roleplay",
-    version: "1.0.0",
-    sourcecode: "src/commands/Roleplay/Wholesome/kiss.ts",
-    documentation: "roleplay",
-    usage: "kiss <user> {message}",
-    example: "kiss @dark-lynn I love you",
+    name: 'kiss',
+    aliases: ['rp-kiss'],
+    description: 'kiss someone',
+    type: 'messageCreate',
+    module: 'Roleplay',
+    version: '1.0.0',
+    sourcecode: 'src/commands/Roleplay/Wholesome/kiss.ts',
+    documentation: 'roleplay',
+    usage: 'kiss <user> {message}',
+    example: 'kiss @dark-lynn I love you',
     code: `
       $c[------------------------------------LET-----------------------------------]
       $let[author;$getUserVar[uuid;$customEncrypt[encrypt;$authorID]]]
@@ -44,6 +44,6 @@ const commands: Command[] = [
       $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.wholesome.kiss.$if[$getUserVar[kiss-got;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$nickname;1];{{amount}};$getVar[kiss-give;$get[author]];1] | $replace[$replace[$i18n[$get[lang];message.roleplay.wholesome.kiss.$if[$getUserVar[kiss-got;$get[user]]>=2;footer.two;footer.twoSingle]];{{amount}};$if[$get[userAgree]==true;$getVar[kiss-got;$get[user]];0];1];{{user}};$nickname[$guildID;$get[userID]];1]]
     `
   }
-]
+];
 
 export default commands;

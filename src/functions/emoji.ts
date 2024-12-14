@@ -1,9 +1,9 @@
-import { CustomFunction } from "@/types";
+import { CustomFunction } from '@/types';
 
 const functions: CustomFunction[] = [
   {
-    name: "emoji",
-    params: ["endpoint"],
+    name: 'emoji',
+    params: ['endpoint'],
     code: `
       $let[emoji;$env[endpoint]]
       $switch[$get[emoji];
@@ -65,6 +65,6 @@ const functions: CustomFunction[] = [
       $return[$get[emote]]
     `
   }
-]
+];
 
 export default functions;

@@ -1,17 +1,17 @@
-import { Command } from "@/types"
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "anime",
-    aliases: ["animelookup", "whattheanime"],
-    type: "messageCreate",
-    description: "Search for a anime or a anime character",
-    usage: "anime <query> {option}",
-    module: "Search",
-    version: "1.0.0",
-    sourcecode: "src/commands/search/anime.ts",
-    documentation: "anime/",
-    example: "anime frieren",
+    name: 'anime',
+    aliases: ['animelookup', 'whattheanime'],
+    type: 'messageCreate',
+    description: 'Search for a anime or a anime character',
+    usage: 'anime <query> {option}',
+    module: 'Search',
+    version: '1.0.0',
+    sourcecode: 'src/commands/search/anime.ts',
+    documentation: 'anime/',
+    example: 'anime frieren',
     code: `
       $c[=====-=====-===== ONLY IFS =====-=====-=====-=====-=====-=====-=====-=====-=====-=====]
       $let[author;$callFunction[customEncrypt;encrypt;$authorID]]
@@ -53,4 +53,4 @@ const commands: Command[] = [
       ]
     `
   }
-]
+];

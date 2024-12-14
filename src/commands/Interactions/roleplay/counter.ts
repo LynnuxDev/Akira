@@ -1,9 +1,9 @@
-import { InteractionCommand } from '@/types'
+import { InteractionCommand } from '@/types';
 
 const commands: InteractionCommand[] = [
   {
-    type: "interactionCreate",
-    version: "V1.0.0",
+    type: 'interactionCreate',
+    version: 'V1.0.0',
     code: `
       $textSplit[$customID;~]
 
@@ -391,6 +391,6 @@ Triggered| $get[triggered-gotten] | $get[triggered-give] | $get[triggered]
       ]
     `
   }
-]
+];
 
 export default commands;

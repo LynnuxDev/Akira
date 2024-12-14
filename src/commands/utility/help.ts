@@ -1,17 +1,17 @@
-import { Command } from '@/types'
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "help",
-	aliases: ["sos","help-me","what","howto","how-to"],
-	module: "Utility",
-	version: "1.0.0",
-    sourcecode: "src/commands/help/help.ts",
-    documentation: "help",
-    type: "messageCreate",
-	description: "Get help using Akira.",
-	usage: "help {module/command}",
-	example: "Help",
+    name: 'help',
+    aliases: ['sos', 'help-me', 'what', 'howto', 'how-to'],
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/help/help.ts',
+    documentation: 'help',
+    type: 'messageCreate',
+    description: 'Get help using Akira.',
+    usage: 'help {module/command}',
+    example: 'Help',
     code: `
       $if[$authorID==705306248538488947;Ping: \`$pingMS\` | Uptime: <t:$round[$math[$math[$getTimestamp-$uptime]/1000];0]:R>;]
       $if[$guildID==;$c[not a guild];$replace[$replace[$checkContains[$message;-c;-chat];true;$c[is for chat];1];false;**Got it!** I sent you a DM with information on how to use me. Please check your DM <@$authorID>;1]]    
@@ -92,15 +92,15 @@ For arguments in commands:
     `
   },
   {
-    type: "interactionCreate",
-    module: "Utility",
-	version: "1.0.0",
-    sourcecode: "src/commands/help/help.ts",
-    documentation: "help",
-	description: "Get help using Akira.",
-	usage: "help {module/command}",
-	example: "Help",
-	code: `
+    type: 'interactionCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/help/help.ts',
+    documentation: 'help',
+    description: 'Get help using Akira.',
+    usage: 'help {module/command}',
+    example: 'Help',
+    code: `
       $onlyIf[$checkContains[$customID;$authorID]]
       $onlyIf[$checkContains[$toLowerCase[$customID];back]]
       $interactionUpdate[
@@ -156,15 +156,15 @@ For arguments in commands:
     `
   },
   {
-    type: "interactionCreate",
-    module: "Utility",
-	version: "1.0.0",
-    sourcecode: "src/commands/help/help.ts",
-    documentation: "help",
-	description: "Get help using Akira.",
-	usage: "help {module/command}",
-	example: "Help",
-	code: `
+    type: 'interactionCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/help/help.ts',
+    documentation: 'help',
+    description: 'Get help using Akira.',
+    usage: 'help {module/command}',
+    example: 'Help',
+    code: `
       $onlyIf[$toLowerCase[$selectMenuValues]==automation]
       $onlyIf[$checkContains[$customID;$authorID]]
       $interactionUpdate[
@@ -182,14 +182,14 @@ For arguments in commands:
     `
   },
   {
-    type: "interactionCreate",
-    module: "Utility",
-	version: "1.0.0",
-    sourcecode: "src/commands/help/help.ts",
-    documentation: "help",
-    description: "Get help using Akira.",
-	usage: "help {module/command}",
-	example: "Help",
+    type: 'interactionCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/help/help.ts',
+    documentation: 'help',
+    description: 'Get help using Akira.',
+    usage: 'help {module/command}',
+    example: 'Help',
     code: `
       $onlyIf[$toLowerCase[$selectMenuValues]==automod]
       $onlyIf[$checkContains[$customID;$authorID]]
@@ -208,14 +208,14 @@ For arguments in commands:
     `
   },
   {
-    type: "interactionCreate",
-	module: "Utility",
-	version: "1.0.0",
-    sourcecode: "src/commands/help/help.ts",
-    documentation: "help",
-    description: "Get help using Akira.",
-	usage: "help {module/command}",
-	example: "Help",
+    type: 'interactionCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/help/help.ts',
+    documentation: 'help',
+    description: 'Get help using Akira.',
+    usage: 'help {module/command}',
+    example: 'Help',
     code: `
       $onlyIf[$toLowerCase[$selectMenuValues]==economy]
       $onlyIf[$checkContains[$customID;$authorID]]
@@ -233,14 +233,14 @@ For arguments in commands:
     `
   },
   {
-    type: "interactionCreate",
-    module: "Utility",
-	version: "1.0.0",
-    sourcecode: "src/commands/help/help.ts",
-    documentation: "help",
-	description: "Get help using Akira.",
-	usage: "help {module/command}",
-	example: "Help",
+    type: 'interactionCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/help/help.ts',
+    documentation: 'help',
+    description: 'Get help using Akira.',
+    usage: 'help {module/command}',
+    example: 'Help',
     code: `
       $onlyIf[$toLowerCase[$selectMenuValues]==leveling]
       $onlyIf[$checkContains[$customID;$authorID]]
@@ -258,15 +258,15 @@ For arguments in commands:
     `
   },
   {
-    type: "interactionCreate",
-    module: "Utility",
-	version: "1.0.0",
-    sourcecode: "src/commands/help/help.ts",
-    documentation: "help",
-	description: "Get help using Akira.",
-	usage: "help {module/command}",
-	example: "Help",
-	code: `
+    type: 'interactionCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/help/help.ts',
+    documentation: 'help',
+    description: 'Get help using Akira.',
+    usage: 'help {module/command}',
+    example: 'Help',
+    code: `
       $onlyIf[$toLowerCase[$selectMenuValues]==moderation]
       $onlyIf[$checkContains[$customID;$authorID]]
       $interactionUpdate[
@@ -283,15 +283,15 @@ For arguments in commands:
     `
   },
   {
-    type: "interactionCreate",
-    module: "Utility",
-	version: "1.0.0",
-    sourcecode: "src/commands/help/help.ts",
-    documentation: "help",
-	description: "Get help using Akira.",
-	usage: "help {module/command}",
-	example: "Help",
-	code: `
+    type: 'interactionCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/help/help.ts',
+    documentation: 'help',
+    description: 'Get help using Akira.',
+    usage: 'help {module/command}',
+    example: 'Help',
+    code: `
       $onlyIf[$toLowerCase[$selectMenuValues]==fun]
       $onlyIf[$checkContains[$customID;$authorID]]
       $interactionUpdate[
@@ -308,14 +308,14 @@ For arguments in commands:
     `
   },
   {
-    type: "interactionCreate",
-    module: "Utility",
-	version: "1.0.0",
-    sourcecode: "src/commands/help/help.ts",
-    documentation: "help",
-	description: "Get help using Akira.",
-	usage: "help {module/command}",
-	example: "Help",
+    type: 'interactionCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/help/help.ts',
+    documentation: 'help',
+    description: 'Get help using Akira.',
+    usage: 'help {module/command}',
+    example: 'Help',
     code: `
       $onlyIf[$toLowerCase[$selectMenuValues]==premium]
       $onlyIf[$checkContains[$customID;$authorID]]
@@ -333,14 +333,14 @@ For arguments in commands:
     `
   },
   {
-    type: "interactionCreate",
-    module: "Utility",
-	version: "1.0.0",
-    sourcecode: "src/commands/help/help.ts",
-    documentation: "help",
-	description: "Get help using Akira.",
-	usage: "help {module/command}",
-	example: "Help",
+    type: 'interactionCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/help/help.ts',
+    documentation: 'help',
+    description: 'Get help using Akira.',
+    usage: 'help {module/command}',
+    example: 'Help',
     code: `
       $onlyIf[$toLowerCase[$selectMenuValues]==profile]
       $onlyIf[$checkContains[$customID;$authorID]]
@@ -358,14 +358,14 @@ For arguments in commands:
     `
   },
   {
-    type: "interactionCreate",
-    module: "Utility",
-	version: "1.0.0",
-    sourcecode: "src/commands/help/help.ts",
-    documentation: "help",
-	description: "Get help using Akira.",
-	usage: "help {module/command}",
-	example: "Help",
+    type: 'interactionCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/help/help.ts',
+    documentation: 'help',
+    description: 'Get help using Akira.',
+    usage: 'help {module/command}',
+    example: 'Help',
     code: `
       $onlyIf[$toLowerCase[$selectMenuValues]==reaction-roles]
       $onlyIf[$checkContains[$customID;$authorID]]
@@ -383,14 +383,14 @@ For arguments in commands:
     `
   },
   {
-    type: "interactionCreate",
-    module: "Utility",
-	version: "1.0.0",
-    sourcecode: "src/commands/help/help.ts",
-    documentation: "help",
-	description: "Get help using Akira.",
-	usage: "help {module/command}",
-	example: "Help",
+    type: 'interactionCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/help/help.ts',
+    documentation: 'help',
+    description: 'Get help using Akira.',
+    usage: 'help {module/command}',
+    example: 'Help',
     code: `
       $onlyIf[$toLowerCase[$selectMenuValues]==roleplay]
       $onlyIf[$checkContains[$customID;$authorID]]
@@ -417,14 +417,14 @@ For arguments in commands:
     `
   },
   {
-    type: "interactionCreate",
-    module: "Utility",
-	version: "1.0.0",
-    sourcecode: "src/commands/help/help.ts",
-    documentation: "help",
-	description: "Get help using Akira.",
-	usage: "help {module/command}",
-	example: "Help",
+    type: 'interactionCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/help/help.ts',
+    documentation: 'help',
+    description: 'Get help using Akira.',
+    usage: 'help {module/command}',
+    example: 'Help',
     code: `
       $onlyIf[$toLowerCase[$selectMenuValues]==search]
       $onlyIf[$checkContains[$customID;$authorID]]
@@ -442,14 +442,14 @@ For arguments in commands:
     `
   },
   {
-    type: "interactionCreate",
-    module: "Utility",
-	version: "1.0.0",
-    sourcecode: "src/commands/help/help.ts",
-    documentation: "help",
-	description: "Get help using Akira.",
-	usage: "help {module/command}",
-	example: "Help",
+    type: 'interactionCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/help/help.ts',
+    documentation: 'help',
+    description: 'Get help using Akira.',
+    usage: 'help {module/command}',
+    example: 'Help',
     code: `
       $onlyIf[$toLowerCase[$selectMenuValues]==settings]
       $onlyIf[$checkContains[$customID;$authorID]]
@@ -467,14 +467,14 @@ For arguments in commands:
     `
   },
   {
-    type: "interactionCreate",
-    module: "Utility",
-	version: "1.0.0",
-    sourcecode: "src/commands/help/help.ts",
-    documentation: "help",
-	description: "Get help using Akira.",
-	usage: "help {module/command}",
-	example: "Help",
+    type: 'interactionCreate',
+    module: 'Utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/help/help.ts',
+    documentation: 'help',
+    description: 'Get help using Akira.',
+    usage: 'help {module/command}',
+    example: 'Help',
     code: `
       $onlyIf[$toLowerCase[$selectMenuValues]==utility]
       $onlyIf[$checkContains[$customID;$authorID]]
@@ -491,6 +491,6 @@ For arguments in commands:
       ]
     `
   }
-]
+];
 
 export default commands;

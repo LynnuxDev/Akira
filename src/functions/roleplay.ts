@@ -1,10 +1,9 @@
-import { CustomFunction } from "@/types";
-
+import { CustomFunction } from '@/types';
 
 const functions: CustomFunction[] = [
   {
-    name: "roleplay",
-    params: ["endpoint"],
+    name: 'roleplay',
+    params: ['endpoint'],
     code: `
       $let[endpoint;$env[endpoint]]
 
@@ -19,6 +18,6 @@ const functions: CustomFunction[] = [
       $return[$get[url]]
     `
   }
-]
+];
 
 export default functions;

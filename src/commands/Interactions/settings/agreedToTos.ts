@@ -14,11 +14,11 @@ interface Command {
 
 const commands: Command[] = [
   {
-    type: "interactionCreate",
-    description: "Closes the embed/message.",
-    module: "Global-Interaction",
-    sourcecode: "/src/commands/Global-Interactions/settings/agreedToTos.ts",
-    version: "1.0.0",
+    type: 'interactionCreate',
+    description: 'Closes the embed/message.',
+    module: 'Global-Interaction',
+    sourcecode: '/src/commands/Global-Interactions/settings/agreedToTos.ts',
+    version: '1.0.0',
     code: `
       $c[------------------------------------LET-----------------------------------]
       $let[author;$customEncrypt[encrypt;$authorID]]
@@ -57,5 +57,5 @@ const commands: Command[] = [
       $try[$interactionDelete;$deleteMessage[$channelID;$messageID]]
     `
   }
-]
+];
 export default commands;

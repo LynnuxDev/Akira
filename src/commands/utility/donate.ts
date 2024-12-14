@@ -1,17 +1,17 @@
-import { Command } from '@/types'
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "donate",
-    aliases: ['givemoney','financial-support'],
-    type: "messageCreate",
-    module: "Utility",
-    sourcecode: "SRC/commands/Utility/donate.ts",
-    documentation: "donate",
-    version: "1.0.0",
-    usage: "donate",
-    description: "See information about donating to akira.",
-    example: "donate",
+    name: 'donate',
+    aliases: ['givemoney', 'financial-support'],
+    type: 'messageCreate',
+    module: 'Utility',
+    sourcecode: 'SRC/commands/Utility/donate.ts',
+    documentation: 'donate',
+    version: '1.0.0',
+    usage: 'donate',
+    description: 'See information about donating to akira.',
+    example: 'donate',
     code: `
       $c[No TOS/POLICY agreement required do to being a static command.]
       $onlyIf[$channelID==$getGuildVar[BotChannel;$guildID;$channelID];$getGlobalVar[BotChannelError]]
@@ -33,6 +33,6 @@ const commands: Command[] = [
       $addButton[close~$authorID~$get[DefaultMessage];;Danger;✖️;false]
     `
   }
-]
+];
 
 export default commands;

@@ -1,7 +1,7 @@
 // @ts-nocheck
 // @ts-ignore
 module.exports = {
-  name: "details",
+  name: 'details',
   code: `
     $let[job;$option[job]]
     $let[author;$authorID]
@@ -22,25 +22,25 @@ module.exports = {
     ]
   `,
   data: {
-    "name": "details",
-    "description": "See details about a job.",
-    "options": [
+    name: 'details',
+    description: 'See details about a job.',
+    options: [
       {
-        "type": 3,
-        "name": "job",
-        "description": "Which job do you want to apply for?",
-        "required": true,
-        "choices": [
+        type: 3,
+        name: 'job',
+        description: 'Which job do you want to apply for?',
+        required: true,
+        choices: [
           {
-            "name": "Supermarket Employee",
-            "value": "supermarket"
+            name: 'Supermarket Employee',
+            value: 'supermarket'
           },
           {
-            "name": "Programmer",
-            "value": "programmer"
+            name: 'Programmer',
+            value: 'programmer'
           }
         ]
       }
     ]
   }
-}
+};

@@ -75,124 +75,124 @@ $c[=================================================== PERMS ===================
     $footer[$username used $get[type] $if[$getVar[$get[type]-give;$authorID]==1;1 time;$getVar[$get[type]-give;$authorID] times]. | $replace[$get[user1];**;;-1] got $get[type2] $if[$getVar[$get[type]-got;$get[user]]==1;1 time;$getVar[$get[type]-got;$get[user]] times]]
   `,
   data: {
-      "name": "wholesome",
-      "description": "Use wholesome roleplay interactions.",
-      "options": [
-        {
-          "type": 3,
-          "name": "type",
-          "description": "what type of roleplay command you want to use?",
-          "required": true,
-          "choices": [
-            {
-              "name": "Blush",
-              "value": "blush"
-            },
-            {
-              "name": "Boop",
-              "value": "boop"
-            },
-            {
-              "name": "Cheer",
-              "value": "cheer"
-            },
-            {
-              "name": "Cuddle",
-              "value": "cuddle"
-            },
-            {
-              "name": "Feed",
-              "value": "feed"
-            },
-            {
-              "name": "Handhold",
-              "value": "handhold"
-            },
-            {
-              "name": "Happy",
-              "value": "happy"
-            },
-            {
-              "name": "Highfive",
-              "value": "highfive"
-            },
-            {
-              "name": "Hug",
-              "value": "hug"
-            },
-            {
-              "name": "Kiss",
-              "value": "kiss"
-            },
-            {
-              "name": "Laugh",
-              "value": "laugh"
-            },
-            {
-              "name": "Love",
-              "value": "love"
-            },
-            {
-              "name": "Lurk",
-              "value": "lurk"
-            },
-            {
-              "name": "Nom",
-              "value": "nom"
-            },
-            {
-              "name": "Nuzzle",
-              "value": "nuzzle"
-            },
-            {
-              "name": "Pat",
-              "value": "pat"
-            },
-            {
-              "name": "Peck",
-              "value": "peck"
-            },
-            {
-              "name": "Poke",
-              "value": "poke"
-            },
-            {
-              "name": "Pout",
-              "value": "pout"
-            },
-            {
-              "name": "Sleep",
-              "value": "sleep"
-            },
-            {
-              "name": "Thumbsup",
-              "value": "thumbsup"
-            },
-            {
-              "name": "Tickle",
-              "value": "tickle"
-            },
-            {
-              "name": "Wag",
-              "value": "wag"
-            },
-            {
-              "name": "wave",
-              "value": "wave"
-            }
-          ]
-        },
-        {
-          "type": 6,
-          "name": "user",
-          "required": false,
-          "description": "Who do you want to give this reaction to? (required for most interactions)"
-        },
-        {
-          "type": 3,
-          "name": "message",
-          "description": "What massage do you want to add to the reaction?"
-        }
-      ]
-    }
-}
+    name: 'wholesome',
+    description: 'Use wholesome roleplay interactions.',
+    options: [
+      {
+        type: 3,
+        name: 'type',
+        description: 'what type of roleplay command you want to use?',
+        required: true,
+        choices: [
+          {
+            name: 'Blush',
+            value: 'blush'
+          },
+          {
+            name: 'Boop',
+            value: 'boop'
+          },
+          {
+            name: 'Cheer',
+            value: 'cheer'
+          },
+          {
+            name: 'Cuddle',
+            value: 'cuddle'
+          },
+          {
+            name: 'Feed',
+            value: 'feed'
+          },
+          {
+            name: 'Handhold',
+            value: 'handhold'
+          },
+          {
+            name: 'Happy',
+            value: 'happy'
+          },
+          {
+            name: 'Highfive',
+            value: 'highfive'
+          },
+          {
+            name: 'Hug',
+            value: 'hug'
+          },
+          {
+            name: 'Kiss',
+            value: 'kiss'
+          },
+          {
+            name: 'Laugh',
+            value: 'laugh'
+          },
+          {
+            name: 'Love',
+            value: 'love'
+          },
+          {
+            name: 'Lurk',
+            value: 'lurk'
+          },
+          {
+            name: 'Nom',
+            value: 'nom'
+          },
+          {
+            name: 'Nuzzle',
+            value: 'nuzzle'
+          },
+          {
+            name: 'Pat',
+            value: 'pat'
+          },
+          {
+            name: 'Peck',
+            value: 'peck'
+          },
+          {
+            name: 'Poke',
+            value: 'poke'
+          },
+          {
+            name: 'Pout',
+            value: 'pout'
+          },
+          {
+            name: 'Sleep',
+            value: 'sleep'
+          },
+          {
+            name: 'Thumbsup',
+            value: 'thumbsup'
+          },
+          {
+            name: 'Tickle',
+            value: 'tickle'
+          },
+          {
+            name: 'Wag',
+            value: 'wag'
+          },
+          {
+            name: 'wave',
+            value: 'wave'
+          }
+        ]
+      },
+      {
+        type: 6,
+        name: 'user',
+        required: false,
+        description: 'Who do you want to give this reaction to? (required for most interactions)'
+      },
+      {
+        type: 3,
+        name: 'message',
+        description: 'What massage do you want to add to the reaction?'
+      }
+    ]
+  }
+};

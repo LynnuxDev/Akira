@@ -1,15 +1,15 @@
-import { InteractionCommand } from '@/types'
+import { InteractionCommand } from '@/types';
 
 const commands: InteractionCommand[] = [
   {
-    type: "interactionCreate",
-    description: "Close an interaction",
-    module: "Client",
-    sourcecode: "src/commands/Global-Interactions/close.ts",
-    documentation: "close",
-    usage: "N/A",
-    example: "N/A",
-    version: "1.0.0",
+    type: 'interactionCreate',
+    description: 'Close an interaction',
+    module: 'Client',
+    sourcecode: 'src/commands/Global-Interactions/close.ts',
+    documentation: 'close',
+    usage: 'N/A',
+    example: 'N/A',
+    version: '1.0.0',
     code: `
       $textSplit[$customID;~]
       $c[
@@ -43,6 +43,6 @@ const commands: InteractionCommand[] = [
 
     `
   }
-]
+];
 
 export default commands;

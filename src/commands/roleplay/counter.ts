@@ -1,17 +1,17 @@
-import { Command } from "@/types"
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "counter",
-    aliases: ["rp-counter"],
-    description: "Get the roleplay counter of a user.",
-    type: "messageCreate",
-    module: "Roleplay",
-    version: "1.0.0",
-    sourcecode: "src/commands/roleplay/counter.ts",
-    documentation: "counter",
-    usage: "counter {user}",
-    example: "counter",
+    name: 'counter',
+    aliases: ['rp-counter'],
+    description: 'Get the roleplay counter of a user.',
+    type: 'messageCreate',
+    module: 'Roleplay',
+    version: '1.0.0',
+    sourcecode: 'src/commands/roleplay/counter.ts',
+    documentation: 'counter',
+    usage: 'counter {user}',
+    example: 'counter',
     code: `
       $let[author;$getUserVar[uuid;$customEncrypt[encrypt;$authorID]]]
       $let[lang;$if[$getUserVar[language;$get[author]]!=;$getUserVar[language;$get[author]];$if[$guildID!=;$guildPreferredLocale;en-us]]]
@@ -197,6 +197,6 @@ Wave     | $get[wave-gotten] | $get[wave-give] | $get[wave]
       $addButton[counter~negative~$authorID~$get[userID];Negative;Secondary;;false]
     `
   }
-]
+];
 
 export default commands;

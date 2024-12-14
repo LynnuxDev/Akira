@@ -1,9 +1,9 @@
-import { InteractionCommand } from '@/types'
+import { InteractionCommand } from '@/types';
 
 const commands: InteractionCommand[] = [
   {
-    type: "interactionCreate",
-    version: "v1.0.0",
+    type: 'interactionCreate',
+    version: 'v1.0.0',
     code: `
       $textSplit[$customID;~]
 
@@ -24,8 +24,8 @@ const commands: InteractionCommand[] = [
       ]
     `
   }, {
-    type: "interactionCreate",
-    version: "v1.0.0",
+    type: 'interactionCreate',
+    version: 'v1.0.0',
     code: `
       $textSplit[$customID;~]
 
@@ -43,8 +43,8 @@ const commands: InteractionCommand[] = [
       ]
     `
   }, {
-    type: "interactionCreate",
-    version: "v1.0.0",
+    type: 'interactionCreate',
+    version: 'v1.0.0',
     code: `
       $textSplit[$customID;~]
 
@@ -71,9 +71,9 @@ const commands: InteractionCommand[] = [
         ]
       ]
     `
-  },  {
-    type: "interactionCreate",
-    version: "v1.0.0",
+  }, {
+    type: 'interactionCreate',
+    version: 'v1.0.0',
     code: `
       $textSplit[$customID;~]
 
@@ -94,8 +94,8 @@ const commands: InteractionCommand[] = [
       ]
     `
   }, {
-    type: "interactionCreate",
-    version: "v1.0.0",
+    type: 'interactionCreate',
+    version: 'v1.0.0',
     code: `
       $textSplit[$customID;~]
 
@@ -116,6 +116,6 @@ const commands: InteractionCommand[] = [
       ]
     `
   }
-]
+];
 
 export default commands;

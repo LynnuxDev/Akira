@@ -1,15 +1,15 @@
-import { InteractionCommand } from '@/types'
+import { InteractionCommand } from '@/types';
 
 const commands: InteractionCommand[] = [
   {
-    type: "interactionCreate",
-    description: "Interaction used for userinfo and avatar",
-    module: "Client",
-    sourcecode: "src/commands/Global-Interactions/avatar.ts",
-    documentation: "avatar",
-    usage: "N/A",
-    example: "N/A",
-    version: "1.0.0",
+    type: 'interactionCreate',
+    description: 'Interaction used for userinfo and avatar',
+    module: 'Client',
+    sourcecode: 'src/commands/Global-Interactions/avatar.ts',
+    documentation: 'avatar',
+    usage: 'N/A',
+    example: 'N/A',
+    version: '1.0.0',
     code: `
       $textSplit[$customID;~]
       $c[
@@ -46,15 +46,15 @@ const commands: InteractionCommand[] = [
         $addButton[memberAvatar~$splitText[1]~$splitText[2];MemberAvatar;Primary;;$if[$get[userAvatar]==$get[memberAvatar];true;false]]
       ]
     `
-  },{
-    type: "interactionCreate",
-    description: "Interaction used for userinfo and avatar",
-    module: "Client",
-    sourcecode: "src/commands/Global-Interactions/avatar.ts",
-    documentation: "avatar",
-    usage: "N/A",
-    example: "N/A",
-    version: "1.0.0",
+  }, {
+    type: 'interactionCreate',
+    description: 'Interaction used for userinfo and avatar',
+    module: 'Client',
+    sourcecode: 'src/commands/Global-Interactions/avatar.ts',
+    documentation: 'avatar',
+    usage: 'N/A',
+    example: 'N/A',
+    version: '1.0.0',
     code: `
       $textSplit[$customID;~]
       $c[
@@ -91,6 +91,6 @@ const commands: InteractionCommand[] = [
         $addButton[userInfo~$splitText[1]~$splitText[2];MemberAvatar;Secondary;;$if[$get[userAvatar]==$get[memberAvatar];true;false]]
       ]
     `
-}]
+  }];
 
 export default commands;

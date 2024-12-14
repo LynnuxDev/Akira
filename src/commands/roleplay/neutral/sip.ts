@@ -1,17 +1,17 @@
-import { Command } from "@/types"
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "sip",
-    aliases: ["rp-sip", "drink", "rp-drink"],
-    description: "sip",
-    type: "messageCreate",
-    module: "Roleplay",
-    version: "1.0.0", 
-    sourcecode: "src/commands/Roleplay/neutral/sip.ts",
-    documentation: "roleplay",
-    usage: "sip {user} {message}",
-    example: "sip @dark-lynn Yikes.",
+    name: 'sip',
+    aliases: ['rp-sip', 'drink', 'rp-drink'],
+    description: 'sip',
+    type: 'messageCreate',
+    module: 'Roleplay',
+    version: '1.0.0',
+    sourcecode: 'src/commands/Roleplay/neutral/sip.ts',
+    documentation: 'roleplay',
+    usage: 'sip {user} {message}',
+    example: 'sip @dark-lynn Yikes.',
     code: `
       $c[------------------------------------LET-----------------------------------]
       $let[author;$getUserVar[uuid;$customEncrypt[encrypt;$authorID]]]
@@ -49,6 +49,6 @@ const commands: Command[] = [
       ]
     `
   }
-]
+];
 
 export default commands;

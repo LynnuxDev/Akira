@@ -43,7 +43,7 @@ If you have major coding issues with this bot, please join and ask for help.
 
 ## ✨ Contributors
 
-Contributions are always welcomed :D Make sure to follow [contribute.md](contribute.md)
+Contributions are always welcomed :D Make sure to follow [CONTRIBUTING.md](./.github/CONTRIBUTING.md)
 
 <a href="https://github.com/LynnuxDev/Akira/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=LynnuxDev/Akira" />

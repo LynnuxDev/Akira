@@ -14,9 +14,9 @@ interface Command {
 
 const commands: Command[] = [
   {
-    type: "interactionCreate",
-    version: "1.0.0",
-    sourcecode: "src/commands/Global-Interactions/search/anime.ts",
+    type: 'interactionCreate',
+    version: '1.0.0',
+    sourcecode: 'src/commands/Global-Interactions/search/anime.ts',
     code: `
       $textSplit[$customID;~]
       $c[
@@ -89,6 +89,6 @@ $c[=====-=====-=====   HTTP REQUES  =====-=====-=====-=====-=====-=====-=====-==
       }]
       $!httpRequest[https://api.lynnux.xyz/anime;post]
   `
-}]
+  }];
 
 export default commands;

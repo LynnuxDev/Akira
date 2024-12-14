@@ -14,16 +14,16 @@ interface Command {
 
 const commands: Command[] = [
   {
-    name: "update",
-    aliases: ["reload", "updatecommands"],
-    type: "messageCreate",
-    description: "Update all module commands",
-    usage: "update",
-    module: "Developers-Only",
-	version: "1.0.0",
-    sourcecode: "https://github.com/LynnuxDev/Akira/blob/main/SRC/commands/dev/update.js",
-    documentation: "https://documentation.lynnux.xyz/commands/utility/dev/Not-Available",
-	example: "update",
+    name: 'update',
+    aliases: ['reload', 'updatecommands'],
+    type: 'messageCreate',
+    description: 'Update all module commands',
+    usage: 'update',
+    module: 'Developers-Only',
+    version: '1.0.0',
+    sourcecode: 'https://github.com/LynnuxDev/Akira/blob/main/SRC/commands/dev/update.js',
+    documentation: 'https://documentation.lynnux.xyz/commands/utility/dev/Not-Available',
+    example: 'update',
 
     code: `
       $onlyForUsers[;705306248538488947;392609934744748032]
@@ -40,5 +40,5 @@ const commands: Command[] = [
       $addButton[2;Total: $commandCount;Secondary;📃;true]
     `
   }
-]
+];
 export default commands;
