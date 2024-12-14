@@ -4,22 +4,26 @@
 <p>For ForgeScript v1.5.0</p>
 </div>
 
+[![Discord][discord-img]][discord-url]
+[![GitHub license][license-img]][license-url]
+[![GitHub release][release-img]][release-url]
+
 ## ✨Latest Updates
 
 > - *Changed package to ForgeScript.*
 
 ## 🚧 Prerequisites
 
-- [Node.js 18+](https://nodejs.org/en/download/)
+- [Node.js 22+](https://nodejs.org/en/download/)
 - [ForgeScript](https://www.npmjs.com/package/forgescript/)
 
 > **Note:** We try to use the latest version of ForgeScript at all time but it can take some time to update commands to new versions.
 
 ## 📝 Tutorials
 
-Copy to [*Repl.it*](./) `(soon)`
+Copy to *[Repl.it]* `(soon)`
 
-Copy to a [*VPS/Server*](./) `(soon)`
+Copy to a *[VPS/Server]* `(soon)`
 
 ## 📝 [Support Server](https://discord.gg/6JayS72cnF)
 
@@ -52,3 +56,15 @@ Contributions are always welcomed :D Make sure to follow [CONTRIBUTING.md](./.gi
 > **Note:** Contributions are not accepted in the master branch.
 
 Made with ❤️ and botforge!
+
+[discord-img]: https://img.shields.io/badge/Discord-JOIN-GREEN.svg?style=for-the-badge&logo=discord
+[discord-url]: https://akira.lynnux.xyz/support
+
+[license-img]: https://img.shields.io/github/license/LynnuxDev/Akira.svg?style=for-the-badge&logo=librarything
+[license-url]: https://github.com/LynnuxDev/Akira/blob/V1.0.0/LICENSE
+
+[release-img]: https://img.shields.io/github/release/Akira/releases.svg?style=for-the-badge&logo=flattr
+[release-url]: https://GitHub.com/LynnuxDev/Akira/releases/
+
+[Repl.it]: ./
+[VPS/Server]: ./
