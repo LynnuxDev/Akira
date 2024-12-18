@@ -1,10 +1,5 @@
 import encryptionKey from '../handler/encryptionKey';
-
-interface CustomFunction {
-  name: string,
-  params: string[],
-  code: string,
-}
+import { CustomFunction } from '@/types';
 
 const functions: CustomFunction[] = [
   {

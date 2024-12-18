@@ -26,7 +26,7 @@ export interface InteractionCommand {
   code: string;
 }
 
-export interface customFunction {
+export interface CustomFunction {
   name: string;
   params?: string[];
   code: string;
