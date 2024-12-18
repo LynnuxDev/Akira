@@ -4,7 +4,7 @@
   "description": "Akira's Test Bot",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --fix",
+    "lint": "eslint . --fix && git add . && git commit -m 'style: lint'",
     "release": "standard-version",
     "build": "tsc",
     "start": "NODE_ENV=production tsc && node -r tsconfig-paths/register dist/index.js",
