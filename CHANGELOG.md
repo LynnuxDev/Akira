@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.7](https://github.com/LynnuxDev/Akira/compare/v0.5.6...v0.5.7) (2024-12-18)
+
+
+### Tests
+
+* Added package version check for devTeam. ([4c949a1](https://github.com/LynnuxDev/Akira/commit/4c949a113187ff4ac41376edd7968fafbd1bdee3))
+
+
+### Documentation
+
+* added documentation to use fs with ts. ([3896b37](https://github.com/LynnuxDev/Akira/commit/3896b37c818bcfc4fd1520498df9aeaea3860f9d))
+* Added markdown badges. ([9708263](https://github.com/LynnuxDev/Akira/commit/97082638d604d5d6a90475e9399549f5754b177e))
+* Changed CONTRIBUTING.md ([63dc833](https://github.com/LynnuxDev/Akira/commit/63dc833779df6786354139275c5097df9b7e91ad))
+
+
+### Code Refactoring
+
+* Getting version Dynamicly. ([8ece7c1](https://github.com/LynnuxDev/Akira/commit/8ece7c1fff1ed61177d6ab8eda666a545acd03f1))
+* Moved default variables to their own file. ([6aa6af8](https://github.com/LynnuxDev/Akira/commit/6aa6af8477f900a77f76aa373c2de4ffacfc6de5))
+* Moved default variables to their own file. ([e2cf39a](https://github.com/LynnuxDev/Akira/commit/e2cf39afe7e1e230e02dcb75e5fb216b97439bba))
+
+
+### Styles
+
+* lint ([3dc5c76](https://github.com/LynnuxDev/Akira/commit/3dc5c7604af8ab507bc0f6d5da5fdcd77c483471))
+
+
+### Chores
+
+* Added more Words to cspell ([95cfab1](https://github.com/LynnuxDev/Akira/commit/95cfab198fc1676b211967e4b238e30cb887c524))
+* automated lint commit. ([17665f8](https://github.com/LynnuxDev/Akira/commit/17665f851b05807832dce72c18a26d91c3f88978))
+* Fixed Eslint. ([7c6398a](https://github.com/LynnuxDev/Akira/commit/7c6398a7464be3d298b0a8251b95676b19ebe965))
+* Fixed lint ([dab71f8](https://github.com/LynnuxDev/Akira/commit/dab71f8507b6eb9d2dfc3029ba3aee2fa821973c))
+* Import from @/types.ts ([52e78ba](https://github.com/LynnuxDev/Akira/commit/52e78baeaee8940f4b25df26295c877a8bba3eda))
+* Removed module type ([eae7c91](https://github.com/LynnuxDev/Akira/commit/eae7c911c9426ea4b906f623fe51aca687ab1eb0))
+* removed not needed comments. ([31fea19](https://github.com/LynnuxDev/Akira/commit/31fea198db2619e771b47c8b48a4fd00b93090de))
+* removed not needed part ([b62cc89](https://github.com/LynnuxDev/Akira/commit/b62cc89cf32536af0629594c35d4a141505793cc))
+* Swap back to standard-version. ([35775cc](https://github.com/LynnuxDev/Akira/commit/35775cc9bd53e26efc662803dc6af918471cd941))
+* Swapped back to CommonJS ([1600a97](https://github.com/LynnuxDev/Akira/commit/1600a9776b1dbac90c865859785e76101469cd6f))
+* Swapped from 2 types to 1. ([f36f9d3](https://github.com/LynnuxDev/Akira/commit/f36f9d3c5679ff9eed137836c24474a466675aac))
+* Swapped to release-please. ([f437458](https://github.com/LynnuxDev/Akira/commit/f4374587882ad92f96fc5054a84764bff14806cd))
+
 ### [0.5.6](https://github.com/LynnuxDev/Akira/compare/v0.5.5...v0.5.6) (2024-12-13)
 
 
