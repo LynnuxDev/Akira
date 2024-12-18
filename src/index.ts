@@ -7,7 +7,7 @@ import { join } from 'path';
 import token from './handler/token'; // Secure bot token
 import events from './handler/events'; // Event handlers
 import intents from './handler/intents'; // Discord API intents
-import variables from './handler/database'
+import variables from './handler/database';
 
 /// ////////////////////////////
 //  [ Environment Config ]  //
