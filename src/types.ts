@@ -35,9 +35,3 @@ export interface customFunction {
 export interface Translations {
   [key: string]: any;
 }
-
-export interface CustomFunction {
-  name: string,
-  params?: string[],
-  code: string,
-}
