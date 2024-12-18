@@ -8,12 +8,10 @@ export function getPackages(): string {
   let packageList = '';
 
   try {
-    // Use spawnSync to run the command synchronously
     const lsProcess = spawnSync('pnpm', ['ls', '--json', '--depth=1']);
 
-    // Check for errors in the sync process
     if (lsProcess.error) {
-      throw lsProcess.error as Error;  // Cast to Error type
+      throw lsProcess.error as Error;
     }
 
     const parsedData = JSON.parse(lsProcess.stdout.toString());
@@ -28,9 +26,8 @@ export function getPackages(): string {
       }
     });
   } catch (error) {
-    // Ensure the error is treated as an instance of Error
     throw new Error(`Failed to retrieve package list: ${(error as Error).message}`);
   }
 
-  return packageList;  // return as string
+  return packageList;  // return string
 }
