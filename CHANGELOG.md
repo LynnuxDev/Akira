@@ -1,7 +1,36 @@
-<!-- markdownlint-disable -->
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.5.8](https://github.com/LynnuxDev/Akira/compare/v0.5.7...v0.5.8) (2024-12-19)
+
+
+### Features
+
+* Added a couple wholesome Roleplay commands. ([25914b3](https://github.com/LynnuxDev/Akira/commit/25914b30a1474a965db512f9f13fa2d132717c11))
+
+
+### Chores
+
+* Added  and  for easy import. ([eb687b2](https://github.com/LynnuxDev/Akira/commit/eb687b2e7867a7206eeec0a5efa7484d96f9ba7c))
+* Added CHANGELOG.md to ignored paths. ([97cd2b0](https://github.com/LynnuxDev/Akira/commit/97cd2b0b5828a6a65d3f1019f2c5230cafa1b4fe))
+* Added MarkdownLint. ([6778734](https://github.com/LynnuxDev/Akira/commit/67787344762e8f044c46297aa2bc0902ce1bf968))
+* Added more words to dictionary. ([939e2b9](https://github.com/LynnuxDev/Akira/commit/939e2b94b30215696e21e858c0ff2c58da601f48))
+* Added words to dictionary. ([cd80e61](https://github.com/LynnuxDev/Akira/commit/cd80e61427ee44d318ab1e685beb22f3018cbc38))
+* Changed all prefix to development prefix. ([3ffa65b](https://github.com/LynnuxDev/Akira/commit/3ffa65b0cb6805410c9dac52878946d6d9e2d0c6))
+* Changed default task from dev to start. ([bd532d1](https://github.com/LynnuxDev/Akira/commit/bd532d13d39f0eb806de2aaf6b74b6915c03527f))
+
+
+### Styles
+
+* Spelling fix. ([a3cbd7d](https://github.com/LynnuxDev/Akira/commit/a3cbd7df01adbaf2c4d762ec50ae0baf1fec43cf))
+
+
+### Code Refactoring
+
+* Automated module command count. ([7cbc605](https://github.com/LynnuxDev/Akira/commit/7cbc6056626308436852f8c202dc5e7c2c767f71))
+* Required all Interactoin Modules to be set to a selected few. ([73fda80](https://github.com/LynnuxDev/Akira/commit/73fda805f0c4a91ae0e115d0ad1aa627149bfdec))
+* Required all modules to be set to a selected few. ([6a91960](https://github.com/LynnuxDev/Akira/commit/6a9196077981f70b8e9a1d3312ccc7d4ebd35750))
 
 ### [0.5.7](https://github.com/LynnuxDev/Akira/compare/v0.5.6...v0.5.7) (2024-12-18)
 
