@@ -70,9 +70,9 @@ const client = new ForgeClient({
   intents,
   useInviteSystem: false,
   prefixes: [
-    '$if[$checkContains[$authorID;1004291040150298715;521676495316582400;705306248538488947]==true;!]', // Dev prefix
-    '<@!$clientID>', // Mention prefix
-    '<@$clientID>' // Alternative mention prefix
+    '$if[$checkContains[$authorID;1004291040150298715;521676495316582400;705306248538488947]==true;!]',             // Dev prefix
+    '$if[$checkContains[$authorID;1004291040150298715;521676495316582400;705306248538488947]==true;<@!$clientID>]', // Mention prefix
+    '$if[$checkContains[$authorID;1004291040150298715;521676495316582400;705306248538488947]==true;<@$clientID>]'   // Alternative mention prefix
   ],
   extensions: [
     new ForgeDB(),
