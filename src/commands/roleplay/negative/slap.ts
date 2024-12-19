@@ -33,7 +33,9 @@ const commands: Command[] = [
       $setVar[slap-give;$get[author];$sum[$getVar[slap-give;$get[author];0];1]]
 
       $if[$get[user]!=null;
-        $setVar[slap-gotten;$get[user];$sum[$getVar[slap-gotten;$get[user];0];1]]
+        $if[$get[user]!=$get[author];
+          $setVar[slap-gotten;$get[user];$sum[$getVar[slap-gotten;$get[user];0];1]]
+        ]
       ]
 
       $color[$getVar[color;default]]

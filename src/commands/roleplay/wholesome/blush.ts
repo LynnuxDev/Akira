@@ -31,19 +31,21 @@ const commands: Command[] = [
       $setVar[blush-give;$get[author];$sum[$getVar[blush-give;$get[author];0];1]]
 
       $if[$get[user]!=null;
-        $setVar[blush-gotten;$get[user];$sum[$getVar[blush-gotten;$get[user];0];1]]
+        $if[$get[user]!=$get[author];
+          $setVar[blush-gotten;$get[user];$sum[$getVar[blush-gotten;$get[user];0];1]]
+        ]
       ]
 
       $color[$getVar[color;default]]
       $image[$callFunction[roleplay;blush]]
       $if[$get[userID]!=$authorID;
-        $let[msg;$i18n[$get[lang];message.roleplay.negative.blush.description]]
+        $let[msg;$i18n[$get[lang];message.roleplay.wholesome.blush.description]]
         $description[$replace[$replace[$get[msg];{{author}};**$if[$guildID!=;$nickname;$username]**;1];{{user}};**$username[$get[userID]]**;1]$if[$get[message]!=;\n"$get[message]"]]
-        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.negative.blush.$if[$getVar[blush-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$if[$guildID!=;$nickname;$username];1];{{amount}};$getVar[blush-give;$get[author]];1] | $replace[$replace[$i18n[$get[lang];message.roleplay.negative.blush.footer.$if[$getVar[blush-gotten;$get[user];0]==1;two;twoSingle]];{{amount}};$getVar[blush-gotten;$get[user];0];-1];{{user}};$try[$nickname[$guildID;$get[userID]];$username[$get[userID]]];-1]]
+        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.wholesome.blush.$if[$getVar[blush-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$if[$guildID!=;$nickname;$username];1];{{amount}};$getVar[blush-give;$get[author]];1] | $replace[$replace[$i18n[$get[lang];message.roleplay.wholesome.blush.footer.$if[$getVar[blush-gotten;$get[user];0]==1;two;twoSingle]];{{amount}};$getVar[blush-gotten;$get[user];0];-1];{{user}};$try[$nickname[$guildID;$get[userID]];$username[$get[userID]]];-1]]
       ;
-        $let[msg;$i18n[$get[lang];message.roleplay.negative.blush.descriptionSingle]]
+        $let[msg;$i18n[$get[lang];message.roleplay.wholesome.blush.descriptionSingle]]
         $description[$replace[$replace[$get[msg];{{author}};**$if[$guildID!=;$nickname;$username]**;1];{{user}};**$username[$get[userID]]**;1]$if[$get[message]!=;\n"$get[message]"]]
-        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.negative.blush.$if[$getVar[blush-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$if[$guildID!=;$nickname;$username];1];{{amount}};$getVar[blush-give;$get[author]];1]]
+        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.wholesome.blush.$if[$getVar[blush-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$if[$guildID!=;$nickname;$username];1];{{amount}};$getVar[blush-give;$get[author]];1]]
       ]
     `
   }

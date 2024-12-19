@@ -30,7 +30,9 @@ const commands: Command[] = [
       $setVar[bite-give;$get[author];$sum[$getVar[bite-give;$get[author];0];1]]
 
       $if[$get[user]!=null;
-        $setVar[bite-gotten;$get[user];$sum[$getVar[bite-gotten;$get[user];0];1]]
+        $if[$get[user]!=$get[author];
+          $setVar[bite-gotten;$get[user];$sum[$getVar[bite-gotten;$get[user];0];1]]
+        ]
       ]
 
       $color[$getVar[color;default]]

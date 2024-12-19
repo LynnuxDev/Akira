@@ -32,7 +32,9 @@ const commands: Command[] = [
       $setVar[cry-give;$get[author];$sum[$getVar[cry-give;$get[author];0];1]]
 
       $if[$get[user]!=null;
-        $setVar[cry-gotten;$get[user];$sum[$getVar[cry-gotten;$get[user];0];1]]
+        $if[$get[user]!=$get[author];
+          $setVar[cry-gotten;$get[user];$sum[$getVar[cry-gotten;$get[user];0];1]]
+        ]
       ]
 
       $color[$getVar[color;default]]

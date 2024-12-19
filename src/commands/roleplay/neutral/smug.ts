@@ -2,16 +2,16 @@ import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: 'sip',
-    aliases: ['rp-sip', 'drink', 'rp-drink'],
-    description: 'sip',
+    name: 'smug',
+    aliases: ['rp-smug', 'drink', 'rp-drink'],
+    description: 'smug',
     type: 'messageCreate',
     module: 'roleplay',
     version: '1.0.0',
-    sourcecode: 'src/commands/Roleplay/neutral/sip.ts',
+    sourcecode: 'src/commands/Roleplay/neutral/smug.ts',
     documentation: 'roleplay',
-    usage: 'sip {user} {message}',
-    example: 'sip @dark-lynn sip sip sip sip sip.',
+    usage: 'smug {user} {message}',
+    example: 'smug @dark-lynn ha.',
     code: `
       $c[------------------------------------LET-----------------------------------]
       $let[author;$getUserVar[uuid;$customEncrypt[encrypt;$authorID]]]
@@ -23,30 +23,30 @@ const commands: Command[] = [
       $onlyIf[$getUserVar[AgreedToTos;$get[author];false]==true;$callEmbed[agreeToTerms]]
       $onlyIf[$channelID==$getGuildVar[BotChannel;$guildID;$channelID];$getGlobalVar[BotChannelError]]
 
-      $onlyIf[$checkContains[$getVar[rp-commandblocked;$get[user]];*;sip]==false;$customError[722;sip]]
-      $onlyIf[$checkContains[$getVar[rp-blocked;$get[user]];$get[author]]!=true;$customError[722;sip]]
+      $onlyIf[$checkContains[$getVar[rp-commandblocked;$get[user]];*;smug]==false;$customError[722;smug]]
+      $onlyIf[$checkContains[$getVar[rp-blocked;$get[user]];$get[author]]!=true;$customError[722;smug]]
 
       $c[-----------------------------------MAIN-----------------------------------]
       $let[message;$replace[$replace[$message;$message[0] ;];$message[0];]]
 
-      $setVar[sip-give;$get[author];$sum[$getVar[sip-give;$get[author];0];1]]
+      $setVar[smug-give;$get[author];$sum[$getVar[smug-give;$get[author];0];1]]
 
       $if[$get[user]!=null;
         $if[$get[user]!=$get[author];
-          $setVar[sip-gotten;$get[user];$sum[$getVar[sip-gotten;$get[user];0];1]]
+          $setVar[smug-gotten;$get[user];$sum[$getVar[smug-gotten;$get[user];0];1]]
         ]
       ]
 
       $color[$getVar[color;default]]
-      $image[$callFunction[roleplay;sip]]
+      $image[$callFunction[roleplay;smug]]
       $if[$get[userID]!=$authorID;
-        $let[msg;$i18n[$get[lang];message.roleplay.neutral.sip.description]]
+        $let[msg;$i18n[$get[lang];message.roleplay.neutral.smug.description]]
         $description[$replace[$replace[$get[msg];{{author}};**$nickname**;1];{{user}};**$username[$get[userID]]**;1]$if[$get[message]!=;\n"$get[message]"]]
-        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.neutral.sip.$if[$getVar[sip-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$nickname;1];{{amount}};$getVar[sip-give;$get[author]];1] | $replace[$replace[$i18n[$get[lang];message.roleplay.neutral.sip.footer.$if[$getVar[sip-gotten;$get[user];0]==1;two;twoSingle]];{{amount}};$getVar[sip-gotten;$get[user];0];-1];{{user}};$try[$nickname[$guildID;$get[userID]];$username];-1]]
+        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.neutral.smug.$if[$getVar[smug-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$nickname;1];{{amount}};$getVar[smug-give;$get[author]];1] | $replace[$replace[$i18n[$get[lang];message.roleplay.neutral.smug.footer.$if[$getVar[smug-gotten;$get[user];0]==1;two;twoSingle]];{{amount}};$getVar[smug-gotten;$get[user];0];-1];{{user}};$try[$nickname[$guildID;$get[userID]];$username];-1]]
       ;
-        $let[msg;$i18n[$get[lang];message.roleplay.neutral.sip.descriptionSingle]]
+        $let[msg;$i18n[$get[lang];message.roleplay.neutral.smug.descriptionSingle]]
         $description[$replace[$replace[$get[msg];{{author}};**$nickname**;1];{{user}};**$username[$get[userID]]**;1]$if[$get[message]!=;\n"$get[message]"]]
-        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.neutral.sip.$if[$getVar[sip-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$nickname;1];{{amount}};$getVar[sip-give;$get[author]];1]]
+        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.neutral.smug.$if[$getVar[smug-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$nickname;1];{{amount}};$getVar[smug-give;$get[author]];1]]
 
       ]
     `

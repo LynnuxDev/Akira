@@ -32,20 +32,24 @@ const commands: Command[] = [
       $setVar[boop-give;$get[author];$sum[$getVar[boop-give;$get[author];0];1]]
 
       $if[$get[user]!=null;
-        $setVar[boop-gotten;$get[user];$sum[$getVar[boop-gotten;$get[user];0];1]]
+        $if[$get[user]!=$get[author];
+          $setVar[boop-gotten;$get[user];$sum[$getVar[boop-gotten;$get[user];0];1]]
+        ]
       ]
 
       $color[$getVar[color;default]]
       $image[$callFunction[roleplay;boop]]
       $if[$get[userID]!=$authorID;
-        $let[msg;$i18n[$get[lang];message.roleplay.negative.boop.description]]
+        $let[msg;$i18n[$get[lang];message.roleplay.wholesome.boop.description]]
         $description[$replace[$replace[$get[msg];{{author}};**$if[$guildID!=;$nickname;$username]**;1];{{user}};**$username[$get[userID]]**;1]$if[$get[message]!=;\n"$get[message]"]]
-        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.negative.boop.$if[$getVar[boop-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$if[$guildID!=;$nickname;$username];1];{{amount}};$getVar[boop-give;$get[author]];1] | $replace[$replace[$i18n[$get[lang];message.roleplay.negative.boop.footer.$if[$getVar[boop-gotten;$get[user];0]==1;two;twoSingle]];{{amount}};$getVar[boop-gotten;$get[user];0];-1];{{user}};$try[$nickname[$guildID;$get[userID]];$username[$get[userID]]];-1]]
+        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.wholesome.boop.$if[$getVar[boop-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$if[$guildID!=;$nickname;$username];1];{{amount}};$getVar[boop-give;$get[author]];1] | $replace[$replace[$i18n[$get[lang];message.roleplay.wholesome.boop.footer.$if[$getVar[boop-gotten;$get[user];0]==1;two;twoSingle]];{{amount}};$getVar[boop-gotten;$get[user];0];-1];{{user}};$try[$nickname[$guildID;$get[userID]];$username[$get[userID]]];-1]]
       ;
-        $let[msg;$i18n[$get[lang];message.roleplay.negative.boop.descriptionSingle]]
+        $let[msg;$i18n[$get[lang];message.roleplay.wholesome.boop.descriptionSingle]]
         $description[$replace[$replace[$get[msg];{{author}};**$if[$guildID!=;$nickname;$username]**;1];{{user}};**$username[$get[userID]]**;1]$if[$get[message]!=;\n"$get[message]"]]
-        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.negative.boop.$if[$getVar[boop-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$if[$guildID!=;$nickname;$username];1];{{amount}};$getVar[boop-give;$get[author]];1]]
+        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.wholesome.boop.$if[$getVar[boop-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$if[$guildID!=;$nickname;$username];1];{{amount}};$getVar[boop-give;$get[author]];1]]
       ]
     `
   }
 ];
+
+export default commands;

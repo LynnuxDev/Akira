@@ -2,16 +2,16 @@ import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: 'sip',
-    aliases: ['rp-sip', 'drink', 'rp-drink'],
-    description: 'sip',
+    name: 'rage',
+    aliases: ['rp-rage', 'drink', 'rp-drink'],
+    description: 'rage',
     type: 'messageCreate',
     module: 'roleplay',
     version: '1.0.0',
-    sourcecode: 'src/commands/Roleplay/neutral/sip.ts',
+    sourcecode: 'src/commands/Roleplay/neutral/rage.ts',
     documentation: 'roleplay',
-    usage: 'sip {user} {message}',
-    example: 'sip @dark-lynn sip sip sip sip sip.',
+    usage: 'rage {user} {message}',
+    example: 'rage @dark-lynn WHAT ARE YOU DOING!',
     code: `
       $c[------------------------------------LET-----------------------------------]
       $let[author;$getUserVar[uuid;$customEncrypt[encrypt;$authorID]]]
@@ -22,31 +22,30 @@ const commands: Command[] = [
       $c[----------------------------------ONLY-IF---------------------------------]
       $onlyIf[$getUserVar[AgreedToTos;$get[author];false]==true;$callEmbed[agreeToTerms]]
       $onlyIf[$channelID==$getGuildVar[BotChannel;$guildID;$channelID];$getGlobalVar[BotChannelError]]
-
-      $onlyIf[$checkContains[$getVar[rp-commandblocked;$get[user]];*;sip]==false;$customError[722;sip]]
-      $onlyIf[$checkContains[$getVar[rp-blocked;$get[user]];$get[author]]!=true;$customError[722;sip]]
+      $onlyIf[$checkContains[$getVar[rp-commandblocked;$get[user]];*;rage]==false;$customError[722;rage]]
+      $onlyIf[$checkContains[$getVar[rp-blocked;$get[user]];$get[author]]!=true;$customError[722;rage]]
 
       $c[-----------------------------------MAIN-----------------------------------]
       $let[message;$replace[$replace[$message;$message[0] ;];$message[0];]]
 
-      $setVar[sip-give;$get[author];$sum[$getVar[sip-give;$get[author];0];1]]
+      $setVar[rage-give;$get[author];$sum[$getVar[rage-give;$get[author];0];1]]
 
       $if[$get[user]!=null;
         $if[$get[user]!=$get[author];
-          $setVar[sip-gotten;$get[user];$sum[$getVar[sip-gotten;$get[user];0];1]]
+          $setVar[rage-gotten;$get[user];$sum[$getVar[rage-gotten;$get[user];0];1]]
         ]
       ]
 
       $color[$getVar[color;default]]
-      $image[$callFunction[roleplay;sip]]
+      $image[$callFunction[roleplay;rage]]
       $if[$get[userID]!=$authorID;
-        $let[msg;$i18n[$get[lang];message.roleplay.neutral.sip.description]]
+        $let[msg;$i18n[$get[lang];message.roleplay.neutral.rage.description]]
         $description[$replace[$replace[$get[msg];{{author}};**$nickname**;1];{{user}};**$username[$get[userID]]**;1]$if[$get[message]!=;\n"$get[message]"]]
-        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.neutral.sip.$if[$getVar[sip-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$nickname;1];{{amount}};$getVar[sip-give;$get[author]];1] | $replace[$replace[$i18n[$get[lang];message.roleplay.neutral.sip.footer.$if[$getVar[sip-gotten;$get[user];0]==1;two;twoSingle]];{{amount}};$getVar[sip-gotten;$get[user];0];-1];{{user}};$try[$nickname[$guildID;$get[userID]];$username];-1]]
+        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.neutral.rage.$if[$getVar[rage-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$nickname;1];{{amount}};$getVar[rage-give;$get[author]];1] | $replace[$replace[$i18n[$get[lang];message.roleplay.neutral.rage.footer.$if[$getVar[rage-gotten;$get[user];0]==1;two;twoSingle]];{{amount}};$getVar[rage-gotten;$get[user];0];-1];{{user}};$try[$nickname[$guildID;$get[userID]];$username];-1]]
       ;
-        $let[msg;$i18n[$get[lang];message.roleplay.neutral.sip.descriptionSingle]]
+        $let[msg;$i18n[$get[lang];message.roleplay.neutral.rage.descriptionSingle]]
         $description[$replace[$replace[$get[msg];{{author}};**$nickname**;1];{{user}};**$username[$get[userID]]**;1]$if[$get[message]!=;\n"$get[message]"]]
-        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.neutral.sip.$if[$getVar[sip-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$nickname;1];{{amount}};$getVar[sip-give;$get[author]];1]]
+        $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.neutral.rage.$if[$getVar[rage-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$nickname;1];{{amount}};$getVar[rage-give;$get[author]];1]]
 
       ]
     `
