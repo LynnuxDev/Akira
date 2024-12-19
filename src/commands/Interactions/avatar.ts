@@ -4,7 +4,7 @@ const commands: InteractionCommand[] = [
   {
     type: 'interactionCreate',
     description: 'Interaction used for userinfo and avatar',
-    module: 'Client',
+    module: 'client',
     sourcecode: 'src/commands/Global-Interactions/avatar.ts',
     documentation: 'avatar',
     usage: 'N/A',
@@ -49,7 +49,7 @@ const commands: InteractionCommand[] = [
   }, {
     type: 'interactionCreate',
     description: 'Interaction used for userinfo and avatar',
-    module: 'Client',
+    module: 'client',
     sourcecode: 'src/commands/Global-Interactions/avatar.ts',
     documentation: 'avatar',
     usage: 'N/A',

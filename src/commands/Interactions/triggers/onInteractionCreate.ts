@@ -4,7 +4,7 @@ const commands: InteractionCommand[] = [
   {
     type: 'interactionCreate',
     description: 'Runs on every interaction.',
-    module: 'Client',
+    module: 'client',
     sourcecode: 'src/commands/Global-Interactions/triggers/onInteractionCreate.ts',
     documentation: 'onInteractionCreate',
     usage: 'N/A',

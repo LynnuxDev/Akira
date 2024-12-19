@@ -4,7 +4,7 @@ const commands: InteractionCommand[] = [
   {
     type: 'interactionCreate',
     description: 'Close an interaction',
-    module: 'Client',
+    module: 'client',
     sourcecode: 'src/commands/Global-Interactions/close.ts',
     documentation: 'close',
     usage: 'N/A',
