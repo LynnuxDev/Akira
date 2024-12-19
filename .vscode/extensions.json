@@ -5,6 +5,7 @@
     "ionutvmi.path-autocomplete",
     "qwtel.sqlite-viewer",
     "usernamehw.errorlens",
-    "standard.vscode-standard"
+    "standard.vscode-standard",
+    "davidanson.vscode-markdownlint"
   ]
 }
