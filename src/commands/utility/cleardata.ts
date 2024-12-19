@@ -6,7 +6,7 @@ const commands: InteractionCommand[] = [
     aliases: ['removedata'],
     type: 'messageCreate',
     description: 'Clear all your Akira data. ~ !THIS CANNOT BE UNDONE!',
-    module: 'Utility',
+    module: 'utility',
     sourcecode: '/SRC/commands/utility/cleardata.js',
     documentation: 'cleardata',
     usage: 'cleardata',

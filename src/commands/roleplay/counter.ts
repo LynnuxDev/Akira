@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['rp-counter'],
     description: 'Get the roleplay counter of a user.',
     type: 'messageCreate',
-    module: 'Roleplay',
+    module: 'roleplay',
     version: '1.0.0',
     sourcecode: 'src/commands/roleplay/counter.ts',
     documentation: 'counter',

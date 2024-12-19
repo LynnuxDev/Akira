@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['enable-command'],
     type: 'messageCreate',
     description: 'Enables the mentioned command or command group.',
-    module: 'Permissions',
+    module: 'permissions',
     sourcecode: 'src/commnads/Permissions/Enable.ts',
     documentation: 'enable',
     usage: 'enable <Command/Modules>',

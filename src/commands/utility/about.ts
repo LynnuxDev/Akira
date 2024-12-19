@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['info', 'information'],
     description: 'get info about akira',
     type: 'messageCreate',
-    module: 'Utility',
+    module: 'utility',
     version: '1.0.0',
     sourcecode: 'src/commands/utility/about.ts',
     documentation: 'about',
@@ -16,9 +16,7 @@ const commands: Command[] = [
       $c[----------------------------------ONLY-IF---------------------------------]
       $onlyIf[$channelID==$getGuildVar[BotChannel;$guildID;$channelID];$getGlobalVar[BotChannelError]]
 
-      $let[author;$getUserVar[uuid;$customEncrypt[encrypt;$authorID]]]
-      $let[lang;$getUserVar[language;$get[author];en-us]]
-
+      $let[lang;$getLang[$authorID]]
       $c[-----------------------------------MAIN-----------------------------------]
       $reply[$channelID;$messageID]
       $if[$guildID!=;$let[DefaultMessage;$messageID];$let[DefaultMessage;NaN]]

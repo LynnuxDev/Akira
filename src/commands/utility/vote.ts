@@ -5,7 +5,7 @@ const commands: Command[] = [
     name: 'vote',
     type: 'messageCreate',
     description: 'Get info on how to vote for akira.',
-    module: 'Utility',
+    module: 'utility',
     version: 'V1.0.0',
     sourcecode: 'src/commands/utility/vote.ts',
     code:

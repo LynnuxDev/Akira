@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['useravatar'],
     type: 'messageCreate',
     description: 'Get the avatar of a user.',
-    module: 'Utility',
+    module: 'utility',
     sourcecode: 'src/commands/utility/avatar.ts',
     documentation: 'avatar',
     usage: 'avatar {user}',

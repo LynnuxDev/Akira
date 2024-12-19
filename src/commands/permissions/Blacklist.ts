@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['black-list'],
     type: 'messageCreate',
     description: 'Prevents the mentioned member from using Akira in the server.',
-    module: 'Permissions',
+    module: 'permissions',
     sourcecode: 'src/commnads/permissions/blacklist.ts',
     documentation: 'blacklist',
     usage: 'blacklist <member>',

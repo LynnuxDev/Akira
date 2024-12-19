@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['rp-bite'],
     description: 'Give them a bite',
     type: 'messageCreate',
-    module: 'Roleplay',
+    module: 'roleplay',
     version: '1.0.0',
     sourcecode: 'src/commands/Roleplay/negative/bite.ts',
     documentation: 'roleplay',
@@ -14,11 +14,8 @@ const commands: Command[] = [
     example: 'bite @dark-lynn NEVER do that again.',
     code: `
       $c[------------------------------------LET-----------------------------------]
-      $let[author;$getUserVar[uuid;$customEncrypt[encrypt;$authorID]]]
-      $let[lang;$if[$getUserVar[language;$get[author]]!=;$getUserVar[language;$get[author]];$if[$guildID!=;$guildPreferredLocale;en-us]]]
-      $let[userID;$findUser[$message[0];true]]
-      $let[user;$getUserVar[uuid;$customEncrypt[encrypt;$get[userID]]]]
-
+      $let[lang;$getLang[$authorID]]
+      $let[userID;$getUUID[$findUser[$message[0];true]]]
       $c[----------------------------------ONLY-IF---------------------------------]
       $onlyIf[$getUserVar[AgreedToTos;$get[author];false]==true;$callEmbed[agreeToTerms]]
       $onlyIf[$channelID==$getGuildVar[BotChannel;$guildID;$channelID];$getGlobalVar[BotChannelError]]

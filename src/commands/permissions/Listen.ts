@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['listen-channel'],
     type: 'messageCreate',
     description: 'Allows Akira to respond to commands in the mentioned channel, if the channel was restricted by the ignore command (defaults to current channel).',
-    module: 'Permissions',
+    module: 'permissions',
     sourcecode: 'src/commnads/Permissions/Listen.ts',
     documentation: 'listen',
     usage: 'listen {channel}',

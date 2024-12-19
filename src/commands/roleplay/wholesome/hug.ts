@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['rp-hug'],
     description: 'Show a hug',
     type: 'messageCreate',
-    module: 'Roleplay',
+    module: 'roleplay',
     version: '1.0.0',
     sourcecode: 'src/commands/Roleplay/Wholesome/hug.ts',
     documentation: 'roleplay',

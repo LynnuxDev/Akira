@@ -7,7 +7,7 @@ const commands: Command[] = [
     description: 'Evals an ForgeScript code',
     type: 'messageCreate',
     usage: 'ev <code>',
-    module: 'Dev',
+    module: 'dev',
     version: '1.0.0',
     sourcecode: '/src/commands/dev/eval.ts',
     documentation: 'eval',

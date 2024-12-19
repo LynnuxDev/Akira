@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['ifoundabug', 'ibrokesomething'],
     type: 'messageCreate',
     description: 'Report issues related to akira.',
-    module: 'Utility',
+    module: 'utility',
     sourcecode: 'src/commands/utility/report.ts',
     documentation: 'report',
     usage: 'report',

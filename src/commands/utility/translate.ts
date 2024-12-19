@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['help-translate', 'localization', 'i18n'],
     description: 'See info on translation.',
     type: 'messageCreate',
-    module: 'Information',
+    module: 'utility',
     version: '1.0.0',
     sourcecode: 'src/commands/utility/translate.ts',
     documentation: 'Utility',
@@ -77,7 +77,7 @@ const commands: Command[] = [
   },
   {
     type: 'interactionCreate',
-    module: 'Information',
+    module: 'utility',
     version: '1.0.0',
     description: 'See info on translation.',
     sourcecode: 'src/commands/utility/translate.ts',

@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['rp-sip', 'drink', 'rp-drink'],
     description: 'sip',
     type: 'messageCreate',
-    module: 'Roleplay',
+    module: 'roleplay',
     version: '1.0.0',
     sourcecode: 'src/commands/Roleplay/neutral/sip.ts',
     documentation: 'roleplay',

@@ -7,7 +7,7 @@ const commands: Command[] = [
     type: 'messageCreate',
     description: 'Update all module commands',
     usage: 'update',
-    module: 'Developers-Only',
+    module: 'dev',
     version: '1.0.0',
     sourcecode: 'https://github.com/LynnuxDev/Akira/blob/main/SRC/commands/dev/update.js',
     documentation: 'https://documentation.lynnux.xyz/commands/utility/dev/Not-Available',

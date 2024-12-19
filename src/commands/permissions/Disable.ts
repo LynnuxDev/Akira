@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['disable-command'],
     type: 'messageCreate',
     description: 'Disables the mentioned command or command group.',
-    module: 'Permissions',
+    module: 'permissions',
     sourcecode: 'src/commnads/Permissions/Disable.ts',
     documentation: 'disable',
     usage: 'disable <Command/Modules>',

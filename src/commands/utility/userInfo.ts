@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['user', 'whois'],
     type: 'messageCreate',
     description: 'Get info on a user.',
-    module: 'Utility',
+    module: 'utility',
     sourcecode: 'src/commands/utility/userInfo.ts',
     documentation: 'userinfo',
     usage: 'userinfo {user}',
@@ -44,7 +44,7 @@ const commands: Command[] = [
   }, {
     type: 'interactionCreate',
     description: 'Get info on a user.',
-    module: 'Utility',
+    module: 'utility',
     sourcecode: 'src/commands/utility/userInfo.ts',
     documentation: 'userinfo',
     usage: 'userinfo {user}',

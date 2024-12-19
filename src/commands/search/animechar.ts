@@ -7,7 +7,7 @@ const commands: Command[] = [
     type: 'messageCreate',
     description: 'Search for a anime or a anime character',
     usage: 'anime <query> {option}',
-    module: 'Search',
+    module: 'search',
     version: '1.0.0',
     sourcecode: 'src/commands/search/anime.ts',
     documentation: 'anime/',

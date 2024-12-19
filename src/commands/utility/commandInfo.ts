@@ -5,7 +5,7 @@ const commands: Command[] = [
     name: 'commandinfo',
     aliases: ['command-info', 'command', 'cmd'],
     type: 'messageCreate',
-    module: 'Utility',
+    module: 'utility',
     sourcecode: 'SRC/commands/help/commandinfo.js',
     documentation: 'commandinfo',
     version: '1.0.0',

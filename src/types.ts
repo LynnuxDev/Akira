@@ -3,7 +3,7 @@ export interface Command {
   aliases?: string[];
   type: 'messageCreate' | 'debug' | 'ready' | 'interactionCreate';
   description: string;
-  module: string;
+  module: 'dev' | 'automation' | 'automod' | 'economy' | 'leveling' | 'moderation' | 'fun' | 'permissions' | 'premium' | 'profile' | 'reactionRoles' | 'roleplay' | 'search' | 'settings' | 'utility';
   sourcecode: string;
   documentation?: string;
   usage?: string;
@@ -17,7 +17,7 @@ export interface InteractionCommand {
   aliases?: string[];
   type:'interactionCreate' | 'messageCreate' ;
   description?: string;
-  module?: string;
+  module?: 'client' | 'dev' | 'automation' | 'automod' | 'economy' | 'leveling' | 'moderation' | 'fun' | 'permissions' | 'premium' | 'profile' | 'reactionRoles' | 'roleplay' | 'search' | 'settings' | 'utility';
   sourcecode?: string;
   documentation?: string;
   usage?: string;

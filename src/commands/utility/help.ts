@@ -28,7 +28,7 @@ For arguments in commands:
 \`{}\` means it's optional.
 \`[\\]\` means it's either required or not based on the usage.
 **Do not actually include the <> , () & [\\] symbols in the command.**]
-        $addField[:robot: Automation;Automatically do things, like welcomemessages and autoroles
+        $addField[:robot: Automation;Automatically do things, like welcomeMessages and autoRoles
 **0 Commands** \`(soon)\`;true]
         $addField[:hammer: Automod;Automatically punish users for swearing or posting server invites
 **0 Commands** \`(soon)\`;true]
@@ -58,7 +58,7 @@ For arguments in commands:
 
         $addActionRow
         $addStringSelectMenu[helpMenu-$authorID;Which command category do you want to see?;false;1;1]
-        $addOption[Automation;Automatically do things, like welcomemessages etc.;Automation;🤖;false]
+        $addOption[Automation;Automatically do things, like welcomeMessages etc.;Automation;🤖;false]
         $addOption[Automod;Automatically punish users.;Automod;🔨;false]
         $addOption[Economy;Get an economy rolling in your server.;Economy;💵;false]
         $addOption[Leveling;Reward members for being active.;Leveling;🆙;false]
@@ -82,8 +82,8 @@ For arguments in commands:
         $addField[Neutral:;\`akira [command\\] {users} (reason)\`\n\`\`\`Bonk, Bored, Chase, Dab, Facepalm, Lick, Lurk, Nervous, No, Panic, Poke, Pout, Run, Shrug, Sip, Sleep, Smug, Stare, Think, Yes\`\`\`]
         $addField[Negative:;\`akira [command\\] {users} (reason)\`\n\`\`\`Bite, Cringe, Cry, Die, Hate, Kill, Sad, Shoot, Slap, Stab, Triggered\`\`\`]
         $addField[Akira counters (user):;See how many times each roleplay action has happened to you and how often you've done them to others.]
-        $addField[Akira blockcommand [roleplay command\\]:;Block a roleplay command so people can't use it on you, in case you want to reject everyone from slapping you.]
-        $addField[Akira unblockcommand [roleplay command\\]:;Unblock a roleplay command so people can use it on you again, in case you once again accept slaps and bonks.]
+        $addField[Akira blockCommand [roleplay command\\]:;Block a roleplay command so people can't use it on you, in case you want to reject everyone from slapping you.]
+        $addField[Akira unblockCommand [roleplay command\\]:;Unblock a roleplay command so people can use it on you again, in case you once again accept slaps and bonks.]
         $addField[Akira block [@users\\]:;Block users so they can't spam you with roleplay commands and harass you. Useful if they keep trying to kiss you.]
         $addField[Akira unblock [@users\\]:;Unblock a user so they can use roleplay commands on you again. In case you forgive your stalkers.]
         $addField[Extra links and information:;[[Invite akira\\](https://discord.com/api/oauth2/authorize?client_id=738057910923296839&permissions=8&scope=bot%20applications.commands)\\] | \[[Support Server\\](https://discord.com/invite/TUqZTutDUz)\\] | \[[Vote\\](https://akira.lynnux.xyz/vote)\\] | \[[Website\\](https://akira.lynnux.xyz)\\] | [Premium\\]]
@@ -108,7 +108,7 @@ For arguments in commands:
         $color[$getUserVar[color;$authorID]]
 		$author[Akira's Features;$userAvatar[$botID]]
 		$description[**To check out a section or command use** \`akira help \[section / command\\]\` \n**If you want this command to show up in chat instead of dms add -c at the end of the command.** \n\{Ex. \`Akira help -c\` or \`Akira help moderation -c\`\} \n \nFor arguments in commands#COLON# \n\`<>\` means it's required. \n\`{\}\` means it's optional. \n\`[\\]\` means it's either required or not based on the usage. \n**Do not actually include the <>, {\} & [\\] symbols in the command.**]
-        $addField[:robot: Automation;Automatically do things, like welcomemessages and autoroles
+        $addField[:robot: Automation;Automatically do things, like welcomeMessages and autoRoles
 **0 Commands** \`(soon)\`;true]
         $addField[:hammer: Automod;Automatically punish users for swearing or posting server invites
 **0 Commands** \`(soon)\`;true]
@@ -137,7 +137,7 @@ For arguments in commands:
         $addField[Extra links and information:;[[Invite akira\\](https://discord.com/api/oauth2/authorize?client_id=738057910923296839&permissions=8&scope=bot%20applications.commands)\\] | \[[Support Server\\](https://discord.com/invite/TUqZTutDUz)\\] | \[[Vote\\](https://akira.lynnux.xyz/vote)\\] | \[[Website\\](https://akira.lynnux.xyz)\\] | [Premium\\]]
         $addActionRow
         $addStringSelectMenu[helpMenu-$authorID;Which command category do you want to see?;false;1;1]
-        $addOption[Automation;Automatically do things, like welcomemessages etc.;Automation;🤖;false]
+        $addOption[Automation;Automatically do things, like welcomeMessages etc.;Automation;🤖;false]
         $addOption[Automod;Automatically punish users.;Automod;🔨;false]
         $addOption[Economy;Get an economy rolling in your server.;Economy;💵;false]
         $addOption[Leveling;Reward members for being active.;Leveling;🆙;false]
@@ -405,8 +405,8 @@ For arguments in commands:
         $addField[Neutral:;\`akira [command\\] {users} (reason)\`\n\`\`\`Bonk, Bored, Chase, Dab, Facepalm, Lick, Lurk, Nervous, No, Panic, Poke, Pout, Run, Shrug, Sip, Sleep, Smug, Stare, Think, Yes\`\`\`]
         $addField[Negative:;\`akira [command\\] {users} (reason)\`\n\`\`\`Bite, Cringe, Cry, Die, Hate, Kill, Sad, Shoot, Slap, Stab, Triggered\`\`\`]
         $addField[Akira counters (user):;See how many times each roleplay action has happened to you and how often you've done them to others.]
-        $addField[Akira blockcommand [roleplay command\\]:;Block a roleplay command so people can't use it on you, in case you want to reject everyone from slapping you.]
-        $addField[Akira unblockcommand [roleplay command\\]:;Unblock a roleplay command so people can use it on you again, in case you once again accept slaps and bonks.]
+        $addField[Akira blockCommand [roleplay command\\]:;Block a roleplay command so people can't use it on you, in case you want to reject everyone from slapping you.]
+        $addField[Akira unblockCommand [roleplay command\\]:;Unblock a roleplay command so people can use it on you again, in case you once again accept slaps and bonks.]
         $addField[Akira block [@users\\]:;Block users so they can't spam you with roleplay commands and harass you. Useful if they keep trying to kiss you.]
         $addField[Akira unblock [@users\\]:;Unblock a user so they can use roleplay commands on you again. In case you forgive your stalkers.]
         $addField[Extra links and information:;[[Invite akira\\](https://discord.com/api/oauth2/authorize?client_id=738057910923296839&permissions=8&scope=bot%20applications.commands)\\] | \[[Support Server\\](https://discord.com/invite/TUqZTutDUz)\\] | \[[Vote\\](https://akira.lynnux.xyz/vote)\\] | \[[Website\\](https://akira.lynnux.xyz)\\] | [Premium\\]]

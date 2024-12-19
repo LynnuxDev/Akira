@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['rp-kiss'],
     description: 'kiss someone',
     type: 'messageCreate',
-    module: 'Roleplay',
+    module: 'roleplay',
     version: '1.0.0',
     sourcecode: 'src/commands/Roleplay/Wholesome/kiss.ts',
     documentation: 'roleplay',

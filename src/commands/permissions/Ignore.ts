@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['ignore-channel'],
     type: 'messageCreate',
     description: 'Prevents Akira from responding to commands in the mentioned channel. (defaults to current channel).',
-    module: 'Permissions',
+    module: 'permissions',
     sourcecode: 'src/commnads/Permissions/ignore.ts',
     documentation: 'ignore',
     usage: 'ignore {channel}',

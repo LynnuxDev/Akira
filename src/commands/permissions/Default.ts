@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['default-channels'],
     type: 'messageCreate',
     description: 'Sets the mentioned command or command group to default permissions.',
-    module: 'Permissions',
+    module: 'permissions',
     sourcecode: 'src/commnads/Permissions/Default.ts',
     documentation: 'default',
     usage: 'default <Command/Modules>',

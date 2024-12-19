@@ -7,7 +7,7 @@ const commands: Command[] = [
     description: 'import global vars.',
     type: 'messageCreate',
     usage: 'importvars',
-    module: 'Developers-Only',
+    module: 'dev',
     version: '1.0.0',
     sourcecode: 'https://github.com/LynnuxDev/Akira/blob/main/SRC/commands/dev/globalVars.js',
     documentation: 'https://documentation.lynnux.xyz/commands/dev/Not-Available',

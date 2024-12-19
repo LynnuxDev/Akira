@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['setting', 'setting'],
     description: 'Change your settings',
     type: 'messageCreate',
-    module: 'Utility',
+    module: 'utility',
     version: '1.0.0',
     sourcecode: 'src/commands/utility/settings.ts',
     documentation: 'settings',

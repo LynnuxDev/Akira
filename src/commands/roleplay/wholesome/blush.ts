@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['rp-blush'],
     description: 'Show a blush',
     type: 'messageCreate',
-    module: 'Roleplay',
+    module: 'roleplay',
     version: '1.0.0',
     sourcecode: 'src/commands/Roleplay/Wholesome/blush.ts',
     documentation: 'roleplay',

@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['rp-slap'],
     description: 'Show how sad you are.',
     type: 'messageCreate',
-    module: 'Roleplay',
+    module: 'roleplay',
     version: '1.0.0',
     sourcecode: 'src/commands/Roleplay/negative/slap.ts',
     documentation: 'roleplay',

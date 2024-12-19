@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['rp-die'],
     description: 'Show how sad you are.',
     type: 'messageCreate',
-    module: 'Roleplay',
+    module: 'roleplay',
     version: '1.0.0',
     sourcecode: 'src/commands/Roleplay/negative/die.ts',
     documentation: 'roleplay',

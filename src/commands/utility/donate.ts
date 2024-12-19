@@ -5,7 +5,7 @@ const commands: Command[] = [
     name: 'donate',
     aliases: ['givemoney', 'financial-support'],
     type: 'messageCreate',
-    module: 'Utility',
+    module: 'utility',
     sourcecode: 'SRC/commands/Utility/donate.ts',
     documentation: 'donate',
     version: '1.0.0',

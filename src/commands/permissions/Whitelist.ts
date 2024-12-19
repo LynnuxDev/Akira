@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['white-list'],
     type: 'messageCreate',
     description: 'Allow the mentioned member to use Akira in the server.',
-    module: 'Permissions',
+    module: 'permissions',
     sourcecode: 'src/commnads/Permissions/Whitelist.ts',
     documentation: 'whitelist',
     usage: 'whitelist <member>',

@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['permission', 'perm', 'permissions'],
     type: 'messageCreate',
     description: 'Edit specific permissions for Akira commands.',
-    module: 'Permissions',
+    module: 'permissions',
     sourcecode: 'src/commnads/Permissions/Perms.ts',
     documentation: 'perms',
     usage: 'perms <option> [group/command] [target]',

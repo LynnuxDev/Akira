@@ -6,7 +6,7 @@ const commands: Command[] = [
     aliases: ['bot-channel'],
     type: 'messageCreate',
     description: 'Causes Akira to ignore commands in all channels except the one mentioned (defaults to current channel).',
-    module: 'Permissions',
+    module: 'permissions',
     sourcecode: 'src/commnads/Permissions/BotChannel.ts',
     documentation: 'botchannel',
     usage: 'botchannel {channel}',
