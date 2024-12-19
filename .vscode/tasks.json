@@ -8,11 +8,7 @@
       "args": [
         "run",
         "dev"
-      ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
+      ]
     },
     {
       "label": "pnpm run build",
@@ -30,6 +26,19 @@
       "args": [
         "run",
         "start"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "pnpm run lint",
+      "type": "shell",
+      "command": "pnpm",
+      "args": [
+        "run",
+        "lint"
       ]
     }
   ]
