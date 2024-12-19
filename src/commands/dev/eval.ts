@@ -4,7 +4,7 @@ const commands: Command[] = [
   {
     name: 'ev',
     aliases: ['fs', 'ForgeScript'],
-    description: 'Evals an ForgeScript code',
+    description: 'Evaluate an ForgeScript code',
     type: 'messageCreate',
     usage: 'ev <code>',
     module: 'dev',

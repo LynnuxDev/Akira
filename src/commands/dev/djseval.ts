@@ -4,7 +4,7 @@ const commands: Command[] = [{
   name: 'eval',
   aliases: ['djs'],
   type: 'messageCreate',
-  description: 'Evals an JavaScript code.',
+  description: 'Evaluate an JavaScript code.',
   module: 'dev',
   sourcecode: 'SRC/commands/dev/djseval.ts',
   documentation: 'djseval',
