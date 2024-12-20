@@ -3,7 +3,7 @@ import { Command } from '@/types';
 const commands: Command[] = [
   {
     name: 'translate',
-    aliases: ['help-translate', 'localization', 'i18n'],
+    aliases: ['help-translate', 'localization', 'i18n', 'translation'],
     description: 'See info on translation.',
     type: 'messageCreate',
     module: 'utility',
@@ -16,6 +16,7 @@ const commands: Command[] = [
       $c[---------------------------------PRE-LETS---------------------------------]
       $let[author;$callFunction[customEncrypt;encrypt;$authorID]]
       $let[uuid;$getUserVar[uuid;$get[author]]]
+      $let[lang;$getLang[$authorID]]
 
       $c[----------------------------------ONLY-IF---------------------------------]
       $onlyIf[$getUserVar[AgreedToTos;$get[uuid]]==true;$getGlobalVar[AgreedToTosEmbedReply]]
@@ -24,9 +25,9 @@ const commands: Command[] = [
       $switch[$message[0];
         $case[default;
           $color[$if[$getUserVar[color;$get[uuid];false]!=false;$getUserVar[color;$get[uuid];#ff47ff];$getUserVar[color;$guildID;#ff47ff]]]
-          $title[Help Me Speak Your Language!]
-          $description[We're incredibly grateful to everyone who helps me teach me more languages!\n\nTranslating is done through **[Crowdin\\](https://crowdin.com/project/lynnuxdevAkira)**, where anyone can contribute to help my personality and commands be accessible in their native language. Every bit of your effort means the world to me and my developers and helps the community grow!\n\nThis project is supported by volunteers who generously give their time to make this possible. While they aren’t paid, their contributions have a lasting impact. If you'd like to join, check it out here: \[[Translate Akira on Crowdin\\](https://crowdin.com/project/lynnuxdevAkira)\\]\n\n-# 3/31 translations are finished.]
-          $footer[Thank you for helping me grow! 💖]
+          $title[$i18n[$get[lang];message.utility.translate.title]]
+          $description[$i18n[$get[lang];message.utility.translate.description.one]\n\n$i18n[$get[lang];message.utility.translate.description.two] $i18n[$get[lang];message.utility.translate.description.three]\n\n$i18n[$get[lang];message.utility.translate.description.four] $i18n[$get[lang];message.utility.translate.description.five] \[[$i18n[$get[lang];message.utility.translate.description.seven]\\](https://crowdin.com/project/lynnuxdevAkira)\\]\n\n-# $replace[$i18n[$get[lang];message.utility.translate.description.six];{{amount}};1;1].]
+          $footer[$i18n[$get[lang];message.utility.translate.footer] 💖]
 
           $addActionRow
           $addStringSelectMenu[translate~$authorID;Select a language;false;1;1]

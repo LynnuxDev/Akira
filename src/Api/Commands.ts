@@ -9,8 +9,8 @@ module.exports = {
     const commandsArray = ctx.client.commands.toArray().map(s => s.data);
     const messageCommands = commandsArray.filter(command => command.type === 'messageCreate');
     const messageCommandsCount = messageCommands.length;
-    const interactonCommand = commandsArray.filter(command => command.type === 'interactionCreate');
-    const interactonCommandCount = interactonCommand.length;
+    const interactionCommand = commandsArray.filter(command => command.type === 'interactionCreate');
+    const interactionCommandCount = interactionCommand.length;
     const otherCommands = commandsArray.filter(command => command.type !== 'messageCreate' && command.type !== 'interactionCreate');
     const otherCommandsCount = otherCommands.length;
 
@@ -21,10 +21,10 @@ module.exports = {
     "paths": "${ctx.client.commands.paths}",
     "amount": "${messageCommandsCount}"
   },
-  "interactons": {
-    "list": ${JSON.stringify(interactonCommand, null, 2)},
+  "interactions": {
+    "list": ${JSON.stringify(interactionCommand, null, 2)},
     "paths": "${ctx.client.applicationCommands.path}",
-    "amount": "${interactonCommandCount}"
+    "amount": "${interactionCommandCount}"
   },
   "other": {
     "list": ${JSON.stringify(otherCommands, null, 2)},

@@ -3,6 +3,9 @@ import { ForgeClient } from '@tryforge/forgescript';
 import { ForgeTopGG } from '@tryforge/forge.topgg';
 import { ForgeAPI } from '@tryforge/forge.api';
 import { join } from 'path';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 import token from './handler/token'; // Secure bot token
 import events from './handler/events'; // Event handlers
@@ -87,7 +90,6 @@ ForgeDB.variables(variables);
 client.functions.load(join(__dirname, 'functions'));
 client.commands.load(commandsPath);
 client.applicationCommands.load(slashCommandsPath);
-
 
 /// ////////////////////////////
 //  [   Client Login    ]    //

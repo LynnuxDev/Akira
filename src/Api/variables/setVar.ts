@@ -18,7 +18,7 @@ module.exports = {
       }
     } else if (type === 'guild') {
       if (!id) {
-        return ctx.res.status(400).send({ error: ':id is required for yhis type.' });
+        return ctx.res.status(400).send({ error: ':id is required for this type.' });
       }
     } else if (type === 'global') {
     } else {

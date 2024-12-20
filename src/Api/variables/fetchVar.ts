@@ -24,7 +24,7 @@ module.exports = {
         return ctx.res.status(400).send({ error: 'guildid is required for \'role\' or \'member\' type' });
       }
     } else if (type === 'global') {
-      identifier = `custom_${name}_undifined`;
+      identifier = `custom_${name}_undefined`;
     } else {
       identifier = `${type}_${name}_${id}`;
     }
