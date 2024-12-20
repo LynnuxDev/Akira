@@ -102,7 +102,6 @@ const commands: Command[] = [
           $let[translator1;Dark-LYNN]
           $let[translatorID1;705306248538488947]
           $let[translatorURL1;https://crowdin.com/profile/Dark-LYNN]
-          $let[translationDate;Nov 6, 2024]
         ]
         $case[translateGerman;
           $let[progression;$crowdinProgress[de]]
@@ -112,7 +111,6 @@ const commands: Command[] = [
           $let[translator1;ARD0NIZ]
           $let[translatorID1;521676495316582400]
           $let[translatorURL1;https://crowdin.com/profile/ARD0NIZ]
-          $let[translationDate;Nov 6, 2024]
         ]
         $case[translateDutch;
           $let[progression;$crowdinProgress[nl]]
@@ -122,7 +120,6 @@ const commands: Command[] = [
           $let[translator1;Dark-LYNN]
           $let[translatorID1;705306248538488947]
           $let[translatorURL1;https://crowdin.com/profile/Dark-LYNN]
-          $let[translationDate;Nov 6, 2024]
         ]
         $case[translatePortugueseBrazilian;
           $let[progression;$crowdinProgress[pt-PT]]
@@ -153,13 +150,12 @@ const commands: Command[] = [
         ]
         $case[default;
           $let[progression;0]
-          $let[languageName;NotYetTranslated]
+          $let[languageName;$replace[$selectMenuValues;translate;;1]]
           $let[languageShort;N/A]
           $let[translatorAmount;1]
           $let[translator1;Dark-LYNN]
           $let[translatorID1;NA]
           $let[translatorURL1;https://crowdin.com/profile/Dark-LYNN]
-          $let[translationDate;n/a]
         ]
       ]
       $interactionUpdate[
@@ -167,7 +163,6 @@ const commands: Command[] = [
         $title[$toTitleCase[$i18n[$get[lang];message.utility.translate.translationInfo]]: $get[languageName]]
         $description[$replace[$i18n[$get[lang];message.utility.translate.thanksTranslators];{{language}};**$get[languageName]**;1]]
         $addField[$toTitleCase[$i18n[$get[lang];message.utility.translate.progress]]:;$replace[$i18n[$get[lang];message.utility.translate.translationProgress];{{amount}};\`$get[progression]%\`;1] | $if[$get[progression]>=21;<:0_1:1303091965365194812>;$if[$get[progression]<=8;<:0_0:1303091907269759029>;<:0_2:1303092011087433790>]]$if[$get[progression]<=20;<:1_0:1303092075998478336>;$if[$get[progression]<=35;<:1_2:1303092127353278535>;$if[$get[progression]<=40;<:1_3:1303147748446568523>;<:1_1:1303092105035649185>]]]$if[$get[progression]<=40;<:1_0:1303092075998478336>;$if[$get[progression]<=55;<:1_2:1303092127353278535>;$if[$get[progression]<=60;<:1_3:1303147748446568523>;<:1_1:1303092105035649185>]]]$if[$get[progression]<=60;<:1_0:1303092075998478336>;$if[$get[progression]<=75;<:1_2:1303092127353278535>;$if[$get[progression]<=80;<:1_3:1303147748446568523>;<:1_1:1303092105035649185>]]]$if[$get[progression]<=80;<:2_0:1303091778840166500>;$if[$get[progression]==100;<:2_2:1303133192143769620>;<:2_1:1303091807256580166>]];true]
-        $addField[$toTitleCase[$i18n[$get[lang];message.utility.translate.lastUpdate]]:;\`$get[translationDate]\`;true]
 
         $addField[$toTitleCase[$i18n[$get[lang];message.utility.translate.translators]]:;$if[$get[translatorAmount]==1;[$get[translator1]\\]($get[translatorURL1]) $if[$get[translatorID1]==NA;;([$userGlobalName[$if[$get[translatorID1]==NA;705306248538488947;$get[translatorID1]]]\\](https://discord.com/users/$get[translatorID1]))];$if[$get[translatorAmount]==0;\`n/a\`;\n> - [$get[translator1]\\]($get[translatorURL1]) ([$userGlobalName[$get[translatorID1]]\\](https://discord.com/users/$get[translatorID1]))]] $if[$get[translatorAmount]>=2;\n> - [$get[translator2]\\]($get[translatorURL2]) ([$userGlobalName[$get[translatorID2]]\\](https://discord.com/users/$get[translatorID2]));];false]
       ]
