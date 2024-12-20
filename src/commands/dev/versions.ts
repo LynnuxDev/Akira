@@ -31,7 +31,7 @@ const commands: Command[] = [
         $addField[$message[0] Version:;\`\`\`yml\n$message[0]: $get[package]\`\`\`]
       ;
         $author[Package Versions:;https://cdn.discordapp.com/emojis/1317543328685883404.webp]
-        $title[Package List:]
+        $title[PNPM Package List:]
         $description[\`\`\`yml\n$get[packages]\`\`\`]
       ]
 

@@ -15,19 +15,26 @@ export function getPackages(): string {
     }
 
     const parsedData = JSON.parse(lsProcess.stdout.toString());
+    const packageEntries: string[] = [];
 
     parsedData.forEach((pkg: any) => {
       if (pkg.dependencies) {
         Object.entries(pkg.dependencies).forEach(([name, dep]) => {
           if (dep && typeof dep === 'object' && 'version' in dep) {
-            packageList += `${name}: ${dep.version}\n`;
+            packageEntries.push(`${name}: ${dep.version}`);
           }
         });
       }
     });
+
+    // Sort alphabetically
+    packageEntries.sort();
+
+    packageList = packageEntries.join('\n') + '\n';
+
   } catch (error) {
     throw new Error(`Failed to retrieve package list: ${(error as Error).message}`);
   }
 
-  return packageList;  // return string
+  return packageList;  // return sorted string
 }
