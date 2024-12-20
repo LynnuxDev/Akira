@@ -95,7 +95,7 @@ const commands: Command[] = [
 
       $switch[$selectMenuValues;
         $case[translateEnglish;
-          $let[progression;100]
+          $let[progression;$crowdinProgress[en]]
           $let[languageName;English]
           $let[languageShort;en-US]
           $let[translatorAmount;1]
@@ -105,7 +105,7 @@ const commands: Command[] = [
           $let[translationDate;Nov 6, 2024]
         ]
         $case[translateGerman;
-          $let[progression;94]
+          $let[progression;$crowdinProgress[de]]
           $let[languageName;German]
           $let[languageShort;de-DE]
           $let[translatorAmount;1]
@@ -115,7 +115,7 @@ const commands: Command[] = [
           $let[translationDate;Nov 6, 2024]
         ]
         $case[translateDutch;
-          $let[progression;86]
+          $let[progression;$crowdinProgress[nl]]
           $let[languageName;Dutch]
           $let[languageShort;nl-NL]
           $let[translatorAmount;1]
@@ -125,34 +125,31 @@ const commands: Command[] = [
           $let[translationDate;Nov 6, 2024]
         ]
         $case[translatePortugueseBrazilian;
-          $let[progression;35]
+          $let[progression;$crowdinProgress[pt-PT]]
           $let[languageName;Portuguese (Brazilian)]
           $let[languageShort;pt-BR]
           $let[translatorAmount;1]
           $let[translator1;renancolombini6]
           $let[translatorID1;NA]
           $let[translatorURL1;https://crowdin.com/profile/renancolombini6]
-          $let[translationDate;Nov 6, 2024]
         ]
         $case[translateSpanish;
-          $let[progression;1]
+          $let[progression;$crowdinProgress[es-ES]]
           $let[languageName;Spanish]
           $let[languageShort;es-ES]
           $let[translatorAmount;1]
           $let[translator1;Dark-LYNN]
           $let[translatorID1;705306248538488947]
           $let[translatorURL1;https://crowdin.com/profile/Dark-LYNN]?>
-          $let[translationDate;Nov 6, 2024]
         ]
         $case[translateHindi;
-          $let[progression;100]
+          $let[progression;$crowdinProgress[he]]
           $let[languageName;Hindi]
           $let[languageShort;hi-IN]
           $let[translatorAmount;1]
           $let[translator1;iconicayansh]
           $let[translatorID1;1004291040150298715]
           $let[translatorURL1;https://crowdin.com/profile/iconicayansh]
-          $let[translationDate;Nov 6, 2024]
         ]
         $case[default;
           $let[progression;0]
@@ -161,7 +158,7 @@ const commands: Command[] = [
           $let[translatorAmount;1]
           $let[translator1;Dark-LYNN]
           $let[translatorID1;NA]
-          $let[translatorURL1;https://crowdin.com/profile/Dark-LYNN]?>
+          $let[translatorURL1;https://crowdin.com/profile/Dark-LYNN]
           $let[translationDate;n/a]
         ]
       ]
