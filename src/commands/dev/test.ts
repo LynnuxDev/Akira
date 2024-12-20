@@ -1,13 +1,4 @@
 import { Command } from '../../types';
-import { fetchLanguageProgressSync } from '../../native/crowdingLanguageProcess';
-
-try {
-  const progress = fetchLanguageProgressSync('en');
-  console.log('Language Progress:', progress);
-} catch (err) {
-  const progress = "0";
-  console.error('Error fetching language progress:', err);
-}
 
 const commands: Command[] = [
   {
@@ -19,7 +10,11 @@ const commands: Command[] = [
     version: 'v1.0.0',
     code: `
       $onlyIf[$checkContains[$botOwnerID[true;,];$authorID];]
-      ${process}
+
+      $httpAddHeader[Authorization;Bearer ${process.env.CROWDIN_API_TOKEN}]
+      $httpRequest[https://api.crowdin.com/api/v2/projects/717569/languages/en/progress;GET;process]
+
+      $logger[Info;$env[process;data;0;data;translationProgress]]
     `
   }
 ];
