@@ -2,6 +2,51 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.9](https://github.com/LynnuxDev/Akira/compare/v0.5.8...v0.5.9) (2024-12-20)
+
+
+### Features
+
+* Added @fun/fortune command. ([761c5e2](https://github.com/LynnuxDev/Akira/commit/761c5e29750c9a4895d1ef88e438318732675482))
+* Added @utility/stats command. ([1e55262](https://github.com/LynnuxDev/Akira/commit/1e55262f59c1f2be9e922cbd48ab8920b4f84f32))
+* Added Roleplay commands. ([465e57d](https://github.com/LynnuxDev/Akira/commit/465e57d19cda2babfc4df44ac9dc798162d95932))
+
+
+### Bug Fixes
+
+* Translation progress nolonger static. ([242bd98](https://github.com/LynnuxDev/Akira/commit/242bd98427d31ead072a01b8783fce4f57e0fdf2))
+
+
+### Styles
+
+* Added new words to dictionary. ([32ada69](https://github.com/LynnuxDev/Akira/commit/32ada694921e7749cb228d0a1a46446c69b68597))
+* lint ([7cb64ea](https://github.com/LynnuxDev/Akira/commit/7cb64ea7851fddd08d3b26420d86cb4ed5529711))
+* Placed rage in alphabetical order. ([a08de9b](https://github.com/LynnuxDev/Akira/commit/a08de9ba93065fd1dd61fd386b0021984aea838c))
+
+
+### Tests
+
+* Added @dev/neofetch command. ([632a71b](https://github.com/LynnuxDev/Akira/commit/632a71be920a9b0f9839f2fa3821a62ff944cd7a))
+* Added Dev testing command. ([73713b9](https://github.com/LynnuxDev/Akira/commit/73713b9a3e8a311f088b41a17517b9f70230b1c0))
+* Prepaired for public test. ([1fc8308](https://github.com/LynnuxDev/Akira/commit/1fc830884bced36d8cd54d6c9fbede0b20952ade))
+
+
+### Code Refactoring
+
+* Added Function 'getColor' for user embed color. ([b96d670](https://github.com/LynnuxDev/Akira/commit/b96d670158bf339b61e46752584288bd0fde96f5))
+
+
+### Chores
+
+* Added TS functions for easy usage. ([7bcb8a2](https://github.com/LynnuxDev/Akira/commit/7bcb8a2b9ac13f9689293fb651547b7f5d761e43))
+* Automated Crowding Progress. ([84d0224](https://github.com/LynnuxDev/Akira/commit/84d02244961ec2bd55e66964583887b5bbaf95d8))
+* Calculate percentage function. ([ea98aae](https://github.com/LynnuxDev/Akira/commit/ea98aaee10886402e6ddd14b8fc244c39ee6c35c))
+* cleanup. ([0e84469](https://github.com/LynnuxDev/Akira/commit/0e84469242a04530190be36dfe382a476f5a8119))
+* Made it easy to get Crowding Progress. ([bd495cd](https://github.com/LynnuxDev/Akira/commit/bd495cdb55a1e6d95c300ec75b16d786ba4ca8e0))
+* Made versions alphabetical ([7fb319e](https://github.com/LynnuxDev/Akira/commit/7fb319e938cbf0cd9cec555bded900001c750cba))
+* Moved [@types](https://github.com/types) modules to dev depends. ([d6a7f20](https://github.com/LynnuxDev/Akira/commit/d6a7f20ff21f9518af10d6d90d65800e075ed9cb))
+* Removed unused command. ([2910bfe](https://github.com/LynnuxDev/Akira/commit/2910bfedba57d7c48833d2ac4f12e6a13a578eb4))
+
 ### [0.5.8](https://github.com/LynnuxDev/Akira/compare/v0.5.7...v0.5.8) (2024-12-19)
 
 
