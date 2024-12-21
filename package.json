@@ -11,7 +11,7 @@
     "dev": "NODE_ENV=development ts-node -r tsconfig-paths/register src/index.ts"
   },
   "author": "Lynnux",
-  "license": "MIT",
+  "license": "BSD-4-Clause",
   "dependencies": {
     "@tryforge/forge.api": "github:tryforge/Forgeapi#dev",
     "@tryforge/forge.db": "github:tryforge/ForgeDB#dev",
