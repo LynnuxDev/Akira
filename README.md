@@ -55,7 +55,12 @@ Contributions are always welcomed :D Make sure to follow [CONTRIBUTING.md](./.gi
 
 > **Note:** Contributions are not accepted in the master branch.
 
-Made with ❤️ and botforge!
+Made with ❤️ by LynnuxDev!
+
+## LICENSE
+
+This project is licensed under the [BSD 4-Clause "Original" License](./LICENSE).
+For a simplified explanation of the license, see [BSD 4-Clause License (Simplified)](INFO/BSD%204-Clause%20License%20(Simplified).md).
 
 [discord-img]: https://img.shields.io/badge/Discord-JOIN-GREEN.svg?style=for-the-badge&logo=discord
 [discord-url]: https://akira.lynnux.xyz/support
