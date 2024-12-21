@@ -14,8 +14,11 @@ const commands: Command[] = [
     example: 'bite @dark-lynn NEVER do that again.',
     code: `
       $c[------------------------------------LET-----------------------------------]
+      $let[author;$getUUID[$authorID]]
       $let[lang;$getLang[$authorID]]
-      $let[userID;$getUUID[$findUser[$message[0];true]]]
+      $let[userID;$findUser[$message[0];true]]
+      $let[user;$getUUID[$get[userID]]]
+
       $c[----------------------------------ONLY-IF---------------------------------]
       $onlyIf[$getUserVar[AgreedToTos;$get[author];false]==true;$callEmbed[agreeToTerms]]
       $onlyIf[$channelID==$getGuildVar[BotChannel;$guildID;$channelID];$getGlobalVar[BotChannelError]]
@@ -45,7 +48,6 @@ const commands: Command[] = [
         $let[msg;$i18n[$get[lang];message.roleplay.negative.bite.descriptionSingle]]
         $description[$replace[$replace[$get[msg];{{author}};**$if[$guildID!=;$nickname;$username]**;1];{{user}};**$username[$get[userID]]**;1]$if[$get[message]!=;\n"$get[message]"]]
         $footer[$replace[$replace[$i18n[$get[lang];message.roleplay.negative.bite.$if[$getVar[bite-gotten;$get[author]]==1;footer.oneSingle;footer.one]];{{author}};$if[$guildID!=;$nickname;$username];1];{{amount}};$getVar[bite-give;$get[author]];1]]
-
       ]
     `
   }
