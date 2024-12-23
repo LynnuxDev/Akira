@@ -17,7 +17,6 @@
     "dev": "NODE_ENV=development ts-node -r tsconfig-paths/register src/index.ts"
   },
   "dependencies": {
-    "@tryforge/forge.api": "github:tryforge/Forgeapi#dev",
     "@tryforge/forge.db": "github:tryforge/ForgeDB#dev",
     "@tryforge/forge.topgg": "github:tryforge/ForgeTopGG#dev",
     "@tryforge/forgescript": "github:tryforge/Forgescript#dev",
