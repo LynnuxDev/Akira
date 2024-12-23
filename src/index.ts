@@ -1,7 +1,7 @@
 import { ForgeDB } from '@tryforge/forge.db';
 import { ForgeClient } from '@tryforge/forgescript';
 import { ForgeTopGG } from '@tryforge/forge.topgg';
-import { ForgeAPI } from '@tryforge/forge.api';
+// ForgeAPI removed due to having https://api.lynnux.xyz
 import { join } from 'path';
 import * as dotenv from 'dotenv';
 
@@ -21,21 +21,24 @@ const isDevelopment: boolean = process.env.NODE_ENV === 'development';
 // Paths for dynamic module loading
 const commandsPath: string = isDevelopment ? 'src/commands' : 'dist/commands';
 const slashCommandsPath: string = isDevelopment ? 'src/slash' : 'dist/slash';
-const apiPath: string = isDevelopment ? 'src/Api' : 'dist/Api';
+const topGgPath: string = isDevelopment ? 'src/TopGG' : 'dist/TopGG';
 
 /// ////////////////////////////
-//  [    API Setup      ]    //
+// [ ForgeTopGG Setup ]       //
 /// ////////////////////////////
 
-const api = new ForgeAPI({
-  port: 1069,
-  logLevel: 1,
-  auth: {
-    bearer: true,
-    type: 1,
-    code: 'ImAAuthCode',
-    ip: '127.0.0.1'
-  }
+const topgg = new ForgeTopGG({
+  token: `${process.env.TOPGG_TOKEN}`,
+  auth: `${process.env.TOPGG_AUTH}`,
+  events: [
+    'error',
+    'posted',
+    'voted'
+  ],
+  post: {
+    interval: 43_200_000 // Update every 12 hours
+  },
+  port: 3001
 });
 
 /// ////////////////////////////
@@ -49,19 +52,6 @@ const database = new ForgeDB({
   username: 'AkiraDB',
   password: 'PASSWORD',
   database: 'Akira'
-});
-
-/// ////////////////////////////
-// [   Top.gg Setup    ]     //
-/// ////////////////////////////
-
-const top = new ForgeTopGG({
-  token: 'TOP.GG TOKEN',
-  auth: 'TOP.GG AUTH',
-  events: ['error', 'posted', 'voted'],
-  post: {
-    interval: 3_600_000 // Post bot stats every hour
-  }
 });
 
 /// ////////////////////////////
@@ -79,7 +69,7 @@ const client = new ForgeClient({
   ],
   extensions: [
     new ForgeDB(),
-    api
+    topgg
   ]
 });
 
@@ -90,10 +80,10 @@ ForgeDB.variables(variables);
 client.functions.load(join(__dirname, 'functions'));
 client.commands.load(commandsPath);
 client.applicationCommands.load(slashCommandsPath);
+topgg.commands.load(topGgPath);
 
 /// ////////////////////////////
 //  [   Client Login    ]    //
 /// ////////////////////////////
 
-// api.router.load(apiPath) // will be used later
 client.login(`${token}`);

@@ -35,3 +35,8 @@ export interface CustomFunction {
 export interface Translations {
   [key: string]: any;
 }
+
+export interface TopGG {
+  type: 'voted' | 'error' | 'posted';
+  code: string;
+}
