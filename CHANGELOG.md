@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.10](https://github.com/LynnuxDev/Akira/compare/v0.5.9...v0.5.10) (2024-12-23)
+
+
+### Features
+
+* Initial Top.gg intergration. ([35bf4ab](https://github.com/LynnuxDev/Akira/commit/35bf4ab3623beb72a340d511a30ca5fa1328ece5))
+
+
+### Performance Improvements
+
+* Now loads from cdn.lynnux.xyz ([f7a2c80](https://github.com/LynnuxDev/Akira/commit/f7a2c80cb5b609e35f49395a494ee1647ccefd87))
+
+
+### Chores
+
+* removed forgeAPI directory due to own api. ([4f6c4e9](https://github.com/LynnuxDev/Akira/commit/4f6c4e97d581cde5156bde4008721a387df4f479))
+* removed forgeAPI due to own api. ([6d15c10](https://github.com/LynnuxDev/Akira/commit/6d15c103b715dfe43d285dbd1f033be2a33ecee0))
+
 ### [0.5.9](https://github.com/LynnuxDev/Akira/compare/v0.5.8...v0.5.9) (2024-12-20)
 
 
