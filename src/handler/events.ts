@@ -25,7 +25,7 @@ const events: (keyof ClientEvents)[] = [
   // "guildAvailable",                           // This event is called when a guild becomes available
   // "guildBanAdd",                              // This event is called when a ban is added
   // "guildBanRemove",                           // This event is called when a ban is removed
-  // "guildCreate",                              // This event is called when the bot is added to a guild
+  "guildCreate",                                 // This event is called when the bot is added to a guild
   // "guildDelete",                              // This event is called when the bot is removed from a guild
   'guildMemberAdd', // This event is called when a member joins the guild
   // "guildMemberAvailable",                     // This event is called when a member of a guild becomes available
