@@ -1,9 +1,9 @@
 import { CustomFunction } from "../types";
 
 const userFunction : CustomFunction[] = [{
-    name: "user",
-    params: ["type", "user"],
-    code: `
+  name: "user",
+  params: ["type", "user"],
+  code: `
       $return[
         $start
         $onlyIf[$or[$env[type]==ID;$env[type]==Username];
@@ -36,7 +36,7 @@ const userFunction : CustomFunction[] = [{
         ]
       ]
     `,
-  },
+},
 ];
 
 export default userFunction;
