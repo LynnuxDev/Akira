@@ -3,7 +3,7 @@ export interface Command {
   aliases?: string[];
   type: 'messageCreate' | 'debug' | 'ready' | 'interactionCreate';
   description: string;
-  module: 'dev' | 'automation' | 'automod' | 'economy' | 'leveling' | 'moderation' | 'fun' | 'permissions' | 'premium' | 'profile' | 'reactionRoles' | 'roleplay' | 'search' | 'settings' | 'utility';
+  module: 'ClientSpecific' | 'dev' | 'automation' | 'automod' | 'economy' | 'leveling' | 'moderation' | 'fun' | 'permissions' | 'premium' | 'profile' | 'reactionRoles' | 'roleplay' | 'search' | 'settings' | 'utility';
   sourcecode: string;
   documentation?: string;
   usage?: string;
@@ -38,5 +38,15 @@ export interface Translations {
 
 export interface TopGG {
   type: 'voted' | 'error' | 'posted';
+  code: string;
+}
+
+
+export interface Event {
+  type: 'ready' | 'guildCreate' | 'error';
+  name?: string;
+  description?: string;
+  module: 'Client';
+  version: string;
   code: string;
 }
