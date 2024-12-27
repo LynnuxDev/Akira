@@ -27,11 +27,11 @@ const commands: Command[] = [
       $addField[❯ $i18n[$get[lang];message.utility.about.field.two.title];V$replace[${getPackages()};akira: ;;1];true]
       $addField[\u200B;\u200B;true]
       $description[$i18n[$get[lang];message.utility.about.description]]
-      $addField[❯ $i18n[$get[lang];global.buttons.website];[$i18n[$get[lang];global.buttons.button2]\\](https://akira.lynnux.xyz)\\];true]
+      $addField[❯ $i18n[$get[lang];global.buttons.website];[[$i18n[$get[lang];global.buttons.button2]\\](https://akira.lynnux.xyz)\\];true]
       $addField[❯ $i18n[$get[lang];global.buttons.server];[[$i18n[$get[lang];global.buttons.button2]\\](https://discord.com/invite/TUqZTutDUz)\\];true]
       $addField[❯ $i18n[$get[lang];global.buttons.Invite];[[$i18n[$get[lang];global.buttons.button2]\\](https://discord.com/oauth2/authorize?client_id=$clientID&scope=bot+applications.commands&permissions=4294307799)\\];true]
       $addActionRow
-      $addButton[close-$authorID-$get[DefaultMessage]-false;Close;Danger;✖️]
+      $addButton[close~$authorID~message~$messageID;Close;Danger;✖️]
       $addButton[https://github.com/LynnuxDev/Akira;Source-Code;Link;📖]
     `
   }
