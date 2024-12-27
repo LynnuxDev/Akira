@@ -2,20 +2,19 @@ import { Event } from '../../../types';
 
 const OnReady: Event[] = [
   {
-    name: 'onEveryFirstOfMonth',
+    name: 'onEveryHour',
     type: 'ready',
-    description: 'This command runs every first of the month.',
+    description: 'This command runs every hour on startup.',
     module: 'Client',
     version: '1.0.0',
     code: `
-      $loop[-1;
-        $c[runs every day at Hour starting on startup]
+      $setInterval[
         $httpSetBody[{"members": $userCount, "servers": $guildCount, "commands": $commandCount, "uptime": $uptime}]
-        $httpSetContentType[application/json]
+        $httpAddHeader[Content-Type;application/json]
         $let[status;$httpRequest[https://api.lynnux.xyz/akira/stats;POST]]
-        $if[$get[status]==200;$logger[Info;stats posted];$logger[Error;stats not posted $get[status]]]
-        $wait[1h]
-      ]
+        $if[$get[status]==200;$logger[Info;stats posted to api.lynnux.xyz.];$logger[Error;Stats failed to post got "$get[status]".]]
+        $logger[Debug;Akira | Hourly Loop ran.]
+      ;1h]
     `
   }
 ];
