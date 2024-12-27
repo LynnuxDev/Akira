@@ -2,6 +2,56 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.11](https://github.com/LynnuxDev/Akira/compare/v0.5.10...v0.5.11) (2024-12-27)
+
+
+### Features
+
+* Added custom prefix. ([f94fc02](https://github.com/LynnuxDev/Akira/commit/f94fc029a5b87ae9fb180183ff560e7976e782b6))
+* Added Invalid command error and the toggle command. ([0ffa503](https://github.com/LynnuxDev/Akira/commit/0ffa503ab694d5ad90ff8fed85575e8f8cdaffc2))
+* Added settings command and GDPR related features. ([e88924d](https://github.com/LynnuxDev/Akira/commit/e88924d3a2c508ec65c4a913428d7bc61b46c94b))
+
+
+### Bug Fixes
+
+* checkAgreedToTos function works again. ([b8688fe](https://github.com/LynnuxDev/Akira/commit/b8688fea266a87859fdaf62e7feed04ab6c125df))
+* CommandInfo command nolonger shows only dev as module, And fixed prefix. ([4c32a51](https://github.com/LynnuxDev/Akira/commit/4c32a51ef0a55a7d2a41e2e5795d102e5b6f3240))
+* EveryHour loop now sends stats data to api. ([078bf9d](https://github.com/LynnuxDev/Akira/commit/078bf9d0f071dcd61622532fea20848120474a70))
+* Fixed roleplay commands having wrong aliases. ([e062b90](https://github.com/LynnuxDev/Akira/commit/e062b905a7e87670d623c9702706e2ebc6b24686))
+* The close button in about now works as it should. ([4aaad26](https://github.com/LynnuxDev/Akira/commit/4aaad26edac06307276194bdd6ff0c0452eefefc))
+
+
+### Styles
+
+* lint ([6ca3305](https://github.com/LynnuxDev/Akira/commit/6ca330555b202262fbc2a2d6141853a708b258a9))
+
+
+### Tests
+
+* Removed testing function. ([1a05422](https://github.com/LynnuxDev/Akira/commit/1a05422c3996015977d7afebc3acbd1ae0c834fc))
+* testing ([f2a3755](https://github.com/LynnuxDev/Akira/commit/f2a375547dc31e390d5b8c633c95acb5df0f7557))
+
+
+### Code Refactoring
+
+* containsCommand function now uses the commandInfo fs-native-function. ([b8ee7ed](https://github.com/LynnuxDev/Akira/commit/b8ee7edfde1fa6488d62ab1f558d7f98b7e2a15a))
+* Custom event folder in commands folder. ([8a48baf](https://github.com/LynnuxDev/Akira/commit/8a48baf72a91e25f748d79be6ca0b3882cff92be))
+* onReady Event now uses types import. ([346df74](https://github.com/LynnuxDev/Akira/commit/346df740035e2bc655f510ef97eebbb1d171fa2c))
+* Refactor of database and used actual prefix. ([10d7320](https://github.com/LynnuxDev/Akira/commit/10d7320e6db6e0ebf096cb6dde714c031b6ddaa4))
+* Replaced settings related stuff to settings module. ([f5ef2e6](https://github.com/LynnuxDev/Akira/commit/f5ef2e6b100033d4b15f8481bc1801c7d375d737))
+
+
+### Chores
+
+* Added {{client}} tag to customError function. ([dbf1f8a](https://github.com/LynnuxDev/Akira/commit/dbf1f8a34cded8da93f11dbc9769f52264e2b33f))
+* Added even more errors. ([fbce5e7](https://github.com/LynnuxDev/Akira/commit/fbce5e7384444b176584965706a049d6eb236a70))
+* Added messageCreate to Event type. ([23c3c4e](https://github.com/LynnuxDev/Akira/commit/23c3c4eebb6bac3852dc3e8114dd70102cb9c5fe))
+* Added more errors. ([0ab4c30](https://github.com/LynnuxDev/Akira/commit/0ab4c30a32143fff35b958539a99e746f7ae305f))
+* config/spelling/linting. ([f836a00](https://github.com/LynnuxDev/Akira/commit/f836a007a4d4acd23dc516cabfe5ae034c619d55))
+* Enabled on.guildJoin event ([1556697](https://github.com/LynnuxDev/Akira/commit/1556697ff7abdc07ea4271c3d6f790819b03f50e))
+* getLang function now supports guilds. ([5281110](https://github.com/LynnuxDev/Akira/commit/5281110b9d3f9696ea143bed5c0100307e157776))
+* GitIgnore. ([9bfef04](https://github.com/LynnuxDev/Akira/commit/9bfef04a119870bb1a35645c49a459b1d3390a11))
+
 ### [0.5.10](https://github.com/LynnuxDev/Akira/compare/v0.5.9...v0.5.10) (2024-12-23)
 
 
