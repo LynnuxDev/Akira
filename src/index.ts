@@ -1,5 +1,5 @@
 import { ForgeDB } from '@tryforge/forge.db';
-import { ForgeClient } from '@tryforge/forgescript';
+import { ForgeClient, LogPriority } from '@tryforge/forgescript';
 import { ForgeTopGG } from '@tryforge/forge.topgg';
 // ForgeAPI removed due to having https://api.lynnux.xyz
 import { join } from 'path';
@@ -62,22 +62,25 @@ const client = new ForgeClient({
   events,
   intents,
   useInviteSystem: false,
+  shardCount: 1,
+  shards: 'auto',
+  logLevel: LogPriority.High,   // Use High for debug, use Medium otherwise.
+  respondOnEdit: false,         // Respond on message IF we ever use this change to <number> of ms
   prefixes: [
-    '!',             // Dev prefix
-    '<@!$clientID>', // Mention prefix
-    '<@$clientID>'   // Alternative mention prefix
+    '$callFunction[prefix]',
+    'akira',
+    '<@!$clientID>',
+    '<@$clientID>'
   ],
   extensions: [
-    new ForgeDB(),
+    new ForgeDB(),  // TODO: change to 'database' on release
     topgg
   ]
 });
 
-// Load default variables
-ForgeDB.variables(variables);
-
-// Load functions and commands
+// Load functions, variables and commands
 client.functions.load(join(__dirname, 'functions'));
+ForgeDB.variables(variables);
 client.commands.load(commandsPath);
 client.applicationCommands.load(slashCommandsPath);
 topgg.commands.load(topGgPath);
