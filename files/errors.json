@@ -16,20 +16,20 @@
   },
   "101": {
     "title": "",
-    "meaning":"Command Recived",
+    "meaning":"Command Received",
     "description":"This code indicates that Akira has successfully received a command but hasn't started processing it yet.",
     "from": "N/A"
   },
   "102": {
     "title": "",
-    "meaning": "Slash Recieved",
+    "meaning": "Slash Received",
     "description": "Similar to 101, but with slash command.",
     "from":"N/A"
   },
   "200": {
     "title": "",
-    "meaning": "Request succesful",
-    "description": "Request was succesful",
+    "meaning": "Request successful",
+    "description": "Request was successful",
     "from": "Any"
   },
   "301": {
@@ -101,7 +101,7 @@
   "714": {
     "title": ["Command’s Out of Its Element!","Command’s Lost in the Wrong Dimension!","Command’s Passport is Server-Only!","Command’s Not a Fan of DMs!"],
     "meaning": "Invalid Command",
-    "description": "The command was used in an wrong envirment.\n-# This includes server-only command in a direct message.",
+    "description": "The command was used in an wrong environment.\n-# This includes server-only command in a direct message.",
     "from": "Client"
   },
   "715": {
@@ -113,13 +113,13 @@
   "716": {
     "title": ["Impostor Detected!","Nice Try，Wrong Guy!","Unauthorized Scribbler","Faker Mode Activated","Command Piracy Detected!"],
     "meaning": "Wrong Author.",
-    "description": "This interaction can only be used by the origional command author.",
+    "description": "This interaction can only be used by the original command author.",
     "from": "Client"
   },
   "717": {
     "title": ["Fill in the Blanks!","Argument Not Found!","Oops，Where's the Rest?","Half-Baked Command!","Lost and Found Argument Department!", "The Argument Thief Strikes Again!"],
     "meaning": "Missing Argument(s).",
-    "description": "You did not provide enough arguments.\nMaybe try `{prefix}{example}`",
+    "description": "You did not provide enough arguments.\nMaybe try `{{prefix}}{example}`",
     "from": "Client"
   },
   "718": {
@@ -161,13 +161,13 @@
   "801": {
     "title": ["Argument Anomaly!","Argument in Distress!","Oops，Wrong Argument!","Argument Malfunction!","Lost Argument Syndrome!","Argument’s Lost in Translation!"],
     "meaning": "Wrong arguments (specific).",
-    "description": "Wrong argument for `{prefix}perms reply`. \nPosible options are `reply / ignore / react`.",
+    "description": "Wrong argument for `{{prefix}}perms reply`. \nPossible options are `reply / ignore / react`.",
     "from": "Client"
   },
   "802": {
     "title": ["Argument Anomaly!","Argument in Distress!","Oops，Wrong Argument!","Argument Malfunction!","Lost Argument Syndrome!","Argument’s Lost in Translation!"],
     "meaning": "Wrong arguments (specific).",
-    "description": "Wrong argument for `{prefix}perms list`. \nThe argument needs to be a `user / role / channel`.",
+    "description": "Wrong argument for `{{prefix}}perms list`. \nThe argument needs to be a `user / role / channel`.",
     "from": "Client"
   },
   "803": {
@@ -185,7 +185,19 @@
   "805": {
     "title": ["Argument Anomaly!","Argument in Distress!","Oops，Wrong Argument!","Argument Malfunction!","Lost Argument Syndrome!","Argument’s Lost in Translation!"],
     "meaning": "Wrong arguments (specific).",
-    "description": "Wrong argument for `{prefix}perms default`. \nThe argument needs to be a `user / role / channel`.",
+    "description": "Wrong argument for `{{prefix}}perms default`. \nThe argument needs to be a `user / role / channel`.",
+    "from": "Client"
+  },
+  "806": {
+    "title": ["Copy Cat!","Thats quick!","Already in use!"],
+    "meaning": "Prefix duplicate.",
+    "description": "The prefix {{prefix}} is already set to {{prefix}}.",
+    "from": "Client"
+  },
+  "807": {
+    "title": ["Can’t Change Perfection!","Default Forever，Sorry!","My Name is Non-Negotiable!"],
+    "meaning": "Prefix reserved.",
+    "description": "Oops! The prefix you tried to set is reserved and cannot be changed.\n\nI will always respond to:\n- My name: `Akira`\n- Mentions: <@{{client}}>\n\nPlease choose a different prefix using the `{{prefix}}set-prefix` command.",
     "from": "Client"
   },
   "901": {
@@ -197,7 +209,7 @@
   "902": {
     "title": ["Permission, denied.", "Sorry，Can't do that here."],
     "meaning": "User Permissions denied.",
-    "description": "You cannot use this command.\nThis command has been disabled for you specificly by an server admin.",
+    "description": "You cannot use this command.\nThis command has been disabled for you specifically by an server admin.",
     "from": "Client"
   },
   "903": {

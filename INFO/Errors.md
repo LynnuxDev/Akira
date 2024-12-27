@@ -63,6 +63,8 @@ table of content
 | 803    | Perms default          | No argument for default. |
 | 804    | Duplicate arguments (specific). | The given value `{messageOne}` is not in the perms list of this target. |
 | 805    | Wrong arguments (specific) | Wrong argument for `{prefix}perms default`. \nThe argument needs to be a `user / role / channel`. |
+| 806    | Prefix Already the same| The given prefix in `{prefix}set-prefix` is the same as it already is. |
+| 807    | Prefix is reserved.    | The given prefix in `{prefix}set-prefix` is a default none-changeable prefix. |
 | 901    | Perms Channel denied   | The perms for this command have been disabled for this channel |
 | 902    | Perms User denied      | The perms for this command have been disabled for this user    |
 | 903    | Perms Role denied      | The perms for this command have been disabled for a role the user has |
