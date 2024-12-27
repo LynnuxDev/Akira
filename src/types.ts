@@ -43,7 +43,7 @@ export interface TopGG {
 
 
 export interface Event {
-  type: 'ready' | 'guildCreate' | 'error';
+  type: 'ready' | 'guildCreate' | 'error' | 'messageCreate';
   name?: string;
   description?: string;
   module: 'Client';
