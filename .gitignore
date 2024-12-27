@@ -3,11 +3,11 @@ node_modules/
 dist/
 package-lock.json
 
-# Ignore specific files
-TODO.MD
+# Private stuff
 forge.db
 pnpm-lock.yaml
-files/anime/not-found.json
 .env
-ogs
-ans.json
+
+# Ignore specific files
+files/anime/not-found.json
+TODO.MD
