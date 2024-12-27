@@ -8,8 +8,16 @@ const ErrorEvent: Event[] = [
     version: '1.0.0',
     code: `
       $disableConsoleErrors
-      $logger[Error;$error[]]
-  `
-  }];
+      $ifx[
+        $if[$startsWith[$error[];DiscordAPIError[10008]:]==true;
+          $logger[Error;DiscordAPIError[10008]: Failed to delete message.]
+        ]
+        $else[
+          $logger[Error;$error[]]
+        ]
+      ]
+    `
+  }
+];
 
 export default ErrorEvent;
