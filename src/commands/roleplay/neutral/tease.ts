@@ -3,7 +3,7 @@ import { Command } from '@/types';
 const commands: Command[] = [
   {
     name: 'tease',
-    aliases: ['rp-tease', 'drink', 'rp-drink'],
+    aliases: ['rp-tease'],
     description: 'tease',
     type: 'messageCreate',
     module: 'roleplay',
