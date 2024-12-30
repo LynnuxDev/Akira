@@ -1,21 +1,20 @@
-export interface Command {
-  name?: string;
-  aliases?: string[];
-  type: 'messageCreate' | 'debug' | 'ready' | 'interactionCreate';
+import { CommandType, IForgeFunction, IBaseCommand } from "@tryforge/forgescript";
+
+export interface CustomFunction extends IForgeFunction {
+  version?: string;
+}
+
+export interface Command extends IBaseCommand<CommandType> {
   description: string;
-  module: 'ClientSpecific' | 'dev' | 'automation' | 'automod' | 'economy' | 'leveling' | 'moderation' | 'fun' | 'permissions' | 'premium' | 'profile' | 'reactionRoles' | 'roleplay' | 'search' | 'settings' | 'utility';
+  module: 'clientSpecific' | 'dev' | 'automation' | 'automod' | 'economy' | 'leveling' | 'moderation' | 'fun' | 'permissions' | 'premium' | 'profile' | 'reactionRoles' | 'roleplay' | 'search' | 'settings' | 'utility';
   sourcecode: string;
   documentation?: string;
   usage?: string;
   example?: string;
   version: string;
-  code: string;
 }
 
-export interface InteractionCommand {
-  name?: string;
-  aliases?: string[];
-  type:'interactionCreate' | 'messageCreate' ;
+export interface InteractionCommand extends IBaseCommand<String> {
   description?: string;
   module?: 'client' | 'dev' | 'automation' | 'automod' | 'economy' | 'leveling' | 'moderation' | 'fun' | 'permissions' | 'premium' | 'profile' | 'reactionRoles' | 'roleplay' | 'search' | 'settings' | 'utility';
   sourcecode?: string;
@@ -23,13 +22,6 @@ export interface InteractionCommand {
   usage?: string;
   example?: string;
   version: string;
-  code: string;
-}
-
-export interface CustomFunction {
-  name: string;
-  params?: string[];
-  code: string;
 }
 
 export interface Translations {

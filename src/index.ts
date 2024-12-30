@@ -1,16 +1,15 @@
 import { ForgeDB } from '@tryforge/forge.db';
 import { ForgeClient, LogPriority } from '@tryforge/forgescript';
 import { ForgeTopGG } from '@tryforge/forge.topgg';
+import { ForgeQuirks } from 'forge.quirks';
+
 // ForgeAPI removed due to having https://api.lynnux.xyz
 import { join } from 'path';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-import token from './handler/token'; // Secure bot token
-import events from './handler/events'; // Event handlers
-import intents from './handler/intents'; // Discord API intents
-import variables from './handler/database';
+import { token, events, intents, variables } from './handler';
 
 /// ////////////////////////////
 //  [ Environment Config ]  //
@@ -66,6 +65,7 @@ const client = new ForgeClient({
   shards: 'auto',
   logLevel: LogPriority.High,   // Use High for debug, use Medium otherwise.
   respondOnEdit: false,         // Respond on message IF we ever use this change to <number> of ms
+  prefixCaseInsensitive: true,
   prefixes: [
     '$callFunction[prefix]',
     'akira',
@@ -74,6 +74,7 @@ const client = new ForgeClient({
   ],
   extensions: [
     new ForgeDB(),  // TODO: change to 'database' on release
+    new ForgeQuirks(),
     topgg
   ]
 });

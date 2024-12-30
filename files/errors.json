@@ -111,7 +111,7 @@
     "from": "Client"
   },
   "716": {
-    "title": ["Impostor Detected!","Nice Try，Wrong Guy!","Unauthorized Scribbler","Faker Mode Activated","Command Piracy Detected!"],
+    "title": ["Impostor Detected!","Nice Try，Wrong Guy!","Unauthorized Scribbler.","Faker Mode Activated","Command Piracy Detected!"],
     "meaning": "Wrong Author.",
     "description": "This interaction can only be used by the original command author.",
     "from": "Client"
@@ -204,6 +204,30 @@
     "title": ["Can’t Change Perfection!","Default Forever，Sorry!","My Name is Non-Negotiable!"],
     "meaning": "Prefix reserved.",
     "description": "Oops! The prefix you tried to set is reserved and cannot be changed.\n\nI will always respond to:\n- My name: `Akira`\n- Mentions: <@{{client}}>\n\nPlease choose a different prefix using the `{{prefix}}set-prefix` command.",
+    "from": "Client"
+  },
+  "808": {
+    "title": ["That doesn’t seem right!","Woops，cant find that website!"],
+    "meaning": "Url not found.",
+    "description": "The url you used for your Welcome Message image is not a valid Link make sure its formatted like `https://example.com/image.png`.",
+    "from": "Client"
+  },
+  "809": {
+    "title": ["That doesn’t seem right!","Woops，cant find that place!"],
+    "meaning": "Channel not found.",
+    "description": "The channel you used for your Welcome Message channel is not a valid server channel, try copying the name or use the [channelID](https://documentation.lynnux.xyz/other/findingids/windows-macos-linux)",
+    "from": "Client"
+  },
+  "810": {
+    "title": ["That doesn’t seem right!"],
+    "meaning": "Incorrect Mention Input.",
+    "description": "You provided a invalid input for Welcome Message Mention please use `True` if you want to mention the user and `false` if you do not want to mention the user.",
+    "from": "Client"
+  },
+  "811": {
+    "title": ["That doesn’t seem right!"],
+    "meaning": "Incorrect Type Input.",
+    "description": "You provided a invalid input for Welcome Message Type please use `Embed` if you want to use embeds and `message` if you want to use normal messages when a person joins.",
     "from": "Client"
   },
   "901": {

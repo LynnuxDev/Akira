@@ -66,6 +66,10 @@ table of content
 | 805    | Wrong arguments (specific) | Wrong argument for `{{prefix}}perms default`. \nThe argument needs to be a `user / role / channel`. |
 | 806    | Prefix Already the same| The given prefix in `{{prefix}}set-prefix` is the same as it already is. |
 | 807    | Prefix is reserved.    | The given prefix in `{{prefix}}set-prefix` is a default none-changeable prefix. |
+| 808    | WelcomeMSG invalid URL | The input for welcome message image is not a valid link. |
+| 809    | WelcomeMSG invalid CHN | The input for welcome message channel is not a valid guild Channel. |
+| 810    | WelcomeMSG invalid MNT | The input for welcome message mention is not valid. |
+| 811    | WelcomeMSG invalid TYPE| The input for welcome message type is not valid. |
 | 901    | Perms Channel denied   | The perms for this command have been disabled for this channel |
 | 902    | Perms User denied      | The perms for this command have been disabled for this user    |
 | 903    | Perms Role denied      | The perms for this command have been disabled for a role the user has |

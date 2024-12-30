@@ -6,7 +6,15 @@ const variables = {
   ServerFeatured: false,
   BotChannel: '$channelID',
   BotChannelStatus: 'default',
-  voteReminder: false,
+
+  //   [   Automation ]
+  welcomeEnabled: false,
+  welcomeChannel: null,
+  welcomeMention: true,
+  welcomeImage: 'https://cdn.lynnux.xyz/images/DiscordDefaultBanner.webp',
+  welcomeImageType: 'png',
+  welcomeType: 'embed',
+  welcomeMessage: 'Welcome to **%server.name%**, %author.mention%. %newline%You are the %member.count%th member.',
 
   //   [   Permission ]
   permsReply: 'reply',
@@ -27,6 +35,7 @@ const variables = {
   language: 'en-us',
   responsePreference: "DM",
   invalidNotify: true,
+  voteReminder: false,
 
   //   [   Embeds     ]
   AgreedToTosEmbedReply: '$interactionReply $color[#ff47ff] $title[Before we continue:] $footer[You have to agree with these terms before using akira.] $description[Before you proceed, please make sure to read and agree to our [Terms of Service\\](https://akira.lynnux.xyz/terms) and [Privacy Policy\\](https://akira.lynnux.xyz/policy).\n\nBy using the button below, you confirm that you have read and agree to abide by our terms and policies.\n\nIf you have any questions or concerns, feel free to contact our support team.] $addActionRow $addButton[AcceptTerms-$authorID;I have read and agree to abide by these terms and policies.;Success;;false]',

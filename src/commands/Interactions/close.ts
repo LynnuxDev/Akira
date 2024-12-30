@@ -19,7 +19,7 @@ const commands: InteractionCommand[] = [
       ]
 
       $onlyIf[$splitText[0]==close;]
-      $onlyIf[$splitText[1]==$authorID;]
+      $onlyIf[$splitText[1]==$authorID;$ephemeral $customError[716;welcomeModalSubmit]]
 
 
       $switch[$splitText[2];
