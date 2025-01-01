@@ -1,5 +1,4 @@
 import { CommandType, IForgeFunction, IBaseCommand } from "@tryforge/forgescript";
-
 export interface CustomFunction extends IForgeFunction {
   version?: string;
 }
@@ -35,7 +34,7 @@ export interface TopGG {
 
 
 export interface Event {
-  type: 'ready' | 'guildCreate' | 'error' | 'messageCreate';
+  type: 'ready' | 'guildCreate' | 'error' | 'messageCreate' | 'shardReady' | 'shardDisconnect';
   name?: string;
   description?: string;
   module: 'Client';

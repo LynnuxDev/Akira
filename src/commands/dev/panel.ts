@@ -1,10 +1,6 @@
 import { Command } from "@/types";
 import os from 'os';
 
-const totalRAMBytes = os.totalmem();
-const totalRAMMB = (totalRAMBytes / 1024 / 1024).toFixed(2);
-
-
 const Panel: Command[] = [{
   name: 'panel',
   description: 'Get bot client info.',
@@ -26,28 +22,20 @@ const Panel: Command[] = [{
       $let[ip;REDACTED]
     ]
 
-    $let[cpuUsage;$djsEval[
-      var os = require('os');
-      const cpus = os.cpus();
-      const totalIdle = cpus.reduce((acc, core) => acc + core.times.idle, 0);
-      const totalTick = cpus.reduce((acc, core) => acc + Object.values(core.times).reduce((sum, val) => sum + val, 0), 0);
-      const totalUsage = totalTick - totalIdle;
-      (totalUsage / totalTick) * 100
-    ]]
-
     $color[$getGlobalVar[color]]
     $title[Developer Panel:]
-    $addField[Server Info;$trim[
-      <:Website:1271544143423996005> Ip: ||$get[ip]||
-      <:Clock:1271543787637833759> Uptime: <t:$round[$math[$round[$math[$getTimestamp/1000];0]-${os.uptime()}];0]:R>
-      <:CPU:1271543827395772517> CPU: \`$round[$get[cpuUsage];2]%\` - {$cpuCores} @$cpuSpeed
-      <:Server:1271544093838938235> Ram: \`$round[$ram;2]MB/${totalRAMMB}MB\`
-    ];true]
-    $addField[Process Info;$trim[
-      <:Clock:1271543787637833759> Uptime: <t:$round[$math[$math[$getTimestamp-$uptime]/1000];0]:R>
-      <:CPU:1271543827395772517> CPU: \`$cpuUsage% {$cpuCores} / $cpuUsage[true]% {1}\`
-      <:Server:1271544093838938235> Ram: \`stats.memory\`
-    ];true]
+    $addField[Server Info;- <:Website:1271544143423996005> Ip: ||$get[ip]||\n- <:Clock:1271543787637833759> Uptime: <t:$round[$math[$round[$math[$getTimestamp/1000];0]-$osUptime];0]:R>\n- <:CPU:1271543827395772517> CPU: \`$cpuUsage[true]%\` - {$cpuCores}\n- <:Server:1271544093838938235> Ram: \`$ram[true;true]\`;true]
+    $addField[Process Info;\n- <:Clock:1271543787637833759> Uptime: <t:$round[$math[$math[$getTimestamp-$uptime]/1000];0]:R>\n- <:CPU:1271543827395772517> CPU: \`$cpuUsage[false]% {$cpuCores}\`\n- <:Server:1271544093838938235> Ram: \`$ram[true;false]\`;true]
+    $addField[;;true]
+    $addField[Client Info;**Client Stats:**\n- <:Roles:1271544076491292736> Guilds: \`$guildCount\`\n- <:members:1271543939576627322> Users: \`$userCount\`\n- <:shard:1271544119080259666> Shards: \`$shardsOnline/$shardCount\`\n- <:Plus:1271544047579693148> Commands: \`$commandCount\`;true]
+    $addField[<:Spacer:1275843251349356675>;<:Spacer:1275843251349356675>\n- <:Akira_Active_Dev:1271546151543373906> Commands used since startup: \`$getGlobalVar[startCommands]\`\n- <:ping:1271544029053452297> DB Latency: \`$dbPing\`\n- <:ping:1271544029053452297> WS Latency: \`$pingms\`\n- <:ping:1271544029053452297> RoundTrip Latency: \`$roundtrip\`;true]
+    $addField[;;true]
+
+    $addActionRow
+    $addButton[panelPrevious~$authorID~0;;Secondary;◀️;true]
+    $addButton[panelGuild~$authorID;Guild;Secondary;;$if[$guildID==;true;false]]
+    $addButton[panelNext~$authorID~0;;Secondary;▶️;false]
+    $addButton[close~$authorID~message~$messageID;Close;Danger;✖️]
   `
 }];
 

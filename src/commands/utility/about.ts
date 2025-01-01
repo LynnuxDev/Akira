@@ -1,5 +1,5 @@
 import { Command } from '@/types';
-import { getPackages } from '../../native/getAkiraVersion';
+
 const commands: Command[] = [
   {
     name: 'about',
@@ -24,7 +24,7 @@ const commands: Command[] = [
       $color[$getGlobalVar[color]]
       $title[❯ $i18n[$get[lang];message.utility.about.title]:]
       $addField[❯ $i18n[$get[lang];message.utility.about.field.one.title];'$i18n[$get[lang];message.utility.about.field.one.description]';true]
-      $addField[❯ $i18n[$get[lang];message.utility.about.field.two.title];V$replace[${getPackages()};akira: ;;1];true]
+      $addField[❯ $i18n[$get[lang];message.utility.about.field.two.title];V$projectVersion;true]
       $addField[\u200B;\u200B;true]
       $description[$i18n[$get[lang];message.utility.about.description]]
       $addField[❯ $i18n[$get[lang];global.buttons.website];[[$i18n[$get[lang];global.buttons.button2]\\](https://akira.lynnux.xyz)\\];true]

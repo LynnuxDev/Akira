@@ -1,11 +1,15 @@
 const variables = {
-  uuid: 'null',
   colorError: '#d50056',
   userBanned: false,
   botErrorChannel: '1083095711094149180',
   ServerFeatured: false,
   BotChannel: '$channelID',
   BotChannelStatus: 'default',
+
+  //   [   Client     ]
+  shardsOnline: 0,
+  shardStatus: null,
+  uuid: 'null',
 
   //   [   Automation ]
   welcomeEnabled: false,

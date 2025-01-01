@@ -1,12 +1,12 @@
 import { ClientEvents } from 'discord.js';
 const events: (keyof ClientEvents)[] = [
   // ~ Client
-  'debug', // This event is called when discord.js sends out debug info
-  'error', // This event is called when an error happens on the client
-  'ready', // This event is called when the client is ready
-  // "shardDisconnect",                          // This event is called when a shard gets disconnected
+  'debug',                                       // This event is called when discord.js sends out debug info
+  'error',                                       // This event is called when an error happens on the client
+  'ready',                                       // This event is called when the client is ready
+  'shardDisconnect',                             // This event is called when a shard gets disconnected
   // "shardError",                               // This event is called when a shard throws an error
-  // "shardReady",                               // This event is called when a shard is ready
+  'shardReady',                                  // This event is called when a shard is ready
   // "shardReconnecting",                        // This event is called when a shard is reconnecting
   // "shardResume",                              // This event is called when a shard resumes
 

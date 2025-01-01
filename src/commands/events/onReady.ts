@@ -8,6 +8,7 @@ const onReady: Event[] = [{
   version: '1.0',
   code: `
     $logger[Info;$username[$clientID] | Running with "$commandCount" commands]
+    $setGlobalVar[startCommands;0]
   `
 }];
 
