@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.12](https://github.com/LynnuxDev/Akira/compare/v0.5.11...v0.5.12) (2025-01-01)
+
+
+### Bug Fixes
+
+* added all prefixes. ([c55a805](https://github.com/LynnuxDev/Akira/commit/c55a805b1c16d0d4ed1bb82bddff8f30602fbb28))
+
+
+### Chores
+
+* removed old roleplay commands. ([1500e06](https://github.com/LynnuxDev/Akira/commit/1500e0634bc79ebf0344dda07c8081fdbcb37fa3))
+
 ### [0.5.11](https://github.com/LynnuxDev/Akira/compare/v0.5.10...v0.5.11) (2024-12-27)
 
 
