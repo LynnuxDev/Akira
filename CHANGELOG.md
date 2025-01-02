@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.13](https://github.com/LynnuxDev/Akira/compare/v0.5.12...v0.5.13) (2025-01-02)
+
+
+### Bug Fixes
+
+* updated close origin error embed origin. ([92fa85b](https://github.com/LynnuxDev/Akira/commit/92fa85b5d0f24b0a8857cdf20406b9a9b4240cb3))
+* using forge.quirks now. ([4fc65d6](https://github.com/LynnuxDev/Akira/commit/4fc65d63f1a96c8bd6ef2bd906c53320ff2c5553))
+
+
+### Chores
+
+* Temp removed forge.topgg ([a7dcfb8](https://github.com/LynnuxDev/Akira/commit/a7dcfb8f3ec1802f831c369287cf354f80be6781))
+
 ### [0.5.12](https://github.com/LynnuxDev/Akira/compare/v0.5.11...v0.5.12) (2025-01-01)
 
 
