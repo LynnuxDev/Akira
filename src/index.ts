@@ -75,7 +75,7 @@ const client = new ForgeClient({
   extensions: [
     new ForgeDB(),  // TODO: change to 'database' on release
     new ForgeQuirks(),
-    topgg
+    //  topgg
   ]
 });
 
@@ -84,7 +84,7 @@ client.functions.load(join(__dirname, 'functions'));
 ForgeDB.variables(variables);
 client.commands.load(commandsPath);
 client.applicationCommands.load(slashCommandsPath);
-topgg.commands.load(topGgPath);
+//topgg.commands.load(topGgPath);
 
 /// ////////////////////////////
 //  [   Client Login    ]    //
