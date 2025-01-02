@@ -1,7 +1,7 @@
 import fs from 'fs';
-import path from 'path';
+import path, { join } from 'path';
 
-const baseDir: string = '/media/lynnux/[E] Other/Codes/@Github/@LynnuxDev/Akira-Beta';
+const baseDir: string = join(__dirname,'../..');
 const isDevelopment: boolean = process.env.NODE_ENV === 'development';
 const commandsPath: string = isDevelopment ? 'src/commands' : 'dist/commands';
 
