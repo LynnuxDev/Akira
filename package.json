@@ -19,7 +19,7 @@
   "dependencies": {
     "@tryforge/forge.db": "github:tryforge/ForgeDB#dev",
     "@tryforge/forge.topgg": "github:tryforge/ForgeTopGG#dev",
-    "@tryforge/forgescript": "github:tryforge/ForgeScript#dev",
+    "@tryforge/forgescript": "github:tryforge/Forgescript#dev",
     "axios": "^1.7.9",
     "discord.js": "^14.16.3",
     "dotenv": "^16.4.7",
