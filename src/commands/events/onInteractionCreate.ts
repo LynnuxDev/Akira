@@ -1,10 +1,10 @@
-import { InteractionCommand } from '@/types';
+import { Command } from '@/types';
 
-const commands: InteractionCommand[] = [
+const interactionCreate: Command[] = [
   {
     type: 'interactionCreate',
     description: 'Runs on every interaction.',
-    module: 'client',
+    module: 'clientSpecific',
     sourcecode: 'src/commands/Global-Interactions/triggers/onInteractionCreate.ts',
     documentation: 'onInteractionCreate',
     usage: 'N/A',
@@ -16,4 +16,4 @@ const commands: InteractionCommand[] = [
   }
 ];
 
-export default commands;
+export default interactionCreate;

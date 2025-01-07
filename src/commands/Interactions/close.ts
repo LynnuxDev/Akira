@@ -1,10 +1,10 @@
-import { InteractionCommand } from '@/types';
+import { Command } from '@/types';
 
-const commands: InteractionCommand[] = [
+const closeInteraction: Command[] = [
   {
     type: 'interactionCreate',
     description: 'Close an interaction',
-    module: 'client',
+    module: 'clientSpecific',
     sourcecode: 'src/commands/Global-Interactions/close.ts',
     documentation: 'close',
     usage: 'N/A',
@@ -45,4 +45,4 @@ const commands: InteractionCommand[] = [
   }
 ];
 
-export default commands;
+export default closeInteraction;
