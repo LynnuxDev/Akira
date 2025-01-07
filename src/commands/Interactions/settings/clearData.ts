@@ -1,8 +1,9 @@
-import { InteractionCommand } from "@/types";
+import { Command } from '../../../types';
 
-const ClearData: InteractionCommand[] = [{
+const ClearData: Command[] = [{
   type: 'interactionCreate',
   version: 'V1.0.0',
+  module: 'settings',
   code: `
     $textSplit[$customID;~]
 

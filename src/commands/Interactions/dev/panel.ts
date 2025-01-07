@@ -1,9 +1,10 @@
-import { InteractionCommand } from '@/types';
+import { Command } from '@/types';
 
-const Panel: InteractionCommand[] = [
+const Panel: Command[] = [
   // PanelNext Button
   {
     type: 'interactionCreate',
+    module: 'dev',
     version: 'V1.0.0',
     code: `
       $textSplit[$customID;~]
@@ -28,6 +29,7 @@ const Panel: InteractionCommand[] = [
   // PanelPrevious Button
   {
     type: 'interactionCreate',
+    module: 'dev',
     version: 'V1.0.0',
     code: `
       $textSplit[$customID;~]
@@ -65,6 +67,7 @@ const Panel: InteractionCommand[] = [
   {
     type: 'interactionCreate',
     version: 'V1.0.0',
+    module: 'dev',
     code: `
       $textSplit[$customID;~]
 
@@ -100,6 +103,7 @@ const Panel: InteractionCommand[] = [
   {
     type: 'interactionCreate',
     version: 'V1.0.0',
+    module: 'dev',
     code: `
       $textSplit[$customID;~]
 

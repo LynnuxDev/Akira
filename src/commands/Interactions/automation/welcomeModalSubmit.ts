@@ -1,8 +1,9 @@
-import { InteractionCommand } from "@/types";
+import { Command } from "@/types";
 
-const WelcomeModalSubmit: InteractionCommand[] = [{
+const WelcomeModalSubmit: Command[] = [{
   type: "interactionCreate",
   allowedInteractionTypes: ['modal'],
+  module: 'automation',
   guildOnly: true,
   version: "v1.0.0",
   code: `

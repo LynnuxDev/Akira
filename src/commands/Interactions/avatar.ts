@@ -1,10 +1,10 @@
-import { InteractionCommand } from '@/types';
+import { Command } from '@/types';
 
-const commands: InteractionCommand[] = [
+const Avatar: Command[] = [
   {
     type: 'interactionCreate',
     description: 'Interaction used for userinfo and avatar',
-    module: 'client',
+    module: 'utility',
     sourcecode: 'src/commands/Global-Interactions/avatar.ts',
     documentation: 'avatar',
     usage: 'N/A',
@@ -49,7 +49,7 @@ const commands: InteractionCommand[] = [
   }, {
     type: 'interactionCreate',
     description: 'Interaction used for userinfo and avatar',
-    module: 'client',
+    module: 'utility',
     sourcecode: 'src/commands/Global-Interactions/avatar.ts',
     documentation: 'avatar',
     usage: 'N/A',
@@ -93,4 +93,4 @@ const commands: InteractionCommand[] = [
     `
   }];
 
-export default commands;
+export default Avatar;

@@ -1,7 +1,8 @@
-import { InteractionCommand } from "@/types";
+import { Command } from "@/types";
 
-const WelcomeFirst: InteractionCommand[] = [{
+const WelcomeFirst: Command[] = [{
   type: "interactionCreate",
+  module: 'automation',
   guildOnly: true,
   version: "v1.0.0",
   code: `

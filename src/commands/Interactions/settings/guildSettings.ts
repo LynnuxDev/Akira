@@ -1,9 +1,10 @@
-import { InteractionCommand } from '../../../types';
+import { Command } from '../../../types';
 
-const guildSettings: InteractionCommand[] = [
+const guildSettings: Command[] = [
   {
     type: 'interactionCreate',
     version: 'v1.0.0',
+    module: 'settings',
     code: `
       $textSplit[$customID;~]
       $let[messageID;$splitText[3]]

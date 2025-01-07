@@ -4,23 +4,13 @@ export interface CustomFunction extends IForgeFunction {
 }
 
 export interface Command extends IBaseCommand<CommandType> {
-  description: string;
-  module: 'clientSpecific' | 'dev' | 'automation' | 'automod' | 'economy' | 'leveling' | 'moderation' | 'fun' | 'permissions' | 'premium' | 'profile' | 'reactionRoles' | 'roleplay' | 'search' | 'settings' | 'utility';
-  sourcecode: string;
-  documentation?: string;
-  usage?: string;
-  example?: string;
-  version: string;
-}
-
-export interface InteractionCommand extends IBaseCommand<String> {
   description?: string;
-  module?: 'client' | 'dev' | 'automation' | 'automod' | 'economy' | 'leveling' | 'moderation' | 'fun' | 'permissions' | 'premium' | 'profile' | 'reactionRoles' | 'roleplay' | 'search' | 'settings' | 'utility';
+  module: 'clientSpecific' | 'dev' | 'automation' | 'automod' | 'economy' | 'leveling' | 'moderation' | 'fun' | 'permissions' | 'premium' | 'profile' | 'reactionRoles' | 'roleplay' | 'search' | 'settings' | 'utility';
   sourcecode?: string;
   documentation?: string;
   usage?: string;
   example?: string;
-  version: string;
+  version?: string;
 }
 
 export interface Translations {

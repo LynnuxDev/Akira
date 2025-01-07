@@ -1,21 +1,10 @@
-interface Command {
-  name?: string;
-  aliases?: string[];
-  type: string;
-  description?: string;
-  module?: string;
-  sourcecode: string;
-  documentation?: string;
-  usage?: string;
-  example?: string;
-  version: string;
-  code: string;
-}
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
     type: 'interactionCreate',
     version: '1.0.0',
+    module: 'search',
     sourcecode: 'src/commands/Global-Interactions/search/anime.ts',
     code: `
       $textSplit[$customID;~]

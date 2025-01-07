@@ -1,10 +1,10 @@
-import { InteractionCommand } from '../../../types';
+import { Command } from '../../../types';
 
-const commands: InteractionCommand[] = [
+const AgreeToTOS: Command[] = [
   {
     type: 'interactionCreate',
     description: 'Closes the embed/message.',
-    module: 'client',
+    module: 'settings',
     sourcecode: '/src/commands/Global-Interactions/settings/agreedToTos.ts',
     version: '1.0.0',
     code: `
@@ -46,4 +46,4 @@ const commands: InteractionCommand[] = [
     `
   }
 ];
-export default commands;
+export default AgreeToTOS;

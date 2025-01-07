@@ -1,8 +1,9 @@
-import { InteractionCommand } from '@/types';
+import { Command } from '@/types';
 
-const commands: InteractionCommand[] = [
+const Vote: Command[] = [
   {
     type: 'interactionCreate',
+    module: 'utility',
     version: 'v1.0.0',
     code: `
       $textSplit[$customID;~]
@@ -26,6 +27,7 @@ const commands: InteractionCommand[] = [
   }, {
     type: 'interactionCreate',
     version: 'v1.0.0',
+    module: 'utility',
     code: `
       $textSplit[$customID;~]
 
@@ -45,6 +47,7 @@ const commands: InteractionCommand[] = [
   }, {
     type: 'interactionCreate',
     version: 'v1.0.0',
+    module: 'utility',
     code: `
       $textSplit[$customID;~]
 
@@ -74,6 +77,7 @@ const commands: InteractionCommand[] = [
   }, {
     type: 'interactionCreate',
     version: 'v1.0.0',
+    module: 'utility',
     code: `
       $textSplit[$customID;~]
 
@@ -96,6 +100,7 @@ const commands: InteractionCommand[] = [
   }, {
     type: 'interactionCreate',
     version: 'v1.0.0',
+    module: 'utility',
     code: `
       $textSplit[$customID;~]
 
@@ -118,4 +123,4 @@ const commands: InteractionCommand[] = [
   }
 ];
 
-export default commands;
+export default Vote;

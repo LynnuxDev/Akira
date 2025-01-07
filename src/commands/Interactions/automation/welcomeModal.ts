@@ -1,8 +1,9 @@
-import { InteractionCommand } from "@/types";
+import { Command } from "@/types";
 
-const WelcomeModal: InteractionCommand[] = [{
+const WelcomeModal: Command[] = [{
   type: "interactionCreate",
   guildOnly: true,
+  module: 'automation',
   version: "v1.0.0",
   code: `
     $textSplit[$customID;~]
