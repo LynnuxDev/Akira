@@ -1,6 +1,6 @@
 import { Command } from '@/types';
 
-const commands: Command[] = [
+const CommandInfo: Command[] = [
   {
     name: 'commandinfo',
     aliases: ['command-info', 'command', 'cmd'],
@@ -18,7 +18,7 @@ const commands: Command[] = [
 
       $checkAgreedToTos
       $onlyIf[$channelID==$getGuildVar[BotChannel;$guildID;$channelID];$getGlobalVar[BotChannelError]]
-      
+
       $c[get the module]
       $textSplit[$commandInfo[messageCreate;$message[0];path];/]
       $let[module;$splitText[$math[$getSplitTextLength-2]]]
@@ -53,4 +53,4 @@ const commands: Command[] = [
   }
 ];
 
-export default commands;
+export default CommandInfo;

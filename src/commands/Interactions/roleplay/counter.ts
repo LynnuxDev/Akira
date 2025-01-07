@@ -1,8 +1,11 @@
-import { InteractionCommand } from '@/types';
+import { Command } from '@/types';
 
-const commands: InteractionCommand[] = [
+const Counter: Command[] = [
   {
     type: 'interactionCreate',
+    description: 'Get the roleplay Counter.',
+    sourcecode: 'src/commands/Interactions/roleplay/counter.ts',
+    module: 'roleplay',
     version: 'V1.0.0',
     code: `
       $textSplit[$customID;~]
@@ -115,4 +118,4 @@ const commands: InteractionCommand[] = [
     `
   }
 ];
-export default commands;
+export default Counter;
