@@ -11,7 +11,7 @@
   "main": "dist/index.js",
   "scripts": {
     "lint": "eslint . --fix && git add . && git commit -m 'style: lint'",
-    "release": "standard-version",
+    "release": "npx commit-and-tag-version",
     "build": "tsc",
     "start": "NODE_ENV=production tsc && node -r tsconfig-paths/register dist/index.js",
     "dev": "NODE_ENV=development ts-node -r tsconfig-paths/register src/index.ts"
@@ -42,11 +42,11 @@
     "@types/ws": "^8.5.13",
     "@typescript-eslint/eslint-plugin": "^8.18.2",
     "@typescript-eslint/parser": "^8.18.2",
+    "commit-and-tag-version": "^12.5.0",
     "deasync": "^0.1.30",
     "eslint": "^9.17.0",
     "eslint-define-config": "^2.1.0",
-    "pidusage": "^3.0.2",
-    "standard-version": "^9.5.0"
+    "pidusage": "^3.0.2"
   },
   "engines": {
     "node": ">=22.0.0"
@@ -57,41 +57,5 @@
       "name": ".brd.",
       "discord": "392609934744748032"
     }
-  ],
-  "standard-version": {
-    "types": [
-      {
-        "type": "feat",
-        "section": "Features"
-      },
-      {
-        "type": "fix",
-        "section": "Bug Fixes"
-      },
-      {
-        "type": "chore",
-        "section": "Chores"
-      },
-      {
-        "type": "refactor",
-        "section": "Code Refactoring"
-      },
-      {
-        "type": "perf",
-        "section": "Performance Improvements"
-      },
-      {
-        "type": "docs",
-        "section": "Documentation"
-      },
-      {
-        "type": "style",
-        "section": "Styles"
-      },
-      {
-        "type": "test",
-        "section": "Tests"
-      }
-    ]
-  }
+  ]
 }
