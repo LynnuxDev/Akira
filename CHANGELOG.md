@@ -1,6 +1,40 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [0.5.14](https://github.com/LynnuxDev/Akira/compare/v0.5.13...v0.5.14) (2025-01-07)
+
+
+### Features
+
+* Added `settings change` for prefix. ([39c4968](https://github.com/LynnuxDev/Akira/commit/39c49681d44a619523e75092d90b50a37f210e33))
+* Added `settings view` slash command. ([6c6a2ea](https://github.com/LynnuxDev/Akira/commit/6c6a2ea933e76137792b9f766bda6e6e1383662d))
+* Dev panel for akira. ([ff2c8d1](https://github.com/LynnuxDev/Akira/commit/ff2c8d170ff59f868bf3a9403fb3c85d2babd713))
+* Dev panel. ([ef36f28](https://github.com/LynnuxDev/Akira/commit/ef36f28676bffcb61ffc31465833aa9eee37883d))
+* Dev panel. ([965cf0b](https://github.com/LynnuxDev/Akira/commit/965cf0b2f56bc0bfd6f75f475b0dec66ab3293f7))
+
+
+### Bug Fixes
+
+* Added slash import. ([479adcb](https://github.com/LynnuxDev/Akira/commit/479adcb1c711c099876fa7e35f2b019c65bfa7a2))
+* Dev panel. ([cd17dee](https://github.com/LynnuxDev/Akira/commit/cd17dee78697948e3c08fe8ae13c689c86be466c))
+* Fixed error message showing user prefix for guild prefix. ([dd70f63](https://github.com/LynnuxDev/Akira/commit/dd70f63dd6b5a6f7013f278142b8204a3c47c764))
+* Fixed i18n on main bot. ([9ae5773](https://github.com/LynnuxDev/Akira/commit/9ae5773d967d96bfd4becfee64fe0fb43dbfdccb))
+
+
+### Chores
+
+* Added better badges and updated ForgeScript. ([59c2bda](https://github.com/LynnuxDev/Akira/commit/59c2bda72bc84e6c41ff8e385f1e3f5ca68a3664))
+* Added more errors. ([c14090c](https://github.com/LynnuxDev/Akira/commit/c14090cc7c7b81bb9befeed40d08f35b40d79133))
+* Changed version control to commit-and-tag-version. ([05f769c](https://github.com/LynnuxDev/Akira/commit/05f769c86112cb194a85f768669feef203e484b9))
+* making ready for akira. ([16a7827](https://github.com/LynnuxDev/Akira/commit/16a7827e71b911d8b3948ee9d5541e40d6c0d0cd))
+* Small useless changes. ([6ea5136](https://github.com/LynnuxDev/Akira/commit/6ea5136c7e7a6989099de0b0e0d4051fc8cdcaa0))
+
+
+### Code Refactoring
+
+* Akira update. ([a93fcfc](https://github.com/LynnuxDev/Akira/commit/a93fcfcc1294166d5aed3a5609198a4126f0dfc3))
+* Rewrote wholesome roleplay slash command. ([4f75ebc](https://github.com/LynnuxDev/Akira/commit/4f75ebc549f1ea7bc6ef3765510483092832a3b5))
 
 ### [0.5.13](https://github.com/LynnuxDev/Akira/compare/v0.5.12...v0.5.13) (2025-01-02)
 
