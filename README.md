@@ -1,12 +1,15 @@
 <div align="center">
 <img src="https://akira.lynnux.xyz/assets/images/android-chrome-192x192.png" width="50px">
 <h1>Akira Bot</h1>
-<p>For ForgeScript v1.5.0</p>
+<p>For ForgeScript v2.1.0</p>
 </div>
 
-[![Discord][discord-img]][discord-url]
+[![Maintained][Maintenance-img]][Maintenance-url]
 [![GitHub license][license-img]][license-url]
-[![GitHub release][release-img]][release-url]
+
+[![WakaTime][wakatime-img]][wakatime-url]
+[![Known Vulnerabilities][snyk-img]][snyk-url]
+[![Maintainability][codeclimate-img]][codeclimate-url]
 
 ## ✨Latest Updates
 
@@ -34,9 +37,11 @@ If you have major coding issues with this bot, please join and ask for help.
 <div align="left">
   <img src="https://akira.lynnux.xyz/_next/image?url=%2Fassets%2Fimages%2FAkira-Command-Preview_Kiss.png&w=640&q=75">
 </div>
+
 <div align="center">
   <img src="https://cdn.lynnux.xyz/images/image_2023-06-21_113124654.png">
 </div>
+
 <div align="right">
   <img src="https://cdn.lynnux.xyz/images/image_2023-06-21_113018151.png">
 </div>
@@ -63,14 +68,20 @@ This project is licensed under the [BSD 4-Clause "Original" License](./LICENSE).
 
 For a simplified explanation of the license, see [BSD 4-Clause License (Simplified)](INFO/BSD%204-Clause%20License%20(Simplified).md).
 
-[discord-img]: https://img.shields.io/badge/Discord-JOIN-GREEN.svg?style=for-the-badge&logo=discord
-[discord-url]: https://akira.lynnux.xyz/support
-
-[license-img]: https://img.shields.io/github/license/LynnuxDev/Akira.svg?style=for-the-badge&logo=librarything
-[license-url]: https://github.com/LynnuxDev/Akira/blob/V1.0.0/LICENSE
-
-[release-img]: https://img.shields.io/github/release/Akira/releases.svg?style=for-the-badge&logo=flattr
-[release-url]: https://GitHub.com/LynnuxDev/Akira/releases/
+[license-img]: https://badgen.net/github/license/LynnuxDev/Akira
+[license-url]: https://github.com/LynnuxDev/Akira/blob/forgescript/LICENSE
 
 [Repl.it]: ./
 [VPS/Server]: ./
+
+[wakatime-img]: https://wakatime.com/badge/user/914584c4-b453-420c-8563-b9efdd43947f/project/ae9f2fb2-bdef-4606-90e6-c76bab79533e.svg
+[wakatime-url]: https://wakatime.com/badge/user/914584c4-b453-420c-8563-b9efdd43947f/project/ae9f2fb2-bdef-4606-90e6-c76bab79533e
+
+[snyk-img]: https://snyk.io/test/github/LynnuxDev/Akira/badge.svg?targetFile=package.json
+[snyk-url]: https://snyk.io/test/github/LynnuxDev/Akira?targetFile=package.json
+
+[codeclimate-img]: https://api.codeclimate.com/v1/badges/82006a4cfbecf9484ae7/maintainability
+[codeclimate-url]: https://codeclimate.com/github/LynnuxDev/Akira/maintainability
+
+[Maintenance-img]: https://img.shields.io/badge/Maintained%3F-yes-green.svg
+[Maintenance-url]: https://GitHub.com/LynnuxDev/Akira/graphs/commit-activity
