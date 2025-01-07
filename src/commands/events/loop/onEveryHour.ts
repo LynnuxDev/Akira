@@ -5,7 +5,7 @@ const OnReady: Event[] = [
     name: 'onEveryHour',
     type: 'ready',
     description: 'This command runs every hour on startup.',
-    module: 'Client',
+    module: 'clientSpecific',
     version: '1.0.0',
     code: `
       $setInterval[

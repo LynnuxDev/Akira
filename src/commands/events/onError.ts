@@ -4,7 +4,7 @@ const ErrorEvent: Event[] = [
   {
     type: 'error',
     description: 'Execute on errors.',
-    module: 'Client',
+    module: 'clientSpecific',
     version: '1.0.0',
     code: `
       $disableConsoleErrors

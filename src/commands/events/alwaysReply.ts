@@ -2,7 +2,7 @@ import { Event } from "@/types";
 
 const AlwaysReply: Event[] = [{
   type: 'messageCreate',
-  module: 'Client',
+  module: 'clientSpecific',
   version: 'v1.0.0',
   code: `
     $let[message;$replace[$replace[$messageContent;$prefix ;;1];$prefix;;1]]

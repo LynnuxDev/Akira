@@ -2,7 +2,7 @@ import { Event } from '../../types';
 
 const GuildJoin: Event[] = [{
   type: 'guildCreate',
-  module: 'Client',
+  module: 'clientSpecific',
   version: 'v1.0.0',
   code: `
     $sendMessage[823241675521392711;
