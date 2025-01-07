@@ -1,4 +1,4 @@
-import { CommandType, IForgeFunction, IBaseCommand } from "@tryforge/forgescript";
+import { CommandType, IForgeFunction, IBaseCommand, IApplicationCommandData } from "@tryforge/forgescript";
 export interface CustomFunction extends IForgeFunction {
   version?: string;
 }
@@ -40,4 +40,9 @@ export interface Event {
   module: 'Client';
   version: string;
   code: string;
+}
+
+export interface ISlash extends IApplicationCommandData {
+  usage?: string;
+  module?: 'client' | 'dev' | 'automation' | 'automod' | 'economy' | 'leveling' | 'moderation' | 'fun' | 'permissions' | 'premium' | 'profile' | 'reactionRoles' | 'roleplay' | 'search' | 'settings' | 'utility';
 }
