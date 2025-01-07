@@ -70,6 +70,8 @@ table of content
 | 809    | WelcomeMSG invalid CHN | The input for welcome message channel is not a valid guild Channel. |
 | 810    | WelcomeMSG invalid MNT | The input for welcome message mention is not valid. |
 | 811    | WelcomeMSG invalid TYPE| The input for welcome message type is not valid. |
+| 812    | Prefix to long         | The used prefix is to long, max characters are 8. |
 | 901    | Perms Channel denied   | The perms for this command have been disabled for this channel |
 | 902    | Perms User denied      | The perms for this command have been disabled for this user    |
 | 903    | Perms Role denied      | The perms for this command have been disabled for a role the user has |
+| 904    | False Bot Channel      | This channel is not the bot channel. |

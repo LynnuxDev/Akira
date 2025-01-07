@@ -99,7 +99,12 @@
     "from": "Client"
   },
   "714": {
-    "title": ["Command’s Out of Its Element!","Command’s Lost in the Wrong Dimension!","Command’s Passport is Server-Only!","Command’s Not a Fan of DMs!"],
+    "title": [
+      "Command’s Out of Its Element!",
+      "Command’s Lost in the Wrong Dimension!",
+      "Command’s Passport is Server-Only!",
+      "Command’s Not a Fan of DMs!"
+    ],
     "meaning": "Invalid Command",
     "description": "The command was used in an wrong environment.\n-# This includes server-only command in a direct message.",
     "from": "Client"
@@ -195,7 +200,11 @@
     "from": "Client"
   },
   "806": {
-    "title": ["Copy Cat!","Thats quick!","Already in use!"],
+    "title": [
+      "Copy Cat!",
+      "Thats quick!",
+      "Already in use!"
+    ],
     "meaning": "Prefix duplicate.",
     "description": "The prefix {{prefix}} is already set to {{prefix}}.",
     "from": "Client"
@@ -213,7 +222,10 @@
     "from": "Client"
   },
   "809": {
-    "title": ["That doesn’t seem right!","Woops，cant find that place!"],
+    "title": [
+      "That doesn’t seem right!",
+      "Woops，cant find that place!"
+    ],
     "meaning": "Channel not found.",
     "description": "The channel you used for your Welcome Message channel is not a valid server channel, try copying the name or use the [channelID](https://documentation.lynnux.xyz/other/findingids/windows-macos-linux)",
     "from": "Client"
@@ -230,6 +242,21 @@
     "description": "You provided a invalid input for Welcome Message Type please use `Embed` if you want to use embeds and `message` if you want to use normal messages when a person joins.",
     "from": "Client"
   },
+  "812": {
+    "title": [
+      "Oops，Too Many Letters!",
+      "Prefix Overload",
+      "Keep It Short，Buddy!",
+      "Character Cap Breach",
+      "Five’s the Limit!",
+      "Trim That Prefix",
+      "Prefix is Stretching Too Long",
+      "Brevity is the Soul of Prefix"
+    ],
+    "meaning": "Prefix too long",
+    "description": "The provided prefix exceeds the maximum character limit of `8`. Please use a shorter prefix.",
+    "from": "Client"
+  },
   "901": {
     "title": ["Permission, denied.", "Sorry，Can't do that here."],
     "meaning": "Perms Channel denied.",
@@ -237,15 +264,21 @@
     "from": "Client"
   },
   "902": {
-    "title": ["Permission, denied.", "Sorry，Can't do that here."],
+    "title": ["Permission，denied.", "Sorry，Can't do that here."],
     "meaning": "User Permissions denied.",
     "description": "You cannot use this command.\nThis command has been disabled for you specifically by an server admin.",
     "from": "Client"
   },
   "903": {
-    "title": ["Permission, denied.", "Sorry，Can't do that here."],
+    "title": ["Permission，denied.", "Sorry，Can't do that here."],
     "meaning": "Role Permissions denied.",
     "description": "You cannot use this command.\nThis command has been disabled for a role you have by an server admin.",
+    "from": "Client"
+  },
+  "904": {
+    "title": ["Permission，denied.", "Sorry，Can't do that here."],
+    "meaning": "No bot Channel.",
+    "description": "You cannot use this command here.\nAn admin of this server has set <#{{botChannel}}> as the bot channel, please try there.",
     "from": "Client"
   }
 }
