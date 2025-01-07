@@ -1,12 +1,17 @@
 import { Command } from '@/types';
 
+/**
+ * @author @Dark-LYNN
+ * @event Interaction
+ * @description Closes the message and deletes the old one
+ */
 const closeInteraction: Command[] = [
   {
     type: 'interactionCreate',
-    description: 'Close an interaction',
+    documentation: 'close',
+    description: 'Close an interaction and delete the version.',
     module: 'clientSpecific',
     sourcecode: 'src/commands/Global-Interactions/close.ts',
-    documentation: 'close',
     usage: 'N/A',
     example: 'N/A',
     version: '1.0.0',
@@ -38,9 +43,7 @@ const closeInteraction: Command[] = [
           ]
         ]
       ]
-
       $!deleteCommand
-
     `
   }
 ];
