@@ -11,7 +11,6 @@ const functions: CustomFunction[] = [
       $let[url;$httpResult[embed;image;url]]
       $let[name;$replace[$replace[$replace[$httpResult[embed;title]; ;_;-1];!;;-1];?;;-1]]
 
-
       $!attachment[$get[url];$get[name]]
       $return[attachment://$get[name]]
 
