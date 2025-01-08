@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.6.0](https://github.com/LynnuxDev/Akira/compare/v0.5.14...v0.6.0) (2025-01-08)
+
+
+### Bug Fixes
+
+* Changed to subcommands ([ccca2fb](https://github.com/LynnuxDev/Akira/commit/ccca2fbc0cfb8b8e46d6efc1dbcd5cfdf24ab79d))
+* using all the same Modules now. ([7e78e6f](https://github.com/LynnuxDev/Akira/commit/7e78e6f81369c05ec02214b5430ef52f0e3641c6))
+
+
+### Chores
+
+* added error ([780bee5](https://github.com/LynnuxDev/Akira/commit/780bee5454ce272e8d1a6fb5bb6358c299f2ced4))
+
+
+### Code Refactoring
+
+* File counter.ts has 336 lines of code (exceeds 250). ([1c62510](https://github.com/LynnuxDev/Akira/commit/1c62510d45118038f85af71383c2d8cd68ef33f5))
+* File counter.ts has 336 lines of code (exceeds 250). ([a2be48e](https://github.com/LynnuxDev/Akira/commit/a2be48ee5dbbf9e8f7423a2e0700526364a11ef0))
+* Similar blocks of code found in 2 locations. ([22087bb](https://github.com/LynnuxDev/Akira/commit/22087bb6e27e9417fa356f664766b0804e9d7c78))
+* Similar blocks of code found in 2 locations. ([5dcdc7a](https://github.com/LynnuxDev/Akira/commit/5dcdc7a96bab32c9c19a7db3ec7474fca14f6703))
+* Similar blocks of code found in 2 locations. ([efddbcb](https://github.com/LynnuxDev/Akira/commit/efddbcb9addd31aaf60bc482039f6cdb24b9a531))
+* Similar blocks of code found in 2 locations. FIX ([9837bd7](https://github.com/LynnuxDev/Akira/commit/9837bd74b84d1a865eb28b55c310c04a9199c487))
+
 ## [0.5.14](https://github.com/LynnuxDev/Akira/compare/v0.5.13...v0.5.14) (2025-01-07)
 
 
