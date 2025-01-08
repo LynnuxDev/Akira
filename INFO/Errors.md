@@ -71,6 +71,10 @@ table of content
 | 810    | WelcomeMSG invalid MNT | The input for welcome message mention is not valid. |
 | 811    | WelcomeMSG invalid TYPE| The input for welcome message type is not valid. |
 | 812    | Prefix to long         | The used prefix is to long, max characters are 8. |
+| 813    | Language not supported | This language is not supported |
+| 814    | Only one language allowed | Due to discord limitations we needed to split our language input in 2 but only 1 can be used max. |
+| 815    | At least one language required | You need to atleast give a language to change to. |
+| 816    | Language already in use| The given language is already the set language. |
 | 901    | Perms Channel denied   | The perms for this command have been disabled for this channel |
 | 902    | Perms User denied      | The perms for this command have been disabled for this user    |
 | 903    | Perms Role denied      | The perms for this command have been disabled for a role the user has |

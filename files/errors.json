@@ -257,6 +257,68 @@
     "description": "The provided prefix exceeds the maximum character limit of `8`. Please use a shorter prefix.",
     "from": "Client"
   },
+  "813": {
+    "title": [
+      "Lost in Translation",
+      "Unsupported Tongue",
+      "Language Barrier Alert",
+      "Say What?",
+      "Not on the Language Menu",
+      "Unsupported Lexicon",
+      "Out of Linguistic Bounds"
+    ],
+    "meaning": "Language not supported",
+    "description": "The provided language is not supported. Please double-check your spelling. If you'd like this language to be added, suggest it using `{{prefix}}suggest`.",
+    "from": "Client"
+  },
+  "814": {
+    "title": [
+      "One Is the Loneliest Number",
+      "Language Solo Only",
+      "Too Many Tongues!",
+      "Pick One，Please!",
+      "Discord Says No to Duo",
+      "A One-Language Limit",
+      "Language Overload Averted",
+      "Keep It Simple，Linguist"
+    ],
+    "meaning": "Only one language allowed",
+    "description": "Due to Discord limitations, we had to split our language input into two fields, but only one can be used at a time. Please select a single language.",
+    "from": "Client"
+  },
+  "815": {
+    "title": [
+      "Lost in Silence",
+      "Where's the Language?",
+      "Say Something!",
+      "Don't Leave Me Hanging",
+      "Language Required",
+      "Fill in the Blank",
+      "Forgot Something?",
+      "No Language, No Fun"
+    ],
+    "meaning": "At least one language required",
+    "description": "You need to provide at least one language to change to. Please specify the language you'd like to use.",
+    "from": "Client"
+  },
+  "816": {
+    "title": [
+      "Déjà Vu?",
+      "Already Speaking That!",
+      "Same Language, Same Page",
+      "Why Fix What Ain't Broke?",
+      "No Change Detected",
+      "You're Already There",
+      "Language Unchanged",
+      "Still English, Fancy That!",
+      "\"If it ain't broke, don't fix it!\"",
+      "Copy-Paste Much?"
+    ],
+    "meaning": "Language already in use",
+    "description": "You're already using this language! No changes were made. If you'd like to try another, feel free to pick a different language.",
+    "from": "Client"
+  },
+
   "901": {
     "title": ["Permission, denied.", "Sorry，Can't do that here."],
     "meaning": "Perms Channel denied.",
