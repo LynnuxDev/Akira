@@ -1,13 +1,9 @@
-interface CustomFunction {
-  name: string,
-  params: string[],
-  code: string,
-}
+import { CustomFunction } from '@/types';
 
 const functions: CustomFunction[] = [
   {
-    name: "callEmbed",
-    params: ["embedName"],
+    name: 'callEmbed',
+    params: ['embedName'],
     code: `
       $let[lang;$if[$guildID!=;$replace[$guildPreferredLocale;null;en-us;-1];en-us]]
 
@@ -30,6 +26,6 @@ const functions: CustomFunction[] = [
       ]
     `
   }
-]
+];
 
 export default functions;

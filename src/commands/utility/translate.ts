@@ -1,21 +1,22 @@
-import { Command } from '@/types'
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "translate",
-    aliases: ["help-translate", "localization", "i18n"],
-    description: "See info on translation.",
-    type: "messageCreate",
-    module: "Information",
-    version: "1.0.0",
-    sourcecode: "src/commands/utility/translate.ts",
-    documentation: "Utility",
-    usage: "translate",
-    example: "translate",
+    name: 'translate',
+    aliases: ['help-translate', 'localization', 'i18n', 'translation'],
+    description: 'See info on translation.',
+    type: 'messageCreate',
+    module: 'utility',
+    version: '1.0.0',
+    sourcecode: 'src/commands/utility/translate.ts',
+    documentation: 'Utility',
+    usage: 'translate',
+    example: 'translate',
     code: `
       $c[---------------------------------PRE-LETS---------------------------------]
       $let[author;$callFunction[customEncrypt;encrypt;$authorID]]
       $let[uuid;$getUserVar[uuid;$get[author]]]
+      $let[lang;$getLang[$authorID]]
 
       $c[----------------------------------ONLY-IF---------------------------------]
       $onlyIf[$getUserVar[AgreedToTos;$get[uuid]]==true;$getGlobalVar[AgreedToTosEmbedReply]]
@@ -24,9 +25,9 @@ const commands: Command[] = [
       $switch[$message[0];
         $case[default;
           $color[$if[$getUserVar[color;$get[uuid];false]!=false;$getUserVar[color;$get[uuid];#ff47ff];$getUserVar[color;$guildID;#ff47ff]]]
-          $title[Help Me Speak Your Language!]
-          $description[We're incredibly grateful to everyone who helps me teach me more languages!\n\nTranslating is done through **[Crowdin\\](https://crowdin.com/project/lynnuxdevAkira)**, where anyone can contribute to help my personality and commands be accessible in their native language. Every bit of your effort means the world to me and my developers and helps the community grow!\n\nThis project is supported by volunteers who generously give their time to make this possible. While they aren’t paid, their contributions have a lasting impact. If you'd like to join, check it out here: \[[Translate Akira on Crowdin\\](https://crowdin.com/project/lynnuxdevAkira)\\]\n\n-# 3/31 translations are finished.]
-          $footer[Thank you for helping me grow! 💖]
+          $title[$i18n[$get[lang];message.utility.translate.title]]
+          $description[$i18n[$get[lang];message.utility.translate.description.one]\n\n$i18n[$get[lang];message.utility.translate.description.two] $i18n[$get[lang];message.utility.translate.description.three]\n\n$i18n[$get[lang];message.utility.translate.description.four] $i18n[$get[lang];message.utility.translate.description.five] \[[$i18n[$get[lang];message.utility.translate.description.seven]\\](https://crowdin.com/project/lynnuxdevAkira)\\]\n\n-# $replace[$i18n[$get[lang];message.utility.translate.description.six];{{amount}};1;1].]
+          $footer[$i18n[$get[lang];message.utility.translate.footer] 💖]
 
           $addActionRow
           $addStringSelectMenu[translate~$authorID;Select a language;false;1;1]
@@ -76,14 +77,14 @@ const commands: Command[] = [
     `
   },
   {
-    type: "interactionCreate",
-    module: "Information",
-    version: "1.0.0",
-    description: "See info on translation.",
-    sourcecode: "src/commands/utility/translate.ts",
-    documentation: "Utility",
-    usage: "translate",
-    example: "translate",
+    type: 'interactionCreate',
+    module: 'utility',
+    version: '1.0.0',
+    description: 'See info on translation.',
+    sourcecode: 'src/commands/utility/translate.ts',
+    documentation: 'Utility',
+    usage: 'translate',
+    example: 'translate',
     code: `
       $textSplit[$customID;~]
       $onlyIf[$splitText[1]==$authorID]
@@ -94,74 +95,67 @@ const commands: Command[] = [
 
       $switch[$selectMenuValues;
         $case[translateEnglish;
-          $let[progression;100]
+          $let[progression;$crowdinProgress[en]]
           $let[languageName;English]
           $let[languageShort;en-US]
           $let[translatorAmount;1]
           $let[translator1;Dark-LYNN]
           $let[translatorID1;705306248538488947]
           $let[translatorURL1;https://crowdin.com/profile/Dark-LYNN]
-          $let[translationDate;Nov 6, 2024]
         ]
         $case[translateGerman;
-          $let[progression;94]
+          $let[progression;$crowdinProgress[de]]
           $let[languageName;German]
           $let[languageShort;de-DE]
           $let[translatorAmount;1]
           $let[translator1;ARD0NIZ]
           $let[translatorID1;521676495316582400]
           $let[translatorURL1;https://crowdin.com/profile/ARD0NIZ]
-          $let[translationDate;Nov 6, 2024]
         ]
         $case[translateDutch;
-          $let[progression;86]
+          $let[progression;$crowdinProgress[nl]]
           $let[languageName;Dutch]
           $let[languageShort;nl-NL]
           $let[translatorAmount;1]
           $let[translator1;Dark-LYNN]
           $let[translatorID1;705306248538488947]
           $let[translatorURL1;https://crowdin.com/profile/Dark-LYNN]
-          $let[translationDate;Nov 6, 2024]
         ]
         $case[translatePortugueseBrazilian;
-          $let[progression;35]
+          $let[progression;$crowdinProgress[pt-PT]]
           $let[languageName;Portuguese (Brazilian)]
           $let[languageShort;pt-BR]
           $let[translatorAmount;1]
           $let[translator1;renancolombini6]
           $let[translatorID1;NA]
           $let[translatorURL1;https://crowdin.com/profile/renancolombini6]
-          $let[translationDate;Nov 6, 2024]
         ]
         $case[translateSpanish;
-          $let[progression;1]
+          $let[progression;$crowdinProgress[es-ES]]
           $let[languageName;Spanish]
           $let[languageShort;es-ES]
           $let[translatorAmount;1]
           $let[translator1;Dark-LYNN]
           $let[translatorID1;705306248538488947]
           $let[translatorURL1;https://crowdin.com/profile/Dark-LYNN]?>
-          $let[translationDate;Nov 6, 2024]
         ]
         $case[translateHindi;
-          $let[progression;100]
+          $let[progression;$crowdinProgress[he]]
           $let[languageName;Hindi]
           $let[languageShort;hi-IN]
           $let[translatorAmount;1]
           $let[translator1;iconicayansh]
           $let[translatorID1;1004291040150298715]
           $let[translatorURL1;https://crowdin.com/profile/iconicayansh]
-          $let[translationDate;Nov 6, 2024]
         ]
         $case[default;
           $let[progression;0]
-          $let[languageName;NotYetTranslated]
+          $let[languageName;$replace[$selectMenuValues;translate;;1]]
           $let[languageShort;N/A]
           $let[translatorAmount;1]
           $let[translator1;Dark-LYNN]
           $let[translatorID1;NA]
-          $let[translatorURL1;https://crowdin.com/profile/Dark-LYNN]?>
-          $let[translationDate;n/a]
+          $let[translatorURL1;https://crowdin.com/profile/Dark-LYNN]
         ]
       ]
       $interactionUpdate[
@@ -169,13 +163,12 @@ const commands: Command[] = [
         $title[$toTitleCase[$i18n[$get[lang];message.utility.translate.translationInfo]]: $get[languageName]]
         $description[$replace[$i18n[$get[lang];message.utility.translate.thanksTranslators];{{language}};**$get[languageName]**;1]]
         $addField[$toTitleCase[$i18n[$get[lang];message.utility.translate.progress]]:;$replace[$i18n[$get[lang];message.utility.translate.translationProgress];{{amount}};\`$get[progression]%\`;1] | $if[$get[progression]>=21;<:0_1:1303091965365194812>;$if[$get[progression]<=8;<:0_0:1303091907269759029>;<:0_2:1303092011087433790>]]$if[$get[progression]<=20;<:1_0:1303092075998478336>;$if[$get[progression]<=35;<:1_2:1303092127353278535>;$if[$get[progression]<=40;<:1_3:1303147748446568523>;<:1_1:1303092105035649185>]]]$if[$get[progression]<=40;<:1_0:1303092075998478336>;$if[$get[progression]<=55;<:1_2:1303092127353278535>;$if[$get[progression]<=60;<:1_3:1303147748446568523>;<:1_1:1303092105035649185>]]]$if[$get[progression]<=60;<:1_0:1303092075998478336>;$if[$get[progression]<=75;<:1_2:1303092127353278535>;$if[$get[progression]<=80;<:1_3:1303147748446568523>;<:1_1:1303092105035649185>]]]$if[$get[progression]<=80;<:2_0:1303091778840166500>;$if[$get[progression]==100;<:2_2:1303133192143769620>;<:2_1:1303091807256580166>]];true]
-        $addField[$toTitleCase[$i18n[$get[lang];message.utility.translate.lastUpdate]]:;\`$get[translationDate]\`;true]
 
         $addField[$toTitleCase[$i18n[$get[lang];message.utility.translate.translators]]:;$if[$get[translatorAmount]==1;[$get[translator1]\\]($get[translatorURL1]) $if[$get[translatorID1]==NA;;([$userGlobalName[$if[$get[translatorID1]==NA;705306248538488947;$get[translatorID1]]]\\](https://discord.com/users/$get[translatorID1]))];$if[$get[translatorAmount]==0;\`n/a\`;\n> - [$get[translator1]\\]($get[translatorURL1]) ([$userGlobalName[$get[translatorID1]]\\](https://discord.com/users/$get[translatorID1]))]] $if[$get[translatorAmount]>=2;\n> - [$get[translator2]\\]($get[translatorURL2]) ([$userGlobalName[$get[translatorID2]]\\](https://discord.com/users/$get[translatorID2]));];false]
       ]
 
     `
   }
-]
+];
 
 export default commands;

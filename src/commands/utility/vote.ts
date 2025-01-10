@@ -1,13 +1,13 @@
-import { Command } from '@/types'
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "vote",
-    type: "messageCreate",
-    description: "Get info on how to vote for akira.",
-    module: "Utility",
-    version: "V1.0.0",
-    sourcecode: "src/commands/utility/vote.ts",
+    name: 'vote',
+    type: 'messageCreate',
+    description: 'Get info on how to vote for akira.',
+    module: 'utility',
+    version: 'V1.0.0',
+    sourcecode: 'src/commands/utility/vote.ts',
     code:
     `
       $color[$if[$getUserVar[color;$get[uuid];false]!=false;$getUserVar[color;$get[uuid];#ff47ff];$getUserVar[color;$guildID;#ff47ff]]]
@@ -19,6 +19,6 @@ const commands: Command[] = [
       $addButton[voteReminder~$authorID~NA;Vote Reminder;Secondary;;false]
     `
   }
-]
+];
 
 export default commands;

@@ -1,17 +1,17 @@
-import { Command } from '@/types'
+import { Command } from '@/types';
 
 const commands: Command[] = [
   {
-    name: "userinfo",
-    aliases: ['user','whois'],
-    type: "messageCreate",
-    description: "Get info on a user.",
-    module: "Utility",
-    sourcecode: "src/commands/utility/userInfo.ts",
-    documentation: "userinfo",
-    usage: "userinfo {user}",
-    example: "userinfo @dark-lynn",
-    version: "1.0.0",
+    name: 'userinfo',
+    aliases: ['user', 'whois'],
+    type: 'messageCreate',
+    description: 'Get info on a user.',
+    module: 'utility',
+    sourcecode: 'src/commands/utility/userInfo.ts',
+    documentation: 'userinfo',
+    usage: 'userinfo {user}',
+    example: 'userinfo @dark-lynn',
+    version: '1.0.0',
     code: `
       $disableConsoleErrors
 
@@ -41,15 +41,15 @@ const commands: Command[] = [
       $addButton[userAvatar~$get[user]~$get[author];UserAvatar;Primary;;false]
       $addButton[memberAvatar~$Get[user]~$get[author];MemberAvatar;Primary;;$if[$get[userAvatar]==$get[memberAvatar];true;false]]
     `
-  },{
-    type: "interactionCreate",
-    description: "Get info on a user.",
-    module: "Utility",
-    sourcecode: "src/commands/utility/userInfo.ts",
-    documentation: "userinfo",
-    usage: "userinfo {user}",
-    example: "userinfo @dark-lynn",
-    version: "1.0.0",
+  }, {
+    type: 'interactionCreate',
+    description: 'Get info on a user.',
+    module: 'utility',
+    sourcecode: 'src/commands/utility/userInfo.ts',
+    documentation: 'userinfo',
+    usage: 'userinfo {user}',
+    example: 'userinfo @dark-lynn',
+    version: '1.0.0',
     code: `
       $textSplit[$customID;~]
       $c[
@@ -92,6 +92,6 @@ const commands: Command[] = [
       ]
     `
   }
-]
+];
 
 export default commands;

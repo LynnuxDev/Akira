@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "streetsidesoftware.code-spell-checker",
+    "yzhang.markdown-all-in-one",
+    "ionutvmi.path-autocomplete",
+    "qwtel.sqlite-viewer",
+    "usernamehw.errorlens",
+    "standard.vscode-standard",
+    "davidanson.vscode-markdownlint"
+  ]
+}

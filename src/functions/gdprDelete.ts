@@ -1,0 +1,83 @@
+import { CustomFunction } from "@/types";
+
+const gdprDelete: CustomFunction[] = [{
+  name: 'gdprDelete',
+  params: ['type','ID'],
+  code: `
+    $switch[$toLowercase[$env[type]];
+      $case[user;
+        $let[author;$getUUID[$authorID]]
+      $c[====== ROLEPLAY ======]
+        $deleteVar[blush-give;$get[author]]     $deleteVar[blush-gotten;$get[author]]
+        $deleteVar[boop-give;$get[author]]      $deleteVar[boop-gotten;$get[author]]
+        $deleteVar[cheer-give;$get[author]]     $deleteVar[cheer-gotten;$get[author]]
+        $deleteVar[cuddle-give;$get[author]]    $deleteVar[cuddle-gotten;$get[author]]
+        $deleteVar[dance-give;$get[author]]     $deleteVar[dance-gotten;$get[author]]
+        $deleteVar[feed-give;$get[author]]      $deleteVar[feed-gotten;$get[author]]
+        $deleteVar[glomp-give;$get[author]]     $deleteVar[glomp-gotten;$get[author]]
+        $deleteVar[handhold-give;$get[author]]  $deleteVar[handhold-gotten;$get[author]]
+        $deleteVar[happy-give;$get[author]]     $deleteVar[happy-gotten;$get[author]]
+        $deleteVar[highfive-give;$get[author]]  $deleteVar[highfive-gotten;$get[author]]
+        $deleteVar[hug-give;$get[author]]       $deleteVar[hug-gotten;$get[author]]
+        $deleteVar[kiss-give;$get[author]]      $deleteVar[kiss-gotten;$get[author]]
+        $deleteVar[laugh-give;$get[author]]     $deleteVar[laugh-gotten;$get[author]]
+        $deleteVar[lick-give;$get[author]]      $deleteVar[lick-gotten;$get[author]]
+        $deleteVar[love-give;$get[author]]      $deleteVar[love-gotten;$get[author]]
+        $deleteVar[lurk-give;$get[author]]      $deleteVar[lurk-gotten;$get[author]]
+        $deleteVar[nom-give;$get[author]]       $deleteVar[nom-gotten;$get[author]]
+        $deleteVar[nuzzle-give;$get[author]]    $deleteVar[nuzzle-gotten;$get[author]]
+        $deleteVar[pat-give;$get[author]]       $deleteVar[pat-gotten;$get[author]]
+        $deleteVar[peck-give;$get[author]]      $deleteVar[peck-gotten;$get[author]]
+        $deleteVar[poke-give;$get[author]]      $deleteVar[poke-gotten;$get[author]]
+        $deleteVar[pout-give;$get[author]]      $deleteVar[pout-gotten;$get[author]]
+        $deleteVar[sleep-give;$get[author]]     $deleteVar[sleep-gotten;$get[author]]
+        $deleteVar[thumbsup-give;$get[author]]  $deleteVar[thumbsup-gotten;$get[author]]
+        $deleteVar[tickle-give;$get[author]]    $deleteVar[tickle-gotten;$get[author]]
+        $deleteVar[wag-give;$get[author]]       $deleteVar[wag-gotten;$get[author]]
+        $deleteVar[wave-give;$get[author]]      $deleteVar[wave-gotten;$get[author]]
+        $deleteVar[bonk-give;$get[author]]      $deleteVar[bonk-gotten;$get[author]]
+        $deleteVar[bored-give;$get[author]]     $deleteVar[bored-gotten;$get[author]]
+        $deleteVar[chase-give;$get[author]]     $deleteVar[chase-gotten;$get[author]]
+        $deleteVar[cringe-give;$get[author]]    $deleteVar[cringe-gotten;$get[author]]
+        $deleteVar[facepalm-give;$get[author]]  $deleteVar[facepalm-gotten;$get[author]]
+        $deleteVar[nervous-give;$get[author]]   $deleteVar[nervous-give;$get[author]]
+        $deleteVar[no-give;$get[author]]        $deleteVar[no-gotten;$get[author]]
+        $deleteVar[panic-give;$get[author]]     $deleteVar[panic-gotten;$get[author]]
+        $deleteVar[run-give;$get[author]]       $deleteVar[run-gotten;$get[author]]
+        $deleteVar[sip-give;$get[author]]       $deleteVar[sip-gotten;$get[author]]
+        $deleteVar[smug-give;$get[author]]      $deleteVar[smug-gotten;$get[author]]
+        $deleteVar[stare-give;$get[author]]     $deleteVar[stare-gotten;$get[author]]
+        $deleteVar[tease-give;$get[author]]     $deleteVar[tease-gotten;$get[author]]
+        $deleteVar[think-give;$get[author]]     $deleteVar[think-gotten;$get[author]]
+        $deleteVar[rage-give;$get[author]]      $deleteVar[rage-gotten;$get[author]]
+        $deleteVar[wink-give;$get[author]]      $deleteVar[wink-gotten;$get[author]]
+        $deleteVar[yes-give;$get[author]]       $deleteVar[yes-gotten;$get[author]]
+        $deleteVar[bite-give;$get[author]]      $deleteVar[bite-gotten;$get[author]]
+        $deleteVar[cry-give;$get[author]]       $deleteVar[cry-gotten;$get[author]]
+        $deleteVar[die-give;$get[author]]       $deleteVar[die-gotten;$get[author]]
+        $deleteVar[hate-give;$get[author]]      $deleteVar[hate-gotten;$get[author]]
+        $deleteVar[sad-give;$get[author]]       $deleteVar[sad-gotten;$get[author]]
+        $deleteVar[kill-give;$get[author]]      $deleteVar[kill-gotten;$get[author]]
+        $deleteVar[shoot-give;$get[author]]     $deleteVar[shoot-gotten;$get[author]]
+        $deleteVar[slap-give;$get[author]]      $deleteVar[slap-gotten;$get[author]]
+        $deleteVar[stab-give;$get[author]]      $deleteVar[stab-gotten;$get[author]]
+        $deleteVar[triggered-give;$get[author]] $deleteVar[triggered-gotten;$get[author]]
+
+      $c[====== SETTINGS ======]
+        $deleteUserVar[language;$get[author]]
+        $deleteUserVar[prefix;$get[author]]
+        $deleteUserVar[color;$get[author]]
+        $deleteUserVAr[voteReminder;$get[author]]
+
+        $deleteUserVar[AgreedToTos;$get[author]]
+        $deleteUserVar[uuid;$customEncrypt[encrypt;$authorID]]
+
+        $logger[Debug;User '$authorID' with UUID '$get[author]' has been removed from the database.]
+      ]
+      $case[guild;]
+    ]
+  `
+}];
+
+export default gdprDelete;
+// $gdprDelete[type;ID]

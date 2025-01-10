@@ -1,13 +1,9 @@
-interface CustomFunction {
-  name: string,
-  params: string[],
-  code: string,
-}
+import { CustomFunction } from '@/types';
 
 const functions: CustomFunction[] = [
   {
-    name: "roleplay",
-    params: ["endpoint"],
+    name: 'roleplay',
+    params: ['endpoint'],
     code: `
       $let[endpoint;$env[endpoint]]
 
@@ -21,6 +17,6 @@ const functions: CustomFunction[] = [
       $return[attachment://$get[name]]
     `
   }
-]
+];
 
 export default functions;

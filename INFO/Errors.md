@@ -58,11 +58,24 @@ table of content
 | 721    | User cannot be Author  | The user given cannot be the author. |
 | 722    | Target user blocked    | The user given has blocked someone/anyone from using this command on them. |
 | 723    | User input required    | There must be a user given in the query |
+| 724    | value Already the same | The given value in `{prefix}{{command}}` is already this value. |
 | 801    | Perms reply            | when the user uses perms reply with wrong input. |
 | 802    | Perms list             | Wrong argument for a.perms list. The argument needs to be a user / role / channel. |
 | 803    | Perms default          | No argument for default. |
 | 804    | Duplicate arguments (specific). | The given value `{messageOne}` is not in the perms list of this target. |
-| 805    | Wrong arguments (specific) | Wrong argument for `{prefix}perms default`. \nThe argument needs to be a `user / role / channel`. |
+| 805    | Wrong arguments (specific) | Wrong argument for `{{prefix}}perms default`. \nThe argument needs to be a `user / role / channel`. |
+| 806    | Prefix Already the same| The given prefix in `{{prefix}}set-prefix` is the same as it already is. |
+| 807    | Prefix is reserved.    | The given prefix in `{{prefix}}set-prefix` is a default none-changeable prefix. |
+| 808    | WelcomeMSG invalid URL | The input for welcome message image is not a valid link. |
+| 809    | WelcomeMSG invalid CHN | The input for welcome message channel is not a valid guild Channel. |
+| 810    | WelcomeMSG invalid MNT | The input for welcome message mention is not valid. |
+| 811    | WelcomeMSG invalid TYPE| The input for welcome message type is not valid. |
+| 812    | Prefix to long         | The used prefix is to long, max characters are 8. |
+| 813    | Language not supported | This language is not supported |
+| 814    | Only one language allowed | Due to discord limitations we needed to split our language input in 2 but only 1 can be used max. |
+| 815    | At least one language required | You need to atleast give a language to change to. |
+| 816    | Language already in use| The given language is already the set language. |
 | 901    | Perms Channel denied   | The perms for this command have been disabled for this channel |
 | 902    | Perms User denied      | The perms for this command have been disabled for this user    |
 | 903    | Perms Role denied      | The perms for this command have been disabled for a role the user has |
+| 904    | False Bot Channel      | This channel is not the bot channel. |

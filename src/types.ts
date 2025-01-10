@@ -1,37 +1,42 @@
-export interface Command {
-  name?: string;
-  aliases?: string[];
-  type: "messageCreate" | "debug" | "ready" | "interactionCreate";
-  description: string;
-  module: string;
-  sourcecode: string;
-  documentation?: string;
-  usage?: string;
-  example?: string;
-  version: string;
-  code: string;
+import { CommandType, IForgeFunction, IBaseCommand, IApplicationCommandData } from "@tryforge/forgescript";
+
+type ModuleList = 'clientSpecific'  | 'dev' | 'automation' | 'automod' | 'economy' | 'leveling' | 'moderation' | 'fun' | 'permissions' | 'premium' | 'profile' | 'reactionRoles' | 'roleplay' | 'search' | 'settings' | 'utility';
+type topggEvent = 'voted' | 'error' | 'posted';
+type ForgeEvent = 'ready' | 'guildCreate' | 'error' | 'messageCreate' | 'shardReady' | 'shardDisconnect';
+
+export interface CustomFunction extends IForgeFunction {
+  version?: string;
 }
 
-export interface InteractionCommand {
-  name?: string;
-  aliases?: string[];
-  type:"interactionCreate" | "messageCreate" ;
+export interface Command extends IBaseCommand<CommandType> {
   description?: string;
-  module?: string;
+  module: ModuleList
   sourcecode?: string;
   documentation?: string;
   usage?: string;
   example?: string;
+  version?: string;
+}
+
+export interface Translations {
+  [key: string]: string | string[] | { [key: string]: string };
+}
+
+export interface TopGG {
+  type: topggEvent;
+  code: string;
+}
+
+export interface Event {
+  type: ForgeEvent;
+  name?: string;
+  description?: string;
+  module: ModuleList;
   version: string;
   code: string;
 }
 
-export interface customFunction {
-  name: string;
-  params?: string[];
-  code: string;
-}
-
-export interface Translations {
-  [key: string]: any;
+export interface ISlash extends IApplicationCommandData {
+  usage?: string;
+  module?: ModuleList
 }

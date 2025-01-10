@@ -1,13 +1,9 @@
-interface CustomFunction {
-  name: string,
-  params: string[],
-  code: string,
-}
+import { CustomFunction } from '@/types';
 
 const functions: CustomFunction[] = [
   {
-    name: "errorEmbed",
-    params: ["errorid","type","cmdid"],
+    name: 'errorEmbed',
+    params: ['errorid', 'type', 'cmdid'],
     code: `
       $jsonLoad[result;$readFile[./files/errors.json]]
       $jsonLoad[command;$readFile[./files/commands.json]]
@@ -31,6 +27,6 @@ const functions: CustomFunction[] = [
       ]
     `
   }
-]
+];
 
 export default functions;

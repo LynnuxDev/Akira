@@ -1,37 +1,61 @@
 {
   "name": "akira",
-  "version": "1.0.0",
-  "description": "Akira's Test Bot",
-  "main": "index.js",
+  "version": "0.6.0",
+  "description": "Akira's yet another multipurpose discord bot.",
+  "author": "LynnuxDev",
+  "license": "BSD-4-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LynnuxDev/Akira.git"
+  },
+  "main": "dist/index.js",
   "scripts": {
+    "lint": "eslint . --fix && git add . && git commit -m 'style: lint'",
+    "release": "npx commit-and-tag-version",
     "build": "tsc",
-    "start": "NODE_ENV=production npm run build && node -r tsconfig-paths/register dist/index.js",
+    "start": "NODE_ENV=production tsc && node -r tsconfig-paths/register dist/index.js",
     "dev": "NODE_ENV=development ts-node -r tsconfig-paths/register src/index.ts"
   },
-  "author": "Lynnux",
-  "license": "MIT",
   "dependencies": {
-    "@tryforge/forge.api": "github:tryforge/ForgeAPI#dev",
     "@tryforge/forge.db": "github:tryforge/ForgeDB#dev",
     "@tryforge/forge.topgg": "github:tryforge/ForgeTopGG#dev",
-    "@tryforge/forgescript": "github:tryforge/ForgeScript#dev",
-    "@types/i18next": "^12.1.0",
-    "@types/js-yaml": "^4.0.9",
-    "@types/node": "^22.5.0",
-    "@types/ws": "^8.5.12",
+    "axios": "^1.7.9",
     "discord.js": "^14.16.3",
-    "fs": "^0.0.1-security",
-    "i18next": "^23.15.1",
-    "i18next-fs-backend": "^2.3.2",
+    "dotenv": "^16.4.7",
+    "forge.quirks": "github:LynnuxDev/forge.quirks#dev",
+    "fs": "0.0.1-security",
     "js-yaml": "^4.1.0",
     "mysql": "^2.18.1",
     "path": "^0.12.7",
     "sqlite3": "^5.1.7",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.5.4"
+    "typescript": "^5.7.2"
   },
   "devDependencies": {
-    "@types/uuid": "^10.0.0"
-  }
+    "@tryforge/forgescript": "github:tryforge/forgescript#dev",
+    "@types/deasync": "^0.1.5",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.10.2",
+    "@types/pidusage": "^2.0.5",
+    "@types/uuid": "^10.0.0",
+    "@types/ws": "^8.5.13",
+    "@typescript-eslint/eslint-plugin": "^8.18.2",
+    "@typescript-eslint/parser": "^8.18.2",
+    "commit-and-tag-version": "^12.5.0",
+    "deasync": "^0.1.30",
+    "eslint": "^9.17.0",
+    "eslint-define-config": "^2.1.0",
+    "pidusage": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "contributors": [
+    "Brd",
+    {
+      "name": ".brd.",
+      "discord": "392609934744748032"
+    }
+  ]
 }
