@@ -1,5 +1,4 @@
 const variables = {
-  colorError: '#d50056',
   userBanned: false,
   botErrorChannel: '1083095711094149180',
   ServerFeatured: false,
@@ -7,8 +6,27 @@ const variables = {
   BotChannelStatus: 'default',
 
   //   [   Client     ]
-  shardsOnline: 0,
-  shardStatus: null,
+  colorError: '#d50056',
+  totalSlashUses: 0,
+  monthSlashUses: 0,
+  weekSlashUses: 0,
+  daySlashUses: 0,
+  sessionSlashUses: 0,
+  totalButtonUses: 0,
+  monthMessageUses: 0,
+  weekMessageUses: 0,
+  dayMessageUses: 0,
+  sessionButtonUses: 0,
+  totalMessageUses: 0,
+  monthButtonUses: 0,
+  weekButtonUses: 0,
+  dayButtonUses: 0,
+  sessionMessageUses: 0,
+  totalErrors: 0,
+  monthErrors: 0,
+  weekErrors: 0,
+  dayErrors: 0,
+  sessionErrors: 0,
   uuid: 'null',
 
   //   [   Automation ]
