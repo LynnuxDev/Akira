@@ -44,14 +44,15 @@ const topgg = new ForgeTopGG({
 // [  Database Setup   ]     //
 /// ////////////////////////////
 
+/*
 const database = new ForgeDB({
   type: 'mysql',
-  host: 'IP',
-  port: 1069,
-  username: 'AkiraDB',
-  password: 'PASSWORD',
-  database: 'Akira'
-});
+  host: process.env.DATABASE_IP,
+  port: 4020,
+  username: process.env.DATABASE_USERNAME,
+  password: process.env.DATABASE_PASSWORD,
+  database: "akiradb"
+});*/
 
 /// ////////////////////////////
 // [   Client Setup    ]     //
@@ -73,9 +74,10 @@ const client = new ForgeClient({
     '<@$clientID>'
   ],
   extensions: [
-    new ForgeDB(),  // TODO: change to 'database' on release
+    // database,
+    new ForgeDB(),
     new ForgeQuirks(),
-    //  topgg
+    // topgg
   ]
 });
 
