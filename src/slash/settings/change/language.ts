@@ -29,6 +29,7 @@ const ChangeLanguage: ISlash = {
     $textSplit[$option[to]$option[to_2];-]
     $let[lang;$splitText[0]-$toUppercase[$splitText[1]]]
     $onlyIf[$getLang[$get[authorID]]!=$get[lang];$customError[816;ChangeLanguage]]
+
     $if[$get[error]!=true;
       $interactionReply[
         $getColor $title[Language Changed]
