@@ -9,6 +9,11 @@ const ErrorEvent: Event[] = [
     code: `
       $disableConsoleErrors
       $logger[Error;$error[]]
+      $setGlobalVar[totalErrors;$math[$getGlobalVar[totalErrors]+1]]
+      $setGlobalVar[monthErrors;$math[$getGlobalVar[monthErrors]+1]]
+      $setGlobalVar[weekErrors;$math[$getGlobalVar[weekErrors]+1]]
+      $setGlobalVar[dayErrors;$math[$getGlobalVar[dayErrors]+1]]
+      $setGlobalVar[sessionErrors;$math[$getGlobalVar[sessionErrors]+1]]
     `
   }
 ];

@@ -1,3 +1,5 @@
+<!-- cSpell:disable -->
+<!-- markdownlint-disable -->
 <div align="center">
 <img src="https://akira.lynnux.xyz/assets/images/android-chrome-192x192.png" width="50px">
 <h1>Akira Bot</h1>

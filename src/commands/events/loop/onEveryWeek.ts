@@ -9,11 +9,11 @@ const OnReady: Event[] = [
     version: '1.0.0',
     code: `
       $setInterval[
-        $if[$hour==1;
-          $setGlobalVar[monthMessageUses;0]
-          $setGlobalVar[monthSlashUses;0]
-          $setGlobalVar[monthButtonUses;0]
-          $setGlobalVar[monthErrors;0]
+        $if[$day[Short]==Mon;
+          $setGlobalVar[weekMessageUses;0]
+          $setGlobalVar[weekSlashUses;0]
+          $setGlobalVar[weekButtonUses;0]
+          $setGlobalVar[weekErrors;0]
         ]
       ;1h]
     `

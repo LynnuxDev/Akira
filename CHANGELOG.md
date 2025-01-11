@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.6.1-0](https://github.com/LynnuxDev/Akira/compare/v0.6.0...v0.6.1-0) (2025-01-11)
+
+
+### Features
+
+* Akira now sends a message in the channel when they join a server ([95154dd](https://github.com/LynnuxDev/Akira/commit/95154dd86b287c7f5721b1b54307f5b2298a5a01))
+* change server notify if command not found. ([b53d2f5](https://github.com/LynnuxDev/Akira/commit/b53d2f566fd3c45402b9a6d5fed708585c42c64e))
+* color settings command. ([661dbc8](https://github.com/LynnuxDev/Akira/commit/661dbc80df9c5c8c6037114d1ef032378de82150))
+* Dev panel improved. ([dd24a72](https://github.com/LynnuxDev/Akira/commit/dd24a727910a965b8a9f6d2d0639640b088828b5))
+
+
+### Bug Fixes
+
+* Fixed the http request to the api for stats posting. ([7b7488b](https://github.com/LynnuxDev/Akira/commit/7b7488bb6062d55d76af3f432d981571bbb51447))
+
+
+### Chores
+
+* database change ([f74e45b](https://github.com/LynnuxDev/Akira/commit/f74e45b997db2aa4073cbbf07c54eb56dd71e22b))
+* More errors. ([3a57b31](https://github.com/LynnuxDev/Akira/commit/3a57b317b332593b7a00343669db51dd5f3ae0e9))
+
 ## [0.6.0](https://github.com/LynnuxDev/Akira/compare/v0.5.14...v0.6.0) (2025-01-08)
 
 

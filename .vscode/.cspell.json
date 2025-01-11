@@ -112,6 +112,7 @@
     "العربية"
   ],
   "ignorePaths": [
-    "/CHANGELOG.md"
+    "/CHANGELOG.md",
+    "*.env"
   ]
 }

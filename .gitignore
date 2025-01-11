@@ -4,10 +4,12 @@ dist/
 package-lock.json
 
 # Private stuff
-forge.db
 pnpm-lock.yaml
 .env
+database
 
 # Ignore specific files
 files/anime/not-found.json
 TODO.MD
+src/slash/dev/test.ts
+src/commands/dev/test.ts

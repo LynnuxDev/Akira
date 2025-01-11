@@ -8,12 +8,14 @@ const OnREady: Event[] = [
     module: 'clientSpecific',
     version: '1.0.0',
     code: `
-      $c[
-        $loop[-1;
-          $if[$week$day==00;]
-          $wait[1d]
+      $setInterval[
+        $if[$day==1;
+          $setGlobalVar[monthMessageUses;0]
+          $setGlobalVar[monthSlashUses;0]
+          $setGlobalVar[monthButtonUses;0]
+          $setGlobalVar[monthErrors;0]
         ]
-      ]
+      ;1d]
     `
   }
 ];
