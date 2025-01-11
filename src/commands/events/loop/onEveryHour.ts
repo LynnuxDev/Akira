@@ -9,7 +9,7 @@ const OnReady: Event[] = [
     version: '1.0.0',
     code: `
       $setInterval[
-        $httpSetBody[{"members": $userCount, "servers": $guildCount, "commands": $commandCount, "uptime": $uptime}]
+        $httpSetBody[{"members": $userCount, "servers": $guildCount, "commands": $commandCount, "uptime": "$uptime"}]
         $httpAddHeader[Content-Type;application/json]
         $let[status;$httpRequest[https://api.lynnux.xyz/akira/stats;POST]]
         $if[$get[status]==200;$logger[Info;stats posted to api.lynnux.xyz.];$logger[Error;Stats failed to post got "$get[status]".]]
