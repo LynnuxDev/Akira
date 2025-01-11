@@ -169,6 +169,21 @@
     "description": "The value of `{{command}}` is already set to `{{messageZero}}`.",
     "from": "Client"
   },
+  "725": {
+    "title": [
+      "No Change，No Problem",
+      "Déjà Value?",
+      "Already Set，Move On",
+      "The Value Stays the Same",
+      "Redundancy Detected",
+      "Why Change Perfection?",
+      "\"If it works，don't touch it!\"",
+      "You Just Rewrote History (Badly)"
+    ],
+    "meaning": "Same value",
+    "description": "You tried to change the value of something, but it already has this value. No changes were made.",
+    "from": "Client"
+  },
   "801": {
     "title": ["Argument Anomaly!","Argument in Distress!","Oops，Wrong Argument!","Argument Malfunction!","Lost Argument Syndrome!","Argument’s Lost in Translation!"],
     "meaning": "Wrong arguments (specific).",
@@ -318,7 +333,6 @@
     "description": "You're already using this language! No changes were made. If you'd like to try another, feel free to pick a different language.",
     "from": "Client"
   },
-
   "901": {
     "title": ["Permission, denied.", "Sorry，Can't do that here."],
     "meaning": "Perms Channel denied.",
