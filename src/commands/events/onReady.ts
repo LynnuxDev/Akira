@@ -8,10 +8,6 @@ const onReady: Event[] = [{
   version: '1.0',
   code: `
     $logger[Info;$username[$clientID] | Running with "$commandCount" commands]
-    $setGlobalVar[sessionMessageUses;0]
-    $setGlobalVar[sessionSlashUses;0]
-    $setGlobalVar[sessionButtonUses;0]
-    $setGlobalVar[sessionErrors;0]
   `
 }];
 

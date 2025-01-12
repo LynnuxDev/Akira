@@ -17,7 +17,7 @@
     "dev": "NODE_ENV=development ts-node -r tsconfig-paths/register src/index.ts"
   },
   "dependencies": {
-    "@tryforge/forge.db": "github:tryforge/forgedb#dev",
+    "@tryforge/forge.db": "github:tryforge/ForgeDB#dev",
     "@tryforge/forge.topgg": "github:tryforge/ForgeTopGG#dev",
     "axios": "^1.7.9",
     "discord.js": "^14.16.3",

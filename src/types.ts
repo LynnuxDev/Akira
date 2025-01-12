@@ -1,8 +1,9 @@
 import { CommandType, IForgeFunction, IBaseCommand, IApplicationCommandData } from "@tryforge/forgescript";
+import { IDBEvents } from "@tryforge/forge.db/dist/structures";
 
 type ModuleList = 'clientSpecific'  | 'dev' | 'automation' | 'automod' | 'economy' | 'leveling' | 'moderation' | 'fun' | 'permissions' | 'premium' | 'profile' | 'reactionRoles' | 'roleplay' | 'search' | 'settings' | 'utility';
 type topggEvent = 'voted' | 'error' | 'posted';
-type ForgeEvent = 'ready' | 'guildCreate' | 'error' | 'messageCreate' | 'shardReady' | 'shardDisconnect';
+type ForgeEvent = 'ready' | 'guildCreate' | 'error' | 'messageCreate' | 'shardReady' | 'shardDisconnect' ;
 
 export interface CustomFunction extends IForgeFunction {
   version?: string;
@@ -39,4 +40,9 @@ export interface Event {
 export interface ISlash extends IApplicationCommandData {
   usage?: string;
   module?: ModuleList
+}
+
+export interface DBEvent {
+  type: 'connect';
+  code: string;
 }
