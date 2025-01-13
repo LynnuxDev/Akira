@@ -6,10 +6,10 @@ import { ForgeQuirks } from 'forge.quirks';
 // ForgeAPI removed due to having https://api.lynnux.xyz
 import { join } from 'path';
 import * as dotenv from 'dotenv';
+import { events, intents, variables } from './handler';
 
 dotenv.config();
-
-import { token, events, intents, variables } from './handler';
+const isMain = process.env.PRODUCTION === 'main';
 
 /// ////////////////////////////
 //  [ Environment Config ]  //
@@ -45,12 +45,12 @@ const topgg = new ForgeTopGG({
 /// ////////////////////////////
 
 const database = new ForgeDB({
-  type: 'mysql',
-  host: process.env.DATABASE_IP,
-  port: 4020,
-  username: process.env.DATABASE_USERNAME,
-  password: process.env.DATABASE_PASSWORD,
-  database: "akiradb",
+  type: isMain ? 'mysql' : 'sqlite',
+  host: isMain && process.env.DATABASE_IP || undefined,
+  port: isMain ? 4020 : undefined,
+  username: isMain && process.env.DATABASE_USERNAME || undefined,
+  password: isMain && process.env.DATABASE_PASSWORD || undefined,
+  database: isMain ? 'akiradb' : undefined,
   events: ['connect']
 });
 
@@ -80,12 +80,13 @@ const client = new ForgeClient({
   ]
 });
 
+
 // Load functions, variables and commands
 client.functions.load(join(__dirname, 'functions'));
 client.commands.load(commandsPath);
 client.applicationCommands.load(slashCommandsPath);
 
-database.commands.load(join(__dirname, 'dataBase'));
+database.commands.load("dist/dataBase");
 database.variables(variables);
 
 //topgg.commands.load(topGgPath);
@@ -94,4 +95,4 @@ database.variables(variables);
 //  [   Client Login    ]    //
 /// ////////////////////////////
 
-client.login(`${token}`);
+client.login(`${process.env.DISCORD_TOKEN}`);
